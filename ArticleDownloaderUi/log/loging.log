@@ -1,0 +1,1222 @@
+16:41:10,226  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+16:41:10,232  INFO GuardianResponseFetcher:29 - Try get list of articles...
+16:41:10,233  INFO GuardianResponseFetcher:41 - writing param metadata
+16:45:07,609  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+16:45:07,614  INFO GuardianResponseFetcher:29 - Try get list of articles...
+16:45:07,614  INFO GuardianResponseFetcher:41 - writing param metadata
+16:45:07,669  INFO GuardianResponseFetcher:49 - Using keywords: economy indonesia
+16:45:07,669  INFO GuardianResponseFetcher:50 - page-size: 50
+16:45:07,742  WARN RegisterBuiltin:103 - NoClassDefFoundError: Unable to load builtin provider: org.jboss.resteasy.plugins.providers.DocumentProvider
+16:45:09,689  INFO DefaultResponseBuilder:25 - Building List of articles...
+16:45:09,777  INFO DefaultDocumentDownloader:49 - Crawling all articles for jobId: 20121125_164507
+16:45:09,777  INFO DefaultDocumentDownloader:51 - Total articles: 50
+16:45:09,778  INFO DefaultDocumentDownloader:57 - Downloading article: Australia's 'safe' debate about racism goes viral | Peter Salmon
+16:45:14,135  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\01_commentisfree_2012_nov_23_australia-safe-debate-racism.html
+16:45:14,135  INFO DefaultDocumentDownloader:57 - Downloading article: More than 1,000 new coal plants planned worldwide, figures show
+16:45:15,724  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\02_environment_2012_nov_20_coal-plants-world-resources-institute.html
+16:45:15,724  INFO DefaultDocumentDownloader:57 - Downloading article: David Cameron and Ed Miliband speak at CBI: Politics live blog
+16:45:19,850  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\03_politics_blog_2012_nov_19_cameron-miliband-cbi-politics-live-blog.html
+16:45:19,851  INFO DefaultDocumentDownloader:57 - Downloading article: The latest predictions on climate change should shock us into action | Jim Yong Kim
+16:45:22,309  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\04_global-development_poverty-matters_2012_nov_19_latest-predictions-climate-change-shock-action.html
+16:45:22,309  INFO DefaultDocumentDownloader:57 - Downloading article: Cameron hits out at 'bureaucratic rubbish' holding back UK economy
+16:45:25,362  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\05_politics_2012_nov_19_cameron-bureacratic-rubbish-uk-economy.html
+16:45:25,363  INFO DefaultDocumentDownloader:57 - Downloading article: OECD: south-east Asian economic outlook to return to pre-crisis levels
+16:45:26,978  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\06_global-development_datablog_2012_nov_18_oecd-south-east-asia-economic-outlook.html
+16:45:26,978  INFO DefaultDocumentDownloader:57 - Downloading article: The day I saw 248 girls suffering genital mutilation
+16:45:28,242  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\07_society_2012_nov_18_female-genital-mutilation-circumcision-indonesia.html
+16:45:28,242  INFO DefaultDocumentDownloader:57 - Downloading article: Your views: Police commissioners, flexible hours and cashless kids
+16:45:29,512  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\08_news_blog_2012_nov_16_your-views-on-the-news-police-commissioners.html
+16:45:29,512  INFO DefaultDocumentDownloader:57 - Downloading article: US considers shifting climate negotiations away from UN track
+16:45:30,780  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\09_environment_2012_nov_16_us-considers-climate-negotiations-un.html
+16:45:30,780  INFO DefaultDocumentDownloader:57 - Downloading article: The GM tree plantations bred to satisfy the world's energy needs
+16:45:32,362  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\10_environment_2012_nov_15_gm-trees-bred-world-energy.html
+16:45:32,363  INFO DefaultDocumentDownloader:57 - Downloading article: Australia starts to catch up with the Asian century | Judith Ireland
+16:45:35,535  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\11_commentisfree_2012_nov_13_australia-catch-up-asian-century.html
+16:45:35,535  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: the best news pictures of the day
+16:45:36,958  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\12_news_2012_nov_12_picture-desk-live-the-best-news-pictures-of-the-day.html
+16:45:36,959  INFO DefaultDocumentDownloader:57 - Downloading article: Ordinary people: the middle class aspirations that give the Obamas their appeal
+16:45:39,296  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\13_world_2012_nov_11_obama-ordinary-people-first-family.html
+16:45:39,297  INFO DefaultDocumentDownloader:57 - Downloading article: Developing economies to eclipse west by 2060, OECD forecasts
+16:45:41,335  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\14_global-development_datablog_2012_nov_09_developing-economies-overtake-west-2050-oecd-forecasts.html
+16:45:41,335  INFO DefaultDocumentDownloader:57 - Downloading article: Vietnam's banking problems reflect turbulence in the economy | Simon Speakman Cordall
+16:45:42,628  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\15_global-development_poverty-matters_2012_nov_09_vietnam-banking-problems-turbulence-economy.html
+16:45:42,628  INFO DefaultDocumentDownloader:57 - Downloading article: Barack Obama wins second term in decisive victory – reaction as it happened
+16:45:45,540  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\16_world_blog_2012_nov_07_obama-reelection-senate-democrats-live.html
+16:45:45,540  INFO DefaultDocumentDownloader:57 - Downloading article: Election day: US voters choose between Obama and Romney – as it happened
+16:45:47,534  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\17_world_2012_nov_06_election-day-obama-romney-live.html
+16:45:47,534  INFO DefaultDocumentDownloader:57 - Downloading article: World on track for 6C warming without carbon cuts, study shows
+16:45:48,748  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\18_environment_2012_nov_05_climate-change-carbon-emissions.html
+16:45:48,748  INFO DefaultDocumentDownloader:57 - Downloading article: David Cameron hails opportunity to end extreme global poverty
+16:45:50,167  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\19_global-development_2012_nov_01_david-cameron-opportunity-end-global-poverty.html
+16:45:50,168  INFO DefaultDocumentDownloader:57 - Downloading article: Liberia's Johnson Sirleaf defiant over nepotism and corruption claims
+16:45:52,391  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\20_global-development_2012_nov_01_liberia-johnson-sirleaf-nepotism-corruption.html
+16:45:52,391  INFO DefaultDocumentDownloader:57 - Downloading article: The post-2015 development agenda explained | Mark Tran
+16:45:54,357  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\21_global-development_2012_oct_31_post-2015-development-agenda-explained.html
+16:45:54,358  INFO DefaultDocumentDownloader:57 - Downloading article: Standard Chartered to settle Iran claims by end of 2012
+16:45:55,888  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\22_business_2012_oct_30_standard-chartered-iran-claims-us-authorities.html
+16:45:55,889  INFO DefaultDocumentDownloader:57 - Downloading article: Sununu race row continues as Cory Booker calls comments 'disrespectful'
+16:45:58,923  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\23_world_2012_oct_26_john-sununu-race-cory-booker.html
+16:45:58,924  INFO DefaultDocumentDownloader:57 - Downloading article: John Sununu backs down after 'own race' slur at Colin Powell's Obama endorsement - US politics live 
+16:46:00,413  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\24_world_2012_oct_26_sununu-powell-obama-race-live.html
+16:46:00,413  INFO DefaultDocumentDownloader:57 - Downloading article: Florida Republicans bet on Romney's business sense: 'Jobs. It's always jobs'
+16:46:03,613  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\25_world_2012_oct_25_florida-republicans-mitt-romney-business.html
+16:46:03,614  INFO DefaultDocumentDownloader:57 - Downloading article: Restoring Korean coastal ecosystems with the byproducts of steelworks
+16:46:04,922  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\26_sustainable-business_restoring-ecosystems-byproduct-steel-industry.html
+16:46:04,922  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: the best news pictures of the day
+16:46:06,300  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\27_news_2012_oct_23_picture-desk-live-the-best-news-pictures-of-the-day.html
+16:46:06,301  INFO DefaultDocumentDownloader:57 - Downloading article: $3.5tn global spend on local procurement 'woefully' mismanaged
+16:46:08,670  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\28_local-government-network_2012_oct_22_colin-cram-local-government-global-procurement.html
+16:46:08,671  INFO DefaultDocumentDownloader:57 - Downloading article: Can emerging economies rebound on their own? | Michael Spence
+16:46:10,317  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\29_business_economics-blog_2012_oct_15_emerging-economies-rebound-eurozone-us-slowdown.html
+16:46:10,317  INFO DefaultDocumentDownloader:57 - Downloading article: Barack Obama v Mitt Romney: how the presidential candidates compare
+16:46:11,856  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\30_world_2012_oct_11_barack-obama-versus-mitt-romney.html
+16:46:11,856  INFO DefaultDocumentDownloader:57 - Downloading article: Norway to double carbon tax on oil industry
+16:46:13,385  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\31_environment_2012_oct_11_norway-carbon-tax-oil.html
+16:46:13,386  INFO DefaultDocumentDownloader:57 - Downloading article: Bakries could take Indonesian assets back from Bumi
+16:46:14,880  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\32_business_2012_oct_11_bakries-bumi-part-company-nat-rothschild.html
+16:46:14,880  INFO DefaultDocumentDownloader:57 - Downloading article: David Cameron's speech at Conservative conference: Politics live blog
+16:46:18,459  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\33_politics_blog_2012_oct_10_david-cameron-speech-conservative-conference-live-blog.html
+16:46:18,459  INFO DefaultDocumentDownloader:57 - Downloading article: David Cameron speech: panel verdict 
+16:46:21,271  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\34_commentisfree_2012_oct_10_david-cameron-speech-conservative-conference-verdict.html
+16:46:21,271  INFO DefaultDocumentDownloader:57 - Downloading article: World Bank warns on China slowdown
+16:46:22,447  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\35_business_2012_oct_08_world-bank-warns-on-china-slowdown.html
+16:46:22,447  INFO DefaultDocumentDownloader:57 - Downloading article: China should remember no country is an island in a globalised world
+16:46:24,092  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\36_business_2012_oct_07_japan-china-senkaku-islands.html
+16:46:24,093  INFO DefaultDocumentDownloader:57 - Downloading article: Beyond the BRICs
+16:46:26,872  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\37_small-business-network-partner-zone-lloyds-tsb_trevor-williams-brics-exporting.html
+16:46:26,873  INFO DefaultDocumentDownloader:57 - Downloading article: Obama and Romney prepare for debate showdown - US politics live
+16:46:31,392  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\38_world_2012_oct_01_romney-obama-debate-libya-live.html
+16:46:31,392  INFO DefaultDocumentDownloader:57 - Downloading article: Muse: 'We like pushing it as far as we can'
+16:46:33,205  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\39_music_2012_sep_30_muse-2nd-law-tour-interview.html
+16:46:33,205  INFO DefaultDocumentDownloader:57 - Downloading article: President Obama's speech to the UN general assembly – full transcript
+16:46:34,664  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\40_world_2012_sep_25_obama-un-general-assembly-transcript.html
+16:46:34,664  INFO DefaultDocumentDownloader:57 - Downloading article: The Spanish public won't accept a financial coup d'etat | Katharine Ainger
+16:46:39,464  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\41_commentisfree_2012_sep_25_spain-public-financial-coup.html
+16:46:39,465  INFO DefaultDocumentDownloader:57 - Downloading article: Mass slaughter of farm animals set to push food prices up 14%
+16:46:41,208  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\42_business_2012_sep_19_mass-slaughter-farm-animals-food-prices.html
+16:46:41,208  INFO DefaultDocumentDownloader:57 - Downloading article: Joseph Anton by Salman Rushdie - review
+16:46:42,626  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\43_books_2012_sep_18_joseph-anton-salman-rushdie-review.html
+16:46:42,626  INFO DefaultDocumentDownloader:57 - Downloading article: Hezbollah protests over anti-Islam film - as it happened
+16:46:45,760  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\44_world_middle-east-live_2012_sep_17_protests-anti-islam-film-hezbollah-live.html
+16:46:45,761  INFO DefaultDocumentDownloader:57 - Downloading article: Mining shares lift markets on Europe, China, US optimism, but Imperial Tobacco misses out on rally
+16:46:47,438  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\45_business_marketforceslive_2012_sep_07_imperial-tobacco-miners-ftse.html
+16:46:47,439  INFO DefaultDocumentDownloader:57 - Downloading article: The Fiver | Staying in the stationery cupboard | Scott Murray
+16:46:48,999  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\46_football_2012_sep_06_the-fiver-liverpool-moneyman-ian-ayre.html
+16:46:48,999  INFO DefaultDocumentDownloader:57 - Downloading article: More pain in Spain as unemployment benefit payments rise
+16:46:51,212  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\47_business_2012_sep_04_spain-unemployment-benefit-payments-budget.html
+16:46:51,212  INFO DefaultDocumentDownloader:57 - Downloading article: A third runway, Boris Island, better rail? Please, just decide | Jackie Ashley
+16:46:54,830  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\48_commentisfree_2012_aug_26_london-airport-expansion-just-decide.html
+16:46:54,830  INFO DefaultDocumentDownloader:57 - Downloading article: Social enterprise should be made central to higher education strategy
+16:46:57,017  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\49_higher-education-network_blog_2012_aug_23_social-enterprise-students-university-experience.html
+16:46:57,018  INFO DefaultDocumentDownloader:57 - Downloading article: Ethnic Chinese at last see a new future opening up in Indonesia
+16:46:58,791  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164507\html\50_world_2012_aug_21_ethnic-chinese-new-indonesia-future.html
+16:46:58,791  INFO DefaultDocumentDownloader:69 - saving response to loca: 
+16:46:58,806  INFO JsoupContentParser:36 - construct jobId: 20121125_164507
+16:46:58,806  INFO JsoupContentParser:42 - saveAll jobId: 20121125_164507
+16:46:58,807  INFO JsoupContentParser:52 - sourceFile: 01_commentisfree_2012_nov_23_australia-safe-debate-racism.html
+16:46:58,807  INFO JsoupContentParser:53 - targetFile: 01_commentisfree_2012_nov_23_australia-safe-debate-racism.txt
+16:46:59,109  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,115  INFO JsoupContentParser:52 - sourceFile: 02_environment_2012_nov_20_coal-plants-world-resources-institute.html
+16:46:59,115  INFO JsoupContentParser:53 - targetFile: 02_environment_2012_nov_20_coal-plants-world-resources-institute.txt
+16:46:59,198  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,200  INFO JsoupContentParser:52 - sourceFile: 03_politics_blog_2012_nov_19_cameron-miliband-cbi-politics-live-blog.html
+16:46:59,200  INFO JsoupContentParser:53 - targetFile: 03_politics_blog_2012_nov_19_cameron-miliband-cbi-politics-live-blog.txt
+16:46:59,385  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,388  INFO JsoupContentParser:52 - sourceFile: 04_global-development_poverty-matters_2012_nov_19_latest-predictions-climate-change-shock-action.html
+16:46:59,388  INFO JsoupContentParser:53 - targetFile: 04_global-development_poverty-matters_2012_nov_19_latest-predictions-climate-change-shock-action.txt
+16:46:59,429  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,431  INFO JsoupContentParser:52 - sourceFile: 05_politics_2012_nov_19_cameron-bureacratic-rubbish-uk-economy.html
+16:46:59,431  INFO JsoupContentParser:53 - targetFile: 05_politics_2012_nov_19_cameron-bureacratic-rubbish-uk-economy.txt
+16:46:59,505  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,507  INFO JsoupContentParser:52 - sourceFile: 06_global-development_datablog_2012_nov_18_oecd-south-east-asia-economic-outlook.html
+16:46:59,507  INFO JsoupContentParser:53 - targetFile: 06_global-development_datablog_2012_nov_18_oecd-south-east-asia-economic-outlook.txt
+16:46:59,545  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,546  INFO JsoupContentParser:52 - sourceFile: 07_society_2012_nov_18_female-genital-mutilation-circumcision-indonesia.html
+16:46:59,546  INFO JsoupContentParser:53 - targetFile: 07_society_2012_nov_18_female-genital-mutilation-circumcision-indonesia.txt
+16:46:59,618  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,620  INFO JsoupContentParser:52 - sourceFile: 08_news_blog_2012_nov_16_your-views-on-the-news-police-commissioners.html
+16:46:59,620  INFO JsoupContentParser:53 - targetFile: 08_news_blog_2012_nov_16_your-views-on-the-news-police-commissioners.txt
+16:46:59,648  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,650  INFO JsoupContentParser:52 - sourceFile: 09_environment_2012_nov_16_us-considers-climate-negotiations-un.html
+16:46:59,650  INFO JsoupContentParser:53 - targetFile: 09_environment_2012_nov_16_us-considers-climate-negotiations-un.txt
+16:46:59,693  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,694  INFO JsoupContentParser:52 - sourceFile: 10_environment_2012_nov_15_gm-trees-bred-world-energy.html
+16:46:59,695  INFO JsoupContentParser:53 - targetFile: 10_environment_2012_nov_15_gm-trees-bred-world-energy.txt
+16:46:59,718  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,720  INFO JsoupContentParser:52 - sourceFile: 11_commentisfree_2012_nov_13_australia-catch-up-asian-century.html
+16:46:59,720  INFO JsoupContentParser:53 - targetFile: 11_commentisfree_2012_nov_13_australia-catch-up-asian-century.txt
+16:46:59,788  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,790  INFO JsoupContentParser:52 - sourceFile: 12_news_2012_nov_12_picture-desk-live-the-best-news-pictures-of-the-day.html
+16:46:59,790  INFO JsoupContentParser:53 - targetFile: 12_news_2012_nov_12_picture-desk-live-the-best-news-pictures-of-the-day.txt
+16:46:59,815  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,817  INFO JsoupContentParser:52 - sourceFile: 13_world_2012_nov_11_obama-ordinary-people-first-family.html
+16:46:59,817  INFO JsoupContentParser:53 - targetFile: 13_world_2012_nov_11_obama-ordinary-people-first-family.txt
+16:46:59,875  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,876  INFO JsoupContentParser:52 - sourceFile: 14_global-development_datablog_2012_nov_09_developing-economies-overtake-west-2050-oecd-forecasts.html
+16:46:59,876  INFO JsoupContentParser:53 - targetFile: 14_global-development_datablog_2012_nov_09_developing-economies-overtake-west-2050-oecd-forecasts.txt
+16:46:59,896  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,897  INFO JsoupContentParser:52 - sourceFile: 15_global-development_poverty-matters_2012_nov_09_vietnam-banking-problems-turbulence-economy.html
+16:46:59,897  INFO JsoupContentParser:53 - targetFile: 15_global-development_poverty-matters_2012_nov_09_vietnam-banking-problems-turbulence-economy.txt
+16:46:59,904  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,906  INFO JsoupContentParser:52 - sourceFile: 16_world_blog_2012_nov_07_obama-reelection-senate-democrats-live.html
+16:46:59,906  INFO JsoupContentParser:53 - targetFile: 16_world_blog_2012_nov_07_obama-reelection-senate-democrats-live.txt
+16:46:59,925  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,926  INFO JsoupContentParser:52 - sourceFile: 17_world_2012_nov_06_election-day-obama-romney-live.html
+16:46:59,926  INFO JsoupContentParser:53 - targetFile: 17_world_2012_nov_06_election-day-obama-romney-live.txt
+16:46:59,956  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,958  INFO JsoupContentParser:52 - sourceFile: 18_environment_2012_nov_05_climate-change-carbon-emissions.html
+16:46:59,958  INFO JsoupContentParser:53 - targetFile: 18_environment_2012_nov_05_climate-change-carbon-emissions.txt
+16:46:59,963  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,965  INFO JsoupContentParser:52 - sourceFile: 19_global-development_2012_nov_01_david-cameron-opportunity-end-global-poverty.html
+16:46:59,965  INFO JsoupContentParser:53 - targetFile: 19_global-development_2012_nov_01_david-cameron-opportunity-end-global-poverty.txt
+16:46:59,970  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,972  INFO JsoupContentParser:52 - sourceFile: 20_global-development_2012_nov_01_liberia-johnson-sirleaf-nepotism-corruption.html
+16:46:59,972  INFO JsoupContentParser:53 - targetFile: 20_global-development_2012_nov_01_liberia-johnson-sirleaf-nepotism-corruption.txt
+16:46:59,978  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,979  INFO JsoupContentParser:52 - sourceFile: 21_global-development_2012_oct_31_post-2015-development-agenda-explained.html
+16:46:59,980  INFO JsoupContentParser:53 - targetFile: 21_global-development_2012_oct_31_post-2015-development-agenda-explained.txt
+16:46:59,987  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,989  INFO JsoupContentParser:52 - sourceFile: 22_business_2012_oct_30_standard-chartered-iran-claims-us-authorities.html
+16:46:59,989  INFO JsoupContentParser:53 - targetFile: 22_business_2012_oct_30_standard-chartered-iran-claims-us-authorities.txt
+16:46:59,997  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:46:59,998  INFO JsoupContentParser:52 - sourceFile: 23_world_2012_oct_26_john-sununu-race-cory-booker.html
+16:46:59,998  INFO JsoupContentParser:53 - targetFile: 23_world_2012_oct_26_john-sununu-race-cory-booker.txt
+16:47:00,016  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,017  INFO JsoupContentParser:52 - sourceFile: 24_world_2012_oct_26_sununu-powell-obama-race-live.html
+16:47:00,017  INFO JsoupContentParser:53 - targetFile: 24_world_2012_oct_26_sununu-powell-obama-race-live.txt
+16:47:00,029  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,030  INFO JsoupContentParser:52 - sourceFile: 25_world_2012_oct_25_florida-republicans-mitt-romney-business.html
+16:47:00,031  INFO JsoupContentParser:53 - targetFile: 25_world_2012_oct_25_florida-republicans-mitt-romney-business.txt
+16:47:00,069  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,070  INFO JsoupContentParser:52 - sourceFile: 26_sustainable-business_restoring-ecosystems-byproduct-steel-industry.html
+16:47:00,070  INFO JsoupContentParser:53 - targetFile: 26_sustainable-business_restoring-ecosystems-byproduct-steel-industry.txt
+16:47:00,083  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,084  INFO JsoupContentParser:52 - sourceFile: 27_news_2012_oct_23_picture-desk-live-the-best-news-pictures-of-the-day.html
+16:47:00,084  INFO JsoupContentParser:53 - targetFile: 27_news_2012_oct_23_picture-desk-live-the-best-news-pictures-of-the-day.txt
+16:47:00,091  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,092  INFO JsoupContentParser:52 - sourceFile: 28_local-government-network_2012_oct_22_colin-cram-local-government-global-procurement.html
+16:47:00,092  INFO JsoupContentParser:53 - targetFile: 28_local-government-network_2012_oct_22_colin-cram-local-government-global-procurement.txt
+16:47:00,099  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,100  INFO JsoupContentParser:52 - sourceFile: 29_business_economics-blog_2012_oct_15_emerging-economies-rebound-eurozone-us-slowdown.html
+16:47:00,101  INFO JsoupContentParser:53 - targetFile: 29_business_economics-blog_2012_oct_15_emerging-economies-rebound-eurozone-us-slowdown.txt
+16:47:00,108  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,109  INFO JsoupContentParser:52 - sourceFile: 30_world_2012_oct_11_barack-obama-versus-mitt-romney.html
+16:47:00,110  INFO JsoupContentParser:53 - targetFile: 30_world_2012_oct_11_barack-obama-versus-mitt-romney.txt
+16:47:00,116  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,118  INFO JsoupContentParser:52 - sourceFile: 31_environment_2012_oct_11_norway-carbon-tax-oil.html
+16:47:00,118  INFO JsoupContentParser:53 - targetFile: 31_environment_2012_oct_11_norway-carbon-tax-oil.txt
+16:47:00,124  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,125  INFO JsoupContentParser:52 - sourceFile: 32_business_2012_oct_11_bakries-bumi-part-company-nat-rothschild.html
+16:47:00,126  INFO JsoupContentParser:53 - targetFile: 32_business_2012_oct_11_bakries-bumi-part-company-nat-rothschild.txt
+16:47:00,136  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,137  INFO JsoupContentParser:52 - sourceFile: 33_politics_blog_2012_oct_10_david-cameron-speech-conservative-conference-live-blog.html
+16:47:00,137  INFO JsoupContentParser:53 - targetFile: 33_politics_blog_2012_oct_10_david-cameron-speech-conservative-conference-live-blog.txt
+16:47:00,167  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,169  INFO JsoupContentParser:52 - sourceFile: 34_commentisfree_2012_oct_10_david-cameron-speech-conservative-conference-verdict.html
+16:47:00,170  INFO JsoupContentParser:53 - targetFile: 34_commentisfree_2012_oct_10_david-cameron-speech-conservative-conference-verdict.txt
+16:47:00,188  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,189  INFO JsoupContentParser:52 - sourceFile: 35_business_2012_oct_08_world-bank-warns-on-china-slowdown.html
+16:47:00,189  INFO JsoupContentParser:53 - targetFile: 35_business_2012_oct_08_world-bank-warns-on-china-slowdown.txt
+16:47:00,195  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,196  INFO JsoupContentParser:52 - sourceFile: 36_business_2012_oct_07_japan-china-senkaku-islands.html
+16:47:00,196  INFO JsoupContentParser:53 - targetFile: 36_business_2012_oct_07_japan-china-senkaku-islands.txt
+16:47:00,220  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,223  INFO JsoupContentParser:52 - sourceFile: 37_small-business-network-partner-zone-lloyds-tsb_trevor-williams-brics-exporting.html
+16:47:00,223  INFO JsoupContentParser:53 - targetFile: 37_small-business-network-partner-zone-lloyds-tsb_trevor-williams-brics-exporting.txt
+16:47:00,227  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,228  INFO JsoupContentParser:52 - sourceFile: 38_world_2012_oct_01_romney-obama-debate-libya-live.html
+16:47:00,228  INFO JsoupContentParser:53 - targetFile: 38_world_2012_oct_01_romney-obama-debate-libya-live.txt
+16:47:00,243  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,245  INFO JsoupContentParser:52 - sourceFile: 39_music_2012_sep_30_muse-2nd-law-tour-interview.html
+16:47:00,245  INFO JsoupContentParser:53 - targetFile: 39_music_2012_sep_30_muse-2nd-law-tour-interview.txt
+16:47:00,250  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,251  INFO JsoupContentParser:52 - sourceFile: 40_world_2012_sep_25_obama-un-general-assembly-transcript.html
+16:47:00,252  INFO JsoupContentParser:53 - targetFile: 40_world_2012_sep_25_obama-un-general-assembly-transcript.txt
+16:47:00,257  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,258  INFO JsoupContentParser:52 - sourceFile: 41_commentisfree_2012_sep_25_spain-public-financial-coup.html
+16:47:00,258  INFO JsoupContentParser:53 - targetFile: 41_commentisfree_2012_sep_25_spain-public-financial-coup.txt
+16:47:00,272  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,273  INFO JsoupContentParser:52 - sourceFile: 42_business_2012_sep_19_mass-slaughter-farm-animals-food-prices.html
+16:47:00,274  INFO JsoupContentParser:53 - targetFile: 42_business_2012_sep_19_mass-slaughter-farm-animals-food-prices.txt
+16:47:00,281  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,282  INFO JsoupContentParser:52 - sourceFile: 43_books_2012_sep_18_joseph-anton-salman-rushdie-review.html
+16:47:00,283  INFO JsoupContentParser:53 - targetFile: 43_books_2012_sep_18_joseph-anton-salman-rushdie-review.txt
+16:47:00,289  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,291  INFO JsoupContentParser:52 - sourceFile: 44_world_middle-east-live_2012_sep_17_protests-anti-islam-film-hezbollah-live.html
+16:47:00,291  INFO JsoupContentParser:53 - targetFile: 44_world_middle-east-live_2012_sep_17_protests-anti-islam-film-hezbollah-live.txt
+16:47:00,308  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,310  INFO JsoupContentParser:52 - sourceFile: 45_business_marketforceslive_2012_sep_07_imperial-tobacco-miners-ftse.html
+16:47:00,310  INFO JsoupContentParser:53 - targetFile: 45_business_marketforceslive_2012_sep_07_imperial-tobacco-miners-ftse.txt
+16:47:00,318  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,319  INFO JsoupContentParser:52 - sourceFile: 46_football_2012_sep_06_the-fiver-liverpool-moneyman-ian-ayre.html
+16:47:00,320  INFO JsoupContentParser:53 - targetFile: 46_football_2012_sep_06_the-fiver-liverpool-moneyman-ian-ayre.txt
+16:47:00,329  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,331  INFO JsoupContentParser:52 - sourceFile: 47_business_2012_sep_04_spain-unemployment-benefit-payments-budget.html
+16:47:00,331  INFO JsoupContentParser:53 - targetFile: 47_business_2012_sep_04_spain-unemployment-benefit-payments-budget.txt
+16:47:00,338  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,339  INFO JsoupContentParser:52 - sourceFile: 48_commentisfree_2012_aug_26_london-airport-expansion-just-decide.html
+16:47:00,339  INFO JsoupContentParser:53 - targetFile: 48_commentisfree_2012_aug_26_london-airport-expansion-just-decide.txt
+16:47:00,355  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,356  INFO JsoupContentParser:52 - sourceFile: 49_higher-education-network_blog_2012_aug_23_social-enterprise-students-university-experience.html
+16:47:00,357  INFO JsoupContentParser:53 - targetFile: 49_higher-education-network_blog_2012_aug_23_social-enterprise-students-university-experience.txt
+16:47:00,364  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,366  INFO JsoupContentParser:52 - sourceFile: 50_world_2012_aug_21_ethnic-chinese-new-indonesia-future.html
+16:47:00,366  INFO JsoupContentParser:53 - targetFile: 50_world_2012_aug_21_ethnic-chinese-new-indonesia-future.txt
+16:47:00,373  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+16:47:00,380  INFO PdfContentParser:36 - construct jobId: 20121125_164507
+16:47:00,383  INFO PdfContentParser:46 - construct jobId: 20121125_164507
+16:47:00,383  INFO PdfContentParser:50 - saveAll jobId: 20121125_164507
+16:47:00,384  INFO PdfContentParser:59 - sourceFile: 01_commentisfree_2012_nov_23_australia-safe-debate-racism.html
+16:47:00,384  INFO PdfContentParser:60 - targetFile: 01_commentisfree_2012_nov_23_australia-safe-debate-racism.pdf
+16:47:00,401  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,401  INFO PdfContentParser:70 - writePdf
+16:47:00,553  INFO PdfContentParser:89 - writeContent
+16:47:00,581  INFO PdfContentParser:59 - sourceFile: 02_environment_2012_nov_20_coal-plants-world-resources-institute.html
+16:47:00,581  INFO PdfContentParser:60 - targetFile: 02_environment_2012_nov_20_coal-plants-world-resources-institute.pdf
+16:47:00,587  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,588  INFO PdfContentParser:70 - writePdf
+16:47:00,590  INFO PdfContentParser:89 - writeContent
+16:47:00,601  INFO PdfContentParser:59 - sourceFile: 03_politics_blog_2012_nov_19_cameron-miliband-cbi-politics-live-blog.html
+16:47:00,601  INFO PdfContentParser:60 - targetFile: 03_politics_blog_2012_nov_19_cameron-miliband-cbi-politics-live-blog.pdf
+16:47:00,631  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,632  INFO PdfContentParser:70 - writePdf
+16:47:00,634  INFO PdfContentParser:89 - writeContent
+16:47:00,703  INFO PdfContentParser:59 - sourceFile: 04_global-development_poverty-matters_2012_nov_19_latest-predictions-climate-change-shock-action.html
+16:47:00,703  INFO PdfContentParser:60 - targetFile: 04_global-development_poverty-matters_2012_nov_19_latest-predictions-climate-change-shock-action.pdf
+16:47:00,716  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,716  INFO PdfContentParser:70 - writePdf
+16:47:00,718  INFO PdfContentParser:89 - writeContent
+16:47:00,724  INFO PdfContentParser:59 - sourceFile: 05_politics_2012_nov_19_cameron-bureacratic-rubbish-uk-economy.html
+16:47:00,724  INFO PdfContentParser:60 - targetFile: 05_politics_2012_nov_19_cameron-bureacratic-rubbish-uk-economy.pdf
+16:47:00,740  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,740  INFO PdfContentParser:70 - writePdf
+16:47:00,742  INFO PdfContentParser:89 - writeContent
+16:47:00,748  INFO PdfContentParser:59 - sourceFile: 06_global-development_datablog_2012_nov_18_oecd-south-east-asia-economic-outlook.html
+16:47:00,748  INFO PdfContentParser:60 - targetFile: 06_global-development_datablog_2012_nov_18_oecd-south-east-asia-economic-outlook.pdf
+16:47:00,756  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,757  INFO PdfContentParser:70 - writePdf
+16:47:00,758  INFO PdfContentParser:89 - writeContent
+16:47:00,764  INFO PdfContentParser:59 - sourceFile: 07_society_2012_nov_18_female-genital-mutilation-circumcision-indonesia.html
+16:47:00,764  INFO PdfContentParser:60 - targetFile: 07_society_2012_nov_18_female-genital-mutilation-circumcision-indonesia.pdf
+16:47:00,777  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,777  INFO PdfContentParser:70 - writePdf
+16:47:00,779  INFO PdfContentParser:89 - writeContent
+16:47:00,793  INFO PdfContentParser:59 - sourceFile: 08_news_blog_2012_nov_16_your-views-on-the-news-police-commissioners.html
+16:47:00,793  INFO PdfContentParser:60 - targetFile: 08_news_blog_2012_nov_16_your-views-on-the-news-police-commissioners.pdf
+16:47:00,801  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,801  INFO PdfContentParser:70 - writePdf
+16:47:00,802  INFO PdfContentParser:89 - writeContent
+16:47:00,825  INFO PdfContentParser:59 - sourceFile: 09_environment_2012_nov_16_us-considers-climate-negotiations-un.html
+16:47:00,826  INFO PdfContentParser:60 - targetFile: 09_environment_2012_nov_16_us-considers-climate-negotiations-un.pdf
+16:47:00,830  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,830  INFO PdfContentParser:70 - writePdf
+16:47:00,831  INFO PdfContentParser:89 - writeContent
+16:47:00,835  INFO PdfContentParser:59 - sourceFile: 10_environment_2012_nov_15_gm-trees-bred-world-energy.html
+16:47:00,836  INFO PdfContentParser:60 - targetFile: 10_environment_2012_nov_15_gm-trees-bred-world-energy.pdf
+16:47:00,840  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,840  INFO PdfContentParser:70 - writePdf
+16:47:00,841  INFO PdfContentParser:89 - writeContent
+16:47:00,846  INFO PdfContentParser:59 - sourceFile: 11_commentisfree_2012_nov_13_australia-catch-up-asian-century.html
+16:47:00,846  INFO PdfContentParser:60 - targetFile: 11_commentisfree_2012_nov_13_australia-catch-up-asian-century.pdf
+16:47:00,861  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,862  INFO PdfContentParser:70 - writePdf
+16:47:00,863  INFO PdfContentParser:89 - writeContent
+16:47:00,867  INFO PdfContentParser:59 - sourceFile: 12_news_2012_nov_12_picture-desk-live-the-best-news-pictures-of-the-day.html
+16:47:00,867  INFO PdfContentParser:60 - targetFile: 12_news_2012_nov_12_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+16:47:00,872  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,872  INFO PdfContentParser:70 - writePdf
+16:47:00,874  INFO PdfContentParser:89 - writeContent
+16:47:00,876  INFO PdfContentParser:59 - sourceFile: 13_world_2012_nov_11_obama-ordinary-people-first-family.html
+16:47:00,877  INFO PdfContentParser:60 - targetFile: 13_world_2012_nov_11_obama-ordinary-people-first-family.pdf
+16:47:00,888  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,889  INFO PdfContentParser:70 - writePdf
+16:47:00,890  INFO PdfContentParser:89 - writeContent
+16:47:00,896  INFO PdfContentParser:59 - sourceFile: 14_global-development_datablog_2012_nov_09_developing-economies-overtake-west-2050-oecd-forecasts.html
+16:47:00,896  INFO PdfContentParser:60 - targetFile: 14_global-development_datablog_2012_nov_09_developing-economies-overtake-west-2050-oecd-forecasts.pdf
+16:47:00,913  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,913  INFO PdfContentParser:70 - writePdf
+16:47:00,914  INFO PdfContentParser:89 - writeContent
+16:47:00,920  INFO PdfContentParser:59 - sourceFile: 15_global-development_poverty-matters_2012_nov_09_vietnam-banking-problems-turbulence-economy.html
+16:47:00,920  INFO PdfContentParser:60 - targetFile: 15_global-development_poverty-matters_2012_nov_09_vietnam-banking-problems-turbulence-economy.pdf
+16:47:00,927  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,928  INFO PdfContentParser:70 - writePdf
+16:47:00,929  INFO PdfContentParser:89 - writeContent
+16:47:00,934  INFO PdfContentParser:59 - sourceFile: 16_world_blog_2012_nov_07_obama-reelection-senate-democrats-live.html
+16:47:00,934  INFO PdfContentParser:60 - targetFile: 16_world_blog_2012_nov_07_obama-reelection-senate-democrats-live.pdf
+16:47:00,953  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,953  INFO PdfContentParser:70 - writePdf
+16:47:00,954  INFO PdfContentParser:89 - writeContent
+16:47:00,973  INFO PdfContentParser:59 - sourceFile: 17_world_2012_nov_06_election-day-obama-romney-live.html
+16:47:00,973  INFO PdfContentParser:60 - targetFile: 17_world_2012_nov_06_election-day-obama-romney-live.pdf
+16:47:00,990  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:00,990  INFO PdfContentParser:70 - writePdf
+16:47:00,991  INFO PdfContentParser:89 - writeContent
+16:47:01,050  INFO PdfContentParser:59 - sourceFile: 18_environment_2012_nov_05_climate-change-carbon-emissions.html
+16:47:01,050  INFO PdfContentParser:60 - targetFile: 18_environment_2012_nov_05_climate-change-carbon-emissions.pdf
+16:47:01,056  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,056  INFO PdfContentParser:70 - writePdf
+16:47:01,057  INFO PdfContentParser:89 - writeContent
+16:47:01,060  INFO PdfContentParser:59 - sourceFile: 19_global-development_2012_nov_01_david-cameron-opportunity-end-global-poverty.html
+16:47:01,060  INFO PdfContentParser:60 - targetFile: 19_global-development_2012_nov_01_david-cameron-opportunity-end-global-poverty.pdf
+16:47:01,066  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,067  INFO PdfContentParser:70 - writePdf
+16:47:01,068  INFO PdfContentParser:89 - writeContent
+16:47:01,071  INFO PdfContentParser:59 - sourceFile: 20_global-development_2012_nov_01_liberia-johnson-sirleaf-nepotism-corruption.html
+16:47:01,072  INFO PdfContentParser:60 - targetFile: 20_global-development_2012_nov_01_liberia-johnson-sirleaf-nepotism-corruption.pdf
+16:47:01,077  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,078  INFO PdfContentParser:70 - writePdf
+16:47:01,079  INFO PdfContentParser:89 - writeContent
+16:47:01,083  INFO PdfContentParser:59 - sourceFile: 21_global-development_2012_oct_31_post-2015-development-agenda-explained.html
+16:47:01,084  INFO PdfContentParser:60 - targetFile: 21_global-development_2012_oct_31_post-2015-development-agenda-explained.pdf
+16:47:01,091  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,091  INFO PdfContentParser:70 - writePdf
+16:47:01,092  INFO PdfContentParser:89 - writeContent
+16:47:01,096  INFO PdfContentParser:59 - sourceFile: 22_business_2012_oct_30_standard-chartered-iran-claims-us-authorities.html
+16:47:01,096  INFO PdfContentParser:60 - targetFile: 22_business_2012_oct_30_standard-chartered-iran-claims-us-authorities.pdf
+16:47:01,104  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,105  INFO PdfContentParser:70 - writePdf
+16:47:01,106  INFO PdfContentParser:89 - writeContent
+16:47:01,108  INFO PdfContentParser:59 - sourceFile: 23_world_2012_oct_26_john-sununu-race-cory-booker.html
+16:47:01,108  INFO PdfContentParser:60 - targetFile: 23_world_2012_oct_26_john-sununu-race-cory-booker.pdf
+16:47:01,121  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,122  INFO PdfContentParser:70 - writePdf
+16:47:01,123  INFO PdfContentParser:89 - writeContent
+16:47:01,126  INFO PdfContentParser:59 - sourceFile: 24_world_2012_oct_26_sununu-powell-obama-race-live.html
+16:47:01,126  INFO PdfContentParser:60 - targetFile: 24_world_2012_oct_26_sununu-powell-obama-race-live.pdf
+16:47:01,135  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,135  INFO PdfContentParser:70 - writePdf
+16:47:01,136  INFO PdfContentParser:89 - writeContent
+16:47:01,161  INFO PdfContentParser:59 - sourceFile: 25_world_2012_oct_25_florida-republicans-mitt-romney-business.html
+16:47:01,161  INFO PdfContentParser:60 - targetFile: 25_world_2012_oct_25_florida-republicans-mitt-romney-business.pdf
+16:47:01,174  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,175  INFO PdfContentParser:70 - writePdf
+16:47:01,176  INFO PdfContentParser:89 - writeContent
+16:47:01,185  INFO PdfContentParser:59 - sourceFile: 26_sustainable-business_restoring-ecosystems-byproduct-steel-industry.html
+16:47:01,185  INFO PdfContentParser:60 - targetFile: 26_sustainable-business_restoring-ecosystems-byproduct-steel-industry.pdf
+16:47:01,190  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,190  INFO PdfContentParser:70 - writePdf
+16:47:01,191  INFO PdfContentParser:89 - writeContent
+16:47:01,195  INFO PdfContentParser:59 - sourceFile: 27_news_2012_oct_23_picture-desk-live-the-best-news-pictures-of-the-day.html
+16:47:01,195  INFO PdfContentParser:60 - targetFile: 27_news_2012_oct_23_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+16:47:01,202  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,203  INFO PdfContentParser:70 - writePdf
+16:47:01,204  INFO PdfContentParser:89 - writeContent
+16:47:01,209  INFO PdfContentParser:59 - sourceFile: 28_local-government-network_2012_oct_22_colin-cram-local-government-global-procurement.html
+16:47:01,209  INFO PdfContentParser:60 - targetFile: 28_local-government-network_2012_oct_22_colin-cram-local-government-global-procurement.pdf
+16:47:01,217  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,218  INFO PdfContentParser:70 - writePdf
+16:47:01,219  INFO PdfContentParser:89 - writeContent
+16:47:01,224  INFO PdfContentParser:59 - sourceFile: 29_business_economics-blog_2012_oct_15_emerging-economies-rebound-eurozone-us-slowdown.html
+16:47:01,224  INFO PdfContentParser:60 - targetFile: 29_business_economics-blog_2012_oct_15_emerging-economies-rebound-eurozone-us-slowdown.pdf
+16:47:01,231  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,232  INFO PdfContentParser:70 - writePdf
+16:47:01,233  INFO PdfContentParser:89 - writeContent
+16:47:01,239  INFO PdfContentParser:59 - sourceFile: 30_world_2012_oct_11_barack-obama-versus-mitt-romney.html
+16:47:01,239  INFO PdfContentParser:60 - targetFile: 30_world_2012_oct_11_barack-obama-versus-mitt-romney.pdf
+16:47:01,244  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,244  INFO PdfContentParser:70 - writePdf
+16:47:01,246  INFO PdfContentParser:89 - writeContent
+16:47:01,253  INFO PdfContentParser:59 - sourceFile: 31_environment_2012_oct_11_norway-carbon-tax-oil.html
+16:47:01,253  INFO PdfContentParser:60 - targetFile: 31_environment_2012_oct_11_norway-carbon-tax-oil.pdf
+16:47:01,258  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,258  INFO PdfContentParser:70 - writePdf
+16:47:01,259  INFO PdfContentParser:89 - writeContent
+16:47:01,264  INFO PdfContentParser:59 - sourceFile: 32_business_2012_oct_11_bakries-bumi-part-company-nat-rothschild.html
+16:47:01,264  INFO PdfContentParser:60 - targetFile: 32_business_2012_oct_11_bakries-bumi-part-company-nat-rothschild.pdf
+16:47:01,269  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,270  INFO PdfContentParser:70 - writePdf
+16:47:01,271  INFO PdfContentParser:89 - writeContent
+16:47:01,273  INFO PdfContentParser:59 - sourceFile: 33_politics_blog_2012_oct_10_david-cameron-speech-conservative-conference-live-blog.html
+16:47:01,273  INFO PdfContentParser:60 - targetFile: 33_politics_blog_2012_oct_10_david-cameron-speech-conservative-conference-live-blog.pdf
+16:47:01,289  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,289  INFO PdfContentParser:70 - writePdf
+16:47:01,291  INFO PdfContentParser:89 - writeContent
+16:47:01,331  INFO PdfContentParser:59 - sourceFile: 34_commentisfree_2012_oct_10_david-cameron-speech-conservative-conference-verdict.html
+16:47:01,332  INFO PdfContentParser:60 - targetFile: 34_commentisfree_2012_oct_10_david-cameron-speech-conservative-conference-verdict.pdf
+16:47:01,342  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,342  INFO PdfContentParser:70 - writePdf
+16:47:01,343  INFO PdfContentParser:89 - writeContent
+16:47:01,348  INFO PdfContentParser:59 - sourceFile: 35_business_2012_oct_08_world-bank-warns-on-china-slowdown.html
+16:47:01,348  INFO PdfContentParser:60 - targetFile: 35_business_2012_oct_08_world-bank-warns-on-china-slowdown.pdf
+16:47:01,354  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,354  INFO PdfContentParser:70 - writePdf
+16:47:01,355  INFO PdfContentParser:89 - writeContent
+16:47:01,356  INFO PdfContentParser:59 - sourceFile: 36_business_2012_oct_07_japan-china-senkaku-islands.html
+16:47:01,357  INFO PdfContentParser:60 - targetFile: 36_business_2012_oct_07_japan-china-senkaku-islands.pdf
+16:47:01,362  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,362  INFO PdfContentParser:70 - writePdf
+16:47:01,364  INFO PdfContentParser:89 - writeContent
+16:47:01,368  INFO PdfContentParser:59 - sourceFile: 37_small-business-network-partner-zone-lloyds-tsb_trevor-williams-brics-exporting.html
+16:47:01,369  INFO PdfContentParser:60 - targetFile: 37_small-business-network-partner-zone-lloyds-tsb_trevor-williams-brics-exporting.pdf
+16:47:01,371  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,372  INFO PdfContentParser:70 - writePdf
+16:47:01,373  INFO PdfContentParser:89 - writeContent
+16:47:01,377  INFO PdfContentParser:59 - sourceFile: 38_world_2012_oct_01_romney-obama-debate-libya-live.html
+16:47:01,377  INFO PdfContentParser:60 - targetFile: 38_world_2012_oct_01_romney-obama-debate-libya-live.pdf
+16:47:01,391  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,391  INFO PdfContentParser:70 - writePdf
+16:47:01,392  INFO PdfContentParser:89 - writeContent
+16:47:01,413  INFO PdfContentParser:59 - sourceFile: 39_music_2012_sep_30_muse-2nd-law-tour-interview.html
+16:47:01,413  INFO PdfContentParser:60 - targetFile: 39_music_2012_sep_30_muse-2nd-law-tour-interview.pdf
+16:47:01,418  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,418  INFO PdfContentParser:70 - writePdf
+16:47:01,419  INFO PdfContentParser:89 - writeContent
+16:47:01,428  INFO PdfContentParser:59 - sourceFile: 40_world_2012_sep_25_obama-un-general-assembly-transcript.html
+16:47:01,428  INFO PdfContentParser:60 - targetFile: 40_world_2012_sep_25_obama-un-general-assembly-transcript.pdf
+16:47:01,432  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,433  INFO PdfContentParser:70 - writePdf
+16:47:01,434  INFO PdfContentParser:89 - writeContent
+16:47:01,447  INFO PdfContentParser:59 - sourceFile: 41_commentisfree_2012_sep_25_spain-public-financial-coup.html
+16:47:01,447  INFO PdfContentParser:60 - targetFile: 41_commentisfree_2012_sep_25_spain-public-financial-coup.pdf
+16:47:01,459  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,459  INFO PdfContentParser:70 - writePdf
+16:47:01,460  INFO PdfContentParser:89 - writeContent
+16:47:01,464  INFO PdfContentParser:59 - sourceFile: 42_business_2012_sep_19_mass-slaughter-farm-animals-food-prices.html
+16:47:01,464  INFO PdfContentParser:60 - targetFile: 42_business_2012_sep_19_mass-slaughter-farm-animals-food-prices.pdf
+16:47:01,471  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,471  INFO PdfContentParser:70 - writePdf
+16:47:01,472  INFO PdfContentParser:89 - writeContent
+16:47:01,477  INFO PdfContentParser:59 - sourceFile: 43_books_2012_sep_18_joseph-anton-salman-rushdie-review.html
+16:47:01,477  INFO PdfContentParser:60 - targetFile: 43_books_2012_sep_18_joseph-anton-salman-rushdie-review.pdf
+16:47:01,485  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,485  INFO PdfContentParser:70 - writePdf
+16:47:01,487  INFO PdfContentParser:89 - writeContent
+16:47:01,499  INFO PdfContentParser:59 - sourceFile: 44_world_middle-east-live_2012_sep_17_protests-anti-islam-film-hezbollah-live.html
+16:47:01,500  INFO PdfContentParser:60 - targetFile: 44_world_middle-east-live_2012_sep_17_protests-anti-islam-film-hezbollah-live.pdf
+16:47:01,520  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,521  INFO PdfContentParser:70 - writePdf
+16:47:01,522  INFO PdfContentParser:89 - writeContent
+16:47:01,551  INFO PdfContentParser:59 - sourceFile: 45_business_marketforceslive_2012_sep_07_imperial-tobacco-miners-ftse.html
+16:47:01,551  INFO PdfContentParser:60 - targetFile: 45_business_marketforceslive_2012_sep_07_imperial-tobacco-miners-ftse.pdf
+16:47:01,557  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,557  INFO PdfContentParser:70 - writePdf
+16:47:01,558  INFO PdfContentParser:89 - writeContent
+16:47:01,562  INFO PdfContentParser:59 - sourceFile: 46_football_2012_sep_06_the-fiver-liverpool-moneyman-ian-ayre.html
+16:47:01,562  INFO PdfContentParser:60 - targetFile: 46_football_2012_sep_06_the-fiver-liverpool-moneyman-ian-ayre.pdf
+16:47:01,568  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,568  INFO PdfContentParser:70 - writePdf
+16:47:01,569  INFO PdfContentParser:89 - writeContent
+16:47:01,575  INFO PdfContentParser:59 - sourceFile: 47_business_2012_sep_04_spain-unemployment-benefit-payments-budget.html
+16:47:01,575  INFO PdfContentParser:60 - targetFile: 47_business_2012_sep_04_spain-unemployment-benefit-payments-budget.pdf
+16:47:01,582  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,583  INFO PdfContentParser:70 - writePdf
+16:47:01,584  INFO PdfContentParser:89 - writeContent
+16:47:01,587  INFO PdfContentParser:59 - sourceFile: 48_commentisfree_2012_aug_26_london-airport-expansion-just-decide.html
+16:47:01,588  INFO PdfContentParser:60 - targetFile: 48_commentisfree_2012_aug_26_london-airport-expansion-just-decide.pdf
+16:47:01,601  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,601  INFO PdfContentParser:70 - writePdf
+16:47:01,602  INFO PdfContentParser:89 - writeContent
+16:47:01,605  INFO PdfContentParser:59 - sourceFile: 49_higher-education-network_blog_2012_aug_23_social-enterprise-students-university-experience.html
+16:47:01,605  INFO PdfContentParser:60 - targetFile: 49_higher-education-network_blog_2012_aug_23_social-enterprise-students-university-experience.pdf
+16:47:01,610  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,610  INFO PdfContentParser:70 - writePdf
+16:47:01,612  INFO PdfContentParser:89 - writeContent
+16:47:01,614  INFO PdfContentParser:59 - sourceFile: 50_world_2012_aug_21_ethnic-chinese-new-indonesia-future.html
+16:47:01,614  INFO PdfContentParser:60 - targetFile: 50_world_2012_aug_21_ethnic-chinese-new-indonesia-future.pdf
+16:47:01,618  INFO PdfContentParser:83 - createHeader countKeyWords: false
+16:47:01,619  INFO PdfContentParser:70 - writePdf
+16:47:01,620  INFO PdfContentParser:89 - writeContent
+16:47:50,284  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+16:47:50,285  INFO GuardianResponseFetcher:29 - Try get list of articles...
+16:47:50,285  INFO GuardianResponseFetcher:41 - writing param metadata
+16:47:50,287  INFO GuardianResponseFetcher:49 - Using keywords: android
+16:47:50,287  INFO GuardianResponseFetcher:50 - page-size: 10
+16:47:51,621  INFO DefaultResponseBuilder:25 - Building List of articles...
+16:47:51,625  INFO DefaultDocumentDownloader:49 - Crawling all articles for jobId: 20121125_164750
+16:47:51,625  INFO DefaultDocumentDownloader:51 - Total articles: 10
+16:47:51,627  INFO DefaultDocumentDownloader:57 - Downloading article: The Ninjas by Jane Yeh – review
+16:47:54,948  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\01_books_2012_nov_23_the-ninjas-jane-yeh-poetry-review.html
+16:47:54,949  INFO DefaultDocumentDownloader:57 - Downloading article: Windows 8 struggling to take off, survey and web data show
+16:47:56,914  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\02_technology_2012_nov_23_windows-8-struggle-take-off.html
+16:47:56,915  INFO DefaultDocumentDownloader:57 - Downloading article: 20 Best iPhone and iPad apps this week
+16:47:58,209  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\03_technology_appsblog_2012_nov_23_best-iphone-ipad-apps-rolling-stones.html
+16:47:58,209  INFO DefaultDocumentDownloader:57 - Downloading article: 20 Best Android apps this week
+16:48:00,885  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\04_technology_appsblog_2012_nov_23_best-android-apps-creatorverse-radioplayer.html
+16:48:00,885  INFO DefaultDocumentDownloader:57 - Downloading article: Boot up: China's 3G revolution, more RIM losses, predicting crime and more
+16:48:04,027  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\05_technology_blog_2012_nov_23_technology-links-newsbucket.html
+16:48:04,027  INFO DefaultDocumentDownloader:57 - Downloading article: Tablets will outsell notebooks in US this quarter and next year, says NPD
+16:48:05,573  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\06_technology_2012_nov_22_tablets-outsell-notebooks-us.html
+16:48:05,573  INFO DefaultDocumentDownloader:57 - Downloading article: 20 Best iPhone, iPad, Android and Windows Phone games this week
+16:48:06,925  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\07_technology_appsblog_2012_nov_22_best-iphone-android-windows-phone-games-22nov.html
+16:48:06,925  INFO DefaultDocumentDownloader:57 - Downloading article: Samsung wins right to see how much HTC is paying Apple per patent
+16:48:08,321  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\08_technology_2012_nov_22_apple-htc-samsung-patents-licence.html
+16:48:08,321  INFO DefaultDocumentDownloader:57 - Downloading article: Boot up: Android 4.2 mystery, HERE reviewed, Microsoft STB?, and more
+16:48:10,768  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\09_technology_blog_2012_nov_22_technology-links-newsbucket.html
+16:48:10,768  INFO DefaultDocumentDownloader:57 - Downloading article: Mobile payments? 'For the consumer, this is doing their head in…'
+16:48:12,237  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\Netbeans\RestUi\result\20121125_164750\html\10_technology_appsblog_2012_nov_21_mobile-payments-ovum-weve-foursquare.html
+16:48:12,237  INFO DefaultDocumentDownloader:69 - saving response to loca: 
+16:48:12,240  INFO JsoupContentParser:36 - construct jobId: 20121125_164750
+16:48:12,240  INFO JsoupContentParser:42 - saveAll jobId: 20121125_164750
+16:48:12,240  INFO JsoupContentParser:52 - sourceFile: 01_books_2012_nov_23_the-ninjas-jane-yeh-poetry-review.html
+16:48:12,240  INFO JsoupContentParser:53 - targetFile: 01_books_2012_nov_23_the-ninjas-jane-yeh-poetry-review.txt
+16:48:12,246  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,246  INFO JsoupContentParser:120 - calculateKeywords: document: Poetry so unsettling, describing worlds so troubling and lonely, is seldom as funny, clever, and dow
+16:48:12,247  INFO JsoupContentParser:132 - countWord
+16:48:12,253  INFO JsoupContentParser:52 - sourceFile: 02_technology_2012_nov_23_windows-8-struggle-take-off.html
+16:48:12,253  INFO JsoupContentParser:53 - targetFile: 02_technology_2012_nov_23_windows-8-struggle-take-off.txt
+16:48:12,265  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,265  INFO JsoupContentParser:120 - calculateKeywords: document: A survey of Britons and new web user data suggests that Windows 8 is struggling to make the same pro
+16:48:12,265  INFO JsoupContentParser:132 - countWord
+16:48:12,271  INFO JsoupContentParser:52 - sourceFile: 03_technology_appsblog_2012_nov_23_best-iphone-ipad-apps-rolling-stones.html
+16:48:12,272  INFO JsoupContentParser:53 - targetFile: 03_technology_appsblog_2012_nov_23_best-iphone-ipad-apps-rolling-stones.txt
+16:48:12,279  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,279  INFO JsoupContentParser:120 - calculateKeywords: document: It's time for our weekly roundup of brand new iPhone and iPad apps released in the last seven days, 
+16:48:12,279  INFO JsoupContentParser:132 - countWord
+16:48:12,285  INFO JsoupContentParser:52 - sourceFile: 04_technology_appsblog_2012_nov_23_best-android-apps-creatorverse-radioplayer.html
+16:48:12,285  INFO JsoupContentParser:53 - targetFile: 04_technology_appsblog_2012_nov_23_best-android-apps-creatorverse-radioplayer.txt
+16:48:12,293  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,294  INFO JsoupContentParser:120 - calculateKeywords: document: It's time for our weekly roundup of brand new Android apps released in the last seven days. A busy w
+16:48:12,294  INFO JsoupContentParser:132 - countWord
+16:48:12,299  INFO JsoupContentParser:52 - sourceFile: 05_technology_blog_2012_nov_23_technology-links-newsbucket.html
+16:48:12,299  INFO JsoupContentParser:53 - targetFile: 05_technology_blog_2012_nov_23_technology-links-newsbucket.txt
+16:48:12,315  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,316  INFO JsoupContentParser:120 - calculateKeywords: document: A quick burst of 10 links for you to chew over, as picked by the Technology team
+
+Kai Fu Lee:
+
+Broad
+16:48:12,316  INFO JsoupContentParser:132 - countWord
+16:48:12,318  INFO JsoupContentParser:52 - sourceFile: 06_technology_2012_nov_22_tablets-outsell-notebooks-us.html
+16:48:12,318  INFO JsoupContentParser:53 - targetFile: 06_technology_2012_nov_22_tablets-outsell-notebooks-us.txt
+16:48:12,324  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,324  INFO JsoupContentParser:120 - calculateKeywords: document: Tablets will outsell notebooks in the US in the fourth quarter of 2012, beginning a trend that will 
+16:48:12,324  INFO JsoupContentParser:132 - countWord
+16:48:12,326  INFO JsoupContentParser:52 - sourceFile: 07_technology_appsblog_2012_nov_22_best-iphone-android-windows-phone-games-22nov.html
+16:48:12,326  INFO JsoupContentParser:53 - targetFile: 07_technology_appsblog_2012_nov_22_best-iphone-android-windows-phone-games-22nov.txt
+16:48:12,345  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,346  INFO JsoupContentParser:120 - calculateKeywords: document: It's time for our weekly roundup of the best new games for smartphones and tablets, easing down slig
+16:48:12,346  INFO JsoupContentParser:132 - countWord
+16:48:12,347  INFO JsoupContentParser:52 - sourceFile: 08_technology_2012_nov_22_apple-htc-samsung-patents-licence.html
+16:48:12,347  INFO JsoupContentParser:53 - targetFile: 08_technology_2012_nov_22_apple-htc-samsung-patents-licence.txt
+16:48:12,353  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,354  INFO JsoupContentParser:120 - calculateKeywords: document: Samsung has won the right to see the text of the HTC-Apple agreement to cross-license (some) patents
+16:48:12,354  INFO JsoupContentParser:132 - countWord
+16:48:12,355  INFO JsoupContentParser:52 - sourceFile: 09_technology_blog_2012_nov_22_technology-links-newsbucket.html
+16:48:12,356  INFO JsoupContentParser:53 - targetFile: 09_technology_blog_2012_nov_22_technology-links-newsbucket.txt
+16:48:12,381  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,382  INFO JsoupContentParser:120 - calculateKeywords: document: A quick burst of 9 links for you to chew over, as picked by the Technology team
+
+It always takes a s
+16:48:12,382  INFO JsoupContentParser:132 - countWord
+16:48:12,383  INFO JsoupContentParser:52 - sourceFile: 10_technology_appsblog_2012_nov_21_mobile-payments-ovum-weve-foursquare.html
+16:48:12,383  INFO JsoupContentParser:53 - targetFile: 10_technology_appsblog_2012_nov_21_mobile-payments-ovum-weve-foursquare.txt
+16:48:12,399  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+16:48:12,400  INFO JsoupContentParser:120 - calculateKeywords: document: Some analysts pump hot air into the hype around unproven new mobile technologies. Thankfully, Eden Z
+16:48:12,400  INFO JsoupContentParser:132 - countWord
+16:48:12,402  INFO PdfContentParser:36 - construct jobId: 20121125_164750
+16:48:12,402  INFO PdfContentParser:46 - construct jobId: 20121125_164750
+16:48:12,402  INFO PdfContentParser:50 - saveAll jobId: 20121125_164750
+16:48:12,403  INFO PdfContentParser:59 - sourceFile: 01_books_2012_nov_23_the-ninjas-jane-yeh-poetry-review.html
+16:48:12,403  INFO PdfContentParser:60 - targetFile: 01_books_2012_nov_23_the-ninjas-jane-yeh-poetry-review.pdf
+16:48:12,409  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:12,410  INFO PdfContentParser:120 - calculateKeywords: document: Poetry so unsettling, describing worlds so troubling and lonely, is seldom as funny, clever, and dow
+16:48:12,410  INFO PdfContentParser:132 - countWord
+16:48:12,410  INFO PdfContentParser:70 - writePdf
+16:48:12,411  INFO PdfContentParser:89 - writeContent
+16:48:12,411  INFO PdfContentParser:97 - highlightText
+16:48:12,412  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:12,596  INFO PdfContentParser:59 - sourceFile: 02_technology_2012_nov_23_windows-8-struggle-take-off.html
+16:48:12,597  INFO PdfContentParser:60 - targetFile: 02_technology_2012_nov_23_windows-8-struggle-take-off.pdf
+16:48:12,613  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:12,614  INFO PdfContentParser:120 - calculateKeywords: document: A survey of Britons and new web user data suggests that Windows 8 is struggling to make the same pro
+16:48:12,614  INFO PdfContentParser:132 - countWord
+16:48:12,614  INFO PdfContentParser:70 - writePdf
+16:48:12,615  INFO PdfContentParser:89 - writeContent
+16:48:12,616  INFO PdfContentParser:97 - highlightText
+16:48:12,616  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:12,783  INFO PdfContentParser:59 - sourceFile: 03_technology_appsblog_2012_nov_23_best-iphone-ipad-apps-rolling-stones.html
+16:48:12,783  INFO PdfContentParser:60 - targetFile: 03_technology_appsblog_2012_nov_23_best-iphone-ipad-apps-rolling-stones.pdf
+16:48:12,794  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:12,794  INFO PdfContentParser:120 - calculateKeywords: document: It's time for our weekly roundup of brand new iPhone and iPad apps released in the last seven days, 
+16:48:12,794  INFO PdfContentParser:132 - countWord
+16:48:12,795  INFO PdfContentParser:70 - writePdf
+16:48:12,796  INFO PdfContentParser:89 - writeContent
+16:48:12,796  INFO PdfContentParser:97 - highlightText
+16:48:12,796  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:12,872  INFO PdfContentParser:59 - sourceFile: 04_technology_appsblog_2012_nov_23_best-android-apps-creatorverse-radioplayer.html
+16:48:12,873  INFO PdfContentParser:60 - targetFile: 04_technology_appsblog_2012_nov_23_best-android-apps-creatorverse-radioplayer.pdf
+16:48:12,883  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:12,883  INFO PdfContentParser:120 - calculateKeywords: document: It's time for our weekly roundup of brand new Android apps released in the last seven days. A busy w
+16:48:12,883  INFO PdfContentParser:132 - countWord
+16:48:12,884  INFO PdfContentParser:70 - writePdf
+16:48:12,885  INFO PdfContentParser:89 - writeContent
+16:48:12,885  INFO PdfContentParser:97 - highlightText
+16:48:12,885  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:12,966  INFO PdfContentParser:59 - sourceFile: 05_technology_blog_2012_nov_23_technology-links-newsbucket.html
+16:48:12,966  INFO PdfContentParser:60 - targetFile: 05_technology_blog_2012_nov_23_technology-links-newsbucket.pdf
+16:48:12,980  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:12,980  INFO PdfContentParser:120 - calculateKeywords: document: A quick burst of 10 links for you to chew over, as picked by the Technology team
+
+Kai Fu Lee:
+
+Broad
+16:48:12,980  INFO PdfContentParser:132 - countWord
+16:48:12,981  INFO PdfContentParser:70 - writePdf
+16:48:12,983  INFO PdfContentParser:89 - writeContent
+16:48:12,983  INFO PdfContentParser:97 - highlightText
+16:48:12,983  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:13,038  INFO PdfContentParser:59 - sourceFile: 06_technology_2012_nov_22_tablets-outsell-notebooks-us.html
+16:48:13,038  INFO PdfContentParser:60 - targetFile: 06_technology_2012_nov_22_tablets-outsell-notebooks-us.pdf
+16:48:13,047  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:13,047  INFO PdfContentParser:120 - calculateKeywords: document: Tablets will outsell notebooks in the US in the fourth quarter of 2012, beginning a trend that will 
+16:48:13,047  INFO PdfContentParser:132 - countWord
+16:48:13,048  INFO PdfContentParser:70 - writePdf
+16:48:13,049  INFO PdfContentParser:89 - writeContent
+16:48:13,049  INFO PdfContentParser:97 - highlightText
+16:48:13,049  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:13,071  INFO PdfContentParser:59 - sourceFile: 07_technology_appsblog_2012_nov_22_best-iphone-android-windows-phone-games-22nov.html
+16:48:13,071  INFO PdfContentParser:60 - targetFile: 07_technology_appsblog_2012_nov_22_best-iphone-android-windows-phone-games-22nov.pdf
+16:48:13,081  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:13,082  INFO PdfContentParser:120 - calculateKeywords: document: It's time for our weekly roundup of the best new games for smartphones and tablets, easing down slig
+16:48:13,082  INFO PdfContentParser:132 - countWord
+16:48:13,083  INFO PdfContentParser:70 - writePdf
+16:48:13,084  INFO PdfContentParser:89 - writeContent
+16:48:13,084  INFO PdfContentParser:97 - highlightText
+16:48:13,084  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:13,135  INFO PdfContentParser:59 - sourceFile: 08_technology_2012_nov_22_apple-htc-samsung-patents-licence.html
+16:48:13,136  INFO PdfContentParser:60 - targetFile: 08_technology_2012_nov_22_apple-htc-samsung-patents-licence.pdf
+16:48:13,142  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:13,142  INFO PdfContentParser:120 - calculateKeywords: document: Samsung has won the right to see the text of the HTC-Apple agreement to cross-license (some) patents
+16:48:13,143  INFO PdfContentParser:132 - countWord
+16:48:13,143  INFO PdfContentParser:70 - writePdf
+16:48:13,144  INFO PdfContentParser:89 - writeContent
+16:48:13,144  INFO PdfContentParser:97 - highlightText
+16:48:13,144  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:13,166  INFO PdfContentParser:59 - sourceFile: 09_technology_blog_2012_nov_22_technology-links-newsbucket.html
+16:48:13,167  INFO PdfContentParser:60 - targetFile: 09_technology_blog_2012_nov_22_technology-links-newsbucket.pdf
+16:48:13,177  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:13,177  INFO PdfContentParser:120 - calculateKeywords: document: A quick burst of 9 links for you to chew over, as picked by the Technology team
+
+It always takes a s
+16:48:13,178  INFO PdfContentParser:132 - countWord
+16:48:13,178  INFO PdfContentParser:70 - writePdf
+16:48:13,179  INFO PdfContentParser:89 - writeContent
+16:48:13,179  INFO PdfContentParser:97 - highlightText
+16:48:13,179  INFO PdfContentParser:116 - preparePattern keys: 
+16:48:13,199  INFO PdfContentParser:59 - sourceFile: 10_technology_appsblog_2012_nov_21_mobile-payments-ovum-weve-foursquare.html
+16:48:13,199  INFO PdfContentParser:60 - targetFile: 10_technology_appsblog_2012_nov_21_mobile-payments-ovum-weve-foursquare.pdf
+16:48:13,205  INFO PdfContentParser:83 - createHeader countKeyWords: true
+16:48:13,205  INFO PdfContentParser:120 - calculateKeywords: document: Some analysts pump hot air into the hype around unproven new mobile technologies. Thankfully, Eden Z
+16:48:13,205  INFO PdfContentParser:132 - countWord
+16:48:13,206  INFO PdfContentParser:70 - writePdf
+16:48:13,207  INFO PdfContentParser:89 - writeContent
+16:48:13,207  INFO PdfContentParser:97 - highlightText
+16:48:13,207  INFO PdfContentParser:116 - preparePattern keys: 
+04:54:26,656  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+04:54:26,660  INFO GuardianResponseFetcher:29 - Try get list of articles...
+04:54:26,661  INFO GuardianResponseFetcher:41 - writing param metadata
+04:55:03,855  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+04:55:03,948  INFO GuardianResponseFetcher:29 - Try get list of articles...
+04:55:03,948  INFO GuardianResponseFetcher:41 - writing param metadata
+04:55:03,997  INFO GuardianResponseFetcher:49 - Using keywords: java
+04:55:03,997  INFO GuardianResponseFetcher:50 - page-size: 50
+04:55:04,071  WARN RegisterBuiltin:103 - NoClassDefFoundError: Unable to load builtin provider: org.jboss.resteasy.plugins.providers.DocumentProvider
+04:55:06,164  INFO DefaultResponseBuilder:25 - Building List of articles...
+04:55:06,444  INFO DefaultDocumentDownloader:49 - Crawling all articles for jobId: 20130305_045503
+04:55:06,444  INFO DefaultDocumentDownloader:51 - Total articles: 50
+04:55:06,444  INFO DefaultDocumentDownloader:57 - Downloading article: Notes from Edge Conference 2013
+04:55:10,053  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\01_info_developer-blog_2013_mar_01_notes-from-edge-conference.html
+04:55:10,054  INFO DefaultDocumentDownloader:57 - Downloading article: Boot up: Samsung's copy/paste problem, Google's AdBlock block, HTC One, and more
+04:55:12,220  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\02_technology_blog_2013_feb_21_technology-links-newsbucket.html
+04:55:12,220  INFO DefaultDocumentDownloader:57 - Downloading article: Inside a snake slaughterhouse in Indonesia – in pictures
+04:55:13,538  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\03_artanddesign_gallery_2013_feb_20_snakes-indonesia-in-pictures.html
+04:55:13,539  INFO DefaultDocumentDownloader:57 - Downloading article: New Zealand v England – second ODI as it happened | Rob Smyth
+04:55:15,667  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\04_sport_2013_feb_20_new-zealand-england-live-obo-cricket-report.html
+04:55:15,667  INFO DefaultDocumentDownloader:57 - Downloading article: Apple workers targeted by hackers
+04:55:17,166  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\05_technology_2013_feb_19_apple-targeted-hackers.html
+04:55:17,166  INFO DefaultDocumentDownloader:57 - Downloading article: Guardian Hack Day February 2013 — Live Blog Day 2
+04:55:18,905  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\06_info_developer-blog_2013_feb_19_guardian-hack-day-february-2013-day-2.html
+04:55:18,906  INFO DefaultDocumentDownloader:57 - Downloading article: PlayStation 4 v Xbox 720: insiders discuss the future of consoles
+04:55:20,460  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\07_technology_gamesblog_2013_feb_18_playstation-4-xbox-720-future-consoles.html
+04:55:20,460  INFO DefaultDocumentDownloader:57 - Downloading article: Baby health crisis in Indonesia as formula companies push products
+04:55:22,422  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\08_world_2013_feb_15_babies-health-formula-indonesia-breastfeeding.html
+04:55:22,422  INFO DefaultDocumentDownloader:57 - Downloading article: Why a stream of consciousness will kill off websites
+04:55:24,252  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\09_technology_2013_feb_10_stream-consciousness-computer-desktop.html
+04:55:24,253  INFO DefaultDocumentDownloader:57 - Downloading article: Gifted and talented education: using technology to engage students
+04:55:26,134  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\10_teacher-network_2013_feb_09_gifted-talented-students-education-technology.html
+04:55:26,135  INFO DefaultDocumentDownloader:57 - Downloading article: Java: should you remove it?
+04:55:27,850  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\11_technology_askjack_2013_feb_08_java-remove-ask-jack-technology.html
+04:55:27,850  INFO DefaultDocumentDownloader:57 - Downloading article: The Obama from Java | Edward Fox
+04:55:29,439  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\12_commentisfree_2013_feb_05_obama-from-java.html
+04:55:29,439  INFO DefaultDocumentDownloader:57 - Downloading article: Jakarta faces up to a high flood-risk future
+04:55:31,271  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\13_world_2013_feb_05_jakarta-floods-rising-sea-levels.html
+04:55:31,272  INFO DefaultDocumentDownloader:57 - Downloading article: Technology: how to land a job riding the silicon roundabout
+04:55:33,109  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\14_business_2013_feb_02_how-to-get-job-silicon-roundabout.html
+04:55:33,109  INFO DefaultDocumentDownloader:57 - Downloading article: Twitter says 250,000 accounts have been hacked in security breach
+04:55:34,847  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\15_technology_2013_feb_02_twitter-hacked-accounts-reset-security.html
+04:55:34,848  INFO DefaultDocumentDownloader:57 - Downloading article: New to nature No&nbsp;97: Ferrisia uzinuri
+04:55:36,510  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\16_science_2013_jan_20_mealybug-ferrisia-uzinuri-new-to-nature.html
+04:55:36,510  INFO DefaultDocumentDownloader:57 - Downloading article: Tools of the trade: the browser-based tools the Guardian's digital team uses for coding
+04:55:37,932  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\17_info_developer-blog_2013_jan_18_tools-of-the-trade-web-development.html
+04:55:37,932  INFO DefaultDocumentDownloader:57 - Downloading article: LinkedIn and Facebook spam spreads trojans
+04:55:39,295  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\18_media-network_partner-zone-infosecurity_linkedin-facebook-spam-trojans.html
+04:55:39,296  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: the best news pictures of the day
+04:55:41,049  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\19_news_2013_jan_14_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:55:41,049  INFO DefaultDocumentDownloader:57 - Downloading article: Oracle issues emergency fix for Java software over security fears
+04:55:42,866  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\20_technology_2013_jan_14_oracle-issues-emergency-fix-java.html
+04:55:42,866  INFO DefaultDocumentDownloader:57 - Downloading article: Boot up: Swartz on Google in 2003, Java danger, CES's swag, and more
+04:55:44,673  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\21_technology_blog_2013_jan_14_technology-links-newsbucket.html
+04:55:44,673  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: the best news pictures of the day
+04:55:46,054  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\22_news_2013_jan_11_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:55:46,054  INFO DefaultDocumentDownloader:57 - Downloading article: Make the most of 2013 with Masterclasses
+04:55:47,396  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\23_guardian-masterclasses_masterclasses-courses-for-2013.html
+04:55:47,396  INFO DefaultDocumentDownloader:57 - Downloading article: Building websites using HTML, CSS and JavaScript
+04:55:48,790  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\24_guardian-masterclasses_building-websites-html-css-javascript-course.html
+04:55:48,790  INFO DefaultDocumentDownloader:57 - Downloading article: The full story of the British empire is yet to be told | Martin Kettle
+04:55:50,570  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\25_commentisfree_2012_dec_28_full-story-british-empire-dutch.html
+04:55:50,571  INFO DefaultDocumentDownloader:57 - Downloading article: What's the best way to drink coffee? Writers on their caffeine habits
+04:55:52,384  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\26_lifeandstyle_2012_dec_19_whats-best-way-to-drink-coffee.html
+04:55:52,384  INFO DefaultDocumentDownloader:57 - Downloading article: Raffles and the Golden Opportunity by Victoria Glendinning – review
+04:55:54,301  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\27_books_2012_dec_16_raffles-golden-opportunity-glendinning-review.html
+04:55:54,301  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesia highlights: readers' tips
+04:55:56,242  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\28_travel_2012_dec_14_indonesia-bali-readers-tips.html
+04:55:56,242  INFO DefaultDocumentDownloader:57 - Downloading article: How can I protect my privacy online?
+04:55:58,251  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\29_technology_askjack_2012_dec_13_keeping-your-privacy-online.html
+04:55:58,251  INFO DefaultDocumentDownloader:57 - Downloading article: The Hobbit wins delay on release of 'mockbuster' Age of the Hobbits
+04:56:00,274  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\30_film_2012_dec_11_the-hobbit-delay-release-age-of.html
+04:56:00,275  INFO DefaultDocumentDownloader:57 - Downloading article: Real-time QA: staying confident with code
+04:56:01,717  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\31_info_developer-blog_2012_dec_06_real-time-qa-confident-code.html
+04:56:01,717  INFO DefaultDocumentDownloader:57 - Downloading article: Raffles and the Golden Opportunity by Victoria Glendinning - review
+04:56:03,346  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\32_books_2012_dec_05_raffles-victoria-glendinning-review.html
+04:56:03,346  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesians protest over Garut chief's text-message divorce
+04:56:05,253  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\33_world_2012_dec_04_indonesians-protest-text-message-divorce.html
+04:56:05,253  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: the best news pictures of the day
+04:56:07,085  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\34_news_2012_nov_27_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:07,086  INFO DefaultDocumentDownloader:57 - Downloading article: Google cancels Christmas? Why Android can't remember December
+04:56:08,763  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\35_technology_blog_2012_nov_18_android-december-lost-birthday.html
+04:56:08,763  INFO DefaultDocumentDownloader:57 - Downloading article: Guardian Weekly Letters, 16 November 2012
+04:56:10,075  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\36_global_2012_nov_13_guardian-weekly-letters-16-november.html
+04:56:10,075  INFO DefaultDocumentDownloader:57 - Downloading article: The Guardian and the Knight-Mozilla OpenNews fellowship 
+04:56:11,485  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\37_info_developer-blog_2012_nov_09_mozilla.html
+04:56:11,485  INFO DefaultDocumentDownloader:57 - Downloading article: The Hobbit rights holder sues makers of Age of the Hobbits flick
+04:56:13,900  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\38_film_2012_nov_08_the-hobbit-rights-owner-sues-age-of.html
+04:56:13,901  INFO DefaultDocumentDownloader:57 - Downloading article: Everyone wants a slice of Raspberry Pi
+04:56:15,697  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\39_technology_2012_nov_04_raspberry-pi-programming-jam-cern.html
+04:56:15,697  INFO DefaultDocumentDownloader:57 - Downloading article: Functional Programming Principles in Scala: the final push
+04:56:17,323  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\40_info_developer-blog_2012_nov_02_functional-programming-scala-the-final-push.html
+04:56:17,324  INFO DefaultDocumentDownloader:57 - Downloading article: Africa's apps: farming to gaming
+04:56:19,252  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\41_world_2012_oct_30_africa-apps-software-digital-enterprise.html
+04:56:19,252  INFO DefaultDocumentDownloader:57 - Downloading article: Building apps with rail data
+04:56:21,060  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\42_news_datablog_2012_oct_29_rail-hack-day-apps.html
+04:56:21,060  INFO DefaultDocumentDownloader:57 - Downloading article: My hero: Thomas Stamford Raffles by Victoria Glendinning
+04:56:22,855  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\43_books_2012_oct_26_my-hero-thomas-stamford-raffles-victoria-glendinning.html
+04:56:22,855  INFO DefaultDocumentDownloader:57 - Downloading article: Football transfer rumours: Manchester United's Nani heading to Italy?
+04:56:24,596  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\44_football_2012_oct_19_football-transfer-rumours-manchester-united-nani.html
+04:56:24,596  INFO DefaultDocumentDownloader:57 - Downloading article: Responsive design at the Guardian: an introduction
+04:56:26,173  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\45_help_developer-blog_2012_oct_18_responsive-design-guardian-introduction.html
+04:56:26,173  INFO DefaultDocumentDownloader:57 - Downloading article: Building websites using HTML, CSS and JavaScript
+04:56:27,563  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\46_guardian-masterclasses_digital-courses3.html
+04:56:27,563  INFO DefaultDocumentDownloader:57 - Downloading article: Google, Apple, Berners-Lee and more team up to launch Web Platform Docs
+04:56:29,383  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\47_technology_2012_oct_09_google-apple-berners-lee-web-platform.html
+04:56:29,383  INFO DefaultDocumentDownloader:57 - Downloading article: Why Arthur Scargill is reluctant to leave his £1.5m Barbican flat
+04:56:31,301  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\48_politics_shortcuts_2012_oct_07_arthur-scargill-barbican.html
+04:56:31,301  INFO DefaultDocumentDownloader:57 - Downloading article: Spell It Out
+04:56:32,655  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\49_crosswords_crossword-blog_2012_oct_01_hugh-stephenson-editors-update-spell-it-out.html
+04:56:32,655  INFO DefaultDocumentDownloader:57 - Downloading article: Select Professional
+04:56:34,801  INFO DefaultDocumentDownloader:64 - Written : D:\Work\workspace\RestUi\result\20130305_045503\html\50_select_publisher-directory-professional.html
+04:56:34,802  INFO DefaultDocumentDownloader:69 - saving response to loca: 
+04:56:34,813  INFO JsoupContentParser:36 - construct jobId: 20130305_045503
+04:56:34,814  INFO JsoupContentParser:42 - saveAll jobId: 20130305_045503
+04:56:34,814  INFO JsoupContentParser:52 - sourceFile: 01_info_developer-blog_2013_mar_01_notes-from-edge-conference.html
+04:56:34,814  INFO JsoupContentParser:53 - targetFile: 01_info_developer-blog_2013_mar_01_notes-from-edge-conference.txt
+04:56:34,939  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:34,963  INFO JsoupContentParser:52 - sourceFile: 02_technology_blog_2013_feb_21_technology-links-newsbucket.html
+04:56:34,963  INFO JsoupContentParser:53 - targetFile: 02_technology_blog_2013_feb_21_technology-links-newsbucket.txt
+04:56:35,022  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,023  INFO JsoupContentParser:52 - sourceFile: 03_artanddesign_gallery_2013_feb_20_snakes-indonesia-in-pictures.html
+04:56:35,023  INFO JsoupContentParser:53 - targetFile: 03_artanddesign_gallery_2013_feb_20_snakes-indonesia-in-pictures.txt
+04:56:35,065  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,067  INFO JsoupContentParser:52 - sourceFile: 04_sport_2013_feb_20_new-zealand-england-live-obo-cricket-report.html
+04:56:35,067  INFO JsoupContentParser:53 - targetFile: 04_sport_2013_feb_20_new-zealand-england-live-obo-cricket-report.txt
+04:56:35,171  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,173  INFO JsoupContentParser:52 - sourceFile: 05_technology_2013_feb_19_apple-targeted-hackers.html
+04:56:35,173  INFO JsoupContentParser:53 - targetFile: 05_technology_2013_feb_19_apple-targeted-hackers.txt
+04:56:35,218  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,219  INFO JsoupContentParser:52 - sourceFile: 06_info_developer-blog_2013_feb_19_guardian-hack-day-february-2013-day-2.html
+04:56:35,220  INFO JsoupContentParser:53 - targetFile: 06_info_developer-blog_2013_feb_19_guardian-hack-day-february-2013-day-2.txt
+04:56:35,285  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,286  INFO JsoupContentParser:52 - sourceFile: 07_technology_gamesblog_2013_feb_18_playstation-4-xbox-720-future-consoles.html
+04:56:35,286  INFO JsoupContentParser:53 - targetFile: 07_technology_gamesblog_2013_feb_18_playstation-4-xbox-720-future-consoles.txt
+04:56:35,320  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,322  INFO JsoupContentParser:52 - sourceFile: 08_world_2013_feb_15_babies-health-formula-indonesia-breastfeeding.html
+04:56:35,322  INFO JsoupContentParser:53 - targetFile: 08_world_2013_feb_15_babies-health-formula-indonesia-breastfeeding.txt
+04:56:35,368  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,396  INFO JsoupContentParser:52 - sourceFile: 09_technology_2013_feb_10_stream-consciousness-computer-desktop.html
+04:56:35,396  INFO JsoupContentParser:53 - targetFile: 09_technology_2013_feb_10_stream-consciousness-computer-desktop.txt
+04:56:35,410  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,411  INFO JsoupContentParser:52 - sourceFile: 10_teacher-network_2013_feb_09_gifted-talented-students-education-technology.html
+04:56:35,411  INFO JsoupContentParser:53 - targetFile: 10_teacher-network_2013_feb_09_gifted-talented-students-education-technology.txt
+04:56:35,420  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,421  INFO JsoupContentParser:52 - sourceFile: 11_technology_askjack_2013_feb_08_java-remove-ask-jack-technology.html
+04:56:35,421  INFO JsoupContentParser:53 - targetFile: 11_technology_askjack_2013_feb_08_java-remove-ask-jack-technology.txt
+04:56:35,435  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,436  INFO JsoupContentParser:52 - sourceFile: 12_commentisfree_2013_feb_05_obama-from-java.html
+04:56:35,436  INFO JsoupContentParser:53 - targetFile: 12_commentisfree_2013_feb_05_obama-from-java.txt
+04:56:35,442  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,443  INFO JsoupContentParser:52 - sourceFile: 13_world_2013_feb_05_jakarta-floods-rising-sea-levels.html
+04:56:35,444  INFO JsoupContentParser:53 - targetFile: 13_world_2013_feb_05_jakarta-floods-rising-sea-levels.txt
+04:56:35,450  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,483  INFO JsoupContentParser:52 - sourceFile: 14_business_2013_feb_02_how-to-get-job-silicon-roundabout.html
+04:56:35,483  INFO JsoupContentParser:53 - targetFile: 14_business_2013_feb_02_how-to-get-job-silicon-roundabout.txt
+04:56:35,496  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,497  INFO JsoupContentParser:52 - sourceFile: 15_technology_2013_feb_02_twitter-hacked-accounts-reset-security.html
+04:56:35,498  INFO JsoupContentParser:53 - targetFile: 15_technology_2013_feb_02_twitter-hacked-accounts-reset-security.txt
+04:56:35,517  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,518  INFO JsoupContentParser:52 - sourceFile: 16_science_2013_jan_20_mealybug-ferrisia-uzinuri-new-to-nature.html
+04:56:35,519  INFO JsoupContentParser:53 - targetFile: 16_science_2013_jan_20_mealybug-ferrisia-uzinuri-new-to-nature.txt
+04:56:35,545  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,547  INFO JsoupContentParser:52 - sourceFile: 17_info_developer-blog_2013_jan_18_tools-of-the-trade-web-development.html
+04:56:35,547  INFO JsoupContentParser:53 - targetFile: 17_info_developer-blog_2013_jan_18_tools-of-the-trade-web-development.txt
+04:56:35,565  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,629  INFO JsoupContentParser:52 - sourceFile: 18_media-network_partner-zone-infosecurity_linkedin-facebook-spam-trojans.html
+04:56:35,630  INFO JsoupContentParser:53 - targetFile: 18_media-network_partner-zone-infosecurity_linkedin-facebook-spam-trojans.txt
+04:56:35,642  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,643  INFO JsoupContentParser:52 - sourceFile: 19_news_2013_jan_14_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:35,643  INFO JsoupContentParser:53 - targetFile: 19_news_2013_jan_14_picture-desk-live-the-best-news-pictures-of-the-day.txt
+04:56:35,672  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,707  INFO JsoupContentParser:52 - sourceFile: 20_technology_2013_jan_14_oracle-issues-emergency-fix-java.html
+04:56:35,707  INFO JsoupContentParser:53 - targetFile: 20_technology_2013_jan_14_oracle-issues-emergency-fix-java.txt
+04:56:35,727  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,728  INFO JsoupContentParser:52 - sourceFile: 21_technology_blog_2013_jan_14_technology-links-newsbucket.html
+04:56:35,729  INFO JsoupContentParser:53 - targetFile: 21_technology_blog_2013_jan_14_technology-links-newsbucket.txt
+04:56:35,752  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,813  INFO JsoupContentParser:52 - sourceFile: 22_news_2013_jan_11_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:35,813  INFO JsoupContentParser:53 - targetFile: 22_news_2013_jan_11_picture-desk-live-the-best-news-pictures-of-the-day.txt
+04:56:35,839  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,941  INFO JsoupContentParser:52 - sourceFile: 23_guardian-masterclasses_masterclasses-courses-for-2013.html
+04:56:35,941  INFO JsoupContentParser:53 - targetFile: 23_guardian-masterclasses_masterclasses-courses-for-2013.txt
+04:56:35,947  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,948  INFO JsoupContentParser:52 - sourceFile: 24_guardian-masterclasses_building-websites-html-css-javascript-course.html
+04:56:35,948  INFO JsoupContentParser:53 - targetFile: 24_guardian-masterclasses_building-websites-html-css-javascript-course.txt
+04:56:35,954  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,955  INFO JsoupContentParser:52 - sourceFile: 25_commentisfree_2012_dec_28_full-story-british-empire-dutch.html
+04:56:35,955  INFO JsoupContentParser:53 - targetFile: 25_commentisfree_2012_dec_28_full-story-british-empire-dutch.txt
+04:56:35,962  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,963  INFO JsoupContentParser:52 - sourceFile: 26_lifeandstyle_2012_dec_19_whats-best-way-to-drink-coffee.html
+04:56:35,963  INFO JsoupContentParser:53 - targetFile: 26_lifeandstyle_2012_dec_19_whats-best-way-to-drink-coffee.txt
+04:56:35,977  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,988  INFO JsoupContentParser:52 - sourceFile: 27_books_2012_dec_16_raffles-golden-opportunity-glendinning-review.html
+04:56:35,989  INFO JsoupContentParser:53 - targetFile: 27_books_2012_dec_16_raffles-golden-opportunity-glendinning-review.txt
+04:56:35,998  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:35,999  INFO JsoupContentParser:52 - sourceFile: 28_travel_2012_dec_14_indonesia-bali-readers-tips.html
+04:56:35,999  INFO JsoupContentParser:53 - targetFile: 28_travel_2012_dec_14_indonesia-bali-readers-tips.txt
+04:56:36,021  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,023  INFO JsoupContentParser:52 - sourceFile: 29_technology_askjack_2012_dec_13_keeping-your-privacy-online.html
+04:56:36,023  INFO JsoupContentParser:53 - targetFile: 29_technology_askjack_2012_dec_13_keeping-your-privacy-online.txt
+04:56:36,039  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,040  INFO JsoupContentParser:52 - sourceFile: 30_film_2012_dec_11_the-hobbit-delay-release-age-of.html
+04:56:36,041  INFO JsoupContentParser:53 - targetFile: 30_film_2012_dec_11_the-hobbit-delay-release-age-of.txt
+04:56:36,063  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,064  INFO JsoupContentParser:52 - sourceFile: 31_info_developer-blog_2012_dec_06_real-time-qa-confident-code.html
+04:56:36,064  INFO JsoupContentParser:53 - targetFile: 31_info_developer-blog_2012_dec_06_real-time-qa-confident-code.txt
+04:56:36,078  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,079  INFO JsoupContentParser:52 - sourceFile: 32_books_2012_dec_05_raffles-victoria-glendinning-review.html
+04:56:36,079  INFO JsoupContentParser:53 - targetFile: 32_books_2012_dec_05_raffles-victoria-glendinning-review.txt
+04:56:36,086  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,088  INFO JsoupContentParser:52 - sourceFile: 33_world_2012_dec_04_indonesians-protest-text-message-divorce.html
+04:56:36,088  INFO JsoupContentParser:53 - targetFile: 33_world_2012_dec_04_indonesians-protest-text-message-divorce.txt
+04:56:36,100  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,101  INFO JsoupContentParser:52 - sourceFile: 34_news_2012_nov_27_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:36,101  INFO JsoupContentParser:53 - targetFile: 34_news_2012_nov_27_picture-desk-live-the-best-news-pictures-of-the-day.txt
+04:56:36,119  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,119  INFO JsoupContentParser:52 - sourceFile: 35_technology_blog_2012_nov_18_android-december-lost-birthday.html
+04:56:36,120  INFO JsoupContentParser:53 - targetFile: 35_technology_blog_2012_nov_18_android-december-lost-birthday.txt
+04:56:36,135  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,135  INFO JsoupContentParser:52 - sourceFile: 36_global_2012_nov_13_guardian-weekly-letters-16-november.html
+04:56:36,136  INFO JsoupContentParser:53 - targetFile: 36_global_2012_nov_13_guardian-weekly-letters-16-november.txt
+04:56:36,148  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,149  INFO JsoupContentParser:52 - sourceFile: 37_info_developer-blog_2012_nov_09_mozilla.html
+04:56:36,149  INFO JsoupContentParser:53 - targetFile: 37_info_developer-blog_2012_nov_09_mozilla.txt
+04:56:36,163  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,164  INFO JsoupContentParser:52 - sourceFile: 38_film_2012_nov_08_the-hobbit-rights-owner-sues-age-of.html
+04:56:36,164  INFO JsoupContentParser:53 - targetFile: 38_film_2012_nov_08_the-hobbit-rights-owner-sues-age-of.txt
+04:56:36,181  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,182  INFO JsoupContentParser:52 - sourceFile: 39_technology_2012_nov_04_raspberry-pi-programming-jam-cern.html
+04:56:36,182  INFO JsoupContentParser:53 - targetFile: 39_technology_2012_nov_04_raspberry-pi-programming-jam-cern.txt
+04:56:36,197  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,198  INFO JsoupContentParser:52 - sourceFile: 40_info_developer-blog_2012_nov_02_functional-programming-scala-the-final-push.html
+04:56:36,198  INFO JsoupContentParser:53 - targetFile: 40_info_developer-blog_2012_nov_02_functional-programming-scala-the-final-push.txt
+04:56:36,215  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,216  INFO JsoupContentParser:52 - sourceFile: 41_world_2012_oct_30_africa-apps-software-digital-enterprise.html
+04:56:36,217  INFO JsoupContentParser:53 - targetFile: 41_world_2012_oct_30_africa-apps-software-digital-enterprise.txt
+04:56:36,232  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,233  INFO JsoupContentParser:52 - sourceFile: 42_news_datablog_2012_oct_29_rail-hack-day-apps.html
+04:56:36,233  INFO JsoupContentParser:53 - targetFile: 42_news_datablog_2012_oct_29_rail-hack-day-apps.txt
+04:56:36,254  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,254  INFO JsoupContentParser:52 - sourceFile: 43_books_2012_oct_26_my-hero-thomas-stamford-raffles-victoria-glendinning.html
+04:56:36,255  INFO JsoupContentParser:53 - targetFile: 43_books_2012_oct_26_my-hero-thomas-stamford-raffles-victoria-glendinning.txt
+04:56:36,275  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,276  INFO JsoupContentParser:52 - sourceFile: 44_football_2012_oct_19_football-transfer-rumours-manchester-united-nani.html
+04:56:36,276  INFO JsoupContentParser:53 - targetFile: 44_football_2012_oct_19_football-transfer-rumours-manchester-united-nani.txt
+04:56:36,306  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,307  INFO JsoupContentParser:52 - sourceFile: 45_help_developer-blog_2012_oct_18_responsive-design-guardian-introduction.html
+04:56:36,308  INFO JsoupContentParser:53 - targetFile: 45_help_developer-blog_2012_oct_18_responsive-design-guardian-introduction.txt
+04:56:36,334  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,335  INFO JsoupContentParser:52 - sourceFile: 46_guardian-masterclasses_digital-courses3.html
+04:56:36,335  INFO JsoupContentParser:53 - targetFile: 46_guardian-masterclasses_digital-courses3.txt
+04:56:36,355  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,356  INFO JsoupContentParser:52 - sourceFile: 47_technology_2012_oct_09_google-apple-berners-lee-web-platform.html
+04:56:36,356  INFO JsoupContentParser:53 - targetFile: 47_technology_2012_oct_09_google-apple-berners-lee-web-platform.txt
+04:56:36,382  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,383  INFO JsoupContentParser:52 - sourceFile: 48_politics_shortcuts_2012_oct_07_arthur-scargill-barbican.html
+04:56:36,383  INFO JsoupContentParser:53 - targetFile: 48_politics_shortcuts_2012_oct_07_arthur-scargill-barbican.txt
+04:56:36,421  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,452  INFO JsoupContentParser:52 - sourceFile: 49_crosswords_crossword-blog_2012_oct_01_hugh-stephenson-editors-update-spell-it-out.html
+04:56:36,452  INFO JsoupContentParser:53 - targetFile: 49_crosswords_crossword-blog_2012_oct_01_hugh-stephenson-editors-update-spell-it-out.txt
+04:56:36,672  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,672  INFO JsoupContentParser:52 - sourceFile: 50_select_publisher-directory-professional.html
+04:56:36,673  INFO JsoupContentParser:53 - targetFile: 50_select_publisher-directory-professional.txt
+04:56:36,796  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+04:56:36,803  INFO PdfContentParser:36 - construct jobId: 20130305_045503
+04:56:36,805  INFO PdfContentParser:47 - construct jobId: 20130305_045503
+04:56:36,806  INFO PdfContentParser:51 - saveAll jobId: 20130305_045503
+04:56:36,806  INFO PdfContentParser:60 - sourceFile: 01_info_developer-blog_2013_mar_01_notes-from-edge-conference.html
+04:56:36,807  INFO PdfContentParser:61 - targetFile: 01_info_developer-blog_2013_mar_01_notes-from-edge-conference.pdf
+04:56:36,813  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:36,813  INFO PdfContentParser:71 - writePdf
+04:56:36,962  INFO PdfContentParser:90 - writeContent
+04:56:36,980  INFO PdfContentParser:60 - sourceFile: 02_technology_blog_2013_feb_21_technology-links-newsbucket.html
+04:56:36,980  INFO PdfContentParser:61 - targetFile: 02_technology_blog_2013_feb_21_technology-links-newsbucket.pdf
+04:56:36,987  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:36,987  INFO PdfContentParser:71 - writePdf
+04:56:36,988  INFO PdfContentParser:90 - writeContent
+04:56:37,005  INFO PdfContentParser:60 - sourceFile: 03_artanddesign_gallery_2013_feb_20_snakes-indonesia-in-pictures.html
+04:56:37,006  INFO PdfContentParser:61 - targetFile: 03_artanddesign_gallery_2013_feb_20_snakes-indonesia-in-pictures.pdf
+04:56:37,011  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,011  INFO PdfContentParser:71 - writePdf
+04:56:37,012  INFO PdfContentParser:90 - writeContent
+04:56:37,014  INFO PdfContentParser:60 - sourceFile: 04_sport_2013_feb_20_new-zealand-england-live-obo-cricket-report.html
+04:56:37,014  INFO PdfContentParser:61 - targetFile: 04_sport_2013_feb_20_new-zealand-england-live-obo-cricket-report.pdf
+04:56:37,026  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,027  INFO PdfContentParser:71 - writePdf
+04:56:37,028  INFO PdfContentParser:90 - writeContent
+04:56:37,119  INFO PdfContentParser:60 - sourceFile: 05_technology_2013_feb_19_apple-targeted-hackers.html
+04:56:37,120  INFO PdfContentParser:61 - targetFile: 05_technology_2013_feb_19_apple-targeted-hackers.pdf
+04:56:37,125  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,126  INFO PdfContentParser:71 - writePdf
+04:56:37,127  INFO PdfContentParser:90 - writeContent
+04:56:37,130  INFO PdfContentParser:60 - sourceFile: 06_info_developer-blog_2013_feb_19_guardian-hack-day-february-2013-day-2.html
+04:56:37,130  INFO PdfContentParser:61 - targetFile: 06_info_developer-blog_2013_feb_19_guardian-hack-day-february-2013-day-2.pdf
+04:56:37,139  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,140  INFO PdfContentParser:71 - writePdf
+04:56:37,141  INFO PdfContentParser:90 - writeContent
+04:56:37,163  INFO PdfContentParser:60 - sourceFile: 07_technology_gamesblog_2013_feb_18_playstation-4-xbox-720-future-consoles.html
+04:56:37,164  INFO PdfContentParser:61 - targetFile: 07_technology_gamesblog_2013_feb_18_playstation-4-xbox-720-future-consoles.pdf
+04:56:37,172  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,172  INFO PdfContentParser:71 - writePdf
+04:56:37,173  INFO PdfContentParser:90 - writeContent
+04:56:37,185  INFO PdfContentParser:60 - sourceFile: 08_world_2013_feb_15_babies-health-formula-indonesia-breastfeeding.html
+04:56:37,185  INFO PdfContentParser:61 - targetFile: 08_world_2013_feb_15_babies-health-formula-indonesia-breastfeeding.pdf
+04:56:37,192  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,192  INFO PdfContentParser:71 - writePdf
+04:56:37,193  INFO PdfContentParser:90 - writeContent
+04:56:37,199  INFO PdfContentParser:60 - sourceFile: 09_technology_2013_feb_10_stream-consciousness-computer-desktop.html
+04:56:37,199  INFO PdfContentParser:61 - targetFile: 09_technology_2013_feb_10_stream-consciousness-computer-desktop.pdf
+04:56:37,205  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,205  INFO PdfContentParser:71 - writePdf
+04:56:37,206  INFO PdfContentParser:90 - writeContent
+04:56:37,210  INFO PdfContentParser:60 - sourceFile: 10_teacher-network_2013_feb_09_gifted-talented-students-education-technology.html
+04:56:37,210  INFO PdfContentParser:61 - targetFile: 10_teacher-network_2013_feb_09_gifted-talented-students-education-technology.pdf
+04:56:37,216  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,216  INFO PdfContentParser:71 - writePdf
+04:56:37,217  INFO PdfContentParser:90 - writeContent
+04:56:37,225  INFO PdfContentParser:60 - sourceFile: 11_technology_askjack_2013_feb_08_java-remove-ask-jack-technology.html
+04:56:37,225  INFO PdfContentParser:61 - targetFile: 11_technology_askjack_2013_feb_08_java-remove-ask-jack-technology.pdf
+04:56:37,233  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,233  INFO PdfContentParser:71 - writePdf
+04:56:37,234  INFO PdfContentParser:90 - writeContent
+04:56:37,240  INFO PdfContentParser:60 - sourceFile: 12_commentisfree_2013_feb_05_obama-from-java.html
+04:56:37,240  INFO PdfContentParser:61 - targetFile: 12_commentisfree_2013_feb_05_obama-from-java.pdf
+04:56:37,247  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,247  INFO PdfContentParser:71 - writePdf
+04:56:37,248  INFO PdfContentParser:90 - writeContent
+04:56:37,253  INFO PdfContentParser:60 - sourceFile: 13_world_2013_feb_05_jakarta-floods-rising-sea-levels.html
+04:56:37,254  INFO PdfContentParser:61 - targetFile: 13_world_2013_feb_05_jakarta-floods-rising-sea-levels.pdf
+04:56:37,261  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,261  INFO PdfContentParser:71 - writePdf
+04:56:37,263  INFO PdfContentParser:90 - writeContent
+04:56:37,265  INFO PdfContentParser:60 - sourceFile: 14_business_2013_feb_02_how-to-get-job-silicon-roundabout.html
+04:56:37,265  INFO PdfContentParser:61 - targetFile: 14_business_2013_feb_02_how-to-get-job-silicon-roundabout.pdf
+04:56:37,272  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,272  INFO PdfContentParser:71 - writePdf
+04:56:37,273  INFO PdfContentParser:90 - writeContent
+04:56:37,279  INFO PdfContentParser:60 - sourceFile: 15_technology_2013_feb_02_twitter-hacked-accounts-reset-security.html
+04:56:37,279  INFO PdfContentParser:61 - targetFile: 15_technology_2013_feb_02_twitter-hacked-accounts-reset-security.pdf
+04:56:37,284  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,284  INFO PdfContentParser:71 - writePdf
+04:56:37,285  INFO PdfContentParser:90 - writeContent
+04:56:37,287  INFO PdfContentParser:60 - sourceFile: 16_science_2013_jan_20_mealybug-ferrisia-uzinuri-new-to-nature.html
+04:56:37,288  INFO PdfContentParser:61 - targetFile: 16_science_2013_jan_20_mealybug-ferrisia-uzinuri-new-to-nature.pdf
+04:56:37,293  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,293  INFO PdfContentParser:71 - writePdf
+04:56:37,294  INFO PdfContentParser:90 - writeContent
+04:56:37,296  INFO PdfContentParser:60 - sourceFile: 17_info_developer-blog_2013_jan_18_tools-of-the-trade-web-development.html
+04:56:37,297  INFO PdfContentParser:61 - targetFile: 17_info_developer-blog_2013_jan_18_tools-of-the-trade-web-development.pdf
+04:56:37,302  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,302  INFO PdfContentParser:71 - writePdf
+04:56:37,303  INFO PdfContentParser:90 - writeContent
+04:56:37,306  INFO PdfContentParser:60 - sourceFile: 18_media-network_partner-zone-infosecurity_linkedin-facebook-spam-trojans.html
+04:56:37,306  INFO PdfContentParser:61 - targetFile: 18_media-network_partner-zone-infosecurity_linkedin-facebook-spam-trojans.pdf
+04:56:37,310  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,310  INFO PdfContentParser:71 - writePdf
+04:56:37,311  INFO PdfContentParser:90 - writeContent
+04:56:37,313  INFO PdfContentParser:60 - sourceFile: 19_news_2013_jan_14_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:37,314  INFO PdfContentParser:61 - targetFile: 19_news_2013_jan_14_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+04:56:37,319  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,320  INFO PdfContentParser:71 - writePdf
+04:56:37,321  INFO PdfContentParser:90 - writeContent
+04:56:37,324  INFO PdfContentParser:60 - sourceFile: 20_technology_2013_jan_14_oracle-issues-emergency-fix-java.html
+04:56:37,325  INFO PdfContentParser:61 - targetFile: 20_technology_2013_jan_14_oracle-issues-emergency-fix-java.pdf
+04:56:37,330  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,330  INFO PdfContentParser:71 - writePdf
+04:56:37,331  INFO PdfContentParser:90 - writeContent
+04:56:37,334  INFO PdfContentParser:60 - sourceFile: 21_technology_blog_2013_jan_14_technology-links-newsbucket.html
+04:56:37,334  INFO PdfContentParser:61 - targetFile: 21_technology_blog_2013_jan_14_technology-links-newsbucket.pdf
+04:56:37,341  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,341  INFO PdfContentParser:71 - writePdf
+04:56:37,342  INFO PdfContentParser:90 - writeContent
+04:56:37,346  INFO PdfContentParser:60 - sourceFile: 22_news_2013_jan_11_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:37,347  INFO PdfContentParser:61 - targetFile: 22_news_2013_jan_11_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+04:56:37,354  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,354  INFO PdfContentParser:71 - writePdf
+04:56:37,355  INFO PdfContentParser:90 - writeContent
+04:56:37,360  INFO PdfContentParser:60 - sourceFile: 23_guardian-masterclasses_masterclasses-courses-for-2013.html
+04:56:37,360  INFO PdfContentParser:61 - targetFile: 23_guardian-masterclasses_masterclasses-courses-for-2013.pdf
+04:56:37,366  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,366  INFO PdfContentParser:71 - writePdf
+04:56:37,368  INFO PdfContentParser:90 - writeContent
+04:56:37,371  INFO PdfContentParser:60 - sourceFile: 24_guardian-masterclasses_building-websites-html-css-javascript-course.html
+04:56:37,371  INFO PdfContentParser:61 - targetFile: 24_guardian-masterclasses_building-websites-html-css-javascript-course.pdf
+04:56:37,378  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,378  INFO PdfContentParser:71 - writePdf
+04:56:37,379  INFO PdfContentParser:90 - writeContent
+04:56:37,381  INFO PdfContentParser:60 - sourceFile: 25_commentisfree_2012_dec_28_full-story-british-empire-dutch.html
+04:56:37,382  INFO PdfContentParser:61 - targetFile: 25_commentisfree_2012_dec_28_full-story-british-empire-dutch.pdf
+04:56:37,387  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,388  INFO PdfContentParser:71 - writePdf
+04:56:37,389  INFO PdfContentParser:90 - writeContent
+04:56:37,393  INFO PdfContentParser:60 - sourceFile: 26_lifeandstyle_2012_dec_19_whats-best-way-to-drink-coffee.html
+04:56:37,393  INFO PdfContentParser:61 - targetFile: 26_lifeandstyle_2012_dec_19_whats-best-way-to-drink-coffee.pdf
+04:56:37,400  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,400  INFO PdfContentParser:71 - writePdf
+04:56:37,487  INFO PdfContentParser:90 - writeContent
+04:56:37,493  INFO PdfContentParser:60 - sourceFile: 27_books_2012_dec_16_raffles-golden-opportunity-glendinning-review.html
+04:56:37,493  INFO PdfContentParser:61 - targetFile: 27_books_2012_dec_16_raffles-golden-opportunity-glendinning-review.pdf
+04:56:37,502  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,502  INFO PdfContentParser:71 - writePdf
+04:56:37,503  INFO PdfContentParser:90 - writeContent
+04:56:37,507  INFO PdfContentParser:60 - sourceFile: 28_travel_2012_dec_14_indonesia-bali-readers-tips.html
+04:56:37,507  INFO PdfContentParser:61 - targetFile: 28_travel_2012_dec_14_indonesia-bali-readers-tips.pdf
+04:56:37,516  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,517  INFO PdfContentParser:71 - writePdf
+04:56:37,518  INFO PdfContentParser:90 - writeContent
+04:56:37,521  INFO PdfContentParser:60 - sourceFile: 29_technology_askjack_2012_dec_13_keeping-your-privacy-online.html
+04:56:37,521  INFO PdfContentParser:61 - targetFile: 29_technology_askjack_2012_dec_13_keeping-your-privacy-online.pdf
+04:56:37,527  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,528  INFO PdfContentParser:71 - writePdf
+04:56:37,528  INFO PdfContentParser:90 - writeContent
+04:56:37,532  INFO PdfContentParser:60 - sourceFile: 30_film_2012_dec_11_the-hobbit-delay-release-age-of.html
+04:56:37,532  INFO PdfContentParser:61 - targetFile: 30_film_2012_dec_11_the-hobbit-delay-release-age-of.pdf
+04:56:37,538  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,539  INFO PdfContentParser:71 - writePdf
+04:56:37,540  INFO PdfContentParser:90 - writeContent
+04:56:37,542  INFO PdfContentParser:60 - sourceFile: 31_info_developer-blog_2012_dec_06_real-time-qa-confident-code.html
+04:56:37,543  INFO PdfContentParser:61 - targetFile: 31_info_developer-blog_2012_dec_06_real-time-qa-confident-code.pdf
+04:56:37,547  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,548  INFO PdfContentParser:71 - writePdf
+04:56:37,549  INFO PdfContentParser:90 - writeContent
+04:56:37,552  INFO PdfContentParser:60 - sourceFile: 32_books_2012_dec_05_raffles-victoria-glendinning-review.html
+04:56:37,552  INFO PdfContentParser:61 - targetFile: 32_books_2012_dec_05_raffles-victoria-glendinning-review.pdf
+04:56:37,557  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,557  INFO PdfContentParser:71 - writePdf
+04:56:37,715  INFO PdfContentParser:90 - writeContent
+04:56:37,718  INFO PdfContentParser:60 - sourceFile: 33_world_2012_dec_04_indonesians-protest-text-message-divorce.html
+04:56:37,718  INFO PdfContentParser:61 - targetFile: 33_world_2012_dec_04_indonesians-protest-text-message-divorce.pdf
+04:56:37,723  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,724  INFO PdfContentParser:71 - writePdf
+04:56:37,724  INFO PdfContentParser:90 - writeContent
+04:56:37,726  INFO PdfContentParser:60 - sourceFile: 34_news_2012_nov_27_picture-desk-live-the-best-news-pictures-of-the-day.html
+04:56:37,726  INFO PdfContentParser:61 - targetFile: 34_news_2012_nov_27_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+04:56:37,732  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,733  INFO PdfContentParser:71 - writePdf
+04:56:37,764  INFO PdfContentParser:90 - writeContent
+04:56:37,768  INFO PdfContentParser:60 - sourceFile: 35_technology_blog_2012_nov_18_android-december-lost-birthday.html
+04:56:37,769  INFO PdfContentParser:61 - targetFile: 35_technology_blog_2012_nov_18_android-december-lost-birthday.pdf
+04:56:37,774  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,774  INFO PdfContentParser:71 - writePdf
+04:56:37,775  INFO PdfContentParser:90 - writeContent
+04:56:37,777  INFO PdfContentParser:60 - sourceFile: 36_global_2012_nov_13_guardian-weekly-letters-16-november.html
+04:56:37,777  INFO PdfContentParser:61 - targetFile: 36_global_2012_nov_13_guardian-weekly-letters-16-november.pdf
+04:56:37,781  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,782  INFO PdfContentParser:71 - writePdf
+04:56:37,783  INFO PdfContentParser:90 - writeContent
+04:56:37,787  INFO PdfContentParser:60 - sourceFile: 37_info_developer-blog_2012_nov_09_mozilla.html
+04:56:37,788  INFO PdfContentParser:61 - targetFile: 37_info_developer-blog_2012_nov_09_mozilla.pdf
+04:56:37,792  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,793  INFO PdfContentParser:71 - writePdf
+04:56:37,794  INFO PdfContentParser:90 - writeContent
+04:56:37,797  INFO PdfContentParser:60 - sourceFile: 38_film_2012_nov_08_the-hobbit-rights-owner-sues-age-of.html
+04:56:37,797  INFO PdfContentParser:61 - targetFile: 38_film_2012_nov_08_the-hobbit-rights-owner-sues-age-of.pdf
+04:56:37,803  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,804  INFO PdfContentParser:71 - writePdf
+04:56:37,805  INFO PdfContentParser:90 - writeContent
+04:56:37,807  INFO PdfContentParser:60 - sourceFile: 39_technology_2012_nov_04_raspberry-pi-programming-jam-cern.html
+04:56:37,808  INFO PdfContentParser:61 - targetFile: 39_technology_2012_nov_04_raspberry-pi-programming-jam-cern.pdf
+04:56:37,812  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,813  INFO PdfContentParser:71 - writePdf
+04:56:37,898  INFO PdfContentParser:90 - writeContent
+04:56:37,907  INFO PdfContentParser:60 - sourceFile: 40_info_developer-blog_2012_nov_02_functional-programming-scala-the-final-push.html
+04:56:37,907  INFO PdfContentParser:61 - targetFile: 40_info_developer-blog_2012_nov_02_functional-programming-scala-the-final-push.pdf
+04:56:37,912  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,912  INFO PdfContentParser:71 - writePdf
+04:56:37,913  INFO PdfContentParser:90 - writeContent
+04:56:37,917  INFO PdfContentParser:60 - sourceFile: 41_world_2012_oct_30_africa-apps-software-digital-enterprise.html
+04:56:37,917  INFO PdfContentParser:61 - targetFile: 41_world_2012_oct_30_africa-apps-software-digital-enterprise.pdf
+04:56:37,922  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:37,923  INFO PdfContentParser:71 - writePdf
+04:56:37,924  INFO PdfContentParser:90 - writeContent
+04:56:37,927  INFO PdfContentParser:60 - sourceFile: 42_news_datablog_2012_oct_29_rail-hack-day-apps.html
+04:56:37,927  INFO PdfContentParser:61 - targetFile: 42_news_datablog_2012_oct_29_rail-hack-day-apps.pdf
+04:56:38,140  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,141  INFO PdfContentParser:71 - writePdf
+04:56:38,220  INFO PdfContentParser:90 - writeContent
+04:56:38,223  INFO PdfContentParser:60 - sourceFile: 43_books_2012_oct_26_my-hero-thomas-stamford-raffles-victoria-glendinning.html
+04:56:38,223  INFO PdfContentParser:61 - targetFile: 43_books_2012_oct_26_my-hero-thomas-stamford-raffles-victoria-glendinning.pdf
+04:56:38,228  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,228  INFO PdfContentParser:71 - writePdf
+04:56:38,229  INFO PdfContentParser:90 - writeContent
+04:56:38,230  INFO PdfContentParser:60 - sourceFile: 44_football_2012_oct_19_football-transfer-rumours-manchester-united-nani.html
+04:56:38,230  INFO PdfContentParser:61 - targetFile: 44_football_2012_oct_19_football-transfer-rumours-manchester-united-nani.pdf
+04:56:38,236  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,236  INFO PdfContentParser:71 - writePdf
+04:56:38,237  INFO PdfContentParser:90 - writeContent
+04:56:38,239  INFO PdfContentParser:60 - sourceFile: 45_help_developer-blog_2012_oct_18_responsive-design-guardian-introduction.html
+04:56:38,239  INFO PdfContentParser:61 - targetFile: 45_help_developer-blog_2012_oct_18_responsive-design-guardian-introduction.pdf
+04:56:38,244  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,245  INFO PdfContentParser:71 - writePdf
+04:56:38,309  INFO PdfContentParser:90 - writeContent
+04:56:38,311  INFO PdfContentParser:60 - sourceFile: 46_guardian-masterclasses_digital-courses3.html
+04:56:38,311  INFO PdfContentParser:61 - targetFile: 46_guardian-masterclasses_digital-courses3.pdf
+04:56:38,315  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,315  INFO PdfContentParser:71 - writePdf
+04:56:38,316  INFO PdfContentParser:90 - writeContent
+04:56:38,318  INFO PdfContentParser:60 - sourceFile: 47_technology_2012_oct_09_google-apple-berners-lee-web-platform.html
+04:56:38,318  INFO PdfContentParser:61 - targetFile: 47_technology_2012_oct_09_google-apple-berners-lee-web-platform.pdf
+04:56:38,322  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,323  INFO PdfContentParser:71 - writePdf
+04:56:38,324  INFO PdfContentParser:90 - writeContent
+04:56:38,326  INFO PdfContentParser:60 - sourceFile: 48_politics_shortcuts_2012_oct_07_arthur-scargill-barbican.html
+04:56:38,326  INFO PdfContentParser:61 - targetFile: 48_politics_shortcuts_2012_oct_07_arthur-scargill-barbican.pdf
+04:56:38,332  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,332  INFO PdfContentParser:71 - writePdf
+04:56:38,366  INFO PdfContentParser:90 - writeContent
+04:56:38,368  INFO PdfContentParser:60 - sourceFile: 49_crosswords_crossword-blog_2012_oct_01_hugh-stephenson-editors-update-spell-it-out.html
+04:56:38,368  INFO PdfContentParser:61 - targetFile: 49_crosswords_crossword-blog_2012_oct_01_hugh-stephenson-editors-update-spell-it-out.pdf
+04:56:38,373  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,373  INFO PdfContentParser:71 - writePdf
+04:56:38,374  INFO PdfContentParser:90 - writeContent
+04:56:38,376  INFO PdfContentParser:60 - sourceFile: 50_select_publisher-directory-professional.html
+04:56:38,376  INFO PdfContentParser:61 - targetFile: 50_select_publisher-directory-professional.pdf
+04:56:38,380  INFO PdfContentParser:83 - createHeader countKeyWords: false
+04:56:38,380  INFO PdfContentParser:71 - writePdf
+04:56:38,381  INFO PdfContentParser:90 - writeContent
