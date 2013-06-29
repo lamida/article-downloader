@@ -1,8 +1,8 @@
 package net.lamida.rest.client;
 
-import net.lamida.rest.RestResponse;
+import net.lamida.rest.Response;
 
 public interface IResponseBuilder {
-	RestResponse buildFromServer(String restResult);
-	RestResponse buildFromLocal(String restResult);
+	Response buildFromServer(String restResult);
+	Response buildFromLocal(String restResult);
 }

@@ -6,7 +6,7 @@ import java.net.URL;
 import java.util.Date;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestResponse;
+import net.lamida.rest.Response;
 import net.lamida.rest.Result;
 import net.lamida.rest.client.IDocumentDownloader;
 import net.lamida.util.ConsoleProgressReporter;
@@ -45,7 +45,7 @@ public class GuardianDefaultDocumentDownloader implements IDocumentDownloader {
 	/**
 	 * 
 	 */
-	public void download(RestResponse response) {
+	public void download(Response response) {
 		log.info("Crawling all articles for jobId: " + job.getId());
 		int totalResults = response.getResults().size();
 		log.info("Total articles: " + totalResults);

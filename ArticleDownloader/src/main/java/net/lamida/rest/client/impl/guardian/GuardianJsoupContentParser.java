@@ -24,13 +24,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class GuardianJsoupContentParser implements IContentParser {
-	private Logger log = Logger.getLogger(this.getClass().toString());
-	
-	public static final String PARSED_FOLDER = "txt";
-	
+	Logger log = Logger.getLogger(this.getClass().toString());
+	protected String selector;
 	protected Job job;
-	private String selector;
-	
+	public static final String PARSED_FOLDER = "txt";
 	
 	public GuardianJsoupContentParser(Job job, String selector) {
 		log.info("construct jobId: " + job.getId());
@@ -62,8 +59,7 @@ public class GuardianJsoupContentParser implements IContentParser {
 		}
 	}
 	
-	
-	protected String parse(File htmlFile) {
+	public String parse(File htmlFile) {
 		StringBuffer sb = new StringBuffer();
 		try {
 			Document doc = Jsoup.parse(htmlFile, Charset.defaultCharset().name());
@@ -116,7 +112,7 @@ public class GuardianJsoupContentParser implements IContentParser {
 		return sb.toString();
 	}
 	
-	private Map<String, Integer> calculateKeyword(String documentContent){
+	protected Map<String, Integer> calculateKeyword(String documentContent){
 		log.info("calculateKeywords: document: " + documentContent.substring(0, 100));
 		Map<String, Integer> counts = new HashMap<String, Integer>();
 		String[] keywords = job.getParam().getQuery().split(" ");
@@ -128,7 +124,7 @@ public class GuardianJsoupContentParser implements IContentParser {
 		return counts;
 	}
 	
-	private int countWord(String keyword, String document){
+	protected int countWord(String keyword, String document){
 		log.info("countWord");
 		String patternText = "\\b{key}\\b";
 		Pattern pattern = Pattern.compile(patternText.replace("{key}", keyword.toLowerCase()));
@@ -139,9 +135,6 @@ public class GuardianJsoupContentParser implements IContentParser {
 		}
 		return count;
 	}
-	
-	
-	
 	
 
 }

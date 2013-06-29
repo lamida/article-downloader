@@ -18,7 +18,6 @@ import net.lamida.rest.client.impl.guardian.GuardianResponseFetcher;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class GuardianRestClientTest {
@@ -35,7 +34,7 @@ public class GuardianRestClientTest {
 		String query = "indonesia investment";
 		String pageSize = "5";
 		
-		RestParameter param = new RestParameter();
+		Parameter param = new Parameter();
 		param.setEndPoint(endPoint);
 		param.setApiKey(apiKey);
 		param.setQuery(query);
@@ -55,7 +54,7 @@ public class GuardianRestClientTest {
 		Assert.assertEquals("json", job.getParam().getFormat());
 	}
 	
-	//@Test
+	@Test
 	// worked to avoid too many api call
 	public void testResponseFetcher() throws IOException{
 		System.out.println("testResponseFetcher");
@@ -65,43 +64,43 @@ public class GuardianRestClientTest {
 		Assert.assertNotNull(actual);
 	}
 	
-//	@Test 
+	@Test 
 	public void buildResponse() throws IOException{
 		File url = new File("result/" + job.getId() + "/html/00_DOWNLOAD_METADATA.json");
 		String restResponse = FileUtils.readFileToString(url);
 		Assert.assertNotNull(restResponse);
-		RestResponse responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
+		Response responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
 		Assert.assertNotNull(responseData);
 	}
 	
-	//@Test
+	@Test
 	public void testDownloadArticles() throws IOException{
 		System.out.println("testDownloadArticles");
 		System.out.println("count words? " + job.getParam().isCountKeyWords());
 		File url = new File("result/" + job.getId() + "/html/00_DOWNLOAD_METADATA.json");
 		IDocumentDownloader downloader = new GuardianDefaultDocumentDownloader(job, null);
 		String restResponse = FileUtils.readFileToString(url);
-		RestResponse responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
+		Response responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
 		downloader.download(responseData);
 	}
 	
 	
-	//@Test
+	@Test
 	public void testJsoupSaveArticles() throws IOException{
 		System.out.println("testJsoupSaveArticles");
 		File url = new File("result/" + job.getId() + "/html/00_DOWNLOAD_METADATA.json");
 		String restResponse = FileUtils.readFileToString(url);
-		RestResponse responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
+		Response responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
 		IContentParser contentParser = new GuardianJsoupContentParser(job, "div#content p");
 		contentParser.saveAll();
 	}
 
-//	@Test
+	@Test
 	public void testPdfSaveArticles() throws IOException{
 		System.out.println("testPdfSaveArticles");
 		File url = new File("result/" + job.getId() + "/html/00_DOWNLOAD_METADATA.json");
 		String restResponse = FileUtils.readFileToString(url);
-		RestResponse responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
+		Response responseData = new GuardianResponseBuilder(job).buildFromLocal(restResponse);
 		IContentParser contentParser = new GuardianPdfContentParser(job, "div#content p");
 		contentParser.saveAll();
 		

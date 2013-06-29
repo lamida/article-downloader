@@ -11,7 +11,7 @@ import org.jboss.resteasy.client.ClientResponse;
 import com.google.gson.GsonBuilder;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestParameter;
+import net.lamida.rest.Parameter;
 import net.lamida.rest.client.IRestResponseFetcher;
 import net.lamida.rest.client.impl.guardian.GuardianDefaultDocumentDownloader;
 
@@ -26,7 +26,7 @@ public class NyTimesResponseFetcher implements IRestResponseFetcher {
 
 	public String getResponse() {
 		log.info("Try get list of articles...");
-		RestParameter param = job.getParam();
+		Parameter param = job.getParam();
 		if (param == null) {
 			throw new IllegalStateException(
 					"Provide parameters before calling getResult");

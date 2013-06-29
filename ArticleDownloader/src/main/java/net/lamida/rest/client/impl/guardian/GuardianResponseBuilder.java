@@ -1,7 +1,7 @@
 package net.lamida.rest.client.impl.guardian;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestResponse;
+import net.lamida.rest.Response;
 import net.lamida.rest.client.IResponseBuilder;
 
 import org.apache.log4j.Logger;
@@ -21,18 +21,18 @@ public class GuardianResponseBuilder implements IResponseBuilder{
 	}
 
 
-	public RestResponse buildFromServer(String restResult) {
+	public Response buildFromServer(String restResult) {
 		log.info("Building List of articles...");
 		JsonParser parser = new JsonParser();
 		JsonElement responseJson = parser.parse(restResult).getAsJsonObject().get("response");
-		RestResponse response = new Gson().fromJson(responseJson, RestResponse.class);
+		Response response = new Gson().fromJson(responseJson, Response.class);
 		job.setResponse(response);
 		return response;
 	}
 
-	public RestResponse buildFromLocal(String restResultLocal) {
+	public Response buildFromLocal(String restResultLocal) {
 		log.info("Building List of articles...");
-		RestResponse response = new Gson().fromJson(restResultLocal, RestResponse.class);
+		Response response = new Gson().fromJson(restResultLocal, Response.class);
 		job.setResponse(response);
 		return response;
 	}

@@ -8,16 +8,16 @@ public class Job {
 	public static final String RESULT_DIRECTORY = "result";
 	
 	private String id;
-	private RestParameter param;
-	private RestResponse response;
+	private Parameter param;
+	private Response response;
 	
-	public Job(RestParameter param) {
+	public Job(Parameter param) {
 		super();
 		this.param = param;
 		this.id = Utils.formatDate(new Date());
 	}
 
-	public Job(RestParameter param, String jobId) {
+	public Job(Parameter param, String jobId) {
 		super();
 		this.param = param;
 		this.id = jobId;
@@ -31,19 +31,19 @@ public class Job {
 		this.id = id;
 	}
 
-	public RestParameter getParam() {
+	public Parameter getParam() {
 		return param;
 	}
 
-	public void setParam(RestParameter param) {
+	public void setParam(Parameter param) {
 		this.param = param;
 	}
 
-	public RestResponse getResponse() {
+	public Response getResponse() {
 		return response;
 	}
 
-	public void setResponse(RestResponse response) {
+	public void setResponse(Response response) {
 		this.response = response;
 	}
 
