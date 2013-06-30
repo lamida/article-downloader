@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.Result;
+import net.lamida.rest.RestResult;
 import net.lamida.rest.client.IContentParser;
 import net.lamida.util.Utils;
 
@@ -27,7 +27,6 @@ public class GuardianJsoupContentParser implements IContentParser {
 	Logger log = Logger.getLogger(this.getClass().toString());
 	protected String selector;
 	protected Job job;
-	public static final String PARSED_FOLDER = "txt";
 	
 	public GuardianJsoupContentParser(Job job, String selector) {
 		log.info("construct jobId: " + job.getId());
@@ -37,13 +36,13 @@ public class GuardianJsoupContentParser implements IContentParser {
 	
 	public void saveAll(){
 		log.info("saveAll jobId: " + job.getId());
-		File targetFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId() + File.separator + GuardianJsoupContentParser.PARSED_FOLDER);
-		File downloadFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId() + File.separator + GuardianDefaultDocumentDownloader.DOWNLOAD_FOLDER);
+		File downloadFolder = new File(Utils.buildDownloadFolder(job.getId()));
+		File targetFolder = new File(Utils.buildParsedFolder(job.getId()));
 		
 		int i = 0;
 		try {
 			for(File sourceFile : downloadFolder.listFiles()){
-				if(sourceFile.getName().equals(GuardianDefaultDocumentDownloader.RESULT_METADATA_FILE)){
+				if(sourceFile.getName().equals(Utils.REST_RESPONSE_RESULT_METADATA_FILE)){
 					continue;
 				}
 				log.info("sourceFile: " + sourceFile.getName());
@@ -75,7 +74,7 @@ public class GuardianJsoupContentParser implements IContentParser {
 		return sb.toString();
 	}
 	
-	protected String createHeader(Result res, String parsedDocument){
+	protected String createHeader(RestResult res, String parsedDocument){
 		log.info("createHeader countKeyWords: " + job.getParam().isCountKeyWords());
 		DateFormat format = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss z");
 		

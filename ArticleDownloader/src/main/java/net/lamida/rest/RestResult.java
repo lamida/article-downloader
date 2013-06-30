@@ -2,7 +2,7 @@ package net.lamida.rest;
 
 import java.util.Date;
 
-public class Result {
+public class RestResult {
 	private String id;
 	private String sectionId;
 	private String sectionName;

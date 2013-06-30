@@ -2,7 +2,7 @@ package net.lamida.rest;
 
 import java.util.List;
 
-public class Response {
+public class RestResponse {
 	private String status;
 	private String userTier;
 	private String total;
@@ -11,7 +11,7 @@ public class Response {
 	private String currentPage;
 	private String pages;
 	private String orderBy;
-	private List<Result> results;
+	private List<RestResult> results;
 
 	public String getStatus() {
 		return status;
@@ -77,11 +77,11 @@ public class Response {
 		this.orderBy = orderBy;
 	}
 
-	public List<Result> getResults() {
+	public List<RestResult> getResults() {
 		return results;
 	}
 
-	public void setResults(List<Result> results) {
+	public void setResults(List<RestResult> results) {
 		this.results = results;
 	}
 }

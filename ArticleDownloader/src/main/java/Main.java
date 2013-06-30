@@ -7,8 +7,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.Parameter;
-import net.lamida.rest.Response;
+import net.lamida.rest.RestParameter;
+import net.lamida.rest.RestResponse;
 import net.lamida.rest.client.IContentParser;
 import net.lamida.rest.client.IDocumentDownloader;
 import net.lamida.rest.client.IRestResponseFetcher;
@@ -58,7 +58,7 @@ public class Main {
 
 		String query = "cloud platform";
 		String pageSize = "5";
-		Parameter param = new Parameter();
+		RestParameter param = new RestParameter();
 		param.setEndPoint(endPoint);
 		param.setApiKey(apiKey);
 		param.setQuery(query);
@@ -72,7 +72,7 @@ public class Main {
 		IRestResponseFetcher responseFetcher = new GuardianResponseFetcher(job);
 		String restResponse = responseFetcher.getResponse();
 		
-		Response responseData = new GuardianResponseBuilder(job).buildFromServer(restResponse);
+		RestResponse responseData = new GuardianResponseBuilder(job).buildResponse(restResponse);
 		
 		IDocumentDownloader downloader = new GuardianDefaultDocumentDownloader(job, null);
 		downloader.download(responseData);

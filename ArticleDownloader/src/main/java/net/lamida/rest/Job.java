@@ -1,3 +1,4 @@
+
 package net.lamida.rest;
 
 import java.util.Date;
@@ -5,23 +6,16 @@ import java.util.Date;
 import net.lamida.util.Utils;
 
 public class Job {
-	public static final String RESULT_DIRECTORY = "result";
-	
-	private String id;
-	private Parameter param;
-	private Response response;
-	
-	public Job(Parameter param) {
+	public String id;
+	public RestParameter param;
+	public RestResponse response;
+
+	public Job(RestParameter param) {
 		super();
 		this.param = param;
 		this.id = Utils.formatDate(new Date());
 	}
 
-	public Job(Parameter param, String jobId) {
-		super();
-		this.param = param;
-		this.id = jobId;
-	}
 
 	public String getId() {
 		return id;
@@ -31,19 +25,19 @@ public class Job {
 		this.id = id;
 	}
 
-	public Parameter getParam() {
+	public RestParameter getParam() {
 		return param;
 	}
 
-	public void setParam(Parameter param) {
+	public void setParam(RestParameter param) {
 		this.param = param;
 	}
 
-	public Response getResponse() {
+	public RestResponse getResponse() {
 		return response;
 	}
 
-	public void setResponse(Response response) {
+	public void setResponse(RestResponse response) {
 		this.response = response;
 	}
 

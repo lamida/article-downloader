@@ -14,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.Result;
+import net.lamida.rest.RestResult;
 import net.lamida.rest.client.IContentParser;
 import net.lamida.util.Utils;
 
@@ -37,9 +37,6 @@ public class GuardianPdfContentParser extends GuardianJsoupContentParser impleme
 		IContentParser {
 	private Logger log = Logger.getLogger(this.getClass().toString());
 
-	public static final String PARSED_FOLDER = "pdf";
-	public static final String MERGED_PDF_FILE = "00_articles_merged.pdf";
-	
 	Font highlightFont = new Font(FontFamily.HELVETICA, -1, Font.BOLD, BaseColor.RED);
 	
 	public GuardianPdfContentParser(Job job, String selector) {
@@ -49,12 +46,13 @@ public class GuardianPdfContentParser extends GuardianJsoupContentParser impleme
 
 	public void saveAll() {
 		log.info("saveAll jobId: " + job.getId());
-		File targetFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId() + File.separator + GuardianPdfContentParser.PARSED_FOLDER);
+		File downloadFolder = new File(Utils.buildDownloadFolder(job.getId()));
+		File targetFolder = new File(Utils.buildPdfFolder(job.getId()));
 		targetFolder.mkdir();
-		File downloadFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId() + File.separator + GuardianDefaultDocumentDownloader.DOWNLOAD_FOLDER);
+		
 		int i = 0;
 		for (File sourceFile : downloadFolder.listFiles()) {
-			if (sourceFile.getName().equals(GuardianDefaultDocumentDownloader.RESULT_METADATA_FILE)) {
+			if (sourceFile.getName().equals(Utils.REST_RESPONSE_RESULT_METADATA_FILE)) {
 				continue;
 			}
 			log.info("sourceFile: " + sourceFile.getName());
@@ -67,7 +65,7 @@ public class GuardianPdfContentParser extends GuardianJsoupContentParser impleme
 		}
 	}
 
-	private void writePdf(File targetFile, Result result, String header, String content) {
+	private void writePdf(File targetFile, RestResult result, String header, String content) {
 		log.info("writePdf");
 		try {
 			Document document = new Document();
@@ -130,13 +128,13 @@ public class GuardianPdfContentParser extends GuardianJsoupContentParser impleme
 	public void joinPdf(){
 		try {
 		    List<InputStream> pdfs = new ArrayList<InputStream>();  
-			File pdfFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId() + File.separator + GuardianPdfContentParser.PARSED_FOLDER);
+			File pdfFolder = new File(Utils.buildPdfFolder(job.getId()));
 			for(File file : pdfFolder.listFiles()){
-				if(!file.getName().equals(MERGED_PDF_FILE)){
+				if(!file.getName().equals(Utils.MERGED_PDF_FILE)){
 					pdfs.add(new FileInputStream(file));
 				}
 			}
-			OutputStream output = new FileOutputStream(new File(pdfFolder, MERGED_PDF_FILE));
+			OutputStream output = new FileOutputStream(new File(pdfFolder, Utils.MERGED_PDF_FILE));
 			concatPDFs(pdfs, output, true);
 		} catch (FileNotFoundException e) {
 			log.error(e.getMessage());

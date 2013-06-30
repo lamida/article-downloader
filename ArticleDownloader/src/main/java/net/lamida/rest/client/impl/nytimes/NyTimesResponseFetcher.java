@@ -11,9 +11,9 @@ import org.jboss.resteasy.client.ClientResponse;
 import com.google.gson.GsonBuilder;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.Parameter;
+import net.lamida.rest.RestParameter;
 import net.lamida.rest.client.IRestResponseFetcher;
-import net.lamida.rest.client.impl.guardian.GuardianDefaultDocumentDownloader;
+import net.lamida.util.Utils;
 
 public class NyTimesResponseFetcher implements IRestResponseFetcher {
 	private Logger log = Logger.getLogger(this.getClass().toString());
@@ -26,7 +26,7 @@ public class NyTimesResponseFetcher implements IRestResponseFetcher {
 
 	public String getResponse() {
 		log.info("Try get list of articles...");
-		Parameter param = job.getParam();
+		RestParameter param = job.getParam();
 		if (param == null) {
 			throw new IllegalStateException(
 					"Provide parameters before calling getResult");
@@ -38,9 +38,9 @@ public class NyTimesResponseFetcher implements IRestResponseFetcher {
 		// save param metadata
 		try {
 			log.info("writing param metadata");
-			File jobFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId());
+			File jobFolder = new File(Utils.RESULT_FOLDER + File.separator + job.getId());
 			jobFolder.mkdirs();
-			FileUtils.writeStringToFile(new File(jobFolder, GuardianDefaultDocumentDownloader.PARAM_METADATA_FILE), new GsonBuilder().setPrettyPrinting().create().toJson(param));
+			FileUtils.writeStringToFile(new File(jobFolder, Utils.REST_REQUEST_PARAM_METADATA_FILE), new GsonBuilder().setPrettyPrinting().create().toJson(param));
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}

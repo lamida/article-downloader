@@ -1,7 +1,7 @@
 package net.lamida.rest.client;
 
-import net.lamida.rest.Response;
+import net.lamida.rest.RestResponse;
 
 public interface IDocumentDownloader {
-	void download(Response response);
+	void download(RestResponse response);
 }

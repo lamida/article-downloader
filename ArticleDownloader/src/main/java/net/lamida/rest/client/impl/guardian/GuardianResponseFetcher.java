@@ -4,8 +4,9 @@ import java.io.File;
 import java.io.IOException;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.Parameter;
+import net.lamida.rest.RestParameter;
 import net.lamida.rest.client.IRestResponseFetcher;
+import net.lamida.util.Utils;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -28,7 +29,7 @@ public class GuardianResponseFetcher implements IRestResponseFetcher {
 
 	public String getResponse() {
 		log.info("Try get list of articles...");
-		Parameter param = job.getParam();
+		RestParameter param = job.getParam();
 		if (param == null) {
 			throw new IllegalStateException(
 					"Provide parameters before calling getResult");
@@ -37,32 +38,54 @@ public class GuardianResponseFetcher implements IRestResponseFetcher {
 			throw new IllegalArgumentException("Only Support Json Format");
 		}
 		
-		// save param metadata
-		try {
-			log.info("writing param metadata");
-			File jobFolder = new File(Job.RESULT_DIRECTORY + File.separator + job.getId());
-			jobFolder.mkdirs();
-			FileUtils.writeStringToFile(new File(jobFolder, GuardianDefaultDocumentDownloader.PARAM_METADATA_FILE), new GsonBuilder().setPrettyPrinting().create().toJson(param));
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
+		String result = executeRestRequest(param);
 		
-		log.info("Using keywords: " + param.getQuery());
-		log.info("page-size: " + param.getPageSize());
+		saveParameter(param);
+		saveResponse(result);
+		return result;
+	}
+
+
+	private String executeRestRequest(RestParameter param) {
+		log.info("Using keywords: " + param.getQuery() + " page-size: " + param.getPageSize());
 		ClientRequest req = new ClientRequest(param.getEndPoint());
 		req.queryParameter("q", param.getQuery())
 				.queryParameter("api-key", param.getApiKey())
 				.queryParameter("format", param.getFormat())
 				.queryParameter("page-size", param.getPageSize());
-
-		ClientResponse<String> res = null;
+		
+		String result = null;
 		try {
-			res = req.get(String.class);
-			return res.getEntity();
+			ClientResponse<String> res = req.get(String.class);
+			result = res.getEntity();
 		} catch (Exception e) {
 			log.error(e.getMessage());
 		}
-		return null;
+		return result;
+	}
+
+
+	private void saveResponse(String result) {
+		if(result == null){
+			return;
+		}
+		try {
+			FileUtils.writeStringToFile(new File(Utils.buildRestResultMetadataFilePath(job.getId())), result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	private void saveParameter(RestParameter param) {
+		try {
+			log.info("writing param metadata");
+			File jobFolder = new File(Utils.buildResultFolder(job.getId()));
+			jobFolder.mkdirs();
+			FileUtils.writeStringToFile(new File(Utils.buildRestRequestParamMetadataFilePath(job.getId())), new GsonBuilder().setPrettyPrinting().create().toJson(param));
+		} catch (IOException e) {
+			log.error(e.getMessage());
+		}
 	}
 
 
