@@ -1220,3 +1220,614 @@ It always takes a s
 04:56:38,380  INFO PdfContentParser:83 - createHeader countKeyWords: false
 04:56:38,380  INFO PdfContentParser:71 - writePdf
 04:56:38,381  INFO PdfContentParser:90 - writeContent
+15:11:06,794  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+15:11:06,809  INFO GuardianResponseFetcher:29 - Try get list of articles...
+15:11:06,809  INFO GuardianResponseFetcher:41 - writing param metadata
+15:11:06,877  INFO GuardianResponseFetcher:49 - Using keywords: haze singapore
+15:11:06,878  INFO GuardianResponseFetcher:50 - page-size: 50
+15:11:06,979  WARN RegisterBuiltin:103 - NoClassDefFoundError: Unable to load builtin provider: org.jboss.resteasy.plugins.providers.DocumentProvider
+15:11:10,304  INFO DefaultResponseBuilder:25 - Building List of articles...
+15:11:10,380  INFO DefaultDocumentDownloader:49 - Crawling all articles for jobId: 20130630_151106
+15:11:10,381  INFO DefaultDocumentDownloader:51 - Total articles: 42
+15:11:10,383  INFO DefaultDocumentDownloader:57 - Downloading article: Day two at the Wimbledon Championships and messages of support for Nelson Mandela: the best news photographs of the day
+15:11:13,482  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:11:13,482  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesian president apologises to Singapore and Malaysia for forest fires
+15:11:15,737  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.html
+15:11:15,737  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesia's forest fire smoke blows deeper into Malaysia
+15:11:18,279  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.html
+15:11:18,279  INFO DefaultDocumentDownloader:57 - Downloading article: Revelers gather at Stonehenge to celebrate the longest day of the year in the UK and protests continue in Brazil: he best news photographs of the day
+15:11:20,385  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\04_news_2013_jun_21_picture-desk-live.html
+15:11:20,385  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore smog - readers pictures
+15:11:22,611  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\05_world_blog_2013_jun_21_singapore-smog-readers-pictures.html
+15:11:22,611  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore air pollution hits record high
+15:11:24,670  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\06_world_2013_jun_21_singapore-air-pollution-record-high.html
+15:11:24,670  INFO DefaultDocumentDownloader:57 - Downloading article: David Beckham causes a stir in China and more from Royal Ascot: the best news photographs of the day
+15:11:26,562  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\07_global_2013_jun_20_picture-desk-live.html
+15:11:26,563  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesia and Singapore engulfed by forest fire smoke – video
+15:11:28,176  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.html
+15:11:28,176  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore pollution from Indonesian forest fires hits record levels
+15:11:30,442  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\09_world_2013_jun_20_singapore-pollution-record-levels.html
+15:11:30,442  INFO DefaultDocumentDownloader:57 - Downloading article: : the best news photographs of the day
+15:11:32,678  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\10_news_2013_jun_19_picture-desk-live-the-best-news-photographs-of-the-day.html
+15:11:32,679  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore pollution soars as haze from Indonesia hits air quality
+15:11:35,920  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\11_world_2013_jun_19_singapore-pollution-haze-indonesia-air-quality.html
+15:11:35,920  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: including the latest from the Boston bombing manhunt
+15:11:39,111  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\12_news_2013_apr_19_picture-desk-live-the-best-news-pictures-of-the-day.html
+15:11:39,111  INFO DefaultDocumentDownloader:57 - Downloading article: Picture desk live: the best news pictures of the day
+15:11:41,586  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\13_news_2012_oct_01_picture-desk-live-the-best-news-pictures-of-the-day.html
+15:11:41,587  INFO DefaultDocumentDownloader:57 - Downloading article: London 2012 Olympics: Friday 3 August - live picture blog
+15:11:44,580  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\14_sport_london-2012-olympics-blog_2012_aug_03_olympics-2012-pictures.html
+15:11:44,581  INFO DefaultDocumentDownloader:57 - Downloading article: January's best music from across the MAP
+15:11:47,035  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\15_music_musicblog_2012_jan_15_january-music-alliance-pact-map.html
+15:11:47,035  INFO DefaultDocumentDownloader:57 - Downloading article: An A to Z of offal
+15:11:49,797  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\16_lifeandstyle_2011_aug_12_an-a-to-z-of-offal.html
+15:11:49,798  INFO DefaultDocumentDownloader:57 - Downloading article: Williams look to overturn worst-ever F1 start at Turkish Grand Prix
+15:11:51,903  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\17_sport_2011_may_01_williams-f1-turkish-grand-prix.html
+15:11:51,903  INFO DefaultDocumentDownloader:57 - Downloading article: Wild blue yonder: Australia's Blue Mountains
+15:11:53,941  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\18_travel_2011_mar_12_blue-mountains-australia-nsw-sydney.html
+15:11:53,941  INFO DefaultDocumentDownloader:57 - Downloading article: Putting the world's music blogs on the MAP
+15:11:57,326  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\19_music_musicblog_2010_oct_15_music-blogs-map.html
+15:11:57,326  INFO DefaultDocumentDownloader:57 - Downloading article: The Iceland volcano ash problem: European flight disruption
+15:12:00,569  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\20_world_blog_2010_apr_16_volcano-ash-airspace-flights-iceland.html
+15:12:00,570  INFO DefaultDocumentDownloader:57 - Downloading article: Can a daily pill really boost your brain power?
+15:12:03,466  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\21_science_2009_sep_20_neuroenhancers-us-brain-power-drugs.html
+15:12:03,466  INFO DefaultDocumentDownloader:57 - Downloading article: Is the chaotic mass that is 21st-century Lagos a blueprint for the cities of the future?
+15:12:06,098  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\22_lifeandstyle_2009_may_09_lagos-city-life.html
+15:12:06,098  INFO DefaultDocumentDownloader:57 - Downloading article: Artists beginning with C (part two)
+15:12:08,737  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\23_artanddesign_2008_oct_27_1000-artworks-to-see-before-you-die-art.html
+15:12:08,737  INFO DefaultDocumentDownloader:57 - Downloading article: Randeep Ramesh on Subodh Gupta, the Damien Hirst of Delhi
+15:12:11,022  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\24_artanddesign_2007_feb_20_art.india.html
+15:12:11,023  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesia: essential information
+15:12:12,759  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\25_travel_2006_oct_27_indonesia.essentialinfo.html
+15:12:12,760  INFO DefaultDocumentDownloader:57 - Downloading article: Illegal brush fire haze hits drivers and airline flights
+15:12:14,712  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\26_news_2006_oct_09_indonesia.pollution.html
+15:12:14,712  INFO DefaultDocumentDownloader:57 - Downloading article: Saving Africa's elephants, one holiday at a time
+15:12:17,539  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\27_travel_2006_jun_04_ethicaltourism.observerescapesection.html
+15:12:17,539  INFO DefaultDocumentDownloader:57 - Downloading article: Boom town
+15:12:22,224  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\28_business_2006_feb_13_unitedarabemirates.travel.html
+15:12:22,225  INFO DefaultDocumentDownloader:57 - Downloading article: The great Gurkha race
+15:12:26,473  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\29_uk_2005_dec_06_military.audreygillan.html
+15:12:26,473  INFO DefaultDocumentDownloader:57 - Downloading article: Beijing, the city that ate the world
+15:12:30,570  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\30_world_2005_oct_16_china.features.html
+15:12:30,570  INFO DefaultDocumentDownloader:57 - Downloading article: 2046
+15:12:33,213  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\31_film_2005_may_20_dvdreviews1.html
+15:12:33,213  INFO DefaultDocumentDownloader:57 - Downloading article: Cricket: Warne's glory but India's day
+15:12:35,880  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\32_sport_2004_oct_16_cricket.indiacricketteam.html
+15:12:35,880  INFO DefaultDocumentDownloader:57 - Downloading article: Darkening skies
+15:12:38,586  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\33_news_2002_aug_29_worlddispatch.indonesia.html
+15:12:38,586  INFO DefaultDocumentDownloader:57 - Downloading article: Dialogue built by association 
+15:12:40,749  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\34_world_2002_aug_01_worlddispatch.johnaglionby.html
+15:12:40,750  INFO DefaultDocumentDownloader:57 - Downloading article: Week 17: Malaysia
+15:12:43,026  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\35_travel_2002_mar_28_netjetters2001ellie.netjetters.html
+15:12:43,027  INFO DefaultDocumentDownloader:57 - Downloading article: If it's Tuesday, this must be Bangkok
+15:12:45,827  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\36_travel_2001_may_06_cambodia.observerescapesection.theobserver.html
+15:12:45,828  INFO DefaultDocumentDownloader:57 - Downloading article: The king of prints
+15:12:48,559  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\37_books_2001_feb_10_books.guardianreview5.html
+15:12:48,559  INFO DefaultDocumentDownloader:57 - Downloading article: The finer China
+15:12:51,170  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\38_world_2000_mar_26_china.html
+15:12:51,170  INFO DefaultDocumentDownloader:57 - Downloading article: Worm's eye
+15:12:53,234  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\39_business_2000_jan_17_columnists.guardiancolumnists.html
+15:12:53,235  INFO DefaultDocumentDownloader:57 - Downloading article: Shifting sands
+15:12:55,743  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\40_travel_1999_nov_20_oman.html
+15:12:55,743  INFO DefaultDocumentDownloader:57 - Downloading article: No smoke without fire
+15:12:58,146  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\41_society_1999_aug_11_guardiansocietysupplement1.html
+15:12:58,147  INFO DefaultDocumentDownloader:57 - Downloading article: South-east Asia faces new smog crisis
+15:13:00,418  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151106\html\42_world_1999_aug_02_johnaglionby.html
+15:13:00,418  INFO DefaultDocumentDownloader:69 - saving response to loca: 
+15:13:00,447  INFO JsoupContentParser:36 - construct jobId: 20130630_151106
+15:13:00,448  INFO JsoupContentParser:42 - saveAll jobId: 20130630_151106
+15:13:00,451  INFO JsoupContentParser:52 - sourceFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:13:00,451  INFO JsoupContentParser:53 - targetFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.txt
+15:13:00,601  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,609  INFO JsoupContentParser:52 - sourceFile: 02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.html
+15:13:00,609  INFO JsoupContentParser:53 - targetFile: 02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.txt
+15:13:00,659  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,666  INFO JsoupContentParser:52 - sourceFile: 03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.html
+15:13:00,666  INFO JsoupContentParser:53 - targetFile: 03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.txt
+15:13:00,730  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,736  INFO JsoupContentParser:52 - sourceFile: 04_news_2013_jun_21_picture-desk-live.html
+15:13:00,737  INFO JsoupContentParser:53 - targetFile: 04_news_2013_jun_21_picture-desk-live.txt
+15:13:00,812  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,819  INFO JsoupContentParser:52 - sourceFile: 05_world_blog_2013_jun_21_singapore-smog-readers-pictures.html
+15:13:00,819  INFO JsoupContentParser:53 - targetFile: 05_world_blog_2013_jun_21_singapore-smog-readers-pictures.txt
+15:13:00,875  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,883  INFO JsoupContentParser:52 - sourceFile: 06_world_2013_jun_21_singapore-air-pollution-record-high.html
+15:13:00,883  INFO JsoupContentParser:53 - targetFile: 06_world_2013_jun_21_singapore-air-pollution-record-high.txt
+15:13:00,918  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,924  INFO JsoupContentParser:52 - sourceFile: 07_global_2013_jun_20_picture-desk-live.html
+15:13:00,924  INFO JsoupContentParser:53 - targetFile: 07_global_2013_jun_20_picture-desk-live.txt
+15:13:00,959  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,965  INFO JsoupContentParser:52 - sourceFile: 08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.html
+15:13:00,965  INFO JsoupContentParser:53 - targetFile: 08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.txt
+15:13:00,987  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:00,992  INFO JsoupContentParser:52 - sourceFile: 09_world_2013_jun_20_singapore-pollution-record-levels.html
+15:13:00,993  INFO JsoupContentParser:53 - targetFile: 09_world_2013_jun_20_singapore-pollution-record-levels.txt
+15:13:01,021  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,027  INFO JsoupContentParser:52 - sourceFile: 10_news_2013_jun_19_picture-desk-live-the-best-news-photographs-of-the-day.html
+15:13:01,027  INFO JsoupContentParser:53 - targetFile: 10_news_2013_jun_19_picture-desk-live-the-best-news-photographs-of-the-day.txt
+15:13:01,070  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,077  INFO JsoupContentParser:52 - sourceFile: 11_world_2013_jun_19_singapore-pollution-haze-indonesia-air-quality.html
+15:13:01,077  INFO JsoupContentParser:53 - targetFile: 11_world_2013_jun_19_singapore-pollution-haze-indonesia-air-quality.txt
+15:13:01,096  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,100  INFO JsoupContentParser:52 - sourceFile: 12_news_2013_apr_19_picture-desk-live-the-best-news-pictures-of-the-day.html
+15:13:01,101  INFO JsoupContentParser:53 - targetFile: 12_news_2013_apr_19_picture-desk-live-the-best-news-pictures-of-the-day.txt
+15:13:01,117  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,122  INFO JsoupContentParser:52 - sourceFile: 13_news_2012_oct_01_picture-desk-live-the-best-news-pictures-of-the-day.html
+15:13:01,123  INFO JsoupContentParser:53 - targetFile: 13_news_2012_oct_01_picture-desk-live-the-best-news-pictures-of-the-day.txt
+15:13:01,133  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,139  INFO JsoupContentParser:52 - sourceFile: 14_sport_london-2012-olympics-blog_2012_aug_03_olympics-2012-pictures.html
+15:13:01,139  INFO JsoupContentParser:53 - targetFile: 14_sport_london-2012-olympics-blog_2012_aug_03_olympics-2012-pictures.txt
+15:13:01,154  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,160  INFO JsoupContentParser:52 - sourceFile: 15_music_musicblog_2012_jan_15_january-music-alliance-pact-map.html
+15:13:01,160  INFO JsoupContentParser:53 - targetFile: 15_music_musicblog_2012_jan_15_january-music-alliance-pact-map.txt
+15:13:01,169  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,177  INFO JsoupContentParser:52 - sourceFile: 16_lifeandstyle_2011_aug_12_an-a-to-z-of-offal.html
+15:13:01,178  INFO JsoupContentParser:53 - targetFile: 16_lifeandstyle_2011_aug_12_an-a-to-z-of-offal.txt
+15:13:01,195  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,202  INFO JsoupContentParser:52 - sourceFile: 17_sport_2011_may_01_williams-f1-turkish-grand-prix.html
+15:13:01,202  INFO JsoupContentParser:53 - targetFile: 17_sport_2011_may_01_williams-f1-turkish-grand-prix.txt
+15:13:01,230  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,236  INFO JsoupContentParser:52 - sourceFile: 18_travel_2011_mar_12_blue-mountains-australia-nsw-sydney.html
+15:13:01,236  INFO JsoupContentParser:53 - targetFile: 18_travel_2011_mar_12_blue-mountains-australia-nsw-sydney.txt
+15:13:01,266  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,271  INFO JsoupContentParser:52 - sourceFile: 19_music_musicblog_2010_oct_15_music-blogs-map.html
+15:13:01,272  INFO JsoupContentParser:53 - targetFile: 19_music_musicblog_2010_oct_15_music-blogs-map.txt
+15:13:01,308  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,315  INFO JsoupContentParser:52 - sourceFile: 20_world_blog_2010_apr_16_volcano-ash-airspace-flights-iceland.html
+15:13:01,315  INFO JsoupContentParser:53 - targetFile: 20_world_blog_2010_apr_16_volcano-ash-airspace-flights-iceland.txt
+15:13:01,355  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,360  INFO JsoupContentParser:52 - sourceFile: 21_science_2009_sep_20_neuroenhancers-us-brain-power-drugs.html
+15:13:01,361  INFO JsoupContentParser:53 - targetFile: 21_science_2009_sep_20_neuroenhancers-us-brain-power-drugs.txt
+15:13:01,384  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,391  INFO JsoupContentParser:52 - sourceFile: 22_lifeandstyle_2009_may_09_lagos-city-life.html
+15:13:01,391  INFO JsoupContentParser:53 - targetFile: 22_lifeandstyle_2009_may_09_lagos-city-life.txt
+15:13:01,414  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,419  INFO JsoupContentParser:52 - sourceFile: 23_artanddesign_2008_oct_27_1000-artworks-to-see-before-you-die-art.html
+15:13:01,420  INFO JsoupContentParser:53 - targetFile: 23_artanddesign_2008_oct_27_1000-artworks-to-see-before-you-die-art.txt
+15:13:01,443  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,448  INFO JsoupContentParser:52 - sourceFile: 24_artanddesign_2007_feb_20_art.india.html
+15:13:01,449  INFO JsoupContentParser:53 - targetFile: 24_artanddesign_2007_feb_20_art.india.txt
+15:13:01,471  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,476  INFO JsoupContentParser:52 - sourceFile: 25_travel_2006_oct_27_indonesia.essentialinfo.html
+15:13:01,477  INFO JsoupContentParser:53 - targetFile: 25_travel_2006_oct_27_indonesia.essentialinfo.txt
+15:13:01,498  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,503  INFO JsoupContentParser:52 - sourceFile: 26_news_2006_oct_09_indonesia.pollution.html
+15:13:01,503  INFO JsoupContentParser:53 - targetFile: 26_news_2006_oct_09_indonesia.pollution.txt
+15:13:01,526  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,532  INFO JsoupContentParser:52 - sourceFile: 27_travel_2006_jun_04_ethicaltourism.observerescapesection.html
+15:13:01,532  INFO JsoupContentParser:53 - targetFile: 27_travel_2006_jun_04_ethicaltourism.observerescapesection.txt
+15:13:01,557  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,563  INFO JsoupContentParser:52 - sourceFile: 28_business_2006_feb_13_unitedarabemirates.travel.html
+15:13:01,564  INFO JsoupContentParser:53 - targetFile: 28_business_2006_feb_13_unitedarabemirates.travel.txt
+15:13:01,590  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,597  INFO JsoupContentParser:52 - sourceFile: 29_uk_2005_dec_06_military.audreygillan.html
+15:13:01,597  INFO JsoupContentParser:53 - targetFile: 29_uk_2005_dec_06_military.audreygillan.txt
+15:13:01,628  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,634  INFO JsoupContentParser:52 - sourceFile: 30_world_2005_oct_16_china.features.html
+15:13:01,634  INFO JsoupContentParser:53 - targetFile: 30_world_2005_oct_16_china.features.txt
+15:13:01,656  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,662  INFO JsoupContentParser:52 - sourceFile: 31_film_2005_may_20_dvdreviews1.html
+15:13:01,663  INFO JsoupContentParser:53 - targetFile: 31_film_2005_may_20_dvdreviews1.txt
+15:13:01,686  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,690  INFO JsoupContentParser:52 - sourceFile: 32_sport_2004_oct_16_cricket.indiacricketteam.html
+15:13:01,690  INFO JsoupContentParser:53 - targetFile: 32_sport_2004_oct_16_cricket.indiacricketteam.txt
+15:13:01,698  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,703  INFO JsoupContentParser:52 - sourceFile: 33_news_2002_aug_29_worlddispatch.indonesia.html
+15:13:01,704  INFO JsoupContentParser:53 - targetFile: 33_news_2002_aug_29_worlddispatch.indonesia.txt
+15:13:01,712  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,720  INFO JsoupContentParser:52 - sourceFile: 34_world_2002_aug_01_worlddispatch.johnaglionby.html
+15:13:01,721  INFO JsoupContentParser:53 - targetFile: 34_world_2002_aug_01_worlddispatch.johnaglionby.txt
+15:13:01,732  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,739  INFO JsoupContentParser:52 - sourceFile: 35_travel_2002_mar_28_netjetters2001ellie.netjetters.html
+15:13:01,739  INFO JsoupContentParser:53 - targetFile: 35_travel_2002_mar_28_netjetters2001ellie.netjetters.txt
+15:13:01,749  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,755  INFO JsoupContentParser:52 - sourceFile: 36_travel_2001_may_06_cambodia.observerescapesection.theobserver.html
+15:13:01,755  INFO JsoupContentParser:53 - targetFile: 36_travel_2001_may_06_cambodia.observerescapesection.theobserver.txt
+15:13:01,762  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,768  INFO JsoupContentParser:52 - sourceFile: 37_books_2001_feb_10_books.guardianreview5.html
+15:13:01,768  INFO JsoupContentParser:53 - targetFile: 37_books_2001_feb_10_books.guardianreview5.txt
+15:13:01,778  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,783  INFO JsoupContentParser:52 - sourceFile: 38_world_2000_mar_26_china.html
+15:13:01,783  INFO JsoupContentParser:53 - targetFile: 38_world_2000_mar_26_china.txt
+15:13:01,791  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,796  INFO JsoupContentParser:52 - sourceFile: 39_business_2000_jan_17_columnists.guardiancolumnists.html
+15:13:01,796  INFO JsoupContentParser:53 - targetFile: 39_business_2000_jan_17_columnists.guardiancolumnists.txt
+15:13:01,805  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,810  INFO JsoupContentParser:52 - sourceFile: 40_travel_1999_nov_20_oman.html
+15:13:01,810  INFO JsoupContentParser:53 - targetFile: 40_travel_1999_nov_20_oman.txt
+15:13:01,819  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,824  INFO JsoupContentParser:52 - sourceFile: 41_society_1999_aug_11_guardiansocietysupplement1.html
+15:13:01,824  INFO JsoupContentParser:53 - targetFile: 41_society_1999_aug_11_guardiansocietysupplement1.txt
+15:13:01,831  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,836  INFO JsoupContentParser:52 - sourceFile: 42_world_1999_aug_02_johnaglionby.html
+15:13:01,836  INFO JsoupContentParser:53 - targetFile: 42_world_1999_aug_02_johnaglionby.txt
+15:13:01,844  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:13:01,856  INFO PdfContentParser:36 - construct jobId: 20130630_151106
+15:13:01,858  INFO PdfContentParser:47 - construct jobId: 20130630_151106
+15:13:01,858  INFO PdfContentParser:51 - saveAll jobId: 20130630_151106
+15:13:01,863  INFO PdfContentParser:60 - sourceFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:13:01,863  INFO PdfContentParser:61 - targetFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.pdf
+15:13:01,875  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:01,875  INFO PdfContentParser:71 - writePdf
+15:13:02,038  INFO PdfContentParser:90 - writeContent
+15:13:02,103  INFO PdfContentParser:60 - sourceFile: 02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.html
+15:13:02,103  INFO PdfContentParser:61 - targetFile: 02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.pdf
+15:13:02,120  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,121  INFO PdfContentParser:71 - writePdf
+15:13:02,124  INFO PdfContentParser:90 - writeContent
+15:13:02,132  INFO PdfContentParser:60 - sourceFile: 03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.html
+15:13:02,132  INFO PdfContentParser:61 - targetFile: 03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.pdf
+15:13:02,140  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,140  INFO PdfContentParser:71 - writePdf
+15:13:02,143  INFO PdfContentParser:90 - writeContent
+15:13:02,161  INFO PdfContentParser:60 - sourceFile: 04_news_2013_jun_21_picture-desk-live.html
+15:13:02,161  INFO PdfContentParser:61 - targetFile: 04_news_2013_jun_21_picture-desk-live.pdf
+15:13:02,171  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,172  INFO PdfContentParser:71 - writePdf
+15:13:02,174  INFO PdfContentParser:90 - writeContent
+15:13:02,183  INFO PdfContentParser:60 - sourceFile: 05_world_blog_2013_jun_21_singapore-smog-readers-pictures.html
+15:13:02,183  INFO PdfContentParser:61 - targetFile: 05_world_blog_2013_jun_21_singapore-smog-readers-pictures.pdf
+15:13:02,194  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,195  INFO PdfContentParser:71 - writePdf
+15:13:02,198  INFO PdfContentParser:90 - writeContent
+15:13:02,207  INFO PdfContentParser:60 - sourceFile: 06_world_2013_jun_21_singapore-air-pollution-record-high.html
+15:13:02,208  INFO PdfContentParser:61 - targetFile: 06_world_2013_jun_21_singapore-air-pollution-record-high.pdf
+15:13:02,219  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,220  INFO PdfContentParser:71 - writePdf
+15:13:02,223  INFO PdfContentParser:90 - writeContent
+15:13:02,232  INFO PdfContentParser:60 - sourceFile: 07_global_2013_jun_20_picture-desk-live.html
+15:13:02,232  INFO PdfContentParser:61 - targetFile: 07_global_2013_jun_20_picture-desk-live.pdf
+15:13:02,243  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,243  INFO PdfContentParser:71 - writePdf
+15:13:02,246  INFO PdfContentParser:90 - writeContent
+15:13:02,256  INFO PdfContentParser:60 - sourceFile: 08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.html
+15:13:02,256  INFO PdfContentParser:61 - targetFile: 08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.pdf
+15:13:02,264  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,265  INFO PdfContentParser:71 - writePdf
+15:13:02,268  INFO PdfContentParser:90 - writeContent
+15:13:02,271  INFO PdfContentParser:60 - sourceFile: 09_world_2013_jun_20_singapore-pollution-record-levels.html
+15:13:02,271  INFO PdfContentParser:61 - targetFile: 09_world_2013_jun_20_singapore-pollution-record-levels.pdf
+15:13:02,279  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,279  INFO PdfContentParser:71 - writePdf
+15:13:02,282  INFO PdfContentParser:90 - writeContent
+15:13:02,288  INFO PdfContentParser:60 - sourceFile: 10_news_2013_jun_19_picture-desk-live-the-best-news-photographs-of-the-day.html
+15:13:02,288  INFO PdfContentParser:61 - targetFile: 10_news_2013_jun_19_picture-desk-live-the-best-news-photographs-of-the-day.pdf
+15:13:02,297  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,298  INFO PdfContentParser:71 - writePdf
+15:13:02,300  INFO PdfContentParser:90 - writeContent
+15:13:02,310  INFO PdfContentParser:60 - sourceFile: 11_world_2013_jun_19_singapore-pollution-haze-indonesia-air-quality.html
+15:13:02,310  INFO PdfContentParser:61 - targetFile: 11_world_2013_jun_19_singapore-pollution-haze-indonesia-air-quality.pdf
+15:13:02,322  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,322  INFO PdfContentParser:71 - writePdf
+15:13:02,325  INFO PdfContentParser:90 - writeContent
+15:13:02,331  INFO PdfContentParser:60 - sourceFile: 12_news_2013_apr_19_picture-desk-live-the-best-news-pictures-of-the-day.html
+15:13:02,331  INFO PdfContentParser:61 - targetFile: 12_news_2013_apr_19_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+15:13:02,342  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,342  INFO PdfContentParser:71 - writePdf
+15:13:02,345  INFO PdfContentParser:90 - writeContent
+15:13:02,354  INFO PdfContentParser:60 - sourceFile: 13_news_2012_oct_01_picture-desk-live-the-best-news-pictures-of-the-day.html
+15:13:02,354  INFO PdfContentParser:61 - targetFile: 13_news_2012_oct_01_picture-desk-live-the-best-news-pictures-of-the-day.pdf
+15:13:02,366  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,366  INFO PdfContentParser:71 - writePdf
+15:13:02,369  INFO PdfContentParser:90 - writeContent
+15:13:02,378  INFO PdfContentParser:60 - sourceFile: 14_sport_london-2012-olympics-blog_2012_aug_03_olympics-2012-pictures.html
+15:13:02,379  INFO PdfContentParser:61 - targetFile: 14_sport_london-2012-olympics-blog_2012_aug_03_olympics-2012-pictures.pdf
+15:13:02,390  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,391  INFO PdfContentParser:71 - writePdf
+15:13:02,394  INFO PdfContentParser:90 - writeContent
+15:13:02,404  INFO PdfContentParser:60 - sourceFile: 15_music_musicblog_2012_jan_15_january-music-alliance-pact-map.html
+15:13:02,405  INFO PdfContentParser:61 - targetFile: 15_music_musicblog_2012_jan_15_january-music-alliance-pact-map.pdf
+15:13:02,418  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,418  INFO PdfContentParser:71 - writePdf
+15:13:02,421  INFO PdfContentParser:90 - writeContent
+15:13:02,424  INFO PdfContentParser:60 - sourceFile: 16_lifeandstyle_2011_aug_12_an-a-to-z-of-offal.html
+15:13:02,425  INFO PdfContentParser:61 - targetFile: 16_lifeandstyle_2011_aug_12_an-a-to-z-of-offal.pdf
+15:13:02,440  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,440  INFO PdfContentParser:71 - writePdf
+15:13:02,443  INFO PdfContentParser:90 - writeContent
+15:13:02,467  INFO PdfContentParser:60 - sourceFile: 17_sport_2011_may_01_williams-f1-turkish-grand-prix.html
+15:13:02,468  INFO PdfContentParser:61 - targetFile: 17_sport_2011_may_01_williams-f1-turkish-grand-prix.pdf
+15:13:02,477  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,478  INFO PdfContentParser:71 - writePdf
+15:13:02,480  INFO PdfContentParser:90 - writeContent
+15:13:02,486  INFO PdfContentParser:60 - sourceFile: 18_travel_2011_mar_12_blue-mountains-australia-nsw-sydney.html
+15:13:02,486  INFO PdfContentParser:61 - targetFile: 18_travel_2011_mar_12_blue-mountains-australia-nsw-sydney.pdf
+15:13:02,496  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,496  INFO PdfContentParser:71 - writePdf
+15:13:02,499  INFO PdfContentParser:90 - writeContent
+15:13:02,507  INFO PdfContentParser:60 - sourceFile: 19_music_musicblog_2010_oct_15_music-blogs-map.html
+15:13:02,507  INFO PdfContentParser:61 - targetFile: 19_music_musicblog_2010_oct_15_music-blogs-map.pdf
+15:13:02,520  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,521  INFO PdfContentParser:71 - writePdf
+15:13:02,524  INFO PdfContentParser:90 - writeContent
+15:13:02,536  INFO PdfContentParser:60 - sourceFile: 20_world_blog_2010_apr_16_volcano-ash-airspace-flights-iceland.html
+15:13:02,536  INFO PdfContentParser:61 - targetFile: 20_world_blog_2010_apr_16_volcano-ash-airspace-flights-iceland.pdf
+15:13:02,549  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,549  INFO PdfContentParser:71 - writePdf
+15:13:02,551  INFO PdfContentParser:90 - writeContent
+15:13:02,601  INFO PdfContentParser:60 - sourceFile: 21_science_2009_sep_20_neuroenhancers-us-brain-power-drugs.html
+15:13:02,602  INFO PdfContentParser:61 - targetFile: 21_science_2009_sep_20_neuroenhancers-us-brain-power-drugs.pdf
+15:13:02,613  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,614  INFO PdfContentParser:71 - writePdf
+15:13:02,616  INFO PdfContentParser:90 - writeContent
+15:13:02,653  INFO PdfContentParser:60 - sourceFile: 22_lifeandstyle_2009_may_09_lagos-city-life.html
+15:13:02,653  INFO PdfContentParser:61 - targetFile: 22_lifeandstyle_2009_may_09_lagos-city-life.pdf
+15:13:02,661  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,661  INFO PdfContentParser:71 - writePdf
+15:13:02,663  INFO PdfContentParser:90 - writeContent
+15:13:02,674  INFO PdfContentParser:60 - sourceFile: 23_artanddesign_2008_oct_27_1000-artworks-to-see-before-you-die-art.html
+15:13:02,675  INFO PdfContentParser:61 - targetFile: 23_artanddesign_2008_oct_27_1000-artworks-to-see-before-you-die-art.pdf
+15:13:02,683  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,684  INFO PdfContentParser:71 - writePdf
+15:13:02,687  INFO PdfContentParser:90 - writeContent
+15:13:02,692  INFO PdfContentParser:60 - sourceFile: 24_artanddesign_2007_feb_20_art.india.html
+15:13:02,692  INFO PdfContentParser:61 - targetFile: 24_artanddesign_2007_feb_20_art.india.pdf
+15:13:02,698  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,698  INFO PdfContentParser:71 - writePdf
+15:13:02,700  INFO PdfContentParser:90 - writeContent
+15:13:02,706  INFO PdfContentParser:60 - sourceFile: 25_travel_2006_oct_27_indonesia.essentialinfo.html
+15:13:02,706  INFO PdfContentParser:61 - targetFile: 25_travel_2006_oct_27_indonesia.essentialinfo.pdf
+15:13:02,712  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,713  INFO PdfContentParser:71 - writePdf
+15:13:02,714  INFO PdfContentParser:90 - writeContent
+15:13:02,719  INFO PdfContentParser:60 - sourceFile: 26_news_2006_oct_09_indonesia.pollution.html
+15:13:02,719  INFO PdfContentParser:61 - targetFile: 26_news_2006_oct_09_indonesia.pollution.pdf
+15:13:02,725  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,725  INFO PdfContentParser:71 - writePdf
+15:13:02,728  INFO PdfContentParser:90 - writeContent
+15:13:02,732  INFO PdfContentParser:60 - sourceFile: 27_travel_2006_jun_04_ethicaltourism.observerescapesection.html
+15:13:02,732  INFO PdfContentParser:61 - targetFile: 27_travel_2006_jun_04_ethicaltourism.observerescapesection.pdf
+15:13:02,740  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,740  INFO PdfContentParser:71 - writePdf
+15:13:02,742  INFO PdfContentParser:90 - writeContent
+15:13:02,753  INFO PdfContentParser:60 - sourceFile: 28_business_2006_feb_13_unitedarabemirates.travel.html
+15:13:02,754  INFO PdfContentParser:61 - targetFile: 28_business_2006_feb_13_unitedarabemirates.travel.pdf
+15:13:02,761  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,762  INFO PdfContentParser:71 - writePdf
+15:13:02,764  INFO PdfContentParser:90 - writeContent
+15:13:02,777  INFO PdfContentParser:60 - sourceFile: 29_uk_2005_dec_06_military.audreygillan.html
+15:13:02,777  INFO PdfContentParser:61 - targetFile: 29_uk_2005_dec_06_military.audreygillan.pdf
+15:13:02,784  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,785  INFO PdfContentParser:71 - writePdf
+15:13:02,787  INFO PdfContentParser:90 - writeContent
+15:13:02,804  INFO PdfContentParser:60 - sourceFile: 30_world_2005_oct_16_china.features.html
+15:13:02,804  INFO PdfContentParser:61 - targetFile: 30_world_2005_oct_16_china.features.pdf
+15:13:02,811  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,812  INFO PdfContentParser:71 - writePdf
+15:13:02,815  INFO PdfContentParser:90 - writeContent
+15:13:02,826  INFO PdfContentParser:60 - sourceFile: 31_film_2005_may_20_dvdreviews1.html
+15:13:02,827  INFO PdfContentParser:61 - targetFile: 31_film_2005_may_20_dvdreviews1.pdf
+15:13:02,835  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,836  INFO PdfContentParser:71 - writePdf
+15:13:02,839  INFO PdfContentParser:90 - writeContent
+15:13:02,843  INFO PdfContentParser:60 - sourceFile: 32_sport_2004_oct_16_cricket.indiacricketteam.html
+15:13:02,843  INFO PdfContentParser:61 - targetFile: 32_sport_2004_oct_16_cricket.indiacricketteam.pdf
+15:13:02,851  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,851  INFO PdfContentParser:71 - writePdf
+15:13:02,854  INFO PdfContentParser:90 - writeContent
+15:13:02,860  INFO PdfContentParser:60 - sourceFile: 33_news_2002_aug_29_worlddispatch.indonesia.html
+15:13:02,860  INFO PdfContentParser:61 - targetFile: 33_news_2002_aug_29_worlddispatch.indonesia.pdf
+15:13:02,867  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,868  INFO PdfContentParser:71 - writePdf
+15:13:02,924  INFO PdfContentParser:90 - writeContent
+15:13:02,932  INFO PdfContentParser:60 - sourceFile: 34_world_2002_aug_01_worlddispatch.johnaglionby.html
+15:13:02,932  INFO PdfContentParser:61 - targetFile: 34_world_2002_aug_01_worlddispatch.johnaglionby.pdf
+15:13:02,941  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,942  INFO PdfContentParser:71 - writePdf
+15:13:02,945  INFO PdfContentParser:90 - writeContent
+15:13:02,949  INFO PdfContentParser:60 - sourceFile: 35_travel_2002_mar_28_netjetters2001ellie.netjetters.html
+15:13:02,950  INFO PdfContentParser:61 - targetFile: 35_travel_2002_mar_28_netjetters2001ellie.netjetters.pdf
+15:13:02,957  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,957  INFO PdfContentParser:71 - writePdf
+15:13:02,960  INFO PdfContentParser:90 - writeContent
+15:13:02,964  INFO PdfContentParser:60 - sourceFile: 36_travel_2001_may_06_cambodia.observerescapesection.theobserver.html
+15:13:02,964  INFO PdfContentParser:61 - targetFile: 36_travel_2001_may_06_cambodia.observerescapesection.theobserver.pdf
+15:13:02,971  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,971  INFO PdfContentParser:71 - writePdf
+15:13:02,974  INFO PdfContentParser:90 - writeContent
+15:13:02,981  INFO PdfContentParser:60 - sourceFile: 37_books_2001_feb_10_books.guardianreview5.html
+15:13:02,982  INFO PdfContentParser:61 - targetFile: 37_books_2001_feb_10_books.guardianreview5.pdf
+15:13:02,989  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:02,990  INFO PdfContentParser:71 - writePdf
+15:13:02,992  INFO PdfContentParser:90 - writeContent
+15:13:03,006  INFO PdfContentParser:60 - sourceFile: 38_world_2000_mar_26_china.html
+15:13:03,007  INFO PdfContentParser:61 - targetFile: 38_world_2000_mar_26_china.pdf
+15:13:03,013  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:03,014  INFO PdfContentParser:71 - writePdf
+15:13:03,016  INFO PdfContentParser:90 - writeContent
+15:13:03,024  INFO PdfContentParser:60 - sourceFile: 39_business_2000_jan_17_columnists.guardiancolumnists.html
+15:13:03,024  INFO PdfContentParser:61 - targetFile: 39_business_2000_jan_17_columnists.guardiancolumnists.pdf
+15:13:03,031  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:03,031  INFO PdfContentParser:71 - writePdf
+15:13:03,034  INFO PdfContentParser:90 - writeContent
+15:13:03,039  INFO PdfContentParser:60 - sourceFile: 40_travel_1999_nov_20_oman.html
+15:13:03,039  INFO PdfContentParser:61 - targetFile: 40_travel_1999_nov_20_oman.pdf
+15:13:03,048  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:03,049  INFO PdfContentParser:71 - writePdf
+15:13:03,087  INFO PdfContentParser:90 - writeContent
+15:13:03,093  INFO PdfContentParser:60 - sourceFile: 41_society_1999_aug_11_guardiansocietysupplement1.html
+15:13:03,093  INFO PdfContentParser:61 - targetFile: 41_society_1999_aug_11_guardiansocietysupplement1.pdf
+15:13:03,099  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:03,099  INFO PdfContentParser:71 - writePdf
+15:13:03,101  INFO PdfContentParser:90 - writeContent
+15:13:03,105  INFO PdfContentParser:60 - sourceFile: 42_world_1999_aug_02_johnaglionby.html
+15:13:03,105  INFO PdfContentParser:61 - targetFile: 42_world_1999_aug_02_johnaglionby.pdf
+15:13:03,111  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:13:03,112  INFO PdfContentParser:71 - writePdf
+15:13:03,114  INFO PdfContentParser:90 - writeContent
+15:14:26,730  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+15:14:26,731  INFO GuardianResponseFetcher:29 - Try get list of articles...
+15:14:26,731  INFO GuardianResponseFetcher:41 - writing param metadata
+15:14:26,738  INFO GuardianResponseFetcher:49 - Using keywords: haze singapore
+15:14:26,738  INFO GuardianResponseFetcher:50 - page-size: 1
+15:14:28,190  INFO DefaultResponseBuilder:25 - Building List of articles...
+15:14:28,208  INFO DefaultDocumentDownloader:49 - Crawling all articles for jobId: 20130630_151426
+15:14:28,208  INFO DefaultDocumentDownloader:51 - Total articles: 1
+15:14:28,210  INFO DefaultDocumentDownloader:57 - Downloading article: Day two at the Wimbledon Championships and messages of support for Nelson Mandela: the best news photographs of the day
+15:14:31,364  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151426\html\01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:14:31,364  INFO DefaultDocumentDownloader:69 - saving response to loca: 
+15:14:31,370  INFO JsoupContentParser:36 - construct jobId: 20130630_151426
+15:14:31,371  INFO JsoupContentParser:42 - saveAll jobId: 20130630_151426
+15:14:31,374  INFO JsoupContentParser:52 - sourceFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:14:31,374  INFO JsoupContentParser:53 - targetFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.txt
+15:14:31,400  INFO JsoupContentParser:83 - createHeader countKeyWords: false
+15:14:31,404  INFO PdfContentParser:36 - construct jobId: 20130630_151426
+15:14:31,405  INFO PdfContentParser:47 - construct jobId: 20130630_151426
+15:14:31,405  INFO PdfContentParser:51 - saveAll jobId: 20130630_151426
+15:14:31,410  INFO PdfContentParser:60 - sourceFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:14:31,411  INFO PdfContentParser:61 - targetFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.pdf
+15:14:31,421  INFO PdfContentParser:83 - createHeader countKeyWords: false
+15:14:31,422  INFO PdfContentParser:71 - writePdf
+15:14:31,424  INFO PdfContentParser:90 - writeContent
+15:14:55,894  INFO GuardianResponseFetcher:23 - Initializing GuardianResponseFetcher
+15:14:55,895  INFO GuardianResponseFetcher:29 - Try get list of articles...
+15:14:55,895  INFO GuardianResponseFetcher:41 - writing param metadata
+15:14:55,902  INFO GuardianResponseFetcher:49 - Using keywords: haze singapore
+15:14:55,902  INFO GuardianResponseFetcher:50 - page-size: 10
+15:14:56,820  INFO DefaultResponseBuilder:25 - Building List of articles...
+15:14:56,839  INFO DefaultDocumentDownloader:49 - Crawling all articles for jobId: 20130630_151455
+15:14:56,839  INFO DefaultDocumentDownloader:51 - Total articles: 10
+15:14:56,841  INFO DefaultDocumentDownloader:57 - Downloading article: Day two at the Wimbledon Championships and messages of support for Nelson Mandela: the best news photographs of the day
+15:14:59,404  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:14:59,404  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesian president apologises to Singapore and Malaysia for forest fires
+15:15:02,518  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.html
+15:15:02,518  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesia's forest fire smoke blows deeper into Malaysia
+15:15:05,377  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.html
+15:15:05,377  INFO DefaultDocumentDownloader:57 - Downloading article: Revelers gather at Stonehenge to celebrate the longest day of the year in the UK and protests continue in Brazil: he best news photographs of the day
+15:15:08,325  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\04_news_2013_jun_21_picture-desk-live.html
+15:15:08,325  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore smog - readers pictures
+15:15:11,620  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\05_world_blog_2013_jun_21_singapore-smog-readers-pictures.html
+15:15:11,621  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore air pollution hits record high
+15:15:15,092  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\06_world_2013_jun_21_singapore-air-pollution-record-high.html
+15:15:15,093  INFO DefaultDocumentDownloader:57 - Downloading article: David Beckham causes a stir in China and more from Royal Ascot: the best news photographs of the day
+15:15:18,300  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\07_global_2013_jun_20_picture-desk-live.html
+15:15:18,300  INFO DefaultDocumentDownloader:57 - Downloading article: Indonesia and Singapore engulfed by forest fire smoke – video
+15:15:20,685  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.html
+15:15:20,685  INFO DefaultDocumentDownloader:57 - Downloading article: Singapore pollution from Indonesian forest fires hits record levels
+15:15:23,836  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\09_world_2013_jun_20_singapore-pollution-record-levels.html
+15:15:23,836  INFO DefaultDocumentDownloader:57 - Downloading article: : the best news photographs of the day
+15:15:27,114  INFO DefaultDocumentDownloader:64 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_151455\html\10_news_2013_jun_19_picture-desk-live-the-best-news-photographs-of-the-day.html
+15:15:27,114  INFO DefaultDocumentDownloader:69 - saving response to loca: 
+15:15:27,121  INFO JsoupContentParser:36 - construct jobId: 20130630_151455
+15:15:27,121  INFO JsoupContentParser:42 - saveAll jobId: 20130630_151455
+15:15:27,124  INFO JsoupContentParser:52 - sourceFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.html
+15:15:27,124  INFO JsoupContentParser:53 - targetFile: 01_news_2013_jun_25_the-best-news-photographs-of-the-day.txt
+15:15:27,134  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,134  INFO JsoupContentParser:120 - calculateKeywords: document: Your IP address will be logged
+
+Live
+
+Sort by:
+
+Auto update:
+
+Updates:
+
+11.47pm BST
+
+11.28pm BST
+
+10
+15:15:27,134  INFO JsoupContentParser:132 - countWord
+15:15:27,137  INFO JsoupContentParser:132 - countWord
+15:15:27,145  INFO JsoupContentParser:52 - sourceFile: 02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.html
+15:15:27,145  INFO JsoupContentParser:53 - targetFile: 02_world_2013_jun_24_indonesian-president-singapore-malaysia-fires.txt
+15:15:27,156  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,156  INFO JsoupContentParser:120 - calculateKeywords: document: The Indonesian president, Susilo Bambang Yudhoyono, has apologised to Singapore and Malaysia for rec
+15:15:27,156  INFO JsoupContentParser:132 - countWord
+15:15:27,161  INFO JsoupContentParser:132 - countWord
+15:15:27,169  INFO JsoupContentParser:52 - sourceFile: 03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.html
+15:15:27,169  INFO JsoupContentParser:53 - targetFile: 03_environment_2013_jun_24_indonesia-forest-fire-malaysia-singapore.txt
+15:15:27,178  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,178  INFO JsoupContentParser:120 - calculateKeywords: document: Singapore was given respite on Monday from the pollution of hundreds of peat fires burning on the is
+15:15:27,179  INFO JsoupContentParser:132 - countWord
+15:15:27,185  INFO JsoupContentParser:132 - countWord
+15:15:27,201  INFO JsoupContentParser:52 - sourceFile: 04_news_2013_jun_21_picture-desk-live.html
+15:15:27,204  INFO JsoupContentParser:53 - targetFile: 04_news_2013_jun_21_picture-desk-live.txt
+15:15:27,233  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,234  INFO JsoupContentParser:120 - calculateKeywords: document: Your IP address will be logged
+
+Live
+
+Sort by:
+
+Auto update:
+
+Updates:
+
+11.17pm BST
+
+10.48pm BST
+
+7.
+15:15:27,234  INFO JsoupContentParser:132 - countWord
+15:15:27,234  INFO JsoupContentParser:132 - countWord
+15:15:27,240  INFO JsoupContentParser:52 - sourceFile: 05_world_blog_2013_jun_21_singapore-smog-readers-pictures.html
+15:15:27,240  INFO JsoupContentParser:53 - targetFile: 05_world_blog_2013_jun_21_singapore-smog-readers-pictures.txt
+15:15:27,251  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,251  INFO JsoupContentParser:120 - calculateKeywords: document: Smog from Indonesian fires has smothered Singapore this week, with a smokey haze causing dramatic vi
+15:15:27,251  INFO JsoupContentParser:132 - countWord
+15:15:27,252  INFO JsoupContentParser:132 - countWord
+15:15:27,258  INFO JsoupContentParser:52 - sourceFile: 06_world_2013_jun_21_singapore-air-pollution-record-high.html
+15:15:27,259  INFO JsoupContentParser:53 - targetFile: 06_world_2013_jun_21_singapore-air-pollution-record-high.txt
+15:15:27,269  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,269  INFO JsoupContentParser:120 - calculateKeywords: document: Air pollution in Singapore has soared to a record high for a third consecutive day, as Indonesia pre
+15:15:27,269  INFO JsoupContentParser:132 - countWord
+15:15:27,270  INFO JsoupContentParser:132 - countWord
+15:15:27,277  INFO JsoupContentParser:52 - sourceFile: 07_global_2013_jun_20_picture-desk-live.html
+15:15:27,277  INFO JsoupContentParser:53 - targetFile: 07_global_2013_jun_20_picture-desk-live.txt
+15:15:27,287  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:15:27,287  INFO JsoupContentParser:120 - calculateKeywords: document: Your IP address will be logged
+
+Live
+
+Sort by:
+
+Auto update:
+
+Updates:
+
+11.40pm BST
+
+10.17pm BST
+
+Up
+15:15:27,288  INFO JsoupContentParser:132 - countWord
+15:15:27,288  INFO JsoupContentParser:132 - countWord
+15:15:27,295  INFO JsoupContentParser:52 - sourceFile: 08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.html
+15:15:27,295  INFO JsoupContentParser:53 - targetFile: 08_world_video_2013_jun_20_indonesia-singapore-forest-fire-smoke-video.txt
+15:15:27,304  INFO JsoupContentParser:83 - createHeader countKeyWords: true
+15:25:30,390  INFO GuardianResponseFetcher:25 - Initializing GuardianResponseFetcher
+15:25:30,396  INFO GuardianResponseFetcher:31 - Try get list of articles...
+15:25:30,397  INFO GuardianResponseFetcher:50 - Using keywords: economy page-size: 2
+15:25:30,475  WARN RegisterBuiltin:103 - NoClassDefFoundError: Unable to load builtin provider: org.jboss.resteasy.plugins.providers.DocumentProvider
+15:25:33,016  INFO GuardianResponseFetcher:82 - writing param metadata
+15:25:33,080  INFO GuardianResponseBuilder:24 - Building List of articles...
+15:25:33,126  INFO GuardianDefaultDocumentDownloader:46 - Crawling all articles for jobId: 20130630_152530
+15:25:33,126  INFO GuardianDefaultDocumentDownloader:48 - Total articles: 2
+15:25:33,129  INFO GuardianDefaultDocumentDownloader:54 - Downloading article: Labour still to blame for economy, say 46% in Opinium/Observer poll
+15:25:35,614  INFO GuardianDefaultDocumentDownloader:60 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_152530\html\01_politics_2013_jun_30_labour-economy-poll.html
+15:25:35,614  INFO GuardianDefaultDocumentDownloader:54 - Downloading article: 'Big society' network given extra £1m grant despite years of failure
+15:25:38,270  INFO GuardianDefaultDocumentDownloader:60 - Written : C:\Users\lamida\work\article-fetcher\article-downloader\ArticleDownloaderUi\result\20130630_152530\html\02_society_2013_jun_30_big-society-network-grant.html
+15:25:38,270  INFO GuardianDefaultDocumentDownloader:77 - saving response to loca: 
+15:25:38,281  INFO GuardianJsoupContentParser:32 - construct jobId: 20130630_152530
+15:25:38,281  INFO GuardianJsoupContentParser:38 - saveAll jobId: 20130630_152530
+15:25:38,284  INFO GuardianJsoupContentParser:48 - sourceFile: 01_politics_2013_jun_30_labour-economy-poll.html
+15:25:38,286  INFO GuardianJsoupContentParser:49 - targetFile: 01_politics_2013_jun_30_labour-economy-poll.txt
+15:25:38,460  INFO GuardianJsoupContentParser:78 - createHeader countKeyWords: false
+15:25:38,467  INFO GuardianJsoupContentParser:48 - sourceFile: 02_society_2013_jun_30_big-society-network-grant.html
+15:25:38,467  INFO GuardianJsoupContentParser:49 - targetFile: 02_society_2013_jun_30_big-society-network-grant.txt
+15:25:38,524  INFO GuardianJsoupContentParser:78 - createHeader countKeyWords: false
+15:25:38,536  INFO GuardianPdfContentParser:32 - construct jobId: 20130630_152530
+15:25:38,539  INFO GuardianPdfContentParser:44 - construct jobId: 20130630_152530
+15:25:38,539  INFO GuardianPdfContentParser:48 - saveAll jobId: 20130630_152530
+15:25:38,544  INFO GuardianPdfContentParser:58 - sourceFile: 01_politics_2013_jun_30_labour-economy-poll.html
+15:25:38,545  INFO GuardianPdfContentParser:59 - targetFile: 01_politics_2013_jun_30_labour-economy-poll.pdf
+15:25:38,619  INFO GuardianPdfContentParser:78 - createHeader countKeyWords: false
+15:25:38,619  INFO GuardianPdfContentParser:69 - writePdf
+15:25:38,770  INFO GuardianPdfContentParser:88 - writeContent
+15:25:38,793  INFO GuardianPdfContentParser:58 - sourceFile: 02_society_2013_jun_30_big-society-network-grant.html
+15:25:38,793  INFO GuardianPdfContentParser:59 - targetFile: 02_society_2013_jun_30_big-society-network-grant.pdf
+15:25:38,842  INFO GuardianPdfContentParser:78 - createHeader countKeyWords: false
+15:25:38,842  INFO GuardianPdfContentParser:69 - writePdf
+15:25:38,846  INFO GuardianPdfContentParser:88 - writeContent

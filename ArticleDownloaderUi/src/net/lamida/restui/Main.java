@@ -9,7 +9,7 @@ import javax.swing.*;
 import net.lamida.rest.Job;
 import net.lamida.rest.RestParameter;
 import net.lamida.rest.RestResponse;
-import net.lamida.rest.client.GuardianRestClientFacade;
+import net.lamida.rest.client.facade.GuardianFacade;
 import net.lamida.util.ProgressReporter;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
@@ -70,6 +70,7 @@ public class Main extends javax.swing.JFrame implements ProgressReporter {
          */
         java.awt.EventQueue.invokeLater(new Runnable() {
 
+            @Override
             public void run() {
                 Main.this.setLocationRelativeTo(null);
                 Main.this.setVisible(true);
@@ -339,14 +340,14 @@ public class Main extends javax.swing.JFrame implements ProgressReporter {
         restParameter.setPageSize(pageSize);
         
         final Job job = new Job(restParameter);
-        final RestResponse responseData = GuardianRestClientFacade.fetchResult(job);
+        final RestResponse responseData = new GuardianFacade().fetchResult(job);
         progressBar.setIndeterminate(false);
         progressBar.setMaximum(responseData.getResults().size());
         new SwingWorker<Object, Object>() {
 
             @Override
             protected Object doInBackground() throws Exception {
-                GuardianRestClientFacade.download(job, responseData, Main.this);
+                new GuardianFacade().download(job, responseData, Main.this);
                 return null;
             }
 
