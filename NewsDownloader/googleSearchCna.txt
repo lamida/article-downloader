@@ -1,0 +1,419 @@
+log4j:WARN No appenders could be found for logger (org.jboss.resteasy.plugins.providers.RegisterBuiltin).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "nextPage": [
+   {
+    "title": "Google Custom Search - Egypt",
+    "totalResults": "41100",
+    "searchTerms": "Egypt",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "007808206270820318552:kx0lxihwtre"
+   }
+  ],
+  "request": [
+   {
+    "title": "Google Custom Search - Egypt",
+    "totalResults": "41100",
+    "searchTerms": "Egypt",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "007808206270820318552:kx0lxihwtre"
+   }
+  ]
+ },
+ "context": {
+  "title": "Channelnewsasia"
+ },
+ "searchInformation": {
+  "searchTime": 0.388262,
+  "formattedSearchTime": "0.39",
+  "totalResults": "41100",
+  "formattedTotalResults": "41,100"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's army topples president Morsi - Channel NewsAsia",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e army topples president Morsi - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-s-army-topples/733606.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "19 hours ago ... Egyptian army toppled Islamist President Mohamed Morsi on Wednesday after a   week of bloodshed that killed nearly 50 people as millions ...",
+   "htmlSnippet": "19 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgyptian\u003c/b\u003e army toppled Islamist President Mohamed Morsi on Wednesday after a \u003cbr\u003e  week of bloodshed that killed nearly 50 people as millions&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "StWN0v1stcMJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt-s.../733606.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e-s.../733606.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/733604/1372879692000/large16x9/768/432/abdelfatah-al-sissi.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ7scB2F5MtJCrirNp7dYh0u8StPjVPgDGlSRbYEfLT5Wix8aPXzaoOgcQ"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt's army topples president Morsi - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-s-army-topples/733606.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/733604/1372879692000/large16x9/640/360/abdelfatah-al-sissi.jpg",
+      "og:description": "Egyptian army toppled Islamist President Mohamed Morsi on Wednesday after a week of bloodshed that killed nearly 50 people as millions took to the streets to demand an end to his turbulent single year of rule.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt army issues President Morsi 48-hour ultimatum - Channel ...",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e army issues President Morsi 48-hour ultimatum - Channel \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-army-issues/730902.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "2 days ago ... Egyptian opposition protesters celebrate in Cairo's landmark Tahrir square after   Egypt's armed forces gave President Mohamed Morsi 48 hours ...",
+   "htmlSnippet": "2 days ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgyptian\u003c/b\u003e opposition protesters celebrate in Cairo&#39;s landmark Tahrir square after \u003cbr\u003e  \u003cb\u003eEgypt&#39;s\u003c/b\u003e armed forces gave President Mohamed Morsi 48 hours&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "ZLO9owzYY44J",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt.../730902.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e.../730902.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/730910/1372697816000/large16x9/768/432/egypt-protest-2.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTRp__k7wdxCRMgOpsj7xMfqa42ey8R5DMjI866AQqRxxsxcDDwtbn7Adk"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt army issues President Morsi 48-hour ultimatum - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-army-issues/730902.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/730910/1372697816000/large16x9/640/360/egypt-protest-2.jpg",
+      "og:description": "Egypt's armed forces warned on Monday that if Islamist President Mohamed Morsi failed to meet the demands of the people within 48 hours, it would intervene with a roadmap of its own, after millions took to the streets to demand he step down",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt army ousts, detains president Morsi - Channel NewsAsia",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e army ousts, detains president Morsi - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-army-ousts-detains/733936.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "12 hours ago ... Egypt's army overthrew and detained the country's first democratically elected   president, Mohamed Morsi, in an abrupt end to the Islamist's first ...",
+   "htmlSnippet": "12 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e army overthrew and detained the country&#39;s first democratically elected \u003cbr\u003e  president, Mohamed Morsi, in an abrupt end to the Islamist&#39;s first&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "lqx9mrskXSsJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt.../733936.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e.../733936.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/733940/1372907344000/large16x9/768/432/egyptian-army-morsi.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNJTnmGL1yr1Up7KQ6s7QdJHzMPD_3344ctRIRNlEgRSI4A8sivefQCO0"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt army ousts, detains president Morsi - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-army-ousts-detains/733936.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/733940/1372907344000/large16x9/640/360/egyptian-army-morsi.jpg",
+      "og:description": "Egypt's army overthrew and detained the country's first democratically elected president, Mohamed Morsi, in an abrupt end to the Islamist's first year in office following days of bloodshed and protests demanding his resignation.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's Morsi: from prison to palace to..? - Channel NewsAsia",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e Morsi: from prison to palace to..? - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-s-morsi-from-prison/733754.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "15 hours ago ... Egypt's first freely elected president Mohamed Morsi, who was toppled in a coup   on Wednesday, is a veteran Islamist who is no stranger to ...",
+   "htmlSnippet": "15 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e first freely elected president Mohamed Morsi, who was toppled in a coup \u003cbr\u003e  on Wednesday, is a veteran Islamist who is no stranger to&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "dZfVPs-3tjAJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt-s.../733754.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e-s.../733754.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/731962/1372792393000/large16x9/768/432/protesters-hold-posters.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSDWeCh95Cn-QGrwJAp9RbteGELj4K5omBDe87OFO-JW7Fwz-MGPYXN61y9"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt's Morsi: from prison to palace to..? - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-s-morsi-from-prison/733754.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/731962/1372792393000/large16x9/640/360/protesters-hold-posters.jpg",
+      "og:description": "Egypt's first freely elected president Mohamed Morsi, who was toppled in a coup on Wednesday, is a veteran Islamist who is no stranger to underground politics, having broken out of jail just 30 months ago.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's presidency rejects army ultimatum - Channel NewsAsia",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e presidency rejects army ultimatum - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-s-presidency/731068.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "2 days ago ... Egypt's presidency on Tuesday rejected an army ultimatum threatening to   intervene if Islamist President Mohamed Morsi did not meet the ...",
+   "htmlSnippet": "2 days ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e presidency on Tuesday rejected an army ultimatum threatening to \u003cbr\u003e  intervene if Islamist President Mohamed Morsi did not meet the&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "FJbLEkswJhEJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt-s.../731068.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e-s.../731068.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/729632/1372616203000/large16x9/768/432/egypt-protest-1.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgRX_QdCWwpt4tPUAqO690x4UFRHeaGAIISOlpqDiYTm7POJIHb2Yj_Tc0"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt's presidency rejects army ultimatum - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-s-presidency/731068.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/729632/1372616203000/large16x9/640/360/egypt-protest-1.jpg",
+      "og:description": "Egypt's presidency on Tuesday rejected an army ultimatum threatening to intervene if Islamist President Mohamed Morsi did not meet the demands of the people, raising the stakes in the country's political crisis.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt protesters erupt in joy as army ousts Morsi - Channel NewsAsia",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e protesters erupt in joy as army ousts Morsi - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-protesters-erupt-in/733726.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "17 hours ago ... Fireworks light the sky opponents of Egypt's Islamist President Mohammed Morsi   celebrate in Tahrir Square in Cairo, Egypt. (AP/Amr Nabil).",
+   "htmlSnippet": "17 hours ago \u003cb\u003e...\u003c/b\u003e Fireworks light the sky opponents of \u003cb\u003eEgypt&#39;s\u003c/b\u003e Islamist President Mohammed Morsi \u003cbr\u003e  celebrate in Tahrir Square in Cairo, \u003cb\u003eEgypt\u003c/b\u003e. (AP/Amr Nabil).",
+   "cacheId": "rUZ6zaWaVJoJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt.../733726.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e.../733726.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/733728/1372889427000/large16x9/768/432/egypt-protest-fireworks.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS06Vn1gDVgQAlpjxrIif7F0R9ZO1afiIYDT-jWECNCAFNJgBnpciOhAtya"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt protesters erupt in joy as army ousts Morsi - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-protesters-erupt-in/733726.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/733728/1372889426000/large16x9/640/360/egypt-protest-fireworks.jpg",
+      "og:description": "In their tens of thousands, they cheered, ignited firecrackers and honked horns as soon as the army announced President Mohamed Morsi's rule was over, ending Egypt's worst crisis since its 2011 revolt.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt orders arrest of 300 Islamists - Channel NewsAsia",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e orders arrest of 300 Islamists - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-orders-arrest-of/733748.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "16 hours ago ... Egyptian police have been ordered to arrest 300 leaders and members of   Mohamed Morsi's Muslim Brotherhood after the army deposed the ...",
+   "htmlSnippet": "16 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgyptian\u003c/b\u003e police have been ordered to arrest 300 leaders and members of \u003cbr\u003e  Mohamed Morsi&#39;s Muslim Brotherhood after the army deposed the&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "wFJnyUjC-K0J",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt.../733748.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e.../733748.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/733420/1372868840000/large16x9/768/432/an-egyptian-opposition.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSlQFnrgrH1j5txg0Rw3uuPDvGAgWxE4WHlDlpod0KqCc9veFUqUHAk-MZj"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt orders arrest of 300 Islamists - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-orders-arrest-of/733748.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/733420/1372868840000/large16x9/640/360/an-egyptian-opposition.jpg",
+      "og:description": "Egyptian police have been ordered to arrest 300 leaders and members of Mohamed Morsi's Muslim Brotherhood after the army deposed the Islamist president on Wednesday, the website of the official Al-Ahram newspaper reported early Thursday.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's Morsi, aides detained in military facility: senior official ...",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e Morsi, aides detained in military facility: senior official \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-s-morsi-aides/733834.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "15 hours ago ... Egypt's deposed president Mohamed Morsi is detained in a military facility with   top aides after the army announced his ouster, a senior member ...",
+   "htmlSnippet": "15 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e deposed president Mohamed Morsi is detained in a military facility with \u003cbr\u003e  top aides after the army announced his ouster, a senior member&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "formattedUrl": "www.channelnewsasia.com/news/world/egypt-s.../733834.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/world/\u003cb\u003eegypt\u003c/b\u003e-s.../733834.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/561254/1368712984000/large16x9/640/360/egyptian-president.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-0c-MH58hIBj4elqMQVXJoCOxgRZNGjnDz69_uNmy8Kd6J8y-r7MSq7dn"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt's Morsi, aides detained in military facility: senior official - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-s-morsi-aides/733834.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/561254/1368712984000/large16x9/640/360/egyptian-president.jpg",
+      "og:description": "Egypt's deposed president Mohamed Morsi is detained in a military facility with top aides after the army announced his ouster, a senior member of the Muslim Brotherhood said Thursday.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt protesters mass after Morsi snubs army ultimatum - Channel ...",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e protesters mass after Morsi snubs army ultimatum - Channel \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-protesters-mass/732066.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "1 day ago ... Opponents of Egypt's Mohamed Morsi poured onto the streets of Cairo on   Tuesday to press their demand that he step down after the Islamist ...",
+   "htmlSnippet": "1 day ago \u003cb\u003e...\u003c/b\u003e Opponents of \u003cb\u003eEgypt&#39;s\u003c/b\u003e Mohamed Morsi poured onto the streets of Cairo on \u003cbr\u003e  Tuesday to press their demand that he step down after the Islamist&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "91lqu2sL9W8J",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt.../732066.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e.../732066.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/731962/1372792393000/large16x9/768/432/protesters-hold-posters.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSDWeCh95Cn-QGrwJAp9RbteGELj4K5omBDe87OFO-JW7Fwz-MGPYXN61y9"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt protesters mass after Morsi snubs army ultimatum - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-protesters-mass/732066.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/731962/1372792393000/large16x9/640/360/protesters-hold-posters.jpg",
+      "og:description": "Opponents of Egypt's Mohamed Morsi poured onto the streets of Cairo on Tuesday to press their demand that he step down after the Islamist president snubbed an ultimatum from the army to agree to the \"people's demands\" or face an imposed solution.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt deeper in crisis as Morsi rebuffs army ultimatum - Channel ...",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e deeper in crisis as Morsi rebuffs army ultimatum - Channel \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/world/egypt-deeper-in-crisis-as/731776.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "2 days ago ... Egypt's political crisis deepened on Tuesday as Islamist President Mohamed   Morsi snubbed an army ultimatum threatening to intervene if he ...",
+   "htmlSnippet": "2 days ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e political crisis deepened on Tuesday as Islamist President Mohamed \u003cbr\u003e  Morsi snubbed an army ultimatum threatening to intervene if he&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "qzOwa9dBD38J",
+   "formattedUrl": "www.channelnewsasia.com/news/.../egypt.../731776.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../\u003cb\u003eegypt\u003c/b\u003e.../731776.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/729548/1372771399000/large16x9/768/432/egypt-rally.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTTJpiOVIHSFXGMOW3YmDfMA4rGqu8ELjo1qNp_sxFOtofblrSXqfZJCSuV"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Egypt deeper in crisis as Morsi rebuffs army ultimatum - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/egypt-deeper-in-crisis-as/731776.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/729548/1372771399000/large16x9/640/360/egypt-rally.jpg",
+      "og:description": "Egypt's political crisis deepened on Tuesday as Islamist President Mohamed Morsi snubbed an army ultimatum threatening to intervene if he did not meet the demands of the people, and five ministers led a spate of government resignations.",
+      "og:type": "article"
+     }
+    ]
+   }
+  }
+ ]
+}
+
