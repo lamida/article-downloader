@@ -1,6 +1,7 @@
-package net.lamida.rest.nue;
+package net.lamida.nd.parser;
 
 import junit.framework.Assert;
+import net.lamida.nd.parser.CnaParser;
 
 import org.junit.Before;
 import org.junit.Test;

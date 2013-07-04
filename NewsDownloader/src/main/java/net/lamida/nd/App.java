@@ -1,4 +1,4 @@
-package net.lamida.newsdownloader;
+package net.lamida.nd;
 
 /**
  * Hello world!

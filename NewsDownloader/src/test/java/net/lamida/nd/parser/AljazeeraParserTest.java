@@ -1,35 +1,36 @@
-package net.lamida.rest.nue;
+package net.lamida.nd.parser;
 
 import junit.framework.Assert;
+import net.lamida.nd.parser.AljazeeraParser;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class CnnParserTest {
+public class AljazeeraParserTest {
 	private String url;
 	
 	@Before
 	public void init(){
-		url = "http://edition.cnn.com/2013/07/02/world/meast/egypt-protests";
+		url = "http://www.aljazeera.com/news/asia/2013/06/20136234309866467.html";
 	}
 	
 	@Test
 	public void testParse(){
-		CnnParser parser = new CnnParser();
+		AljazeeraParser parser = new AljazeeraParser();
 		parser.init(url);
 		String articleText = parser.getNewsContent();
 		Assert.assertNotNull(articleText);
 		
 		String articleTitle = parser.getNewsTitle();
 		Assert.assertNotNull(articleTitle);
-		Assert.assertEquals("Showdown? Egypt's Morsy defies military 'ultimatum'", articleTitle);
+		Assert.assertEquals("Pakistani Taliban claim attack on foreigners", articleTitle);
 		
 		String articleSection = parser.getNewsSection();
 		Assert.assertNotNull(articleSection);
-		Assert.assertEquals("Middle East", articleSection);
+		Assert.assertEquals("Central & South Asia", articleSection);
 		
 		String articlePostTime = parser.getNewsPostTime();
 		Assert.assertNotNull(articlePostTime);
-		Assert.assertEquals("July 3, 2013 -- Updated 0339 GMT (1139 HKT)", articlePostTime);
+		Assert.assertEquals("24 Jun 2013 05:50", articlePostTime);
 	}
 }

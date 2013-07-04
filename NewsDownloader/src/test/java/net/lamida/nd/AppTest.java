@@ -1,4 +1,4 @@
-package net.lamida.newsdownloader;
+package net.lamida.nd;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

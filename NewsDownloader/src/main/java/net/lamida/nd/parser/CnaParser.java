@@ -1,4 +1,4 @@
-package net.lamida.rest.nue;
+package net.lamida.nd.parser;
 
 
 public class CnaParser extends AbstractParser {

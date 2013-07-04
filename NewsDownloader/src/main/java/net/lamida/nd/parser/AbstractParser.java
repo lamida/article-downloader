@@ -1,4 +1,4 @@
-package net.lamida.rest.nue;
+package net.lamida.nd.parser;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
