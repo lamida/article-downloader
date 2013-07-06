@@ -1,6 +1,6 @@
 package net.lamida.rest;
 
-public class RestParameter {
+public class SearchParameter {
 	private String provider;
 	private String query;
 	private String endPoint;

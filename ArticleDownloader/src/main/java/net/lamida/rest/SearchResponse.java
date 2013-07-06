@@ -1,8 +1,9 @@
 package net.lamida.rest;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class RestResponse {
+public class SearchResponse {
 	private String status;
 	private String userTier;
 	private String total;
@@ -11,7 +12,7 @@ public class RestResponse {
 	private String currentPage;
 	private String pages;
 	private String orderBy;
-	private List<RestResult> results;
+	private List<SearchResult> results;
 
 	public String getStatus() {
 		return status;
@@ -76,12 +77,19 @@ public class RestResponse {
 	public void setOrderBy(String orderBy) {
 		this.orderBy = orderBy;
 	}
+	
+	public void addSearchResults(SearchResult searchResult){
+		if(results == null){
+			results = new ArrayList<SearchResult>();
+		}
+		results.add(searchResult);
+	}
 
-	public List<RestResult> getResults() {
+	public List<SearchResult> getResults() {
 		return results;
 	}
 
-	public void setResults(List<RestResult> results) {
+	public void setResults(List<SearchResult> results) {
 		this.results = results;
 	}
 }

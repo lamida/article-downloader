@@ -6,17 +6,37 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.lamida.nd.rest.SearchProviderEnum;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class AbstractParser {
+public class AbstractParser implements IParser{
 	protected String url;
 	protected String newsContentSelector;
 	protected String newsTitleSelector;
 	protected String newsSectionSelector;
 	protected String newsPostTime;
+	
+	public static IParser getParser(SearchProviderEnum searchProviderEnum){
+		IParser parser = null;
+		switch (searchProviderEnum) {
+		case ALJAZEERA:
+			parser = new AljazeeraParser();
+			break;
+		case CNA:
+			parser = new CnaParser();
+			break;
+		case CNN:
+			parser = new CnnParser();
+			break;
+		default:
+			break;
+		}
+		return parser;
+	}
 	
 	private Map<String,Document> documentCache;
 	
@@ -74,8 +94,12 @@ public class AbstractParser {
 		String result = null;
 		Document doc = getDocument(url);
 		Elements els = doc.select(selector);
-		Element el = els.get(0);
-		result = el.text();
+		Element el = null;
+		if(els != null && !els.isEmpty()){
+			el = els.get(0);
+			result = el.text();
+		}
+		
 		return result;
 	}
 

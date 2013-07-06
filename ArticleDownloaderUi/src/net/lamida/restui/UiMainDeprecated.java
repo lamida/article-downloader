@@ -18,7 +18,7 @@ import org.apache.log4j.PatternLayout;
  *
  * @author lamida
  */
-public class Main extends javax.swing.JFrame implements ProgressReporter {
+public class UiMainDeprecated extends javax.swing.JFrame implements ProgressReporter {
 
     Map<String, RestParameter> parameters;
     private RestParameter restParameter;
@@ -26,7 +26,7 @@ public class Main extends javax.swing.JFrame implements ProgressReporter {
     /**
      * Creates new form Main
      */
-    public Main(Map<String, RestParameter> parameters) {
+    public UiMainDeprecated(Map<String, RestParameter> parameters) {
         this.parameters = parameters;
         // get first
         restParameter = parameters.values().iterator().next();
@@ -55,13 +55,13 @@ public class Main extends javax.swing.JFrame implements ProgressReporter {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UiMainDeprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UiMainDeprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UiMainDeprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UiMainDeprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -72,8 +72,8 @@ public class Main extends javax.swing.JFrame implements ProgressReporter {
 
             @Override
             public void run() {
-                Main.this.setLocationRelativeTo(null);
-                Main.this.setVisible(true);
+                UiMainDeprecated.this.setLocationRelativeTo(null);
+                UiMainDeprecated.this.setVisible(true);
             }
         });
 
@@ -347,14 +347,14 @@ public class Main extends javax.swing.JFrame implements ProgressReporter {
 
             @Override
             protected Object doInBackground() throws Exception {
-                new GuardianFacade().download(job, responseData, Main.this);
+                new GuardianFacade().download(job, responseData, UiMainDeprecated.this);
                 return null;
             }
 
             @Override
             protected void done() {
                 progressBar.setValue(0);
-                JOptionPane.showMessageDialog(Main.this, "All Articles have been downloaded!");
+                JOptionPane.showMessageDialog(UiMainDeprecated.this, "All Articles have been downloaded!");
             }
         }.execute();
     }//GEN-LAST:event_searchButtonActionPerformed

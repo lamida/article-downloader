@@ -1,5 +1,7 @@
 package net.lamida.nd.rest;
 
+import net.lamida.nd.Constant;
+
 import org.apache.log4j.Logger;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
@@ -11,12 +13,33 @@ public class AbstractRestSearch implements IRestSearch {
 	protected String customSearchEngine;
 	private int resultStart;
 	private String sort;
+	protected String searchQuery;
 	
+	public static IRestSearch getSearchProvider(SearchProviderEnum searchProviderEnum) {
+		IRestSearch search = null;
+		switch (searchProviderEnum) {
+		case ALJAZEERA:
+			search = new AljazeeraRestSearch();
+			break;
+		case CNA:
+			search = new CnaRestSearch();
+			break;
+		case CNN:
+			search = new CnnRestSearch();
+			break;
+		default:
+			break;
+		}
+		return search;
+	}
 	
 	/* (non-Javadoc)
 	 * @see net.lamida.nd.rest.IRestSearch#execute(java.lang.String)
 	 */
-	public String execute(String searchQuery) {
+	public String execute() {
+		if(searchQuery == null){
+			throw new IllegalStateException("set searchQuery first");
+		}
 		ClientRequest req = getClientRequest(searchQuery);
 		
 		String result = null;
@@ -52,5 +75,29 @@ public class AbstractRestSearch implements IRestSearch {
 
 	public void setSort(String sort) {
 		this.sort = sort;
+	}
+
+	public String next() {
+		resultStart += Constant.RESULTS_PER_PAGE;
+		return execute();
+	}
+
+	public String prev() {
+		if(resultStart <= 1){
+			resultStart = 0;
+			return execute();
+		}else{
+			resultStart -= Constant.RESULTS_PER_PAGE;
+			return execute();
+		}
+	}
+
+	public String goTo(int page) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setQuery(String query) {
+		this.searchQuery = query;
 	}
 }

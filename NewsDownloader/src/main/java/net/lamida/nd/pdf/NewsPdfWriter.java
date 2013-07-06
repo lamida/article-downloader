@@ -45,6 +45,8 @@ public class NewsPdfWriter {
 	private boolean countKeyWords;
 	private boolean highlightQuery;
 	
+	public NewsPdfWriter(){}
+	
 	public NewsPdfWriter(String searchQuery, String url, String newsTitle,
 			String newsContent, String newsPostTime, boolean countKeyWords,
 			boolean highlightQuery) {
@@ -189,7 +191,7 @@ public class NewsPdfWriter {
 					pdfs.add(new FileInputStream(file));
 				}
 			}
-			OutputStream output = new FileOutputStream(new File(pdfFolder, mergedPdfFileName));
+			OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
 			concatPDFs(pdfs, output, true);
 		} catch (FileNotFoundException e) {
 			log.error(e.getMessage());

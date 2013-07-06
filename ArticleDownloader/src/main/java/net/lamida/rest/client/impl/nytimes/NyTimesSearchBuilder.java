@@ -3,6 +3,12 @@ package net.lamida.rest.client.impl.nytimes;
 import java.io.File;
 import java.io.IOException;
 
+import net.lamida.rest.Job;
+import net.lamida.rest.SearchParameter;
+import net.lamida.rest.SearchResponse;
+import net.lamida.rest.client.ISearchBuilder;
+import net.lamida.util.Utils;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.jboss.resteasy.client.ClientRequest;
@@ -10,23 +16,18 @@ import org.jboss.resteasy.client.ClientResponse;
 
 import com.google.gson.GsonBuilder;
 
-import net.lamida.rest.Job;
-import net.lamida.rest.RestParameter;
-import net.lamida.rest.client.IRestResponseFetcher;
-import net.lamida.util.Utils;
-
-public class NyTimesResponseFetcher implements IRestResponseFetcher {
+public class NyTimesSearchBuilder implements ISearchBuilder {
 	private Logger log = Logger.getLogger(this.getClass().toString());
 	
 	private Job job;
 	
-	public NyTimesResponseFetcher(Job job) {
+	public NyTimesSearchBuilder(Job job) {
 		log.info("Initializing NyTimesResponseFetcher");
 	}
 
-	public String getResponse() {
+	private String getSearchResponse() {
 		log.info("Try get list of articles...");
-		RestParameter param = job.getParam();
+		SearchParameter param = job.getParam();
 		if (param == null) {
 			throw new IllegalStateException(
 					"Provide parameters before calling getResult");
@@ -63,6 +64,11 @@ public class NyTimesResponseFetcher implements IRestResponseFetcher {
 		} catch (Exception e) {
 			log.error(e.getMessage());
 		}
+		return null;
+	}
+
+	public SearchResponse buildSearchResponse() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

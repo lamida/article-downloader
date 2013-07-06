@@ -1,4 +1,4 @@
-package net.lamida.rest.client.impl.guardian;
+package net.lamida.rest.client.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,8 +6,8 @@ import java.net.URL;
 import java.util.Date;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestResponse;
-import net.lamida.rest.RestResult;
+import net.lamida.rest.SearchResponse;
+import net.lamida.rest.SearchResult;
 import net.lamida.rest.client.IDocumentDownloader;
 import net.lamida.util.ConsoleProgressReporter;
 import net.lamida.util.ProgressReporter;
@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 
 import com.google.gson.GsonBuilder;
 
-public class GuardianDefaultDocumentDownloader implements IDocumentDownloader {
+public class DefaultDocumentDownloader implements IDocumentDownloader {
 	private Logger log = Logger.getLogger(this.getClass().toString());
 	
 	private static int CONNECTION_TIMEOUT = 10000;
@@ -28,7 +28,7 @@ public class GuardianDefaultDocumentDownloader implements IDocumentDownloader {
 	
 	private ProgressReporter progressReporter;
 
-	public GuardianDefaultDocumentDownloader(Job job,
+	public DefaultDocumentDownloader(Job job,
 			ProgressReporter progressReporter) {
 		super();
 		this.job = job;
@@ -42,7 +42,7 @@ public class GuardianDefaultDocumentDownloader implements IDocumentDownloader {
 	/**
 	 * 
 	 */
-	public void download(RestResponse response) {
+	public void download(SearchResponse response) {
 		log.info("Crawling all articles for jobId: " + job.getId());
 		int totalResults = response.getResults().size();
 		log.info("Total articles: " + totalResults);
@@ -50,7 +50,7 @@ public class GuardianDefaultDocumentDownloader implements IDocumentDownloader {
 		downloadFolder.mkdirs();
 		int i = 1;
 		try{
-			for (RestResult document: response.getResults()) {
+			for (SearchResult document: response.getResults()) {
 				log.info("Downloading article: " + document.getWebTitle());
 				updateProgress(i, document);
 				String prefix = i < 10 ? "0" + i : "" + i;
@@ -71,14 +71,14 @@ public class GuardianDefaultDocumentDownloader implements IDocumentDownloader {
 		return downloadFolder.getAbsolutePath() + File.separator + prefix + "_" + documentId + Utils.HTML_EXTENSION;
 	}
 
-	private void saveResultMetadata(RestResponse response)
+	private void saveResultMetadata(SearchResponse response)
 			throws IOException {
 		// write metadata
 		log.info("saving response to loca: ");
 		FileUtils.writeStringToFile(new File(Utils.buildRestResultMetadataFilePath(job.getId())), new GsonBuilder().setPrettyPrinting().create().toJson(response));
 	}
 	
-	private void updateProgress(int i, RestResult document) {
+	private void updateProgress(int i, SearchResult document) {
 		progressReporter.updateCurrentStatus("Downloading article: " + document.getWebTitle());
 		progressReporter.updateCurrentProcess(i);
 	}

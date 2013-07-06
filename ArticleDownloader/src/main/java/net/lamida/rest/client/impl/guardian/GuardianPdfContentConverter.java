@@ -14,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestResult;
+import net.lamida.rest.SearchResult;
 import net.lamida.rest.client.IContentParser;
 import net.lamida.util.Utils;
 
@@ -33,13 +33,13 @@ import com.itextpdf.text.pdf.PdfImportedPage;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfWriter;
 
-public class GuardianPdfContentParser extends GuardianJsoupContentParser implements
+public class GuardianPdfContentConverter extends GuardianJsoupContentParser implements
 		IContentParser {
 	private Logger log = Logger.getLogger(this.getClass().toString());
 
 	Font highlightFont = new Font(FontFamily.HELVETICA, -1, Font.BOLD, BaseColor.RED);
 	
-	public GuardianPdfContentParser(Job job, String selector) {
+	public GuardianPdfContentConverter(Job job, String selector) {
 		super(job, selector);
 		log.info("construct jobId: " + job.getId());
 	}
@@ -65,7 +65,7 @@ public class GuardianPdfContentParser extends GuardianJsoupContentParser impleme
 		}
 	}
 
-	private void writePdf(File targetFile, RestResult result, String header, String content) {
+	private void writePdf(File targetFile, SearchResult result, String header, String content) {
 		log.info("writePdf");
 		try {
 			Document document = new Document();

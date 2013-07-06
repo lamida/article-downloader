@@ -1,7 +1,9 @@
 package net.lamida.nd.rest;
 
 public interface IRestSearch {
-
-	public abstract String execute(String searchQuery);
-
+	void setQuery(String query);
+	public abstract String execute();
+	public abstract String next();
+	public abstract String prev();
+	public abstract String goTo(int page);
 }

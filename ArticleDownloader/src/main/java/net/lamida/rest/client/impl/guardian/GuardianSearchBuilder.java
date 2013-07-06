@@ -4,8 +4,9 @@ import java.io.File;
 import java.io.IOException;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestParameter;
-import net.lamida.rest.client.IRestResponseFetcher;
+import net.lamida.rest.SearchParameter;
+import net.lamida.rest.SearchResponse;
+import net.lamida.rest.client.ISearchBuilder;
 import net.lamida.util.Utils;
 
 import org.apache.commons.io.FileUtils;
@@ -13,23 +14,26 @@ import org.apache.log4j.Logger;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 
-public class GuardianResponseFetcher implements IRestResponseFetcher {
+public class GuardianSearchBuilder implements ISearchBuilder {
 	private Logger log = Logger.getLogger(this.getClass().toString());
 	
 	private Job job;
 	
-	public GuardianResponseFetcher(Job job) {
+	public GuardianSearchBuilder(Job job) {
 		log.info("Initializing GuardianResponseFetcher");
 		this.job = job;
 	}
 	
 
-	public String getResponse() {
+	private String getSearchResponse() {
 		log.info("Try get list of articles...");
-		RestParameter param = job.getParam();
+		SearchParameter param = job.getParam();
 		if (param == null) {
 			throw new IllegalStateException(
 					"Provide parameters before calling getResult");
@@ -44,9 +48,20 @@ public class GuardianResponseFetcher implements IRestResponseFetcher {
 		saveResponse(result);
 		return result;
 	}
+	
+	public SearchResponse buildSearchResponse() {
+		String restResult = getSearchResponse();
+		
+		log.info("Building List of articles...");
+		JsonParser parser = new JsonParser();
+		JsonElement responseJson = parser.parse(restResult).getAsJsonObject().get("response");
+		SearchResponse response = new Gson().fromJson(responseJson, SearchResponse.class);
+		job.setResponse(response);
+		return response;
+	}
 
 
-	private String executeRestRequest(RestParameter param) {
+	private String executeRestRequest(SearchParameter param) {
 		log.info("Using keywords: " + param.getQuery() + " page-size: " + param.getPageSize());
 		ClientRequest req = new ClientRequest(param.getEndPoint());
 		req.queryParameter("q", param.getQuery())
@@ -77,7 +92,7 @@ public class GuardianResponseFetcher implements IRestResponseFetcher {
 	}
 
 
-	private void saveParameter(RestParameter param) {
+	private void saveParameter(SearchParameter param) {
 		try {
 			log.info("writing param metadata");
 			File jobFolder = new File(Utils.buildResultFolder(job.getId()));

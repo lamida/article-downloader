@@ -1,5 +1,7 @@
 package net.lamida.rest.client;
 
-public interface IRestResponseFetcher {
-	String getResponse();
+import net.lamida.rest.SearchResponse;
+
+public interface ISearchBuilder {
+	SearchResponse buildSearchResponse();
 }

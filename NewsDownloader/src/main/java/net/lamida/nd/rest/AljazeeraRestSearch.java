@@ -12,7 +12,7 @@ public class AljazeeraRestSearch extends AbstractRestSearch{
 		this.customSearchEngine = "007808206270820318552:kn2qoclkjhm";
 	}
 	
-	public String execute(String searchQuery) {
+	public String execute() {
 		ClientRequest req = getClientRequest(searchQuery);
 		req.queryParameter("siteSearch", newsPath);
 		

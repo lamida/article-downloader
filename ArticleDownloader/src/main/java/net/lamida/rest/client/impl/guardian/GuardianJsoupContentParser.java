@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.lamida.rest.Job;
-import net.lamida.rest.RestResult;
+import net.lamida.rest.SearchResult;
 import net.lamida.rest.client.IContentParser;
 import net.lamida.util.Utils;
 
@@ -74,7 +74,7 @@ public class GuardianJsoupContentParser implements IContentParser {
 		return sb.toString();
 	}
 	
-	protected String createHeader(RestResult res, String parsedDocument){
+	protected String createHeader(SearchResult res, String parsedDocument){
 		log.info("createHeader countKeyWords: " + job.getParam().isCountKeyWords());
 		DateFormat format = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss z");
 		

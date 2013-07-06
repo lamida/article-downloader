@@ -6,11 +6,12 @@ import java.util.Date;
 import net.lamida.util.Utils;
 
 public class Job {
-	public String id;
-	public RestParameter param;
-	public RestResponse response;
+	private String id;
+	private SearchParameter param;
+	private SearchResponse response;
+	
 
-	public Job(RestParameter param) {
+	public Job(SearchParameter param) {
 		super();
 		this.param = param;
 		this.id = Utils.formatDate(new Date());
@@ -25,19 +26,19 @@ public class Job {
 		this.id = id;
 	}
 
-	public RestParameter getParam() {
+	public SearchParameter getParam() {
 		return param;
 	}
 
-	public void setParam(RestParameter param) {
+	public void setParam(SearchParameter param) {
 		this.param = param;
 	}
 
-	public RestResponse getResponse() {
+	public SearchResponse getResponse() {
 		return response;
 	}
 
-	public void setResponse(RestResponse response) {
+	public void setResponse(SearchResponse response) {
 		this.response = response;
 	}
 

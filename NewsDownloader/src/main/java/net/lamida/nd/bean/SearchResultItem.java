@@ -1,9 +1,10 @@
 package net.lamida.nd.bean;
 
 public class SearchResultItem {
-	public String title;
-	public String link;
-	public String snippet;
+	private String title;
+	private String link;
+	private String snippet;
+	private boolean selected;
 
 	public SearchResultItem() {
 	}
@@ -31,6 +32,12 @@ public class SearchResultItem {
 	public void setSnippet(String snippet) {
 		this.snippet = snippet;
 	}
-	
-	
+
+	public boolean isSelected() {
+		return selected;
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
+	}
 }

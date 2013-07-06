@@ -12,13 +12,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class SearchResultBuilder {
-	private String json;
-	
-	public void setJson(String json) {
-		this.json = json;
-	}
-
-	public void build(){
+	public SearchResult build(String json){
+		if(json == null){
+			throw new IllegalArgumentException("json string have to set first");
+		}
 		JsonParser parser = new JsonParser();
 		SearchResult result = new SearchResult();
 		JsonObject root = parser.parse(json).getAsJsonObject();
@@ -37,6 +34,9 @@ public class SearchResultBuilder {
 			SearchResultItem searchItem = new SearchResultItem();
 			searchItem.setTitle(item.get("title").getAsString());
 			searchItem.setLink(item.get("link").getAsString());
+			searchItem.setSnippet(item.get("snippet").getAsString());
+			result.addResult(searchItem);
 		}
+		return result;
 	}
 }
