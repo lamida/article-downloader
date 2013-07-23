@@ -15,26 +15,32 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.swing.DefaultCellEditor;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.SwingWorker;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+
 import net.lamida.nd.Constant;
 import net.lamida.nd.Utils;
 import net.lamida.nd.bean.SearchResult;
 import net.lamida.nd.bean.SearchResultItem;
 import net.lamida.nd.parser.AbstractParser;
 import net.lamida.nd.parser.IParser;
+import net.lamida.nd.pdf.INewsPdfWriter;
+import net.lamida.nd.pdf.IPdfJoiner;
 import net.lamida.nd.pdf.NewsPdfWriter;
+import net.lamida.nd.pdf.PdfInputData;
+import net.lamida.nd.pdf.PdfJoiner;
 import net.lamida.nd.rest.AbstractRestSearch;
 import net.lamida.nd.rest.IRestSearch;
 import net.lamida.nd.rest.SearchProviderEnum;
 import net.lamida.nd.rest.SearchResultBuilder;
-
 
 /**
  *
@@ -46,8 +52,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private Map<Integer, SearchResult> searchCache;
     private DefaultTableModel model;
     private IRestSearch currentSearch;
-    private boolean dummyData = false;
+    private boolean dummyData = true;
     private long totalResults;
+    private boolean selectAll;
+
     /**
      * Creates new form NewsDownloaderForm
      */
@@ -60,7 +68,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 JTable target = (JTable) e.getSource();
                 int row = target.getSelectedRow();
                 int column = target.getSelectedColumn();
-                if(column != 3){
+                if (column != 3) {
                     return;
                 }
                 String link = (String) target.getValueAt(row, column);
@@ -75,15 +83,36 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         });
         model = (DefaultTableModel) table.getModel();
+        table.getTableHeader().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent mouseEvent) {
+                selectResultToText.setText("");
+                selectAllDialog.setLocationRelativeTo(null);
+                selectAllDialog.pack();
+                selectAllDialog.setVisible(true);
+            }
+        ;
+        });
         textOutputFile.setText(new File("output.pdf").getAbsolutePath());
     }
-    
-    private void clearTableData(){
-        while(model.getRowCount() != 0)
-        model.removeRow(model.getRowCount() - 1);
+
+    private void toggleSelectAllCurrentPage(MouseEvent mouseEvent) {
+        int index = table.columnAtPoint(mouseEvent.getPoint());
+        if (index == 4) {
+            selectAll = !selectAll;
+            for (int row = 0; row < model.getRowCount(); row++) {
+                model.setValueAt(selectAll, row, 4);
+            }
+        }
     }
-    
-    private SearchResult getDummySearchResult(){
+
+    private void clearTableData() {
+        while (model.getRowCount() != 0) {
+            model.removeRow(model.getRowCount() - 1);
+        }
+    }
+
+    private SearchResult getDummySearchResult() {
         SearchResultBuilder builder = new SearchResultBuilder();
         SearchResult result = null;
         try {
@@ -98,7 +127,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         Object[][] data = new Object[10][5];
         int row = 0;
         for (SearchResultItem item : search.getItems()) {
-            data[row][0] = resultStart + row ;
+            data[row][0] = resultStart + row;
             data[row][1] = item.getTitle();
             data[row][2] = item.getSnippet();
             data[row][3] = item.getLink();
@@ -107,7 +136,6 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         }
         return data;
     }
-    
 
     /**
      * @param args the command line arguments
@@ -145,34 +173,34 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         });
     }
-    
-    private void showResult(SearchResult result){
+
+    private void showResult(SearchResult result) {
         clearTableData();
         Object[][] data = convertToArray(result);
-        for(Object[] row : data){
+        for (Object[] row : data) {
             model.addRow(row);
         }
         int currentPage = resultStart / Constant.RESULTS_PER_PAGE;
         int lastPage = (int) (result.getSearchInformation().getTotalResults() / Constant.RESULTS_PER_PAGE);
         executionTimeLabel.setText("About " + result.getSearchInformation().getTotalResults() + " results (" + result.getSearchInformation().getSearchTime() + "seconds)");
         pagingInfoLabel.setText("Page " + (currentPage + 1) + " of " + lastPage);
-        if(currentPage > 0){
+        if (currentPage > 0) {
             prevButton.setEnabled(true);
-        }else{
+        } else {
             prevButton.setEnabled(false);
         }
-        if(currentPage < lastPage){
+        if (currentPage < lastPage) {
             nextButton.setEnabled(true);
-        }else{
+        } else {
             nextButton.setEnabled(false);
         }
     }
-    
-    private void updateSelected(){
+
+    private void updateSelected() {
         SearchResult currentResult = searchCache.get(resultStart);
         int row = 0;
-        for(SearchResultItem it:currentResult.getItems()){
-            boolean selected = (Boolean)model.getValueAt(row, 4);
+        for (SearchResultItem it : currentResult.getItems()) {
+            boolean selected = (Boolean) model.getValueAt(row, 4);
             it.setSelected(selected);
             row++;
         }
@@ -187,6 +215,11 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        selectAllDialog = new javax.swing.JDialog();
+        jLabel7 = new javax.swing.JLabel();
+        selectAllAcceptButton = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        selectResultToText = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         dataProviderCombo = new javax.swing.JComboBox(SearchProviderEnum.values());
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -204,9 +237,63 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         nextButton = new javax.swing.JButton();
         textOutputFile = new javax.swing.JTextField();
         browseButton = new javax.swing.JButton();
+        dateFromText = new javax.swing.JTextField();
+        dateToText = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        progressBar = new javax.swing.JProgressBar();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Select result");
+
+        selectAllAcceptButton.setText("OK");
+        selectAllAcceptButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectAllAcceptButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("To:");
+
+        javax.swing.GroupLayout selectAllDialogLayout = new javax.swing.GroupLayout(selectAllDialog.getContentPane());
+        selectAllDialog.getContentPane().setLayout(selectAllDialogLayout);
+        selectAllDialogLayout.setHorizontalGroup(
+            selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selectAllDialogLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(selectAllAcceptButton)
+                .addContainerGap())
+            .addGroup(selectAllDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(selectAllDialogLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(selectResultToText)
+                        .addGap(10, 10, 10))
+                    .addGroup(selectAllDialogLayout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                        .addContainerGap())))
+        );
+        selectAllDialogLayout.setVerticalGroup(
+            selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(selectAllDialogLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(selectResultToText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(selectAllAcceptButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -237,7 +324,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Title", "Snippet", "URL", "Select"
+                "No", "Title", "Snippet", "URL", "Select All"
             }
         ) {
             Class[] types = new Class [] {
@@ -289,6 +376,14 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Date From:");
+
+        jLabel4.setText("Date To:");
+
+        jLabel5.setText("yyyymmdd");
+
+        jLabel6.setText("yyyymmdd");
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -302,35 +397,6 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(1, 1, 1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(searchButton)
-                                    .addComponent(dataProviderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(executionTimeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(pagingInfoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(saveButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textOutputFile, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(browseButton)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -342,6 +408,46 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nextButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(saveButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textOutputFile, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(browseButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(1, 1, 1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(searchButton)
+                            .addComponent(jScrollPane1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(dataProviderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dateToText, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                    .addComponent(dateFromText))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(executionTimeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pagingInfoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addComponent(progressBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,14 +460,26 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateFromText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateToText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(9, 9, 9)
+                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(executionTimeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pagingInfoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(prevButton)
@@ -370,7 +488,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(countKeywordsCb)
                     .addComponent(highlightKeywordsCb))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(textOutputFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -381,17 +499,19 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        if(queryText.getText().equals("")){
+        if (queryText.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Please Enter Search Query");
             return;
         }
         searchCache.clear();
-        if(dummyData){
+        if (dummyData) {
             SearchResult searchResult = getDummySearchResult();
             searchCache.put(resultStart, searchResult);
-        }else{
+        } else {
             currentSearch = AbstractRestSearch.getSearchProvider(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
             currentSearch.setQuery(queryText.getText());
+            currentSearch.setDateFrom(dateFromText.getText().trim().isEmpty() ? null : dateFromText.getText().trim());
+            currentSearch.setDateTo(dateToText.getText().trim().isEmpty() ? null : dateToText.getText().trim());
             String json = currentSearch.execute();
             SearchResult searchResult = new SearchResultBuilder().build(json);
             searchCache.put(resultStart, searchResult);
@@ -400,77 +520,56 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        
+
         updateSelected();
         IParser parser = AbstractParser.getParser(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
-        NewsPdfWriter pdfWriter = null;
+        INewsPdfWriter pdfWriter = new NewsPdfWriter();
         int count = 0;
-        for(SearchResult result : searchCache.values()){
-            for(SearchResultItem it:result.getItems()){
-               if(it.isSelected()){
+        for (SearchResult result : searchCache.values()) {
+            for (SearchResultItem it : result.getItems()) {
+                if (it.isSelected()) {
                     count++;
                     parser.init(it.getLink());
-                    pdfWriter = new NewsPdfWriter(queryText.getText(), it.getLink(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime(), countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected());
-                    pdfWriter.writePdf(new File("temp", it.getTitle().replace(":", "") + ".pdf"));
-               }
+                    
+                    PdfInputData data = new PdfInputData(queryText.getText(), it.getLink(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime());
+                    String targetFileName = it.getTitle().replace(":", "") + ".pdf";
+                    pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected());
+                    pdfWriter.writePdf();
+                }
             }
         }
-        if(count != 0){
-            if(saveFile == null){
+        if (count != 0) {
+            if (saveFile == null) {
                 saveFile = new File(textOutputFile.getText());
             }
-            if(saveFile.exists()){
+            if (saveFile.exists()) {
                 int x = JOptionPane.showConfirmDialog(this, "File with same name exist. Would you like to overwrite?");
-                if(x != JOptionPane.YES_OPTION){
+                if (x != JOptionPane.YES_OPTION) {
                     return;
                 }
             }
             String path = saveFile.getAbsolutePath();
-            if(!path.endsWith(".pdf")){ 
+            if (!path.endsWith(".pdf")) {
                 path += ".pdf";
             }
-            new NewsPdfWriter().joinPdf("temp", path);
+            IPdfJoiner pdfJoiner = new PdfJoiner();
+            pdfJoiner.joinPdf("temp", path);
             JOptionPane.showMessageDialog(this, "File saved at " + path);
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "Please select some checkbox first");
         }
 	}//GEN-LAST:event_saveButtonActionPerformed
 
     private void prevButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prevButtonActionPerformed
-        if(resultStart == 0){
+        if (resultStart == 0) {
             return;
         }
-        updateSelected();
-        resultStart -= Constant.RESULTS_PER_PAGE;
-        if(searchCache.get(resultStart) == null){
-            if(dummyData){
-                SearchResult searchResult = getDummySearchResult();
-                searchCache.put(resultStart, searchResult);
-            }else{
-                String json = currentSearch.prev();
-                SearchResult searchResult = new SearchResultBuilder().build(json);
-                searchCache.put(resultStart, searchResult);
-            }
-        }
-        showResult(searchCache.get(resultStart));
+        navigatePrev();
     }//GEN-LAST:event_prevButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
-        updateSelected();
-        resultStart += Constant.RESULTS_PER_PAGE;
-        if(searchCache.get(resultStart) == null){
-            if(dummyData){
-                SearchResult searchResult = getDummySearchResult();
-                searchCache.put(resultStart, searchResult);
-            }else{
-                String json = currentSearch.next();
-                SearchResult searchResult = new SearchResultBuilder().build(json);
-                searchCache.put(resultStart, searchResult);
-            }
-        }
-        showResult(searchCache.get(resultStart));
+        navigateNext();
     }//GEN-LAST:event_nextButtonActionPerformed
-
     private File saveFile;
     private void browseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseButtonActionPerformed
         final JFileChooser fc = new JFileChooser();
@@ -479,14 +578,48 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         saveFile = fc.getSelectedFile();
     }//GEN-LAST:event_browseButtonActionPerformed
 
+    private void selectAllAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectAllAcceptButtonActionPerformed
+        try {
+            int selectAllTo = Integer.parseInt(selectResultToText.getText());
+            if (selectAllTo > 100) {
+                JOptionPane.showMessageDialog(this, "Maximum Article to Select is 100", "Error", JOptionPane.ERROR_MESSAGE);
+                selectAllTo = 100;
+            }
+            int page = selectAllTo / Constant.RESULTS_PER_PAGE + 1;
+            for (int i = 1; i < page; i++) {
+                int resultStart = i;
+                if (searchCache.get(resultStart) == null) {
+                    navigateNext();
+                }
+                if(searchCache.get(resultStart) != null){
+                    for (SearchResultItem it : searchCache.get(resultStart).getItems()) {
+                        it.setSelected(true);
+                    }
+                    resultStart += Constant.RESULTS_PER_PAGE;
+                }
+            }
+            selectAllDialog.setVisible(false);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_selectAllAcceptButtonActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton browseButton;
     private javax.swing.JCheckBox countKeywordsCb;
     private javax.swing.JComboBox dataProviderCombo;
+    private javax.swing.JTextField dateFromText;
+    private javax.swing.JTextField dateToText;
     private javax.swing.JLabel executionTimeLabel;
     private javax.swing.JCheckBox highlightKeywordsCb;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -495,9 +628,13 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private javax.swing.JButton nextButton;
     private javax.swing.JLabel pagingInfoLabel;
     private javax.swing.JButton prevButton;
+    private javax.swing.JProgressBar progressBar;
     private javax.swing.JTextArea queryText;
     private javax.swing.JButton saveButton;
     private javax.swing.JButton searchButton;
+    private javax.swing.JButton selectAllAcceptButton;
+    private javax.swing.JDialog selectAllDialog;
+    private javax.swing.JTextField selectResultToText;
     private javax.swing.JTable table;
     private javax.swing.JTextField textOutputFile;
     // End of variables declaration//GEN-END:variables
@@ -506,22 +643,72 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         File saveFile = fc.getSelectedFile();
         File temp = new File("temp");
         temp.mkdir();
-        for(File f:temp.listFiles()){
+        for (File f : temp.listFiles()) {
             f.delete();
         }
         return saveFile;
     }
 
-    
+    private void doDownload() {
+        progressBar.setIndeterminate(false);
+        progressBar.setMaximum(100);
+        new SwingWorker<Object, Object>() {
+            @Override
+            protected Object doInBackground() throws Exception {
+                // do the process
+                return null;
+            }
 
+            @Override
+            protected void done() {
+                progressBar.setValue(0);
+                JOptionPane.showMessageDialog(NewsDownloaderForm.this, "All Articles have been downloaded!");
+            }
+        }.execute();
+    }
+
+    private void navigateNext() {
+        updateSelected();
+        resultStart += Constant.RESULTS_PER_PAGE;
+        System.out.println("navigateNext " + resultStart);
+        if (searchCache.get(resultStart) == null) {
+            if (dummyData) {
+                SearchResult searchResult = getDummySearchResult();
+                searchCache.put(resultStart, searchResult);
+            } else {
+                String json = currentSearch.next();
+                SearchResult searchResult = new SearchResultBuilder().build(json);
+                searchCache.put(resultStart, searchResult);
+            }
+        }
+        showResult(searchCache.get(resultStart));
+    }
+
+    private void navigatePrev() {
+        updateSelected();
+        resultStart -= Constant.RESULTS_PER_PAGE;
+        if (searchCache.get(resultStart) == null) {
+            if (dummyData) {
+                SearchResult searchResult = getDummySearchResult();
+                searchCache.put(resultStart, searchResult);
+            } else {
+                String json = currentSearch.prev();
+                SearchResult searchResult = new SearchResultBuilder().build(json);
+                searchCache.put(resultStart, searchResult);
+            }
+        }
+        showResult(searchCache.get(resultStart));
+    }
 }
+
 class PathCellRenderer extends DefaultTableCellRenderer {
+
     @Override
     public Component getTableCellRendererComponent(
-                        JTable table, Object value,
-                        boolean isSelected, boolean hasFocus,
-                        int row, int column) {
-        JLabel c = (JLabel)super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+            JTable table, Object value,
+            boolean isSelected, boolean hasFocus,
+            int row, int column) {
+        JLabel c = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
         c.setToolTipText(c.getText());
         return c;
     }
