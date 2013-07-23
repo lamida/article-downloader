@@ -1,7 +1,6 @@
 package net.lamida.nd.parser;
 
 import junit.framework.Assert;
-import net.lamida.nd.parser.CnnParser;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -33,4 +32,16 @@ public class CnnParserTest {
 		Assert.assertNotNull(articlePostTime);
 		Assert.assertEquals("July 3, 2013 -- Updated 0339 GMT (1139 HKT)", articlePostTime);
 	}
+	
+//	@Test
+//	public void foo(){
+//		DateFormat format = new SimpleDateFormat("yyyyMMdd");
+//		System.out.println(format.format(new Date()));
+//		try {
+//			System.out.println(format.parse("20121312"));
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		};
+//	}
 }

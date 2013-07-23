@@ -1,5 +1,9 @@
 package net.lamida.nd.rest;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import net.lamida.nd.Constant;
 
 import org.apache.log4j.Logger;
@@ -14,6 +18,10 @@ public class AbstractRestSearch implements IRestSearch {
 	private int resultStart;
 	private String sort;
 	protected String searchQuery;
+	protected String dateFrom;
+	protected String dateTo;
+	
+	DateFormat format = new SimpleDateFormat("yyyyMMdd");
 	
 	public static IRestSearch getSearchProvider(SearchProviderEnum searchProviderEnum) {
 		IRestSearch search = null;
@@ -62,6 +70,13 @@ public class AbstractRestSearch implements IRestSearch {
 			req.queryParameter("start", resultStart);
 		}
 		
+		if(dateFrom != null){
+			if(dateTo == null){
+				dateTo = format.format(new Date());
+			}
+			sort = "date:r:" + dateFrom + ":" + dateTo;
+		}
+		
 		if(sort != null){
 			req.queryParameter("sort", sort);
 		}
@@ -99,5 +114,13 @@ public class AbstractRestSearch implements IRestSearch {
 
 	public void setQuery(String query) {
 		this.searchQuery = query;
+	}
+
+	public void setDateFrom(String dateFrom) {
+		this.dateFrom = dateFrom;
+	}
+
+	public void setDateTo(String dateTo) {
+		this.dateTo = dateTo;
 	}
 }

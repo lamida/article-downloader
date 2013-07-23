@@ -8,40 +8,43 @@
   "nextPage": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "53800",
+    "totalResults": "42300",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 20,
     "inputEncoding": "utf8",
     "outputEncoding": "utf8",
     "safe": "off",
-    "cx": "007808206270820318552:kx0lxihwtre"
+    "cx": "007808206270820318552:kx0lxihwtre",
+    "sort": "date:r:20130601:20130630"
    }
   ],
   "request": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "53800",
+    "totalResults": "42300",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 10,
     "inputEncoding": "utf8",
     "outputEncoding": "utf8",
     "safe": "off",
-    "cx": "007808206270820318552:kx0lxihwtre"
+    "cx": "007808206270820318552:kx0lxihwtre",
+    "sort": "date:r:20130601:20130630"
    }
   ],
   "previousPage": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "53800",
+    "totalResults": "42300",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 1,
     "inputEncoding": "utf8",
     "outputEncoding": "utf8",
     "safe": "off",
-    "cx": "007808206270820318552:kx0lxihwtre"
+    "cx": "007808206270820318552:kx0lxihwtre",
+    "sort": "date:r:20130601:20130630"
    }
   ]
  },
@@ -49,116 +52,12 @@
   "title": "Channelnewsasia"
  },
  "searchInformation": {
-  "searchTime": 0.522149,
-  "formattedSearchTime": "0.52",
-  "totalResults": "53800",
-  "formattedTotalResults": "53,800"
+  "searchTime": 0.352283,
+  "formattedSearchTime": "0.35",
+  "totalResults": "42300",
+  "formattedTotalResults": "42,300"
  },
  "items": [
-  {
-   "kind": "customsearch#result",
-   "title": "Ultra-wired South Korea battles smartphone addiction - Channel ...",
-   "htmlTitle": "Ultra-wired South \u003cb\u003eKorea\u003c/b\u003e battles smartphone addiction - Channel \u003cb\u003e...\u003c/b\u003e",
-   "link": "http://www.channelnewsasia.com/news/technology/ultra-wired-south-korea/726382.html",
-   "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 27, 2013 ... South Korea's fixation with everything digital has parents worried about its impact   on young children, and the government has gone furthest in ...",
-   "htmlSnippet": "Jun 27, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea&#39;s\u003c/b\u003e fixation with everything digital has parents worried about its impact \u003cbr\u003e  on young children, and the government has gone furthest in&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "sE7C9TCxyEAJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea/726382.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e/726382.html",
-   "pagemap": {
-    "cse_image": [
-     {
-      "src": "http://www.channelnewsasia.com/image/726408/1372307375000/large16x9/640/360/south-korea-smartphone.jpg"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "Ultra-wired South Korea battles smartphone addiction - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/technology/ultra-wired-south-korea/726382.html",
-      "og:site_name": "Channel NewsAsia",
-      "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/726408/1372307375000/large16x9/640/360/south-korea-smartphone.jpg",
-      "og:description": "South Korea’s fixation with everything digital has parents worried about its impact on young children, and the government has gone furthest in its response by organising “boot camps” to wean students off their dependency on technology.",
-      "og:type": "article"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "N Korea keeps world guessing on missile launch - Channel NewsAsia",
-   "htmlTitle": "N \u003cb\u003eKorea\u003c/b\u003e keeps world guessing on missile launch - Channel NewsAsia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/n-korea-keeps-world-guess/638530.html",
-   "displayLink": "www.channelnewsasia.com",
-   "snippet": "Apr 15, 2013 ... All eyes are on North Korea on Monday to see if it marks the birthday of late   founder Kim Il-Sung with an expected missile launch, despite ...",
-   "htmlSnippet": "Apr 15, 2013 \u003cb\u003e...\u003c/b\u003e All eyes are on North \u003cb\u003eKorea\u003c/b\u003e on Monday to see if it marks the birthday of late \u003cbr\u003e  founder Kim Il-Sung with an expected missile launch, despite&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "p8XmFei-T2MJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../638530.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../638530.html",
-   "pagemap": {
-    "cse_image": [
-     {
-      "src": "http://www.channelnewsasia.com/image/638532/1366546694000/large16x9/640/360/the-seafront-of-north.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
-      "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTHUaYUkthbeknNZK7ill5ji_lgD8xFjybGxtmPi0HZSTYdpysBF7UyZZXC"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "N Korea keeps world guessing on missile launch - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/n-korea-keeps-world-guess/638530.html",
-      "og:site_name": "Channel NewsAsia",
-      "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/638532/1366546694000/large16x9/640/360/the-seafront-of-north.jpg",
-      "og:description": "All eyes are on North Korea on Monday to see if it marks the birthday of late founder Kim Il-Sung with an expected missile launch, despite tension-reducing noises from Seoul and Washington.",
-      "og:type": "article"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "US carrier joins S Korea drill despite North anger - Channel NewsAsia",
-   "htmlTitle": "US carrier joins S \u003cb\u003eKorea\u003c/b\u003e drill despite North anger - Channel NewsAsia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/us-carrier-joins-s-korea-drill-despite-n/673016.html",
-   "displayLink": "www.channelnewsasia.com",
-   "snippet": "May 13, 2013 ... South Korea and a US strike force led by the nuclear-powered aircraft carrier   USS Nimitz kicked off Monday a joint naval drill slammed by North ...",
-   "htmlSnippet": "May 13, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea\u003c/b\u003e and a US strike force led by the nuclear-powered aircraft carrier \u003cbr\u003e  USS Nimitz kicked off Monday a joint naval drill slammed by North&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "M9NFJd8CgmsJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../673016.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../673016.html",
-   "pagemap": {
-    "cse_image": [
-     {
-      "src": "http://www.channelnewsasia.com/image/673032/1368417534000/large16x9/768/432/uss-nimitz-1.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
-      "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQXyw1BSiMu_CBvISPJNcruR3u6154VNEjm0ZdEBCmzRAl45U6HcJtc0dM5"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "US carrier joins S Korea drill despite North anger - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/us-carrier-joins-s-korea/673016.html",
-      "og:site_name": "Channel NewsAsia",
-      "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/673032/1368417534000/large16x9/640/360/uss-nimitz-1.jpg",
-      "og:description": "South Korea and a US strike force led by the nuclear-powered aircraft carrier USS Nimitz kicked off Monday a joint naval drill slammed by North Korea as a \"wanton\" provocation and rehearsal for war.",
-      "og:type": "article"
-     }
-    ]
-   }
-  },
   {
    "kind": "customsearch#result",
    "title": "North Korea slams South for scrapped talks - Channel NewsAsia",
@@ -198,36 +97,36 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "South Korea's tourism industry hit by decline in Japanese visitors ...",
-   "htmlTitle": "South \u003cb\u003eKorea&#39;s\u003c/b\u003e tourism industry hit by decline in Japanese visitors \u003cb\u003e...\u003c/b\u003e",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-s-tourism/703894.html",
+   "title": "N Korea to dominate S Korea-China summit - Channel NewsAsia",
+   "htmlTitle": "N \u003cb\u003eKorea\u003c/b\u003e to dominate S \u003cb\u003eKorea\u003c/b\u003e-China summit - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/n-korea-to-dominate-s/723508.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 10, 2013 ... According to the Korea Culture and Tourism Institute, about 689,000 Japanese   travellers visited South Korea during the first three months of ...",
-   "htmlSnippet": "Jun 10, 2013 \u003cb\u003e...\u003c/b\u003e According to the \u003cb\u003eKorea\u003c/b\u003e Culture and Tourism Institute, about 689,000 Japanese \u003cbr\u003e  travellers visited South \u003cb\u003eKorea\u003c/b\u003e during the first three months of&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "v8eoCRcc1KkJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea-s.../703894.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e-s.../703894.html",
+   "snippet": "Jun 25, 2013 ... South Korean President Park Geun-Hye heads for a summit in China on   Wednesday, looking to exploit signs of Beijing's growing frustration ...",
+   "htmlSnippet": "Jun 25, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye heads for a summit in China on \u003cbr\u003e  Wednesday, looking to exploit signs of Beijing&#39;s growing frustration&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "rX4SE6iT7XsJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea-to.../723508.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e-to.../723508.html",
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/704314/1370877451000/large16x9/640/360/korea-tourism.jpg"
+      "src": "http://www.channelnewsasia.com/image/673088/1371479336000/large16x9/640/360/president-of-south-korea.jpg"
      }
     ],
     "cse_thumbnail": [
      {
       "width": "300",
       "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGv6ELlQLh9swerSCe6FroqoysUhqb5Yv7O5Fo6dcuVGVQ4MtvKoo71iV"
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScSavRwYcMFrcmZvCnj3YwhNFGoGDeEQkd4G1jpuyMSSV7huvZzOF64tw"
      }
     ],
     "metatags": [
      {
-      "og:title": "South Korea's tourism industry hit by decline in Japanese visitors - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/south-korea-s-tourism/703894.html",
+      "og:title": "N Korea to dominate S Korea-China summit - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/n-korea-to-dominate-s/723508.html",
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/704314/1370877451000/large16x9/640/360/korea-tourism.jpg",
-      "og:description": "According to the Korea Culture and Tourism Institute, about 689,000 Japanese travellers visited South Korea during the first three months of this year - a 22 per cent drop compared with the same period last year. ",
+      "og:image": "http://www.channelnewsasia.com/image/673088/1371479336000/large16x9/640/360/president-of-south-korea.jpg",
+      "og:description": "South Korean President Park Geun-Hye heads for a summit in China on Wednesday, looking to exploit signs of Beijing's growing frustration with its unpredictable ally North Korea.",
       "og:type": "article"
      }
     ]
@@ -235,36 +134,36 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "North Korea under fire at Asia security forum - Channel NewsAsia",
-   "htmlTitle": "North \u003cb\u003eKorea\u003c/b\u003e under fire at Asia security forum - Channel NewsAsia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/north-korea-under-fire-at/731664.html",
+   "title": "S Korea sounds alert after official websites hacked - Channel News ...",
+   "htmlTitle": "S \u003cb\u003eKorea\u003c/b\u003e sounds alert after official websites hacked - Channel News \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/s-korea-sounds-alert/723538.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "4 days ago ... North Korea came under fire at an Asia-Pacific security forum on Tuesday as   foreign ministers called on the defiant communist state to end its ...",
-   "htmlSnippet": "4 days ago \u003cb\u003e...\u003c/b\u003e North \u003cb\u003eKorea\u003c/b\u003e came under fire at an Asia-Pacific security forum on Tuesday as \u003cbr\u003e  foreign ministers called on the defiant communist state to end its&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "r006yE2da3UJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../731664.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../731664.html",
+   "snippet": "Jun 25, 2013 ... South Korea issued a cyber attack alert on Tuesday after hackers apparently   penetrated a number of official websites, including the presidential ...",
+   "htmlSnippet": "Jun 25, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea\u003c/b\u003e issued a cyber attack alert on Tuesday after hackers apparently \u003cbr\u003e  penetrated a number of official websites, including the presidential&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "18TjbiY3OagJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../s-korea.../723538.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../s-\u003cb\u003ekorea\u003c/b\u003e.../723538.html",
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/730242/1372760245000/large16x9/640/360/asean-summit.jpg"
+      "src": "http://www.channelnewsasia.com/image/723568/1372132330000/large16x9/640/360/south-korea-website.jpg"
      }
     ],
     "cse_thumbnail": [
      {
       "width": "300",
       "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhgIvXKRs61dH7eCXuy1kR1OwmqAu2REk19yK6FbF2ktlohhNqEw4zKSI"
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLMG5MDY6D9-FwrDV-9UojQB5bvAeazUfFkka6h_J54eDJF2RRSYDTRXo"
      }
     ],
     "metatags": [
      {
-      "og:title": "North Korea under fire at Asia security forum - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/north-korea-under-fire-at/731664.html",
+      "og:title": "S Korea sounds alert after official websites hacked - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/s-korea-sounds-alert/723538.html",
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/730242/1372760245000/large16x9/640/360/asean-summit.jpg",
-      "og:description": "North Korea came under fire at an Asia-Pacific security forum on Tuesday as foreign ministers called on the defiant communist state to end its nuclear weapons programme.",
+      "og:image": "http://www.channelnewsasia.com/image/723568/1372132330000/large16x9/640/360/south-korea-website.jpg",
+      "og:description": "South Korea issued a cyber attack alert on Tuesday after hackers apparently penetrated a number of official websites, including the presidential Blue House, the science ministry said.",
       "og:type": "article"
      }
     ]
@@ -272,36 +171,36 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "Kerry hits back as North Korea threatens Japan - Channel NewsAsia",
-   "htmlTitle": "Kerry hits back as North \u003cb\u003eKorea\u003c/b\u003e threatens Japan - Channel NewsAsia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/kerry-hits-back-as-north-korea-threatens/636514.html",
+   "title": "S Korea's foreign minister to visit Singapore for talks - Channel ...",
+   "htmlTitle": "S \u003cb\u003eKorea&#39;s\u003c/b\u003e foreign minister to visit Singapore for talks - Channel \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/singapore/s-korea-s-foreign/709570.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Apr 12, 2013 ... US Secretary of State John Kerry on Friday demanded North Korea abandon an   expected missile launch as Pyongyang turned its nuclear ...",
-   "htmlSnippet": "Apr 12, 2013 \u003cb\u003e...\u003c/b\u003e US Secretary of State John Kerry on Friday demanded North \u003cb\u003eKorea\u003c/b\u003e abandon an \u003cbr\u003e  expected missile launch as Pyongyang turned its nuclear&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "-aUVku1EhoYJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../636514.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../636514.html",
+   "snippet": "Jun 13, 2013 ... SINGAPORE: South Korea's Foreign Minister Yun Byung-se will make an official   visit to Singapore on 14 and 15 June. The Foreign Ministry ...",
+   "htmlSnippet": "Jun 13, 2013 \u003cb\u003e...\u003c/b\u003e SINGAPORE: South \u003cb\u003eKorea&#39;s\u003c/b\u003e Foreign Minister Yun Byung-se will make an official \u003cbr\u003e  visit to Singapore on 14 and 15 June. The Foreign Ministry&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "d-VlPyf26wMJ",
+   "formattedUrl": "www.channelnewsasia.com/news/.../s-korea.../709570.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/.../s-\u003cb\u003ekorea\u003c/b\u003e.../709570.html",
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/636292/1365753402000/large16x9/640/360/us-secretary-of-state.jpg"
+      "src": "http://www.channelnewsasia.com/image/646704/1371133699000/large16x9/640/360/yun-byung-se-south-korea.jpg"
      }
     ],
     "cse_thumbnail": [
      {
       "width": "300",
       "height": "168",
-      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcToEoJqCImqmjesy65ouc-_kkcWijI5bmyzL2xcjNBy9RHr_JzF-6m_kxA"
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxuaDg9C7zKNgcU0n9LiybHoS72w-z3__SAnI9h7jNc2NdY7xfEttfzY5P"
      }
     ],
     "metatags": [
      {
-      "og:title": "Kerry hits back as North Korea threatens Japan - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/kerry-hits-back-as-north/636514.html",
+      "og:title": "S Korea's foreign minister to visit Singapore for talks - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/singapore/s-korea-s-foreign/709570.html",
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/636292/1365753402000/large16x9/640/360/us-secretary-of-state.jpg",
-      "og:description": "US Secretary of State John Kerry on Friday demanded North Korea abandon an expected missile launch as Pyongyang turned its nuclear threats on Japan amid a chilling new evaluation of its offensive capability.",
+      "og:image": "http://www.channelnewsasia.com/image/646704/1371133699000/large16x9/640/360/yun-byung-se-south-korea.jpg",
+      "og:description": "South Korea's Foreign Minister Yun Byung-se will make an official visit to Singapore on 14 and 15 June.",
       "og:type": "article"
      }
     ]
@@ -309,36 +208,36 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "South Korea rejects Laos - Channel News Asia",
-   "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e rejects Laos - Channel News Asia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-rejects-laos/693902.html",
+   "title": "China says North Korea ready to return to nuclear talks - Channel ...",
+   "htmlTitle": "China says North \u003cb\u003eKorea\u003c/b\u003e ready to return to nuclear talks - Channel \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/china-says-north-korea/717434.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "May 31, 2013 ... South Korea rejected Laos' account of how Seoul responded to the detention and   eventual repatriation of nine North Korean refugees, saying ...",
-   "htmlSnippet": "May 31, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea\u003c/b\u003e rejected Laos&#39; account of how Seoul responded to the detention and \u003cbr\u003e  eventual repatriation of nine North \u003cb\u003eKorean\u003c/b\u003e refugees, saying&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "zJpKIzfgcvwJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../693902.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../693902.html",
+   "snippet": "Jun 20, 2013 ... North Korea expressed willingness on Wednesday to rejoin long-stalled nuclear   talks, according to its ally China, but the United States, Japan ...",
+   "htmlSnippet": "Jun 20, 2013 \u003cb\u003e...\u003c/b\u003e North \u003cb\u003eKorea\u003c/b\u003e expressed willingness on Wednesday to rejoin long-stalled nuclear \u003cbr\u003e  talks, according to its ally China, but the United States, Japan&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "2KyUwBPo6c0J",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea/717434.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e/717434.html",
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/693906/1369999057000/large16x9/640/360/korea-refugees.jpg"
+      "src": "http://www.channelnewsasia.com/image/637784/1365894453000/large16x9/640/360/korea-border.jpg"
      }
     ],
     "cse_thumbnail": [
      {
       "width": "300",
       "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmekDT1ZhM3jXV6Kx7T1iuDnpNnvOnMe2Xba7gAnlgpsz0uScASTcKY00"
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT8Z-UQe0fgT35tEw7HWbF5JFs-bDBXtkDwkyMs2ybktbPooleuzKO-EDg"
      }
     ],
     "metatags": [
      {
-      "og:title": "South Korea rejects Laos' account of refugee repatriation - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/south-korea-rejects-laos/693902.html",
+      "og:title": "China says North Korea ready to return to nuclear talks - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/china-says-north-korea/717434.html",
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/693906/1369999057000/large16x9/640/360/korea-refugees.jpg",
-      "og:description": "South Korea rejected Laos' account of how Seoul responded to the detention and eventual repatriation of nine North Korean refugees, saying its diplomats sought to protect the defectors from the day of their detention.",
+      "og:image": "http://www.channelnewsasia.com/image/637784/1365894453000/large16x9/640/360/korea-border.jpg",
+      "og:description": "North Korea expressed willingness on Wednesday to rejoin long-stalled nuclear talks, according to its ally China, but the United States, Japan and South Korea called for action instead of words.",
       "og:type": "article"
      }
     ]
@@ -346,36 +245,36 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "Japan, China, S Korea to cooperate on air pollution - Channel News ...",
-   "htmlTitle": "Japan, China, S \u003cb\u003eKorea\u003c/b\u003e to cooperate on air pollution - Channel News \u003cb\u003e...\u003c/b\u003e",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/japan-china-s-korea-to-cooperate-on-air-/664964.html",
+   "title": "China, N Korea hold \"strategic dialogue\": officials - Channel NewsAsia",
+   "htmlTitle": "China, N \u003cb\u003eKorea\u003c/b\u003e hold &quot;strategic dialogue&quot;: officials - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/china-n-korea-hold/716622.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "May 6, 2013 ... Japan, China and South Korea agreed on Monday to continue cooperating in the   fight against cross-border air pollution, despite strained ...",
-   "htmlSnippet": "May 6, 2013 \u003cb\u003e...\u003c/b\u003e Japan, China and South \u003cb\u003eKorea\u003c/b\u003e agreed on Monday to continue cooperating in the \u003cbr\u003e  fight against cross-border air pollution, despite strained&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "0Js-ZPOLXFgJ",
-   "formattedUrl": "www.channelnewsasia.com/...s-korea...-/664964.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/...s-\u003cb\u003ekorea\u003c/b\u003e...-/664964.html",
+   "snippet": "Jun 19, 2013 ... A high-ranking North Korean official with long experience as his country's   international nuclear negotiator held talks on Wednesday with ...",
+   "htmlSnippet": "Jun 19, 2013 \u003cb\u003e...\u003c/b\u003e A high-ranking North \u003cb\u003eKorean\u003c/b\u003e official with long experience as his country&#39;s \u003cbr\u003e  international nuclear negotiator held talks on Wednesday with&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "Y-y4NzD6azkJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...n-korea.../716622.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...n-\u003cb\u003ekorea\u003c/b\u003e.../716622.html",
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/573592/1367828232000/large16x9/640/360/two-women-wearing-face.jpg"
+      "src": "http://www.channelnewsasia.com/image/716624/1371633979000/large16x9/640/360/kim-kye-gwan-right-leaves.jpg"
      }
     ],
     "cse_thumbnail": [
      {
       "width": "300",
       "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LW4z1iplC7w4oYz1QtHjSWKlOJpRQ9B301jRb8uC2z9X2UuUJXKyP4Lm"
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR316hMPyw3y_pcdU5FfXAeZXmBHCGLWhK89G4mJfKs_D1mCr-Gg238myHe"
      }
     ],
     "metatags": [
      {
-      "og:title": "Japan, China, S Korea to cooperate on air pollution - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/japan-china-s-korea-to/664964.html",
+      "og:title": "China, N Korea hold",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/china-n-korea-hold/716622.html",
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/573592/1367828232000/large16x9/640/360/two-women-wearing-face.jpg",
-      "og:description": "Japan, China and South Korea agreed on Monday to continue cooperating in the fight against cross-border air pollution, despite strained relations because of territorial disputes.",
+      "og:image": "http://www.channelnewsasia.com/image/716624/1371633979000/large16x9/640/360/kim-kye-gwan-right-leaves.jpg",
+      "og:description": "A high-ranking North Korean official with long experience as his country's international nuclear negotiator held talks on Wednesday with Chinese officials, Beijing's foreign ministry announced.",
       "og:type": "article"
      }
     ]
@@ -383,36 +282,147 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "N Korea blasts S Korean leader's nuclear comments - Channel ...",
-   "htmlTitle": "N \u003cb\u003eKorea\u003c/b\u003e blasts S \u003cb\u003eKorean\u003c/b\u003e leader&#39;s nuclear comments - Channel \u003cb\u003e...\u003c/b\u003e",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/n-korea-blasts-s-korean/730248.html",
+   "title": "UN chief says Korea talks should focus on denuclearisation ...",
+   "htmlTitle": "UN chief says \u003cb\u003eKorea\u003c/b\u003e talks should focus on denuclearisation \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/world/un-chief-says-korea-talks/718890.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "5 days ago ... North Korea on Monday slammed South Korean President Park Geun-Hye for \"  hurting its dignity\" with her call for de-nuclearisation and said its ...",
-   "htmlSnippet": "5 days ago \u003cb\u003e...\u003c/b\u003e North \u003cb\u003eKorea\u003c/b\u003e on Monday slammed South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye for &quot;\u003cbr\u003e  hurting its dignity&quot; with her call for de-nuclearisation and said its&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "n5vRRv2V0MUJ",
-   "formattedUrl": "www.channelnewsasia.com/...korea...korean/730248.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/...\u003cb\u003ekorea\u003c/b\u003e...\u003cb\u003ekorean\u003c/b\u003e/730248.html",
+   "snippet": "Jun 20, 2013 ... UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the   Korean peninsula should be first and foremost about ending ...",
+   "htmlSnippet": "Jun 20, 2013 \u003cb\u003e...\u003c/b\u003e UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the \u003cbr\u003e  \u003cb\u003eKorean\u003c/b\u003e peninsula should be first and foremost about ending&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "__pJk7iI33oJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea.../718890.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../718890.html",
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/701744/1372215118000/large16x9/640/360/south-korean-president.jpg"
+      "src": "http://www.channelnewsasia.com/image/718892/1371744264000/large16x9/640/360/un-chief-ban-ki-moon-left.jpg"
      }
     ],
     "cse_thumbnail": [
      {
       "width": "300",
       "height": "168",
-      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRYwtir-InYQjf-7x-sseTvZCY9lN22bPFaFdtHcv7BejRjyLqcXKMSHNE8"
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3PTMOmL2HV7WU1bdtuRaLWrZWcwC1mEqD_rNbRHVDZRkyLwc5IsfRuG-j"
      }
     ],
     "metatags": [
      {
-      "og:title": "N Korea blasts S Korean leader's nuclear comments - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/n-korea-blasts-s-korean/730248.html",
+      "og:title": "UN chief says Korea talks should focus on denuclearisation - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/un-chief-says-korea-talks/718890.html",
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/701744/1372215118000/large16x9/640/360/south-korean-president.jpg",
-      "og:description": "North Korea on Monday slammed South Korean President Park Geun-Hye for \"hurting its dignity\" with her call for de-nuclearisation and said its atomic weapons could never be a bargaining chip.",
+      "og:image": "http://www.channelnewsasia.com/image/718892/1371744264000/large16x9/640/360/un-chief-ban-ki-moon-left.jpg",
+      "og:description": "UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the Korean peninsula should be first and foremost about ending North Korea's nuclear programme.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "N Korea warns of war with talks offer - Channel NewsAsia",
+   "htmlTitle": "N \u003cb\u003eKorea\u003c/b\u003e warns of war with talks offer - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/n-korea-warns-of-war-with/720298.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "Jun 22, 2013 ... A top North Korean envoy said on Friday that US hostility could \"lead to war any   time\" but he repeated an offer of talks that he said could ...",
+   "htmlSnippet": "Jun 22, 2013 \u003cb\u003e...\u003c/b\u003e A top North \u003cb\u003eKorean\u003c/b\u003e envoy said on Friday that US hostility could &quot;lead to war any \u003cbr\u003e  time&quot; but he repeated an offer of talks that he said could&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "qOc0IWsUwZIJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea.../720298.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../720298.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/720300/1371835782000/large16x9/640/360/sin-son-ho-north-korea-s.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhpEbYKVgoDBhYlh36rTFHPKGAa266tMjGKK4H4tEqJDcjNdGBQKVfpE"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "N Korea warns of war with talks offer - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/n-korea-warns-of-war-with/720298.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/720300/1371835782000/large16x9/640/360/sin-son-ho-north-korea-s.jpg",
+      "og:description": "A top North Korean envoy said on Friday that US hostility could \"lead to war any time\" but he repeated an offer of talks that he said could include discussion of nuclear weapons.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "South Korea president flags risks in engaging North - Channel News ...",
+   "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e president flags risks in engaging North - Channel News \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-president/713226.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "Jun 17, 2013 ... SEOUL: South Korean President Park Geun-Hye on Monday warned against   engaging North Korea in a token dialogue that would only allow ...",
+   "htmlSnippet": "Jun 17, 2013 \u003cb\u003e...\u003c/b\u003e SEOUL: South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye on Monday warned against \u003cbr\u003e  engaging North \u003cb\u003eKorea\u003c/b\u003e in a token dialogue that would only allow&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "I_FMZpCtKWYJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea.../713226.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../713226.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/673088/1371479336000/large16x9/640/360/president-of-south-korea.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScSavRwYcMFrcmZvCnj3YwhNFGoGDeEQkd4G1jpuyMSSV7huvZzOF64tw"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "South Korea president flags risks in engaging North - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/south-korea-president/713226.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/673088/1371479336000/large16x9/640/360/president-of-south-korea.jpg",
+      "og:description": "South Korean President Park Geun-Hye on Monday warned against engaging North Korea in a token dialogue that would only allow Pyongyang more time to develop its nuclear weapons programme.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "South Korea warns North over returned refugees - Channel NewsAsia",
+   "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e warns North over returned refugees - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-warns-north-over-returned-re/696046.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "Jun 3, 2013 ... South Korean President Park Geun-Hye warned North Korea on Monday that it   would be held responsible for the safety of nine young asylum ...",
+   "htmlSnippet": "Jun 3, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye warned North \u003cb\u003eKorea\u003c/b\u003e on Monday that it \u003cbr\u003e  would be held responsible for the safety of nine young asylum&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "64tOLEgzUd4J",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea.../696046.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../696046.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/696048/1370240213000/large16x9/640/360/north-korean-town-of.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtiKH19qO-vqr1gDe1rq55WSpVf7QoArm4tjW7-m0kk_kgUkcu_t4sdT4"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "South Korea warns North over returned refugees - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/south-korea-warns-north/696046.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/696048/1370240213000/large16x9/640/360/north-korean-town-of.jpg",
+      "og:description": "South Korean President Park Geun-Hye warned North Korea on Monday that it would be held responsible for the safety of nine young asylum seekers forcibly repatriated after their capture in Laos.",
       "og:type": "article"
      }
     ]

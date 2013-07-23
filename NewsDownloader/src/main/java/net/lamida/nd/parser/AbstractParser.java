@@ -47,7 +47,7 @@ public class AbstractParser implements IParser{
 		
 		Document doc = null;
 		try {
-			doc = Jsoup.parse(new URL(url), 3000);
+			doc = Jsoup.parse(new URL(url), 10000);
 			if(doc != null){
 				documentCache.put(url, doc);
 			}

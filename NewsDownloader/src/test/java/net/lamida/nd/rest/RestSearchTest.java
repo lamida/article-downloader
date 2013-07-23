@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import junit.framework.Assert;
 import net.lamida.nd.Utils;
-import net.lamida.nd.bean.SearchResult;
 
 import org.apache.commons.io.FileUtils;
 import org.easymock.EasyMock;
@@ -23,10 +22,12 @@ public class RestSearchTest {
 		System.out.println(result);
 	}
 	
-	//@Test
+	@Test
 	public void pagingTest() throws IOException{
 		IRestSearch search = AbstractRestSearch.getSearchProvider(SearchProviderEnum.CNA);
 		search.setQuery("korea");
+		search.setDateFrom("20130601");
+		search.setDateTo("20130630");
 		String json = search.execute();
 		FileUtils.writeStringToFile(new File("page-one.txt"), json);
 		json = search.next();
