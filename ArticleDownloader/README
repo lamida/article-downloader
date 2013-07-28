@@ -1,6 +1,0 @@
-The step of getting document are:
-1. Fetch JSON response consist of URL
-2. Build JSON response into Response object
-3. Download all url as html from Response url list
-4. Parse all html into news text and add metadata
-5. Build PDF document
