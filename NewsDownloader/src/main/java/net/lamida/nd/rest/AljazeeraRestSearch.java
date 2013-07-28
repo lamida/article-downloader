@@ -1,15 +1,17 @@
 package net.lamida.nd.rest;
 
+import net.lamida.nd.Utils;
+
 import org.apache.log4j.Logger;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
 public class AljazeeraRestSearch extends AbstractRestSearch{
 	private Logger log = Logger.getLogger(this.getClass().toString());
-	private String newsPath = "http://www.aljazeera.com/news/";
+	private String newsPath = Utils.loadConfiguration("aljazeeraRestSearchNewsPath");
 	
 	public AljazeeraRestSearch() {
-		this.customSearchEngine = "007808206270820318552:kn2qoclkjhm";
+		this.customSearchEngine = Utils.loadConfiguration("aljazeeraRestSearchCustomSearchEngine");
 	}
 	
 	public String execute() {

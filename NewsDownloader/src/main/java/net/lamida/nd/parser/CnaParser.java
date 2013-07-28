@@ -1,14 +1,19 @@
 package net.lamida.nd.parser;
 
+import java.util.Properties;
+
+import net.lamida.nd.Utils;
+
 
 public class CnaParser extends AbstractParser {
 	@Override
 	public void init(String url) {
 		super.init(url);
-		newsContentSelector = "div.news_detail p";
-		newsTitleSelector = "h1.news_title";
-		newsSectionSelector = "ul.breadcrumbs-top li a";
-		newsPostTime = "li.news_posttime";
+		Properties prop = Utils.loadConfigurationProperty();
+		newsContentSelector = prop.getProperty("cnaParserNewsContentSelector");
+		newsTitleSelector = prop.getProperty("cnaParserNewsTitleSelector");
+		newsSectionSelector = prop.getProperty("cnaParserNewsSectionSelector");
+		newsPostTime = prop.getProperty("cnaParserNewsPostTime");
 	}
 
 	@Override

@@ -16,15 +16,11 @@ import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Font.FontFamily;
-import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class NewsPdfWriter implements INewsPdfWriter {
 	private Logger log = Logger.getLogger(this.getClass().toString());
-	Font highlightFont = new Font(FontFamily.HELVETICA, -1, Font.BOLD, BaseColor.RED);
 	
 	private PdfInputData data;
 	private String targetFileName;
@@ -57,7 +53,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		log.info("writePdf");
 		try {
 			Document document = new Document();
-			File targetFile = new File(targetFileName);
+			File targetFile = new File("temp", targetFileName);
 			PdfWriter.getInstance(document, new FileOutputStream(targetFile.getAbsolutePath())).setInitialLeading(16);
 			document.open();
 			writeHeader(document);
@@ -138,8 +134,9 @@ public class NewsPdfWriter implements INewsPdfWriter {
 			String standardText = content.substring(cursor, m.start());
 			String highlightText = content.substring(m.start(), m.end());
 			Chunk standard = new Chunk(standardText);
-			Chunk highlight = new Chunk(highlightText, highlightFont);
-			Phrase phrase = new Paragraph();
+			Chunk highlight = new Chunk(highlightText);
+			highlight.setBackground(new BaseColor(255, 255, 0));  
+			Phrase phrase = new Phrase();
 			phrase.add(standard);
 			phrase.add(highlight);
 			document.add(phrase);

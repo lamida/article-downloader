@@ -48,11 +48,15 @@ public class PdfJoiner implements IPdfJoiner {
 			}
 			List<InputStream> pdfs = new ArrayList<InputStream>();  
 			for(File file : dir.listFiles()){
+				System.out.println(file.getName());
 				pdfs.add(new FileInputStream(file));
 				file.delete();
 			}
 			OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
 			concatPDFs(pdfs, output, true);
+			for(File file : dir.listFiles()){
+				file.delete();
+			}
 		} catch (FileNotFoundException e) {
 			log.error(e.getMessage());
 		}
@@ -79,8 +83,7 @@ public class PdfJoiner implements IPdfJoiner {
 
 			document.open();
 			BaseFont bf = BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-			PdfContentByte cb = writer.getDirectContent(); // Holds the PDF
-			// data
+			PdfContentByte cb = writer.getDirectContent(); // Holds the PDF data
 
 			PdfImportedPage page;
 			int currentPageNumber = 0;
