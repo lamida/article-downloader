@@ -1,0 +1,712 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "nextPage": [
+   {
+    "title": "Google Custom Search - Egypt",
+    "totalResults": "137000",
+    "searchTerms": "Egypt",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "007808206270820318552:u7kh9orxkcg"
+   }
+  ],
+  "request": [
+   {
+    "title": "Google Custom Search - Egypt",
+    "totalResults": "137000",
+    "searchTerms": "Egypt",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "007808206270820318552:u7kh9orxkcg"
+   }
+  ]
+ },
+ "context": {
+  "title": "Cnn"
+ },
+ "searchInformation": {
+  "searchTime": 0.240685,
+  "formattedSearchTime": "0.24",
+  "totalResults": "137000",
+  "formattedTotalResults": "137,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Tick tock: Deadlines loom for Egypt's Morsy - CNN.com",
+   "htmlTitle": "Tick tock: Deadlines loom for \u003cb\u003eEgypt&#39;s\u003c/b\u003e Morsy - CNN.com",
+   "link": "http://www.cnn.com/2013/07/02/world/meast/egypt-protests",
+   "displayLink": "www.cnn.com",
+   "snippet": "2 days ago ... A deadline looms Tuesday for Egyptian President Mohamed Morsy, and another   hangs over his head for Wednesday.",
+   "htmlSnippet": "2 days ago \u003cb\u003e...\u003c/b\u003e A deadline looms Tuesday for \u003cb\u003eEgyptian\u003c/b\u003e President Mohamed Morsy, and another \u003cbr\u003e  hangs over his head for Wednesday.",
+   "formattedUrl": "www.cnn.com/2013/07/02/world/meast/egypt-protests",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/02/world/meast/\u003cb\u003eegypt\u003c/b\u003e-protests",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130629121623-01-egypt-protest-horizontal-gallery.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlSa6efrgbdLesy4vd_1OxCkdV1s2NbADaOTuqFOlIOFu_C8LwhnRkgIIS"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "A deadline looms Tuesday for Egyptian President Mohamed Morsy, and another hangs over his head for Wednesday.",
+      "author": "Salma Abdelaziz, Reza Sayah and Ben Wedeman, CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-02T07:42:43Z",
+      "datemodified": "2013-07-02T08:43:00Z",
+      "datecreated": "2013-07-02T07:42:43Z",
+      "contentlocation": "Cairo",
+      "headline": "Tick tock: Deadlines loom for Egypt's Morsy",
+      "url": "http://www.cnn.com/2013/07/02/world/meast/egypt-protests/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130701130809-egypt-helicopter-protests-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Tick tock: Deadlines loom for Egypt's Morsy - CNN.com",
+      "author": "Salma Abdelaziz, Reza Sayah and Ben Wedeman, CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-02T07:42:43Z",
+      "lastmod": "2013-07-02T08:43:00Z",
+      "og:title": "Tick tock: Deadlines loom for Egypt's Morsy",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/02/world/meast/egypt-protests/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130701130809-egypt-helicopter-protests-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251",
+      "twitter:image": "http://i2.cdn.turner.com/cnn/dam/assets/130701130809-egypt-helicopter-protests-left-tease.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Coup topples Egypt's Morsy; supporters reportedly rounded up ...",
+   "htmlTitle": "Coup topples \u003cb\u003eEgypt&#39;s\u003c/b\u003e Morsy; supporters reportedly rounded up \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.cnn.com/2013/07/03/world/meast/egypt-protests/index.html",
+   "displayLink": "www.cnn.com",
+   "snippet": "15 hours ago ... Egypt's military deposed the country's first democratically elected president   Wednesday night, installing the head of the country's high court to ...",
+   "htmlSnippet": "15 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e military deposed the country&#39;s first democratically elected president \u003cbr\u003e  Wednesday night, installing the head of the country&#39;s high court to&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "formattedUrl": "www.cnn.com/2013/07/03/world/meast/egypt-protests/index.html",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/03/world/meast/\u003cb\u003eegypt\u003c/b\u003e-protests/index.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTxyPerxl7vvB91Ldz6Rs7KzTp2F-HzWv4HFGzbrIr1tov6AVlHDuA_cwZ9"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "Egypt's military deposed the country's first democratically elected president Wednesday night, installing the head of the country's high court to replace him.",
+      "author": "Ben Wedeman. Reza Sayah and Matt Smith, CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-03T06:02:58Z",
+      "datemodified": "2013-07-04T03:22:56Z",
+      "datecreated": "2013-07-03T06:02:58Z",
+      "contentlocation": "Cairo",
+      "headline": "Coup topples Egypt's Morsy; deposed president under 'house arrest'",
+      "url": "http://www.cnn.com/2013/07/03/world/meast/egypt-protests/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Coup topples Egypt's Morsy; supporters reportedly rounded up - CNN.com",
+      "author": "Ben Wedeman. Reza Sayah and Matt Smith, CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-03T06:02:58Z",
+      "lastmod": "2013-07-04T03:22:56Z",
+      "og:title": "Coup topples Egypt's Morsy; deposed president under 'house arrest'",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/03/world/meast/egypt-protests/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's military gives Morsy ultimatum - CNN.com",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e military gives Morsy ultimatum - CNN.com",
+   "link": "http://www.cnn.com/2013/07/01/world/meast/egypt-protests",
+   "displayLink": "www.cnn.com",
+   "snippet": "2 days ago ... Egypt's armed forces said Monday that the growing governing dispute must be   resolved in 48 hours or it will step in to restore order.",
+   "htmlSnippet": "2 days ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e armed forces said Monday that the growing governing dispute must be \u003cbr\u003e  resolved in 48 hours or it will step in to restore order.",
+   "formattedUrl": "www.cnn.com/2013/07/01/world/meast/egypt-protests",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/01/world/meast/\u003cb\u003eegypt\u003c/b\u003e-protests",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130629121623-01-egypt-protest-horizontal-gallery.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlSa6efrgbdLesy4vd_1OxCkdV1s2NbADaOTuqFOlIOFu_C8LwhnRkgIIS"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "Egypt's armed forces said Monday that the growing governing dispute must be resolved in 48 hours or it will step in to restore order.",
+      "keywords": "Morsy",
+      "author": "Salma Abdelaziz. Reza Sayah and Ben Wedeman CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-01T06:54:11Z",
+      "datemodified": "2013-07-02T14:52:04Z",
+      "datecreated": "2013-07-01T06:54:11Z",
+      "contentlocation": "Cairo",
+      "headline": "Egypt's military gives Morsy ultimatum",
+      "url": "http://www.cnn.com/2013/07/01/world/meast/egypt-protests/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130701170730-egypt-politics-unrest-army-tahrir---s023787189-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Egypt's military gives Morsy ultimatum - CNN.com",
+      "news_keywords": "Morsy",
+      "author": "Salma Abdelaziz. Reza Sayah and Ben Wedeman CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-01T06:54:11Z",
+      "lastmod": "2013-07-02T14:52:04Z",
+      "og:title": "Egypt's military gives Morsy ultimatum",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/01/world/meast/egypt-protests/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130701170730-egypt-politics-unrest-army-tahrir---s023787189-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251",
+      "twitter:image": "http://i2.cdn.turner.com/cnn/dam/assets/130701170730-egypt-politics-unrest-army-tahrir---s023787189-left-tease.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "With Egypt in limbo, schools crumbling - CNN.com",
+   "htmlTitle": "With \u003cb\u003eEgypt\u003c/b\u003e in limbo, schools crumbling - CNN.com",
+   "link": "http://www.cnn.com/2013/06/24/world/africa/egypt-broken-schools",
+   "displayLink": "www.cnn.com",
+   "snippet": "Jun 25, 2013 ... As Egypt struggles to wade through political problems, its festering education   system has been orphaned.",
+   "htmlSnippet": "Jun 25, 2013 \u003cb\u003e...\u003c/b\u003e As \u003cb\u003eEgypt\u003c/b\u003e struggles to wade through political problems, its festering education \u003cbr\u003e  system has been orphaned.",
+   "formattedUrl": "www.cnn.com/2013/06/24/world/africa/egypt-broken-schools",
+   "htmlFormattedUrl": "www.cnn.com/2013/06/24/world/africa/\u003cb\u003eegypt\u003c/b\u003e-broken-schools",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130624132657-bohn-egypt-feet-story-top.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSsHEZkfqcWiYnHin76Mfsob5chALK4eRegeuCRZNQyzB0sg1f8Sb5EIhI"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "As Egypt struggles to wade through political problems, its festering education system has been orphaned.",
+      "author": "Lauren E. Bohn, Special for CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-06-24T21:00:12Z",
+      "datemodified": "2013-06-25T11:53:59Z",
+      "datecreated": "2013-06-24T21:00:12Z",
+      "contentlocation": "Qena, Egypt",
+      "headline": "With Egypt in limbo, schools crumbling",
+      "url": "http://www.cnn.com/2013/06/24/world/africa/egypt-broken-schools/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130624132657-bohn-egypt-feet-story-top.jpg",
+      "image": "http://i2.cdn.turner.com/cnn/dam/assets/130624132657-bohn-egypt-feet-video-tease.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "With Egypt in limbo, schools crumbling - CNN.com",
+      "author": "Lauren E. Bohn, Special for CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "africa",
+      "pubdate": "2013-06-24T21:00:12Z",
+      "lastmod": "2013-06-25T11:53:59Z",
+      "og:title": "With Egypt in limbo, schools crumbling",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/06/24/world/africa/egypt-broken-schools/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130624132657-bohn-egypt-feet-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251",
+      "twitter:image": "http://i2.cdn.turner.com/cnn/dam/assets/130624132657-bohn-egypt-feet-left-tease.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's coup: What we know - CNN.com",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e coup: What we know - CNN.com",
+   "link": "http://www.cnn.com/2013/07/04/world/meast/egypt-coup-what-we-know",
+   "displayLink": "www.cnn.com",
+   "snippet": "5 hours ago ... After days of mass demonstrations, Egypt's military finally ousted Mohamed   Morsy, the country's first democratically elected president, in the ...",
+   "htmlSnippet": "5 hours ago \u003cb\u003e...\u003c/b\u003e After days of mass demonstrations, \u003cb\u003eEgypt&#39;s\u003c/b\u003e military finally ousted Mohamed \u003cbr\u003e  Morsy, the country&#39;s first democratically elected president, in the&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "formattedUrl": "www.cnn.com/2013/07/04/world/meast/egypt-coup-what-we-know",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/04/world/meast/\u003cb\u003eegypt\u003c/b\u003e-coup-what-we-know",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130703221208-ac-egypt-whats-next-getty-collage-story-top.jpg"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "After days of mass demonstrations, Egypt's military finally ousted Mohamed Morsy, the country's first democratically elected president, in the country's second revolution in two years.",
+      "author": "Tim Hume, CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-04T06:56:13Z",
+      "datemodified": "2013-07-04T10:42:54Z",
+      "datecreated": "2013-07-04T06:56:13Z",
+      "headline": "Egypt's coup: What we know so far",
+      "url": "http://www.cnn.com/2013/07/04/world/meast/egypt-coup-what-we-know/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703221208-ac-egypt-whats-next-getty-collage-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Egypt's coup: What we know - CNN.com",
+      "author": "Tim Hume, CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-04T06:56:13Z",
+      "lastmod": "2013-07-04T10:42:54Z",
+      "og:title": "Egypt's coup: What we know so far",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/04/world/meast/egypt-coup-what-we-know/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703221208-ac-egypt-whats-next-getty-collage-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251",
+      "twitter:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703221208-ac-egypt-whats-next-getty-collage-left-tease.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "A day after coup, Egyptians awake to uncertainty - CNN.com",
+   "htmlTitle": "A day after coup, Egyptians awake to uncertainty - CNN.com",
+   "link": "http://www.cnn.com/2013/07/04/world/meast/egypt-coup/index.html",
+   "displayLink": "www.cnn.com",
+   "snippet": "6 hours ago ... Egypt's military deposed the country's first democratically elected president   Wednesday night, installing the head of the country's high court to ...",
+   "htmlSnippet": "6 hours ago \u003cb\u003e...\u003c/b\u003e \u003cb\u003eEgypt&#39;s\u003c/b\u003e military deposed the country&#39;s first democratically elected president \u003cbr\u003e  Wednesday night, installing the head of the country&#39;s high court to&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "formattedUrl": "www.cnn.com/2013/07/04/world/meast/egypt-coup/index.html",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/04/world/meast/\u003cb\u003eegypt\u003c/b\u003e-coup/index.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTxyPerxl7vvB91Ldz6Rs7KzTp2F-HzWv4HFGzbrIr1tov6AVlHDuA_cwZ9"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "Egypt's military deposed the country's first democratically elected president Wednesday night, installing the head of the country's high court to replace him.",
+      "author": "Ben Wedeman. Jethro Mullen and Chelsea J. Carter, CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-04T05:16:29Z",
+      "datemodified": "2013-07-04T09:33:32Z",
+      "datecreated": "2013-07-04T05:16:29Z",
+      "contentlocation": "Cairo",
+      "headline": "A day after coup, Egyptians awake to uncertainty",
+      "url": "http://www.cnn.com/2013/07/04/world/meast/egypt-coup/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "A day after coup, Egyptians awake to uncertainty - CNN.com",
+      "author": "Ben Wedeman. Jethro Mullen and Chelsea J. Carter, CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-04T05:16:29Z",
+      "lastmod": "2013-07-04T09:33:32Z",
+      "og:title": "A day after coup, Egyptians awake to uncertainty",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/04/world/meast/egypt-coup/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt's Adly Mansour: Interim president, mystery man - CNN.com",
+   "htmlTitle": "\u003cb\u003eEgypt&#39;s\u003c/b\u003e Adly Mansour: Interim president, mystery man - CNN.com",
+   "link": "http://www.cnn.com/2013/07/04/world/meast/egypt-mansour-profile",
+   "displayLink": "www.cnn.com",
+   "snippet": "5 hours ago ... He is the new leader of the most populous Arab nation. But Egypt's interim   president Adly Mansour is, in many respects, a mystery man.",
+   "htmlSnippet": "5 hours ago \u003cb\u003e...\u003c/b\u003e He is the new leader of the most populous Arab nation. But \u003cb\u003eEgypt&#39;s\u003c/b\u003e interim \u003cbr\u003e  president Adly Mansour is, in many respects, a mystery man.",
+   "formattedUrl": "www.cnn.com/2013/07/04/world/meast/egypt-mansour-profile",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/04/world/meast/\u003cb\u003eegypt\u003c/b\u003e-mansour-profile",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130703221208-ac-egypt-whats-next-getty-collage-story-body.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "240",
+      "height": "135",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwfQ9zKBUa168XHou83Q5wWHCObjC1h0g0Xb4LzqcGuQKFxfZu7JTD-i4"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "He is the new leader of the most populous Arab nation. But Egypt's interim president Adly Mansour is, in many respects, a mystery man.",
+      "author": "Faith Karimi, CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-04T04:10:19Z",
+      "datemodified": "2013-07-04T10:35:33Z",
+      "datecreated": "2013-07-04T04:10:19Z",
+      "headline": "Egypt's Adly Mansour: Interim president, veteran judge, mystery man",
+      "url": "http://www.cnn.com/2013/07/04/world/meast/egypt-mansour-profile/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Egypt's Adly Mansour: Interim president, mystery man - CNN.com",
+      "author": "Faith Karimi, CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-04T04:10:19Z",
+      "lastmod": "2013-07-04T10:35:33Z",
+      "og:title": "Egypt's Adly Mansour: Interim president, veteran judge, mystery man",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/04/world/meast/egypt-mansour-profile/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Opinion: Stop using taxpayer money to aid Egypt's Morsy - CNN.com",
+   "htmlTitle": "Opinion: Stop using taxpayer money to aid \u003cb\u003eEgypt&#39;s\u003c/b\u003e Morsy - CNN.com",
+   "link": "http://www.cnn.com/2013/07/02/opinion/paul-stop-egypt-funds",
+   "displayLink": "www.cnn.com",
+   "snippet": "2 days ago ... Sen. Rand Paul asks: Why is the U.S. supporting Egyptian President Mohammed   Morsy when his own people are against him?",
+   "htmlSnippet": "2 days ago \u003cb\u003e...\u003c/b\u003e Sen. Rand Paul asks: Why is the U.S. supporting \u003cb\u003eEgyptian\u003c/b\u003e President Mohammed \u003cbr\u003e  Morsy when his own people are against him?",
+   "formattedUrl": "www.cnn.com/2013/07/02/opinion/paul-stop-egypt-funds",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/02/opinion/paul-stop-\u003cb\u003eegypt\u003c/b\u003e-funds",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130629121623-01-egypt-protest-horizontal-gallery.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlSa6efrgbdLesy4vd_1OxCkdV1s2NbADaOTuqFOlIOFu_C8LwhnRkgIIS"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "Sen. Rand Paul asks: Why is the U.S. supporting Egyptian President Mohammed Morsy when his own people are against him?",
+      "author": "Rand Paul, Special to CNN",
+      "articlesection": "opinion",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-02T11:42:12Z",
+      "datemodified": "2013-07-03T12:34:28Z",
+      "datecreated": "2013-07-02T11:42:12Z",
+      "headline": "Stop using taxpayer money to aid Egypt's Morsy",
+      "url": "http://www.cnn.com/2013/07/02/opinion/paul-stop-egypt-funds/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703151300-15-egypt-0703-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Opinion: Stop using taxpayer money to aid Egypt's Morsy - CNN.com",
+      "author": "Rand Paul, Special to CNN",
+      "section": "opinion",
+      "source": "CNN",
+      "pubdate": "2013-07-02T11:42:12Z",
+      "lastmod": "2013-07-03T12:34:28Z",
+      "og:title": "Stop using taxpayer money to aid Egypt's Morsy",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/02/opinion/paul-stop-egypt-funds/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703151300-15-egypt-0703-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@cnnopinion",
+      "twitter:creator:id": "259074538"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Obama urges quick return to civilian leadership in Egypt - CNN.com",
+   "htmlTitle": "Obama urges quick return to civilian leadership in \u003cb\u003eEgypt\u003c/b\u003e - CNN.com",
+   "link": "http://www.cnn.com/2013/07/03/politics/us-egypt/index.html",
+   "displayLink": "www.cnn.com",
+   "snippet": "14 hours ago ... A foreign policy headache for President Obama worsened as Egypt endured its   second military coup in three years.",
+   "htmlSnippet": "14 hours ago \u003cb\u003e...\u003c/b\u003e A foreign policy headache for President Obama worsened as \u003cb\u003eEgypt\u003c/b\u003e endured its \u003cbr\u003e  second military coup in three years.",
+   "formattedUrl": "www.cnn.com/2013/07/03/politics/us-egypt/index.html",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/03/politics/us-\u003cb\u003eegypt\u003c/b\u003e/index.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130703192510-tsr-obama-statement-on-egypt-coup-00020518-story-top.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcROJevPs41VEFfKCqBMiWoeJANZEAfxoAHqXvvBbtdpt5qT_pJFW-vcmfxj"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "A foreign policy headache for President Obama worsened as Egypt endured its second military coup in three years.",
+      "author": "Tom Cohen, CNN",
+      "articlesection": "politics",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-03T19:45:55Z",
+      "datemodified": "2013-07-04T00:59:29Z",
+      "datecreated": "2013-07-03T19:45:55Z",
+      "contentlocation": "Washington",
+      "headline": "Obama urges quick return to civilian leadership in Egypt",
+      "url": "http://www.cnn.com/2013/07/03/politics/us-egypt/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703192510-tsr-obama-statement-on-egypt-coup-00020518-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Obama urges quick return to civilian leadership in Egypt - CNN.com",
+      "author": "Tom Cohen, CNN",
+      "section": "politics",
+      "source": "CNN",
+      "pubdate": "2013-07-03T19:45:55Z",
+      "lastmod": "2013-07-04T00:59:29Z",
+      "og:title": "Obama urges quick return to civilian leadership in Egypt",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/03/politics/us-egypt/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703192510-tsr-obama-statement-on-egypt-coup-00020518-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@cnnpolitics",
+      "twitter:creator:id": "13850422",
+      "twitter:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703192510-tsr-obama-statement-on-egypt-coup-00020518-left-tease.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Egypt unrest: 5 key questions - CNN.com",
+   "htmlTitle": "\u003cb\u003eEgypt\u003c/b\u003e unrest: 5 key questions - CNN.com",
+   "link": "http://www.cnn.com/2013/07/03/world/meast/egypt-5-questions",
+   "displayLink": "www.cnn.com",
+   "snippet": "19 hours ago ... Two years after massive demonstrations forced out longtime leader Hosni   Mubarak, Egypt finds itself right back where it started.",
+   "htmlSnippet": "19 hours ago \u003cb\u003e...\u003c/b\u003e Two years after massive demonstrations forced out longtime leader Hosni \u003cbr\u003e  Mubarak, \u003cb\u003eEgypt\u003c/b\u003e finds itself right back where it started.",
+   "formattedUrl": "www.cnn.com/2013/07/03/world/meast/egypt-5-questions",
+   "htmlFormattedUrl": "www.cnn.com/2013/07/03/world/meast/\u003cb\u003eegypt\u003c/b\u003e-5-questions",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.turner.com/cnn/dam/assets/130703170223-02-egypt-fireworks-0703-horizontal-gallery.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR0EEUGBCKMKoN4lLFGjArOGB3xCTD7W_LWC4cbohsBbDnGendsWmY3s-Y"
+     }
+    ],
+    "newsarticle": [
+     {
+      "genre": "news",
+      "inlanguage": "en-US",
+      "description": "Two years after massive demonstrations forced out longtime leader Hosni Mubarak, Egypt finds itself right back where it started.",
+      "author": "Kyle Almond, CNN",
+      "articlesection": "world",
+      "sourceorganization": "CNN",
+      "datepublished": "2013-07-03T19:04:19Z",
+      "datemodified": "2013-07-03T20:42:47Z",
+      "datecreated": "2013-07-03T19:04:19Z",
+      "headline": "Egypt unrest: 5 key questions",
+      "url": "http://www.cnn.com/2013/07/03/world/meast/egypt-5-questions/index.html",
+      "thumbnailurl": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1024",
+      "medium": "news",
+      "title": "Egypt unrest: 5 key questions - CNN.com",
+      "author": "Kyle Almond, CNN",
+      "section": "world",
+      "source": "CNN",
+      "subsection": "middleeast",
+      "pubdate": "2013-07-03T19:04:19Z",
+      "lastmod": "2013-07-03T20:42:47Z",
+      "og:title": "Egypt unrest: 5 key questions",
+      "og:type": "article",
+      "og:url": "http://www.cnn.com/2013/07/03/world/meast/egypt-5-questions/index.html",
+      "og:site_name": "CNN",
+      "og:image": "http://i2.cdn.turner.com/cnn/dam/assets/130703193413-29-egypt-0703-story-top.jpg",
+      "fb:app_id": "80401312489",
+      "fb:page_id": "129343697106537",
+      "twitter:card": "summary",
+      "twitter:site": "@CNN",
+      "twitter:site:id": "759251",
+      "twitter:creator": "@CNN",
+      "twitter:creator:id": "759251"
+     }
+    ]
+   }
+  }
+ ]
+}
+

@@ -8,7 +8,7 @@
   "nextPage": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "42300",
+    "totalResults": "43300",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 20,
@@ -22,7 +22,7 @@
   "request": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "42300",
+    "totalResults": "43300",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 10,
@@ -36,7 +36,7 @@
   "previousPage": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "42300",
+    "totalResults": "43300",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 1,
@@ -52,10 +52,10 @@
   "title": "Channelnewsasia"
  },
  "searchInformation": {
-  "searchTime": 0.352283,
-  "formattedSearchTime": "0.35",
-  "totalResults": "42300",
-  "formattedTotalResults": "42,300"
+  "searchTime": 0.289904,
+  "formattedSearchTime": "0.29",
+  "totalResults": "43300",
+  "formattedTotalResults": "43,300"
  },
  "items": [
   {
@@ -64,7 +64,7 @@
    "htmlTitle": "North \u003cb\u003eKorea\u003c/b\u003e slams South for scrapped talks - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/north-korea-slams-south/708726.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 13, 2013 ... North Korea on Thursday blamed South Korean arrogance and deceit for the   collapse of planned talks between the two rivals and warned thatÂ ...",
+   "snippet": "Jun 13, 2013 ... North Korea on Thursday blamed South Korean arrogance and deceit for the   collapse of planned talks between the two rivals and warned that ...",
    "htmlSnippet": "Jun 13, 2013 \u003cb\u003e...\u003c/b\u003e North \u003cb\u003eKorea\u003c/b\u003e on Thursday blamed South \u003cb\u003eKorean\u003c/b\u003e arrogance and deceit for the \u003cbr\u003e  collapse of planned talks between the two rivals and warned that&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "8FHF-VgYIOwJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../708726.html",
@@ -97,11 +97,48 @@
   },
   {
    "kind": "customsearch#result",
+   "title": "China, N Korea hold \"strategic dialogue\": officials - Channel NewsAsia",
+   "htmlTitle": "China, N \u003cb\u003eKorea\u003c/b\u003e hold &quot;strategic dialogue&quot;: officials - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/china-n-korea-hold/716622.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "Jun 19, 2013 ... A high-ranking North Korean official with long experience as his country's   international nuclear negotiator held talks on Wednesday with ...",
+   "htmlSnippet": "Jun 19, 2013 \u003cb\u003e...\u003c/b\u003e A high-ranking North \u003cb\u003eKorean\u003c/b\u003e official with long experience as his country&#39;s \u003cbr\u003e  international nuclear negotiator held talks on Wednesday with&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "Y-y4NzD6azkJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...n-korea.../716622.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...n-\u003cb\u003ekorea\u003c/b\u003e.../716622.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/716624/1371633979000/large16x9/640/360/kim-kye-gwan-right-leaves.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR316hMPyw3y_pcdU5FfXAeZXmBHCGLWhK89G4mJfKs_D1mCr-Gg238myHe"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "China, N Korea hold",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/china-n-korea-hold/716622.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/716624/1371633979000/large16x9/640/360/kim-kye-gwan-right-leaves.jpg",
+      "og:description": "A high-ranking North Korean official with long experience as his country's international nuclear negotiator held talks on Wednesday with Chinese officials, Beijing's foreign ministry announced.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
    "title": "N Korea to dominate S Korea-China summit - Channel NewsAsia",
    "htmlTitle": "N \u003cb\u003eKorea\u003c/b\u003e to dominate S \u003cb\u003eKorea\u003c/b\u003e-China summit - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/n-korea-to-dominate-s/723508.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 25, 2013 ... South Korean President Park Geun-Hye heads for a summit in China on   Wednesday, looking to exploit signs of Beijing's growing frustrationÂ ...",
+   "snippet": "Jun 25, 2013 ... South Korean President Park Geun-Hye heads for a summit in China on   Wednesday, looking to exploit signs of Beijing's growing frustration ...",
    "htmlSnippet": "Jun 25, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye heads for a summit in China on \u003cbr\u003e  Wednesday, looking to exploit signs of Beijing&#39;s growing frustration&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "rX4SE6iT7XsJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea-to.../723508.html",
@@ -138,7 +175,7 @@
    "htmlTitle": "S \u003cb\u003eKorea\u003c/b\u003e sounds alert after official websites hacked - Channel News \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/asiapacific/s-korea-sounds-alert/723538.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 25, 2013 ... South Korea issued a cyber attack alert on Tuesday after hackers apparently   penetrated a number of official websites, including the presidentialÂ ...",
+   "snippet": "Jun 25, 2013 ... South Korea issued a cyber attack alert on Tuesday after hackers apparently   penetrated a number of official websites, including the presidential ...",
    "htmlSnippet": "Jun 25, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea\u003c/b\u003e issued a cyber attack alert on Tuesday after hackers apparently \u003cbr\u003e  penetrated a number of official websites, including the presidential&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "18TjbiY3OagJ",
    "formattedUrl": "www.channelnewsasia.com/news/.../s-korea.../723538.html",
@@ -175,7 +212,7 @@
    "htmlTitle": "S \u003cb\u003eKorea&#39;s\u003c/b\u003e foreign minister to visit Singapore for talks - Channel \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/singapore/s-korea-s-foreign/709570.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 13, 2013 ... SINGAPORE: South Korea's Foreign Minister Yun Byung-se will make an official   visit to Singapore on 14 and 15 June. The Foreign MinistryÂ ...",
+   "snippet": "Jun 13, 2013 ... SINGAPORE: South Korea's Foreign Minister Yun Byung-se will make an official   visit to Singapore on 14 and 15 June. The Foreign Ministry ...",
    "htmlSnippet": "Jun 13, 2013 \u003cb\u003e...\u003c/b\u003e SINGAPORE: South \u003cb\u003eKorea&#39;s\u003c/b\u003e Foreign Minister Yun Byung-se will make an official \u003cbr\u003e  visit to Singapore on 14 and 15 June. The Foreign Ministry&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "d-VlPyf26wMJ",
    "formattedUrl": "www.channelnewsasia.com/news/.../s-korea.../709570.html",
@@ -212,7 +249,7 @@
    "htmlTitle": "China says North \u003cb\u003eKorea\u003c/b\u003e ready to return to nuclear talks - Channel \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/asiapacific/china-says-north-korea/717434.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 20, 2013 ... North Korea expressed willingness on Wednesday to rejoin long-stalled nuclear   talks, according to its ally China, but the United States, JapanÂ ...",
+   "snippet": "Jun 20, 2013 ... North Korea expressed willingness on Wednesday to rejoin long-stalled nuclear   talks, according to its ally China, but the United States, Japan ...",
    "htmlSnippet": "Jun 20, 2013 \u003cb\u003e...\u003c/b\u003e North \u003cb\u003eKorea\u003c/b\u003e expressed willingness on Wednesday to rejoin long-stalled nuclear \u003cbr\u003e  talks, according to its ally China, but the United States, Japan&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "2KyUwBPo6c0J",
    "formattedUrl": "www.channelnewsasia.com/news/...korea/717434.html",
@@ -237,81 +274,7 @@
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
       "og:image": "http://www.channelnewsasia.com/image/637784/1365894453000/large16x9/640/360/korea-border.jpg",
-      "og:description": "North KoreaÂ expressed willingness on Wednesday to rejoin long-stalled nuclear talks, according to its ally China, but the United States, Japan and South KoreaÂ called for action instead of words.",
-      "og:type": "article"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "China, N Korea hold \"strategic dialogue\": officials - Channel NewsAsia",
-   "htmlTitle": "China, N \u003cb\u003eKorea\u003c/b\u003e hold &quot;strategic dialogue&quot;: officials - Channel NewsAsia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/china-n-korea-hold/716622.html",
-   "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 19, 2013 ... A high-ranking North Korean official with long experience as his country's   international nuclear negotiator held talks on Wednesday withÂ ...",
-   "htmlSnippet": "Jun 19, 2013 \u003cb\u003e...\u003c/b\u003e A high-ranking North \u003cb\u003eKorean\u003c/b\u003e official with long experience as his country&#39;s \u003cbr\u003e  international nuclear negotiator held talks on Wednesday with&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "Y-y4NzD6azkJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...n-korea.../716622.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...n-\u003cb\u003ekorea\u003c/b\u003e.../716622.html",
-   "pagemap": {
-    "cse_image": [
-     {
-      "src": "http://www.channelnewsasia.com/image/716624/1371633979000/large16x9/640/360/kim-kye-gwan-right-leaves.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
-      "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR316hMPyw3y_pcdU5FfXAeZXmBHCGLWhK89G4mJfKs_D1mCr-Gg238myHe"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "China, N Korea hold",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/china-n-korea-hold/716622.html",
-      "og:site_name": "Channel NewsAsia",
-      "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/716624/1371633979000/large16x9/640/360/kim-kye-gwan-right-leaves.jpg",
-      "og:description": "A high-ranking North Korean official with long experience as his country's international nuclear negotiator held talks on Wednesday with Chinese officials, Beijing's foreign ministry announced.",
-      "og:type": "article"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "UN chief says Korea talks should focus on denuclearisation ...",
-   "htmlTitle": "UN chief says \u003cb\u003eKorea\u003c/b\u003e talks should focus on denuclearisation \u003cb\u003e...\u003c/b\u003e",
-   "link": "http://www.channelnewsasia.com/news/world/un-chief-says-korea-talks/718890.html",
-   "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 20, 2013 ... UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the   Korean peninsula should be first and foremost about endingÂ ...",
-   "htmlSnippet": "Jun 20, 2013 \u003cb\u003e...\u003c/b\u003e UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the \u003cbr\u003e  \u003cb\u003eKorean\u003c/b\u003e peninsula should be first and foremost about ending&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "__pJk7iI33oJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../718890.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../718890.html",
-   "pagemap": {
-    "cse_image": [
-     {
-      "src": "http://www.channelnewsasia.com/image/718892/1371744264000/large16x9/640/360/un-chief-ban-ki-moon-left.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
-      "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3PTMOmL2HV7WU1bdtuRaLWrZWcwC1mEqD_rNbRHVDZRkyLwc5IsfRuG-j"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "UN chief says Korea talks should focus on denuclearisation - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/world/un-chief-says-korea-talks/718890.html",
-      "og:site_name": "Channel NewsAsia",
-      "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/718892/1371744264000/large16x9/640/360/un-chief-ban-ki-moon-left.jpg",
-      "og:description": "UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the Korean peninsula should be first and foremost about ending North Korea's nuclear programme.",
+      "og:description": "North Korea expressed willingness on Wednesday to rejoin long-stalled nuclear talks, according to its ally China, but the United States, Japan and South Korea called for action instead of words.",
       "og:type": "article"
      }
     ]
@@ -323,7 +286,7 @@
    "htmlTitle": "N \u003cb\u003eKorea\u003c/b\u003e warns of war with talks offer - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/n-korea-warns-of-war-with/720298.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 22, 2013 ... A top North Korean envoy said on Friday that US hostility could \"lead to war any   time\" but he repeated an offer of talks that he said couldÂ ...",
+   "snippet": "Jun 22, 2013 ... A top North Korean envoy said on Friday that US hostility could \"lead to war any   time\" but he repeated an offer of talks that he said could ...",
    "htmlSnippet": "Jun 22, 2013 \u003cb\u003e...\u003c/b\u003e A top North \u003cb\u003eKorean\u003c/b\u003e envoy said on Friday that US hostility could &quot;lead to war any \u003cbr\u003e  time&quot; but he repeated an offer of talks that he said could&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "qOc0IWsUwZIJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../720298.html",
@@ -356,11 +319,48 @@
   },
   {
    "kind": "customsearch#result",
+   "title": "UN chief says Korea talks should focus on denuclearisation ...",
+   "htmlTitle": "UN chief says \u003cb\u003eKorea\u003c/b\u003e talks should focus on denuclearisation \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.channelnewsasia.com/news/world/un-chief-says-korea-talks/718890.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "Jun 20, 2013 ... UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the   Korean peninsula should be first and foremost about ending ...",
+   "htmlSnippet": "Jun 20, 2013 \u003cb\u003e...\u003c/b\u003e UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the \u003cbr\u003e  \u003cb\u003eKorean\u003c/b\u003e peninsula should be first and foremost about ending&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "__pJk7iI33oJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea.../718890.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../718890.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/718892/1371744264000/large16x9/640/360/un-chief-ban-ki-moon-left.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3PTMOmL2HV7WU1bdtuRaLWrZWcwC1mEqD_rNbRHVDZRkyLwc5IsfRuG-j"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "UN chief says Korea talks should focus on denuclearisation - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/world/un-chief-says-korea-talks/718890.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/718892/1371744264000/large16x9/640/360/un-chief-ban-ki-moon-left.jpg",
+      "og:description": "UN Secretary-General Ban Ki-moon said on Thursday that talks regarding the Korean peninsula should be first and foremost about ending North Korea's nuclear programme.",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
    "title": "South Korea president flags risks in engaging North - Channel News ...",
    "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e president flags risks in engaging North - Channel News \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-president/713226.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 17, 2013 ... SEOUL: South Korean President Park Geun-Hye on Monday warned against   engaging North Korea in a token dialogue that would only allowÂ ...",
+   "snippet": "Jun 17, 2013 ... SEOUL: South Korean President Park Geun-Hye on Monday warned against   engaging North Korea in a token dialogue that would only allow ...",
    "htmlSnippet": "Jun 17, 2013 \u003cb\u003e...\u003c/b\u003e SEOUL: South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye on Monday warned against \u003cbr\u003e  engaging North \u003cb\u003eKorea\u003c/b\u003e in a token dialogue that would only allow&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "I_FMZpCtKWYJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../713226.html",
@@ -385,7 +385,7 @@
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
       "og:image": "http://www.channelnewsasia.com/image/673088/1371479336000/large16x9/640/360/president-of-south-korea.jpg",
-      "og:description": "South Korean President Park Geun-Hye on Monday warned against engagingÂ North Korea in a token dialogue that would only allow Pyongyang more time to develop its nuclear weapons programme.",
+      "og:description": "South Korean President Park Geun-Hye on Monday warned against engaging North Korea in a token dialogue that would only allow Pyongyang more time to develop its nuclear weapons programme.",
       "og:type": "article"
      }
     ]
@@ -397,7 +397,7 @@
    "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e warns North over returned refugees - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-warns-north-over-returned-re/696046.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 3, 2013 ... South Korean President Park Geun-Hye warned North Korea on Monday that it   would be held responsible for the safety of nine young asylumÂ ...",
+   "snippet": "Jun 3, 2013 ... South Korean President Park Geun-Hye warned North Korea on Monday that it   would be held responsible for the safety of nine young asylum ...",
    "htmlSnippet": "Jun 3, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorean\u003c/b\u003e President Park Geun-Hye warned North \u003cb\u003eKorea\u003c/b\u003e on Monday that it \u003cbr\u003e  would be held responsible for the safety of nine young asylum&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "64tOLEgzUd4J",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../696046.html",

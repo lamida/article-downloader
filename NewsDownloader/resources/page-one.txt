@@ -8,7 +8,7 @@
   "nextPage": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "42300",
+    "totalResults": "43200",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 11,
@@ -22,7 +22,7 @@
   "request": [
    {
     "title": "Google Custom Search - korea",
-    "totalResults": "42300",
+    "totalResults": "43200",
     "searchTerms": "korea",
     "count": 10,
     "startIndex": 1,
@@ -38,10 +38,10 @@
   "title": "Channelnewsasia"
  },
  "searchInformation": {
-  "searchTime": 0.571334,
-  "formattedSearchTime": "0.57",
-  "totalResults": "42300",
-  "formattedTotalResults": "42,300"
+  "searchTime": 0.382093,
+  "formattedSearchTime": "0.38",
+  "totalResults": "43200",
+  "formattedTotalResults": "43,200"
  },
  "items": [
   {
@@ -50,7 +50,7 @@
    "htmlTitle": "Ultra-wired South \u003cb\u003eKorea\u003c/b\u003e battles smartphone addiction - Channel \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/technology/ultra-wired-south-korea/726382.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 27, 2013 ... South Korea's fixation with everything digital has parents worried about its impact   on young children, and the government has gone furthest in¬†...",
+   "snippet": "Jun 27, 2013 ... South Korea's fixation with everything digital has parents worried about its impact   on young children, and the government has gone furthest in†...",
    "htmlSnippet": "Jun 27, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea&#39;s\u003c/b\u003e fixation with everything digital has parents worried about its impact \u003cbr\u003e  on young children, and the government has gone furthest in&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "sE7C9TCxyEAJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea/726382.html",
@@ -58,14 +58,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/726408/1372307374000/large16x9/640/360/south-korea-smartphone.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/726408/1372307374000/large16x9/768/432/south-korea-smartphone.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQuEL24t9EM97bJT3s6cTJHk8oYKOrfPBBWH3fZQAswxMwtc6t8ItNtq5-"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -75,7 +71,7 @@
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
       "og:image": "http://www.channelnewsasia.com/image/726408/1372307374000/large16x9/640/360/south-korea-smartphone.jpg",
-      "og:description": "South Korea‚Äôs fixation with everything digital has parents worried about its impact on young children, and the government has gone furthest in its response by organising ‚Äúboot camps‚Äù to wean students off their dependency on technology.",
+      "og:description": "South Koreaís fixation with everything digital has parents worried about its impact on young children, and the government has gone furthest in its response by organising ìboot campsî to wean students off their dependency on technology.",
       "og:type": "article"
      }
     ]
@@ -87,7 +83,7 @@
    "htmlTitle": "Japan, S \u003cb\u003eKorea\u003c/b\u003e foreign ministers to hold first talks - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/japan-s-korea-foreign/729124.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 30, 2013 ... Japan's foreign minister will hold direct talks with his South Korean counterpart at   a regional gathering this week, the first ministerial meeting¬†...",
+   "snippet": "Jun 30, 2013 ... Japan's foreign minister will hold direct talks with his South Korean counterpart at   a regional gathering this week, the first ministerial meeting†...",
    "htmlSnippet": "Jun 30, 2013 \u003cb\u003e...\u003c/b\u003e Japan&#39;s foreign minister will hold direct talks with his South \u003cb\u003eKorean\u003c/b\u003e counterpart at \u003cbr\u003e  a regional gathering this week, the first ministerial meeting&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "9whXomkO0ywJ",
    "formattedUrl": "www.channelnewsasia.com/news/...s-korea.../729124.html",
@@ -95,14 +91,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/729060/1372559211000/large16x9/640/360/a-general-view-shows-the.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/729060/1372559211000/large16x9/640/360/a-general-view-shows-the.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_vKcVioOknyNOfD_1v8Dn4Al2lvkzJPl5WquVnFLukaldNpMY32e38WRM"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -124,7 +116,7 @@
    "htmlTitle": "South \u003cb\u003eKorea&#39;s\u003c/b\u003e top nuclear plant operator sacked - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-s-top-nuclear/700446.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 7, 2013 ... SEOUL - South Korea on Thursday fired the head of the state-run company that   oversees the country's 23 nuclear reactors over a forged¬†...",
+   "snippet": "Jun 7, 2013 ... SEOUL - South Korea on Thursday fired the head of the state-run company that   oversees the country's 23 nuclear reactors over a forged†...",
    "htmlSnippet": "Jun 7, 2013 \u003cb\u003e...\u003c/b\u003e SEOUL - South \u003cb\u003eKorea\u003c/b\u003e on Thursday fired the head of the state-run company that \u003cbr\u003e  oversees the country&#39;s 23 nuclear reactors over a forged&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "s1HUJ7YEcFAJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea-s.../700446.html",
@@ -132,14 +124,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/700448/1370539632000/large16x9/640/360/south-korea-s-nuclear.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/700448/1370539632000/large16x9/640/360/south-korea-s-nuclear.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1EKDkUVvjZNtUYxvpLKg7Nk9Fr7QAnbG-xuJWtq3IvLj_ty_sXU2o_2nj"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -161,7 +149,7 @@
    "htmlTitle": "S \u003cb\u003eKorea\u003c/b\u003e raises 2013 growth outlook to 2.7% - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/business/international/s-korea-raises-2013/726244.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 27, 2013 ... South Korea on Thursday raised its 2013 economic growth outlook to 2.7 per   cent from 2.3 per cent, citing payoffs from back-to-back stimulus¬†...",
+   "snippet": "Jun 27, 2013 ... South Korea on Thursday raised its 2013 economic growth outlook to 2.7 per   cent from 2.3 per cent, citing payoffs from back-to-back stimulus†...",
    "htmlSnippet": "Jun 27, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea\u003c/b\u003e on Thursday raised its 2013 economic growth outlook to 2.7 per \u003cbr\u003e  cent from 2.3 per cent, citing payoffs from back-to-back stimulus&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "Is0nzzQGOEIJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../726244.html",
@@ -169,14 +157,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/521800/1372302297000/large16x9/640/360/south-korea-s-economy.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/521800/1372302297000/large16x9/640/360/south-korea-s-economy.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSactnTQFAFct_lS3JBX-Vl91kAi1TAUtQdzcccmOCZ7MNf2D-4Voh4Mo_O"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -186,7 +170,7 @@
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
       "og:image": "http://www.channelnewsasia.com/image/521800/1372302297000/large16x9/640/360/south-korea-s-economy.jpg",
-      "og:description": "South Korea on Thursday raised its 2013¬†economic growth outlook to 2.7 per cent from 2.3 per cent, citing payoffs from¬†back-to-back stimulus measures.",
+      "og:description": "South Korea on Thursday raised its 2013†economic growth outlook to 2.7 per cent from 2.3 per cent, citing payoffs from†back-to-back stimulus measures.",
       "og:type": "article"
      }
     ]
@@ -198,7 +182,7 @@
    "htmlTitle": "S \u003cb\u003eKorea\u003c/b\u003e opens bidding on $7.3 billion fighter jet deal - Channel \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/business/international/s-korea-opens-bidding-on/713638.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 18, 2013 ... SEOUL: South Korea formally opened bidding Tuesday on a $7.3 billion deal to   provide 60 advanced fighter planes, with three aviation giants¬†...",
+   "snippet": "Jun 18, 2013 ... SEOUL: South Korea formally opened bidding Tuesday on a $7.3 billion deal to   provide 60 advanced fighter planes, with three aviation giants†...",
    "htmlSnippet": "Jun 18, 2013 \u003cb\u003e...\u003c/b\u003e SEOUL: South \u003cb\u003eKorea\u003c/b\u003e formally opened bidding Tuesday on a $7.3 billion deal to \u003cbr\u003e  provide 60 advanced fighter planes, with three aviation giants&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "76qtshlnKf4J",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../713638.html",
@@ -206,14 +190,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/713690/1371525531000/large16x9/640/360/f-35-lightning-ii.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/713690/1371525531000/large16x9/640/360/f-35-lightning-ii.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTHeb5zEle3CoFR8RVUdoEjszEp-KWN-5aC535KTSaeT0Vvhdan3d7L6sY"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -243,14 +223,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/701744/1372215118000/large16x9/640/360/south-korean-president.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/701744/1372215118000/large16x9/640/360/south-korean-president.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRYwtir-InYQjf-7x-sseTvZCY9lN22bPFaFdtHcv7BejRjyLqcXKMSHNE8"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -272,7 +248,7 @@
    "htmlTitle": "Football: South \u003cb\u003eKorea\u003c/b\u003e edge vital win over Uzbekistan - Channel \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/sport/football-south-korea-edge/706754.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 11, 2013 ... South Korea had a first-half own goal to thank on Tuesday as they edged   Uzbekistan 1-0 for a vital win which could be enough to put them¬†...",
+   "snippet": "Jun 11, 2013 ... South Korea had a first-half own goal to thank on Tuesday as they edged   Uzbekistan 1-0 for a vital win which could be enough to put them†...",
    "htmlSnippet": "Jun 11, 2013 \u003cb\u003e...\u003c/b\u003e South \u003cb\u003eKorea\u003c/b\u003e had a first-half own goal to thank on Tuesday as they edged \u003cbr\u003e  Uzbekistan 1-0 for a vital win which could be enough to put them&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "S082TbxBLloJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../706754.html",
@@ -280,14 +256,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/706758/1370959745000/large16x9/640/360/shorakhmedov-akmal.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/706758/1370959745000/large16x9/640/360/shorakhmedov-akmal.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQXa9QD4RLwn89NYMby9Zku_gtdbZrcsiYgqdPyE5NNscljOnO4plrcesX_"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -297,44 +269,7 @@
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
       "og:image": "http://www.channelnewsasia.com/image/706758/1370959745000/large16x9/640/360/shorakhmedov-akmal.jpg",
-      "og:description": "South Korea had a first-half own goal to thank on Tuesday as they edged Uzbekistan¬†1-0 for a vital win which could be enough to put them through to their eighth successive World Cup next year.",
-      "og:type": "article"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "South Korea stops anti-North leaflet launch - Channel NewsAsia",
-   "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e stops anti-North leaflet launch - Channel NewsAsia",
-   "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-stops-anti/728456.html",
-   "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 29, 2013 ... SEOUL: South Korean police on Saturday stopped a planned launch of anti-  Pyongyang leaflets following a threat of violent retaliation by the¬†...",
-   "htmlSnippet": "Jun 29, 2013 \u003cb\u003e...\u003c/b\u003e SEOUL: South \u003cb\u003eKorean\u003c/b\u003e police on Saturday stopped a planned launch of anti-\u003cbr\u003e  Pyongyang leaflets following a threat of violent retaliation by the&nbsp;\u003cb\u003e...\u003c/b\u003e",
-   "cacheId": "4Kqcl5029ewJ",
-   "formattedUrl": "www.channelnewsasia.com/news/...korea.../728456.html",
-   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../728456.html",
-   "pagemap": {
-    "cse_image": [
-     {
-      "src": "http://www.channelnewsasia.com/image/728458/1372476435000/large16x9/640/360/south-korea-leaflet.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
-      "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5R4P13CxPh6_2kodRmAVhT8ROSidtQdoFgqcteu0XdTUAJm_R3PSXjmI"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "South Korea stops anti-North leaflet launch - Channel NewsAsia",
-      "og:url": "http://www.channelnewsasia.com/news/asiapacific/south-korea-stops-anti/728456.html",
-      "og:site_name": "Channel NewsAsia",
-      "fb:app_id": "101910072318",
-      "og:image": "http://www.channelnewsasia.com/image/728458/1372476435000/large16x9/640/360/south-korea-leaflet.jpg",
-      "og:description": "South Korean police on Saturday stopped a¬†planned launch of anti-Pyongyang leaflets following a threat of violent¬†retaliation by the North.",
+      "og:description": "South Korea had a first-half own goal to thank on Tuesday as they edged Uzbekistan†1-0 for a vital win which could be enough to put them through to their eighth successive World Cup next year.",
       "og:type": "article"
      }
     ]
@@ -346,7 +281,7 @@
    "htmlTitle": "South \u003cb\u003eKorea&#39;s\u003c/b\u003e tourism industry hit by decline in Japanese visitors \u003cb\u003e...\u003c/b\u003e",
    "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-s-tourism/703894.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 10, 2013 ... According to the Korea Culture and Tourism Institute, about 689,000 Japanese   travellers visited South Korea during the first three months of¬†...",
+   "snippet": "Jun 10, 2013 ... According to the Korea Culture and Tourism Institute, about 689,000 Japanese   travellers visited South Korea during the first three months of†...",
    "htmlSnippet": "Jun 10, 2013 \u003cb\u003e...\u003c/b\u003e According to the \u003cb\u003eKorea\u003c/b\u003e Culture and Tourism Institute, about 689,000 Japanese \u003cbr\u003e  travellers visited South \u003cb\u003eKorea\u003c/b\u003e during the first three months of&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "v8eoCRcc1KkJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea-s.../703894.html",
@@ -354,14 +289,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/704314/1370877451000/large16x9/640/360/korea-tourism.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/704314/1370877451000/large16x9/640/360/korea-tourism.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGv6ELlQLh9swerSCe6FroqoysUhqb5Yv7O5Fo6dcuVGVQ4MtvKoo71iV"
+      "height": "168"
      }
     ],
     "metatags": [
@@ -371,7 +302,40 @@
       "og:site_name": "Channel NewsAsia",
       "fb:app_id": "101910072318",
       "og:image": "http://www.channelnewsasia.com/image/704314/1370877451000/large16x9/640/360/korea-tourism.jpg",
-      "og:description": "According to the Korea Culture and Tourism Institute, about 689,000 Japanese travellers visited South Korea during the first three months of this year - a 22 per cent drop compared with the same period last year.¬†",
+      "og:description": "According to the Korea Culture and Tourism Institute, about 689,000 Japanese travellers visited South Korea during the first three months of this year - a 22 per cent drop compared with the same period last year.†",
+      "og:type": "article"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "South Korea stops anti-North leaflet launch - Channel NewsAsia",
+   "htmlTitle": "South \u003cb\u003eKorea\u003c/b\u003e stops anti-North leaflet launch - Channel NewsAsia",
+   "link": "http://www.channelnewsasia.com/news/asiapacific/south-korea-stops-anti/728456.html",
+   "displayLink": "www.channelnewsasia.com",
+   "snippet": "Jun 29, 2013 ... SEOUL: South Korean police on Saturday stopped a planned launch of anti-  Pyongyang leaflets following a threat of violent retaliation by the†...",
+   "htmlSnippet": "Jun 29, 2013 \u003cb\u003e...\u003c/b\u003e SEOUL: South \u003cb\u003eKorean\u003c/b\u003e police on Saturday stopped a planned launch of anti-\u003cbr\u003e  Pyongyang leaflets following a threat of violent retaliation by the&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "4Kqcl5029ewJ",
+   "formattedUrl": "www.channelnewsasia.com/news/...korea.../728456.html",
+   "htmlFormattedUrl": "www.channelnewsasia.com/news/...\u003cb\u003ekorea\u003c/b\u003e.../728456.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.channelnewsasia.com/image/728458/1372476435000/large16x9/640/360/south-korea-leaflet.jpg",
+      "type": "1",
+      "width": "300",
+      "height": "168"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "South Korea stops anti-North leaflet launch - Channel NewsAsia",
+      "og:url": "http://www.channelnewsasia.com/news/asiapacific/south-korea-stops-anti/728456.html",
+      "og:site_name": "Channel NewsAsia",
+      "fb:app_id": "101910072318",
+      "og:image": "http://www.channelnewsasia.com/image/728458/1372476435000/large16x9/640/360/south-korea-leaflet.jpg",
+      "og:description": "South Korean police on Saturday stopped a†planned launch of anti-Pyongyang leaflets following a threat of violent†retaliation by the North.",
       "og:type": "article"
      }
     ]
@@ -383,7 +347,7 @@
    "htmlTitle": "North \u003cb\u003eKorea\u003c/b\u003e slams South for scrapped talks - Channel NewsAsia",
    "link": "http://www.channelnewsasia.com/news/asiapacific/north-korea-slams-south/708726.html",
    "displayLink": "www.channelnewsasia.com",
-   "snippet": "Jun 13, 2013 ... North Korea on Thursday blamed South Korean arrogance and deceit for the   collapse of planned talks between the two rivals and warned that¬†...",
+   "snippet": "Jun 13, 2013 ... North Korea on Thursday blamed South Korean arrogance and deceit for the   collapse of planned talks between the two rivals and warned that†...",
    "htmlSnippet": "Jun 13, 2013 \u003cb\u003e...\u003c/b\u003e North \u003cb\u003eKorea\u003c/b\u003e on Thursday blamed South \u003cb\u003eKorean\u003c/b\u003e arrogance and deceit for the \u003cbr\u003e  collapse of planned talks between the two rivals and warned that&nbsp;\u003cb\u003e...\u003c/b\u003e",
    "cacheId": "8FHF-VgYIOwJ",
    "formattedUrl": "www.channelnewsasia.com/news/...korea.../708726.html",
@@ -391,14 +355,10 @@
    "pagemap": {
     "cse_image": [
      {
-      "src": "http://www.channelnewsasia.com/image/708342/1371085959000/large16x9/640/360/a-south-korean-flag.jpg"
-     }
-    ],
-    "cse_thumbnail": [
-     {
+      "src": "http://www.channelnewsasia.com/image/708342/1371085959000/large16x9/640/360/a-south-korean-flag.jpg",
+      "type": "1",
       "width": "300",
-      "height": "168",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQQP0dHkNtIJQGA13nVZKyuO6MXXOWo2nwy3dTgAVslzvZTWZ4pAICW7Yw"
+      "height": "168"
      }
     ],
     "metatags": [
