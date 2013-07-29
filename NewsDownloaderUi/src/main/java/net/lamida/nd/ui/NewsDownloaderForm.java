@@ -53,7 +53,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private Map<Integer, SearchResult> searchCache;
     private DefaultTableModel model;
     private IRestSearch currentSearch;
-    private boolean dummyData = false;
+    private boolean dummyData = true;
     private long totalResults;
     private boolean selectAll;
 
@@ -64,8 +64,13 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         searchCache = new HashMap<Integer, SearchResult>();
         initComponents();
         addLinkListener();
+        addTableHeaderClickListener();
         model = (DefaultTableModel) table.getModel();
-        table.getTableHeader().addMouseListener(new MouseAdapter() {
+        textOutputFile.setText(new File("result/output.pdf").getAbsolutePath());
+    }
+
+	private void addTableHeaderClickListener() {
+		table.getTableHeader().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
                 selectResultToText.setText("");
@@ -75,8 +80,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         ;
         });
-        textOutputFile.setText(new File("output.pdf").getAbsolutePath());
-    }
+	}
 
 	private void addLinkListener() {
 		table.addMouseListener(new MouseAdapter() {
@@ -101,6 +105,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         });
 	}
 
+	/**
+	 * Currently Not Used
+	 * @param mouseEvent
+	 */
     private void toggleSelectAllCurrentPage(MouseEvent mouseEvent) {
         int index = table.columnAtPoint(mouseEvent.getPoint());
         if (index == 4) {
@@ -121,7 +129,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         SearchResultBuilder builder = new SearchResultBuilder();
         SearchResult result = null;
         try {
-            result = builder.build(Utils.readFileToString(new File("googleSearchAljazeera.txt")));
+            result = builder.build(Utils.readFileToString(new File("resources/googleSearchCnn.txt")));
         } catch (IOException ex) {
             Logger.getLogger(NewsDownloaderForm.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -189,7 +197,12 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         int lastPage = (int) (result.getSearchInformation().getTotalResults() / Constant.RESULTS_PER_PAGE);
         executionTimeLabel.setText("About " + result.getSearchInformation().getTotalResults() + " results (" + result.getSearchInformation().getSearchTime() + "seconds)");
         pagingInfoLabel.setText("Page " + (currentPage + 1) + " of " + lastPage);
-        if (currentPage > 0) {
+        
+        enableDisableButton(currentPage, lastPage);
+    }
+
+	private void enableDisableButton(int currentPage, int lastPage) {
+		if (currentPage > 0) {
             prevButton.setEnabled(true);
         } else {
             prevButton.setEnabled(false);
@@ -199,7 +212,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         } else {
             nextButton.setEnabled(false);
         }
-    }
+	}
 
     private void updateSelected() {
         SearchResult currentResult = searchCache.get(resultStart);
@@ -552,6 +565,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 path += ".pdf";
             }
             IPdfJoiner pdfJoiner = new PdfJoiner();
+            File temp = new File("temp");
+            if(!temp.exists()){
+            	temp.mkdir();
+            }
             pdfJoiner.joinPdf("temp", path);
             JOptionPane.showMessageDialog(NewsDownloaderForm.this, "File saved at " + path);
         } else {
@@ -570,6 +587,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         navigateNext();
     }//GEN-LAST:event_nextButtonActionPerformed
+    
     private File saveFile;
     private void browseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseButtonActionPerformed
         final JFileChooser fc = new JFileChooser();
@@ -578,6 +596,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         saveFile = fc.getSelectedFile();
     }//GEN-LAST:event_browseButtonActionPerformed
 
+    /**
+     * TODO
+     * @param evt
+     */
     private void selectAllAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectAllAcceptButtonActionPerformed
         try {
             if (selectResultToText.getText().isEmpty()) {
@@ -592,6 +614,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 
             for (int i = 1; i < page; i++) {
                 int resultStart = i;
+                showResult(searchCache.get(resultStart));
                 if (searchCache.get(resultStart) == null) {
                     navigateNext();
                 }
@@ -608,6 +631,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }//GEN-LAST:event_selectAllAcceptButtonActionPerformed
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton browseButton;
     private javax.swing.JCheckBox countKeywordsCb;
@@ -677,6 +701,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         }
                 .execute();
     }
+    
+    private SearchResultBuilder resultBuilder = new SearchResultBuilder();
 
     private void navigateNext() {
         updateSelected();
@@ -688,7 +714,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 searchCache.put(resultStart, searchResult);
             } else {
                 String json = currentSearch.next();
-                SearchResult searchResult = new SearchResultBuilder().build(json);
+                SearchResult searchResult = resultBuilder.build(json);
                 searchCache.put(resultStart, searchResult);
             }
         }
@@ -704,7 +730,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 searchCache.put(resultStart, searchResult);
             } else {
                 String json = currentSearch.prev();
-                SearchResult searchResult = new SearchResultBuilder().build(json);
+                SearchResult searchResult = resultBuilder.build(json);
                 searchCache.put(resultStart, searchResult);
             }
         }
@@ -712,8 +738,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     }
 }
 
+@SuppressWarnings("serial")
 class PathCellRenderer extends DefaultTableCellRenderer {
-
     @Override
     public Component getTableCellRendererComponent(
             JTable table, Object value,

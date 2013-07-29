@@ -15,7 +15,7 @@ public class RestSearchTest {
 	//@Test
 	public void test() throws IOException{
 		IRestSearch mock = EasyMock.createNiceMock(IRestSearch.class);
-		EasyMock.expect(mock.execute()).andReturn(Utils.readFileToString(new File("googleSearchAljazeera.txt")));
+		EasyMock.expect(mock.execute()).andReturn(Utils.readFileToString(new File("resources/googleSearchAljazeera.txt")));
 		EasyMock.replay(mock);
 		String result = mock.execute();
 		Assert.assertNotNull(result);
