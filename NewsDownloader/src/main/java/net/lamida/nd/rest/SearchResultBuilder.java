@@ -2,6 +2,8 @@ package net.lamida.nd.rest;
 
 import java.util.Iterator;
 
+import javax.swing.JOptionPane;
+
 import net.lamida.nd.bean.SearchInformation;
 import net.lamida.nd.bean.SearchResult;
 import net.lamida.nd.bean.SearchResultItem;
@@ -27,15 +29,20 @@ public class SearchResultBuilder {
 		searchInfo.setTotalResults(searchInfoJson.get("totalResults").getAsLong());
 		
 		result.getItems();
-		JsonArray jsonItems = root.get("items").getAsJsonArray();
-		Iterator<JsonElement> iterator = jsonItems.iterator();
-		while(iterator.hasNext()){
-			JsonObject item = iterator.next().getAsJsonObject();
-			SearchResultItem searchItem = new SearchResultItem();
-			searchItem.setTitle(item.get("title").getAsString());
-			searchItem.setLink(item.get("link").getAsString());
-			searchItem.setSnippet(item.get("snippet").getAsString());
-			result.addResult(searchItem);
+		JsonElement element = root.get("items");
+		if(element != null){
+			JsonArray jsonItems = element.getAsJsonArray();
+			Iterator<JsonElement> iterator = jsonItems.iterator();
+			while(iterator.hasNext()){
+				JsonObject item = iterator.next().getAsJsonObject();
+				SearchResultItem searchItem = new SearchResultItem();
+				searchItem.setTitle(item.get("title").getAsString());
+				searchItem.setLink(item.get("link").getAsString());
+				searchItem.setSnippet(item.get("snippet").getAsString());
+				result.addResult(searchItem);
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "No Result!");
 		}
 		return result;
 	}
