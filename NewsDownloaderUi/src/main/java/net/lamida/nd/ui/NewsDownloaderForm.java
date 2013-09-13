@@ -162,7 +162,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     }
     
     private Object[][] convertToArray(SearchResult search) {
-        Object[][] data = new Object[10][5];
+        Object[][] data = new Object[search.getItems().size()][5];
         int row = 0;
         for (SearchResultItem item : search.getItems()) {
             data[row][0] = loadedSearch.getResultStart() + row;
@@ -576,6 +576,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+    	log.info("saveButtonActionPerformed");
         updateSelected();
         selectedCount = 0;
         for (SearchResult result : loadedSearch.getSearchCache().values()) {
@@ -593,12 +594,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             		if(!folder.mkdirs()){
             			JOptionPane.showMessageDialog(this, "Cannot create directory " + folderPath); 
             			return;
-            		}else{
-            			saveFile = new File(textOutputFile.getText());
             		}
             	}
-                
             }
+            saveFile = new File(textOutputFile.getText());
             if (saveFile.exists()) {
                 int x = JOptionPane.showConfirmDialog(NewsDownloaderForm.this, "File with same name exist. Would you like to overwrite?");
                 if (x != JOptionPane.YES_OPTION) {
@@ -613,7 +612,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 	}//GEN-LAST:event_saveButtonActionPerformed
 
 	private void joinPdf() {
-		String path = saveFile.getAbsolutePath();
+		log.info("joinPdf");
+        String path = saveFile.getAbsolutePath();
 		if (!path.endsWith(".pdf")) {
 		    path += ".pdf";
 		}
@@ -772,6 +772,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void doDownload() {
+    	log.info("doDownload");
+    	progressBar.setStringPainted(true);
         progressBar.setIndeterminate(false);
         progressBar.setMaximum(100);
         new SwingWorker<Object, Object>() {
@@ -785,9 +787,12 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                         if (it.isSelected()) {
                             count++;
                             progressBar.setValue(100 * count / selectedCount);
+                            progressBar.setString("Downloading: " + it.getTitle());
+                            progressBar.setToolTipText("Downloading: " + it.getTitle());
                             parser.init(it.getLink());
 
                             String targetFileName = it.getTitle().replace(":", "") + ".pdf";
+                            log.info("Downloading " + targetFileName);
                             PdfInputData data = new PdfInputData(queryText.getText(), it.getLink(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime());
                             pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected());
                             pdfWriter.writePdf();
@@ -801,6 +806,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             @Override
             protected void done() {
                 progressBar.setValue(0);
+                progressBar.setString(null);
                 JOptionPane.showMessageDialog(NewsDownloaderForm.this, "All Articles have been downloaded!");
             }
         }.execute();

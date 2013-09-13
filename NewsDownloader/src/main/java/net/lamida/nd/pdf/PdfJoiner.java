@@ -27,6 +27,7 @@ public class PdfJoiner implements IPdfJoiner {
 	 * @see net.lamida.nd.pdf.IJoinPdf#joinPdf(java.util.List, java.lang.String)
 	 */
 	public void joinPdf(List<String> fileInput, String mergedPdfFileName){
+		log.info("joinPdf");
 		try {
 		    List<InputStream> pdfs = new ArrayList<InputStream>();  
 			for(String fileName : fileInput){
@@ -41,6 +42,7 @@ public class PdfJoiner implements IPdfJoiner {
 	}
 
 	public void joinPdf(String inputDir, String mergedPdfFileName){
+		log.info("joinPdf");
 		try {
 			File dir = new File(inputDir);
 			if(!dir.isDirectory()){

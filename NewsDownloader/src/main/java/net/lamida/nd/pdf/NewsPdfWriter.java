@@ -46,11 +46,11 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	 * @see net.lamida.nd.pdf.INewsPdfWriter#writePdf(java.lang.String)
 	 */
 	public void writePdf() {
+		log.info("writePdf for document with length " + data.getNewsContent().length());
 		if(targetFileName == null || data == null){
 			throw new IllegalArgumentException("Call init first");
 		}
 		
-		log.info("writePdf");
 		try {
 			Document document = new Document();
 			File targetFile = new File("temp", targetFileName);
@@ -62,6 +62,8 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		} catch (FileNotFoundException e) {
 			log.error(e.getMessage());
 		} catch (DocumentException e) {
+			log.error(e.getMessage());
+		} catch(Exception e){
 			log.error(e.getMessage());
 		}
 	}
