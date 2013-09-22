@@ -9,6 +9,7 @@ import java.awt.Desktop;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,26 +40,29 @@ import net.lamida.nd.rest.IRestSearch;
 import net.lamida.nd.rest.LoadedSearch;
 import net.lamida.nd.rest.SearchProviderEnum;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /**
  *
  * @author lamida
  */
 @SuppressWarnings("serial")
 public class NewsDownloaderForm extends javax.swing.JFrame {
-
+	private Log log = LogFactory.getLog(this.getClass().toString());
     private DefaultTableModel model;
     private IRestSearch currentSearch;
     private boolean dummyData = false;
     private int selectedCount;
     private File saveFile;
     private LoadedSearch loadedSearch;
-    private Logger log = Logger.getLogger(this.getClass().getName());
     
 
     /**
      * Creates new form NewsDownloaderForm
      */
     public NewsDownloaderForm() {
+    	log.info("init");
         initComponents();
         addLinkListener();
         addTableHeaderClickListener();
@@ -93,7 +97,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 }
                 String link = (String) target.getValueAt(row, column);
                 try {
-                    System.out.println(Desktop.isDesktopSupported());
+                    log.info(Desktop.isDesktopSupported());
                     if (Desktop.isDesktopSupported()) {
                         Desktop.getDesktop().browse(new URI(link));
                     }
@@ -224,7 +228,9 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         queryText = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         countKeywordsCb = new javax.swing.JCheckBox();
+        countKeywordsCb.setSelected(true);
         highlightKeywordsCb = new javax.swing.JCheckBox();
+        highlightKeywordsCb.setSelected(true);
         searchButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
@@ -557,6 +563,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+    	log.info("searchButtonActionPerformed");
         if (queryText.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Please Enter Search Query");
             return;
@@ -587,16 +594,14 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         }
         if (selectedCount != 0) {
-            if (saveFile == null) {
-            	String folderPath = textOutputFile.getText().substring(0,textOutputFile.getText().lastIndexOf("/"));
-            	File folder = new File(folderPath);
-            	if(!folder.exists()){
-            		if(!folder.mkdirs()){
-            			JOptionPane.showMessageDialog(this, "Cannot create directory " + folderPath); 
-            			return;
-            		}
-            	}
-            }
+        	String folderPath = textOutputFile.getText().substring(0,textOutputFile.getText().lastIndexOf(File.separatorChar));
+        	File folder = new File(folderPath);
+        	if(!folder.exists()){
+        		if(!folder.mkdirs()){
+        			JOptionPane.showMessageDialog(this, "Cannot create directory " + folderPath); 
+        			return;
+        		}
+        	}
             saveFile = new File(textOutputFile.getText());
             if (saveFile.exists()) {
                 int x = JOptionPane.showConfirmDialog(NewsDownloaderForm.this, "File with same name exist. Would you like to overwrite?");
@@ -611,7 +616,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 
 	}//GEN-LAST:event_saveButtonActionPerformed
 
-	private void joinPdf() {
+	private void joinPdf() throws FileNotFoundException {
 		log.info("joinPdf");
         String path = saveFile.getAbsolutePath();
 		if (!path.endsWith(".pdf")) {
@@ -777,6 +782,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         progressBar.setIndeterminate(false);
         progressBar.setMaximum(100);
         new SwingWorker<Object, Object>() {
+        	boolean saveError = false;
             @Override
             protected Object doInBackground() {
                 IParser parser = AbstractParser.getParser(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
@@ -794,12 +800,18 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                             String targetFileName = it.getTitle().replace(":", "") + ".pdf";
                             log.info("Downloading " + targetFileName);
                             PdfInputData data = new PdfInputData(queryText.getText(), it.getLink(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime());
-                            pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected());
+                        	pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected());
                             pdfWriter.writePdf();
                         }
                     }
                 }
-                joinPdf();
+                try {
+                	joinPdf();
+        		} catch (FileNotFoundException e) {
+        			saveError = true;
+        			JOptionPane.showMessageDialog(NewsDownloaderForm.this, "Error Saving " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        		}
+                
                 return null;
             }
 
@@ -807,7 +819,9 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             protected void done() {
                 progressBar.setValue(0);
                 progressBar.setString(null);
-                JOptionPane.showMessageDialog(NewsDownloaderForm.this, "All Articles have been downloaded!");
+                if(!saveError){
+                	JOptionPane.showMessageDialog(NewsDownloaderForm.this, "All Articles have been downloaded!");
+                }
             }
         }.execute();
     }

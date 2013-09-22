@@ -10,7 +10,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
@@ -20,7 +21,7 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class NewsPdfWriter implements INewsPdfWriter {
-	private Logger log = Logger.getLogger(this.getClass().toString());
+	private Log log = LogFactory.getLog(this.getClass().toString());
 	
 	private PdfInputData data;
 	private String targetFileName;
@@ -33,9 +34,11 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	 * @see net.lamida.nd.pdf.INewsPdfWriter#init(net.lamida.nd.pdf.NewsPdfWriterData, boolean, boolean)
 	 */
 	public void init(PdfInputData data, String targetFileName, boolean countKeyWords, boolean highlightQuery) {
+		log.info("init");
 		if(targetFileName == null || data == null){
 			throw new IllegalArgumentException("OuputFileName or Data cannot be null");
 		}
+		
 		this.data = data;
 		this.targetFileName = targetFileName;
 		this.countKeyWords = countKeyWords;
@@ -46,7 +49,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	 * @see net.lamida.nd.pdf.INewsPdfWriter#writePdf(java.lang.String)
 	 */
 	public void writePdf() {
-		log.info("writePdf for document with length " + data.getNewsContent().length());
+		log.info("writePdf for document with content: " + data.getNewsContent());
 		if(targetFileName == null || data == null){
 			throw new IllegalArgumentException("Call init first");
 		}
@@ -57,7 +60,14 @@ public class NewsPdfWriter implements INewsPdfWriter {
 			PdfWriter.getInstance(document, new FileOutputStream(targetFile.getAbsolutePath())).setInitialLeading(16);
 			document.open();
 			writeHeader(document);
-			writeContent(document, data.getNewsContent(), highlightQuery);
+			String newsContent = null;
+			if(data.getNewsContent() == null || data.getNewsContent().isEmpty()){
+				newsContent = "Error parsing, empty data";
+			}else{
+				newsContent = data.getNewsContent();
+			}
+				
+			writeContent(document, newsContent, highlightQuery);
 			document.close();
 		} catch (FileNotFoundException e) {
 			log.error(e.getMessage());
@@ -99,6 +109,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	}
 
 	private void writeCountKeywords(StringBuffer sb) {
+		log.info("writeCountKeywords");
 		WordCalculator wordCalc = new WordCalculator();
 		Map<String, Integer> counts = wordCalc.calculateKeyword(data.getSearchQuery(), data.getNewsContent());
 		for(String key : counts.keySet()){
@@ -111,13 +122,13 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	}
 	
 	private void writeHeader(Document document) throws DocumentException {
-		log.info("writeContent");
+		log.info("writeHeader");
 		document.addTitle(data.getNewsTitle());
 		document.add(new Chunk(createHeader()));
 	}
 	
 	private void writeContent(Document document, String content, boolean highlightQuery) throws DocumentException{
-		log.info("writeContent");
+		log.info("writeContent content: " + content);
 		if(highlightQuery){
 			highlightText(document, content);
 		}else{
@@ -144,6 +155,10 @@ public class NewsPdfWriter implements INewsPdfWriter {
 			document.add(phrase);
 			cursor = m.end();
 		}
+		Chunk remain = new Chunk(content.substring(cursor));
+		Phrase p = new Phrase();
+		p.add(remain);
+		document.add(p);
 	}
 	
 	private Pattern preparePattern(String[] keywords){

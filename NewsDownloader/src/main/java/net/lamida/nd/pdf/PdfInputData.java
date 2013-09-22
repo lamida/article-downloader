@@ -6,6 +6,7 @@ public class PdfInputData {
 	private String newsTitle;
 	private String newsContent;
 	private String newsPostTime;
+	private static final String ERROR_PARSING = "Error Parsing";
 	
 	public PdfInputData(String searchQuery, String url, String newsTitle,
 			String newsContent, String newsPostTime) {
@@ -23,12 +24,21 @@ public class PdfInputData {
 		return url;
 	}
 	public String getNewsTitle() {
+		if(newsTitle == null){
+			newsTitle = ERROR_PARSING;
+		}
 		return newsTitle;
 	}
 	public String getNewsContent() {
+		if(newsContent == null){
+			newsContent = ERROR_PARSING;
+		}
 		return newsContent;
 	}
 	public String getNewsPostTime() {
+		if(newsPostTime == null){
+			newsPostTime = ERROR_PARSING;
+		}
 		return newsPostTime;
 	}
 }

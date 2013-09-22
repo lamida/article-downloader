@@ -2,12 +2,13 @@ package net.lamida.nd.rest;
 
 import net.lamida.nd.Utils;
 
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
 public class AljazeeraRestSearch extends AbstractRestSearch{
-	private Logger log = Logger.getLogger(this.getClass().toString());
+	private Log log = LogFactory.getLog(this.getClass().toString());
 	private String newsPath = Utils.loadConfiguration("aljazeeraRestSearchNewsPath");
 	
 	public AljazeeraRestSearch() {

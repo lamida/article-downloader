@@ -1,8 +1,5 @@
 package net.lamida.nd.facade;
 
-import net.lamida.nd.rest.AljazeeraRestSearch;
-import net.lamida.nd.rest.CnaRestSearch;
-import net.lamida.nd.rest.CnnRestSearch;
 import net.lamida.nd.rest.IRestSearch;
 import net.lamida.nd.rest.SearchProviderEnum;
 

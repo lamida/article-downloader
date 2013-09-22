@@ -18,7 +18,7 @@ public class CnaParser extends AbstractParser {
 
 	@Override
 	public String getNewsPostTime() {
-		return super.getNewsPostTime().replace("POSTED: ", "");
+		return super.getNewsPostTime() != null ? super.getNewsPostTime().replace("POSTED: ", "") : null;
 	}
 	
 	

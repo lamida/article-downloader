@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.BaseFont;
@@ -21,7 +22,7 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class PdfJoiner implements IPdfJoiner {
-	private Logger log = Logger.getLogger(this.getClass().toString());
+	private Log log = LogFactory.getLog(this.getClass().toString());
 	
 	/* (non-Javadoc)
 	 * @see net.lamida.nd.pdf.IJoinPdf#joinPdf(java.util.List, java.lang.String)
@@ -41,31 +42,27 @@ public class PdfJoiner implements IPdfJoiner {
 		}
 	}
 
-	public void joinPdf(String inputDir, String mergedPdfFileName){
+	public void joinPdf(String inputDir, String mergedPdfFileName) throws FileNotFoundException{
 		log.info("joinPdf");
-		try {
-			File dir = new File(inputDir);
-			if(!dir.isDirectory()){
-				throw new IllegalArgumentException("inputDir must be directory");
-			}
-			List<InputStream> pdfs = new ArrayList<InputStream>();  
-			for(File file : dir.listFiles()){
-				System.out.println(file.getName());
-				pdfs.add(new FileInputStream(file));
-				file.delete();
-			}
-			OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
-			concatPDFs(pdfs, output, true);
-			for(File file : dir.listFiles()){
-				file.delete();
-			}
-		} catch (FileNotFoundException e) {
-			log.error(e.getMessage());
+		File dir = new File(inputDir);
+		if(!dir.isDirectory()){
+			throw new IllegalArgumentException("inputDir must be directory");
+		}
+		List<InputStream> pdfs = new ArrayList<InputStream>();  
+		for(File file : dir.listFiles()){
+			System.out.println(file.getName());
+			pdfs.add(new FileInputStream(file));
+			file.delete(); 
+		}
+		OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
+		concatPDFs(pdfs, output, true);
+		for(File file : dir.listFiles()){
+			file.delete();
 		}
 	}
 	
-	private static void concatPDFs(List<InputStream> streamOfPDFFiles, OutputStream outputStream, boolean paginate) {
-
+	private void concatPDFs(List<InputStream> streamOfPDFFiles, OutputStream outputStream, boolean paginate) {
+		log.info("concatPDFs");
 		Document document = new Document();
 		try {
 			List<InputStream> pdfs = streamOfPDFFiles;
@@ -127,7 +124,8 @@ public class PdfJoiner implements IPdfJoiner {
 		}
 	}
 
-	private static void paginate(int totalPages, BaseFont bf, PdfContentByte cb, int currentPageNumber) {
+	private void paginate(int totalPages, BaseFont bf, PdfContentByte cb, int currentPageNumber) {
+		log.info("paginate");
 		cb.beginText();
 		cb.setFontAndSize(bf, 9);
 		cb.showTextAligned(PdfContentByte.ALIGN_CENTER, "" + currentPageNumber + " of " + totalPages, 520, 5, 0);

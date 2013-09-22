@@ -6,12 +6,14 @@ import java.util.Date;
 
 import net.lamida.nd.Constant;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
 public class AbstractRestSearch implements IRestSearch {
-	private Logger log = Logger.getLogger(this.getClass().toString());
+	private Log log = LogFactory.getLog(this.getClass().toString());
 	private String endPoint = "https://www.googleapis.com/customsearch/v1";
 	private String apiKey = "AIzaSyCFii2JdR0hbrPzUCEp2JBlB6Dit6GpXmY";
 	protected String customSearchEngine;
