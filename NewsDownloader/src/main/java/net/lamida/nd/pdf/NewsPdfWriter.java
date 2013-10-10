@@ -27,13 +27,14 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	private String targetFileName;
 	private boolean countKeyWords;
 	private boolean highlightQuery;
+	private int totalArticleCount;
 	
 	public NewsPdfWriter(){}
 	
 	/* (non-Javadoc)
 	 * @see net.lamida.nd.pdf.INewsPdfWriter#init(net.lamida.nd.pdf.NewsPdfWriterData, boolean, boolean)
 	 */
-	public void init(PdfInputData data, String targetFileName, boolean countKeyWords, boolean highlightQuery) {
+	public void init(PdfInputData data, String targetFileName, boolean countKeyWords, boolean highlightQuery, int totalArticleCount) {
 		log.info("init");
 		if(targetFileName == null || data == null){
 			throw new IllegalArgumentException("OuputFileName or Data cannot be null");
@@ -43,6 +44,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		this.targetFileName = targetFileName;
 		this.countKeyWords = countKeyWords;
 		this.highlightQuery = highlightQuery;
+		this.totalArticleCount = totalArticleCount;
 	}
 	
 	/* (non-Javadoc)
@@ -83,6 +85,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		DateFormat format = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss z");
 		
 		StringBuffer sb = new StringBuffer();
+		//sb.append("Article: " + data.getCurrentCount() + " of " + totalArticleCount);
 		sb.append("Document URL: ");
 		sb.append(data.getUrl());
 		sb.append("\n");

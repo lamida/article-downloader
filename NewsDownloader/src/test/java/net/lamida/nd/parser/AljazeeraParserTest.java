@@ -15,7 +15,7 @@ public class AljazeeraParserTest {
 	}
 	
 	@Test
-	public void testParse(){
+	public void testParse() throws Exception{
 		AljazeeraParser parser = new AljazeeraParser();
 		parser.init(url);
 		String articleText = parser.getNewsContent();

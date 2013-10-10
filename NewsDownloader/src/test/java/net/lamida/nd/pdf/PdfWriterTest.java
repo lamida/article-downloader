@@ -16,10 +16,10 @@ public class PdfWriterTest {
 		String newsTitle = "Foo bar";
 		String newsPostTime = "Foo bar";
 		PdfInputData input = new PdfInputData(searchQuery, url, newsTitle,
-				newsContent, newsPostTime);
+				newsContent, newsPostTime, 10);
 
 		INewsPdfWriter writer = new NewsPdfWriter();
-		writer.init(input, "my3.pdf", true, true);
+		writer.init(input, "my3.pdf", true, true, 10);
 		writer.writePdf();
 
 	}

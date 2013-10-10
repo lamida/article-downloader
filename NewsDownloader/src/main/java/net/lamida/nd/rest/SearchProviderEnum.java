@@ -1,7 +1,8 @@
 package net.lamida.nd.rest;
 
 public enum SearchProviderEnum {
-	ALJAZEERA("Aljazeera"), CNN("CNN"), CNA("Channel News Asia");
+	ALJAZEERA("Aljazeera"), CNN("CNN"), 
+	CNA("Channel News Asia");
 	
 	private String name;
 	

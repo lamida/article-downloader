@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import junit.framework.Assert;
 import net.lamida.nd.Utils;
-import net.lamida.nd.bean.SearchResult;
+import net.lamida.nd.bean.GoogleSearchResult;
 import net.lamida.nd.bean.SearchResultItem;
 
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class SearchResultBuilderTest {
 	public void buildJsonResultTest() throws IOException{
 		SearchResultBuilder builder = new SearchResultBuilder();
 		String json = Utils.readFileToString(new File("googleSearchCnn.txt"));
-		SearchResult result = builder.build(json);
+		GoogleSearchResult result = builder.build(json);
 		Assert.assertNotNull(result);
 		Assert.assertEquals("customsearch#search", result.getKind());
 		Assert.assertNotNull(result.getItems());

@@ -32,9 +32,9 @@ public class AbstractParser implements IParser{
 		case CNA:
 			parser = new CnaParser();
 			break;
-		case CNN:
-			parser = new CnnParser();
-			break;
+//		case CNN:
+//			parser = new CnnParser();
+//			break;
 		default:
 			break;
 		}
@@ -43,22 +43,16 @@ public class AbstractParser implements IParser{
 	
 	private Map<String,Document> documentCache;
 	
-	private Document getDocument(String url){
+	private Document getDocument(String url) throws Exception{
 		log.info("getDocument: " + url);
 		if(documentCache.get(url) != null){
 			return documentCache.get(url);
 		}
 		
 		Document doc = null;
-		try {
-			doc = Jsoup.parse(new URL(url), 10000);
-			if(doc != null){
-				documentCache.put(url, doc);
-			}
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+		doc = Jsoup.parse(new URL(url), 10000);
+		if(doc != null){
+			documentCache.put(url, doc);
 		}
 		return doc;
 	}
@@ -69,17 +63,24 @@ public class AbstractParser implements IParser{
 		this.url = url;
 	}
 	
-	public String getNewsContent() {
+	public String getNewsContent()  {
 		log.info("getNewsContent");
-		StringBuffer sb = new StringBuffer();
-		Document doc = getDocument(url);
-		Elements paragraphs = doc.select(newsContentSelector);
-		for(Element el : paragraphs){
-			String p = el.text();
-			sb.append(p);
-			sb.append("\n\n");
+		String result = null;
+		try{
+			StringBuffer sb = new StringBuffer();
+			Document doc = getDocument(url);
+			Elements paragraphs = doc.select(newsContentSelector);
+			for(Element el : paragraphs){
+				String p = el.text();
+				sb.append(p);
+				sb.append("\n\n");
+			}
+			result = sb.toString();
+		}catch(Exception e){
+			log.error("some error happen when parsing this news: " + e.getMessage());
+			result = "some error happen when parsing this news.";
 		}
-		return sb.toString();
+		return result;
 	}
 	
 	public String getNewsTitle() {
@@ -99,8 +100,8 @@ public class AbstractParser implements IParser{
 	
 	private String getSingleElementText(String selector) {
 		String result = null;
-		Document doc = getDocument(url);
 		try {
+			Document doc = getDocument(url);
 			Elements els = doc.select(selector);
 			Element el = null;
 			if (els != null && !els.isEmpty()) {
@@ -108,7 +109,8 @@ public class AbstractParser implements IParser{
 				result = el.text();
 			}
 		} catch (Exception e) {
-			log.error(e.getMessage());
+			log.error("some error happen when parsing this news: " + e.getMessage());
+			result = "some error happen when parsing this news.";
 		}
 		return result;
 	}

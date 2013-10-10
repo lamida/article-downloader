@@ -15,7 +15,7 @@ public class CnaParserTest {
 	}
 	
 	@Test
-	public void testParse(){
+	public void testParse() throws Exception{
 		CnaParser parser = new CnaParser();
 		parser.init(url);
 		String articleText = parser.getNewsContent();

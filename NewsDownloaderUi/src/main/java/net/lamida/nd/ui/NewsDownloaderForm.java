@@ -15,6 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.swing.DefaultCellEditor;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -25,9 +26,6 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
-import net.lamida.nd.Constant;
-import net.lamida.nd.bean.SearchResult;
-import net.lamida.nd.bean.SearchResultItem;
 import net.lamida.nd.parser.AbstractParser;
 import net.lamida.nd.parser.IParser;
 import net.lamida.nd.pdf.INewsPdfWriter;
@@ -35,10 +33,12 @@ import net.lamida.nd.pdf.IPdfJoiner;
 import net.lamida.nd.pdf.NewsPdfWriter;
 import net.lamida.nd.pdf.PdfInputData;
 import net.lamida.nd.pdf.PdfJoiner;
-import net.lamida.nd.rest.AbstractRestSearch;
-import net.lamida.nd.rest.IRestSearch;
-import net.lamida.nd.rest.LoadedSearch;
 import net.lamida.nd.rest.SearchProviderEnum;
+import net.lamida.nd.rest.neo.AbstractSearch;
+import net.lamida.nd.rest.neo.IResultEntry;
+import net.lamida.nd.rest.neo.ISearch;
+import net.lamida.nd.rest.neo.SearchResult;
+import net.lamida.nd.rest.neo.SortBy;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -51,11 +51,9 @@ import org.apache.commons.logging.LogFactory;
 public class NewsDownloaderForm extends javax.swing.JFrame {
 	private Log log = LogFactory.getLog(this.getClass().toString());
     private DefaultTableModel model;
-    private IRestSearch currentSearch;
-    private boolean dummyData = false;
+    private ISearch currentSearch;
     private int selectedCount;
     private File saveFile;
-    private LoadedSearch loadedSearch;
     
 
     /**
@@ -68,6 +66,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         addTableHeaderClickListener();
         model = (DefaultTableModel) table.getModel();
         textOutputFile.setText(new File("result/output.pdf").getAbsolutePath());
+        DefaultComboBoxModel comboModel = new DefaultComboBoxModel();
+        comboModel.addElement(SortBy.ALJAZEERA_RELEVANCE.getValue());
+        comboModel.addElement(SortBy.ALJAZEERA_DATE.getValue());
+        sortByCombo.setModel(comboModel);
     }
 
 	private void addTableHeaderClickListener() {
@@ -77,6 +79,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 selectResultToText.setText("");
                 selectResultToText.requestFocusInWindow();
                 selectAllDialog.pack();
+                selectAllDialog.setModal(true);
                 selectAllDialog.setLocationRelativeTo(null);
                 selectAllDialog.setModal(true);
                 selectAllDialog.setVisible(true);
@@ -92,7 +95,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 JTable target = (JTable) e.getSource();
                 int row = target.getSelectedRow();
                 int column = target.getSelectedColumn();
-                if (column != 3) {
+                if (column != 4) {
                     return;
                 }
                 String link = (String) target.getValueAt(row, column);
@@ -157,46 +160,34 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         for (Object[] row : data) {
             model.addRow(row);
         }
-        int currentPage = loadedSearch.getResultStart() / Constant.RESULTS_PER_PAGE;
-        int lastPage = (int) (result.getSearchInformation().getTotalResults() / Constant.RESULTS_PER_PAGE);
-        executionTimeLabel.setText("About " + result.getSearchInformation().getTotalResults() + " results (" + result.getSearchInformation().getSearchTime() + "seconds)");
-        pagingInfoLabel.setText("Result Start " + loadedSearch.getResultStart() + " Page " + (currentPage + 1) + " of " + lastPage);
-        
-        enableDisableButton(currentPage, lastPage);
+        //int currentPage = currentSearch.getCurrentStartPage() / currentSearch.getResultPerPage();
+        //int lastPage = (int) (Math.ceil((result.getSearchInformation().getTotalResults() * 1.0) / Constant.RESULTS_PER_PAGE));
+        //executionTimeLabel.setText("About " + result.getSearchInformation().getTotalResults() + " results (" + result.getSearchInformation().getSearchTime() + "seconds)");
+        //pagingInfoLabel.setText("Result Start " + loadedSearch.getResultStart() + " Page " + (currentPage + 1) + " of " + lastPage);
+        pagingInfoLabel.setText(currentSearch.getSearchMetaInfo());
+        //enableDisableButton(currentPage, lastPage);
     }
     
     private Object[][] convertToArray(SearchResult search) {
-        Object[][] data = new Object[search.getItems().size()][5];
+        Object[][] data = new Object[search.getResultList().size()][6];
         int row = 0;
-        for (SearchResultItem item : search.getItems()) {
-            data[row][0] = loadedSearch.getResultStart() + row;
-            data[row][1] = item.getTitle();
-            data[row][2] = item.getSnippet();
-            data[row][3] = item.getLink();
-            data[row][4] = item.isSelected();
+        for (IResultEntry item : search.getResultList()) {
+            data[row][0] = row + 1;
+            data[row][1] = item.getDate();
+            data[row][2] = item.getTitle();
+            data[row][3] = item.getSnipet();
+            data[row][4] = item.getUrl();
+            data[row][5] = item.isSelected();
             row++;
         }
         return data;
     }
 
-	private void enableDisableButton(int currentPage, int lastPage) {
-		if (currentPage > 0) {
-            prevButton.setEnabled(true);
-        } else {
-            prevButton.setEnabled(false);
-        }
-        if (currentPage < lastPage) {
-            nextButton.setEnabled(true);
-        } else {
-            nextButton.setEnabled(false);
-        }
-	}
-
     private void updateSelected() {
-        SearchResult currentResult = loadedSearch.getCurrentSearchResult();
+        SearchResult currentResult = currentSearch.getSearchResult();
         int row = 0;
-        for (SearchResultItem it : currentResult.getItems()) {
-            boolean selected = (Boolean) model.getValueAt(row, 4);
+        for (IResultEntry it : currentResult.getResultList()) {
+            boolean selected = (Boolean) model.getValueAt(row, 5);
             it.setSelected(selected);
             row++;
         }
@@ -216,8 +207,6 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         selectAllAcceptButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         selectResultToText = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         aboutDialog = new javax.swing.JDialog();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -228,29 +217,21 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         queryText = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         countKeywordsCb = new javax.swing.JCheckBox();
-        countKeywordsCb.setSelected(true);
         highlightKeywordsCb = new javax.swing.JCheckBox();
-        highlightKeywordsCb.setSelected(true);
         searchButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         saveButton = new javax.swing.JButton();
-        executionTimeLabel = new javax.swing.JLabel();
         pagingInfoLabel = new javax.swing.JLabel();
-        prevButton = new javax.swing.JButton();
         nextButton = new javax.swing.JButton();
         textOutputFile = new javax.swing.JTextField();
         browseButton = new javax.swing.JButton();
-        dateFromText = new javax.swing.JTextField();
-        dateToText = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         progressBar = new javax.swing.JProgressBar();
+        jLabel8 = new javax.swing.JLabel();
+        sortByCombo = new javax.swing.JComboBox(SearchProviderEnum.values());
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Select result");
@@ -262,37 +243,27 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setText("From,To:");
-
-        jLabel8.setText("E.g: \"50\" to get first 50 results");
-
-        jLabel9.setText("E.g: \"23,45\" to get result from 23 to 45");
+        jLabel10.setText("To:");
 
         javax.swing.GroupLayout selectAllDialogLayout = new javax.swing.GroupLayout(selectAllDialog.getContentPane());
         selectAllDialog.getContentPane().setLayout(selectAllDialogLayout);
         selectAllDialogLayout.setHorizontalGroup(
             selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selectAllDialogLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(selectAllAcceptButton)
+                .addContainerGap())
             .addGroup(selectAllDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(selectAllDialogLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addGroup(selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selectAllDialogLayout.createSequentialGroup()
-                                .addGroup(selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(selectAllDialogLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(selectAllAcceptButton))
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap())
-                            .addGroup(selectAllDialogLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(selectResultToText)
-                                .addGap(10, 10, 10))))
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(selectResultToText)
+                        .addGap(10, 10, 10))
                     .addGroup(selectAllDialogLayout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         selectAllDialogLayout.setVerticalGroup(
@@ -304,24 +275,17 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 .addGroup(selectAllDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(selectResultToText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(selectAllAcceptButton)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        aboutDialog.setModal(true);
-
-        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("NewsDownloader 1.0\n\nDownload news from:\nAljazeera\nCNN\nChannel News Asia\n\nEspecially dedicated for lovely Indri Rizkina Hapsari <3\n\nSource Code:\nhttps://github.com/lamida/article-downloader\n\nme@lamida.net\n\n2013");
         jScrollPane3.setViewportView(jTextArea1);
 
-        jButton1.setText("Ok");
+        jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -335,7 +299,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             .addGroup(aboutDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(aboutDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, aboutDialogLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton1)))
@@ -345,15 +309,21 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             aboutDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(aboutDialogLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Data Provider:");
+
+        dataProviderCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataProviderComboActionPerformed(evt);
+            }
+        });
 
         queryText.setColumns(20);
         queryText.setRows(5);
@@ -362,9 +332,11 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 
         jLabel2.setText("Search Query:");
 
+        countKeywordsCb.setSelected(true);
         countKeywordsCb.setText("Count Keywords");
         countKeywordsCb.setToolTipText("When checked, in header of document result will show number of keyword inside document");
 
+        highlightKeywordsCb.setSelected(true);
         highlightKeywordsCb.setText("Highlight Keywords");
         highlightKeywordsCb.setToolTipText("Highlight keyword in result document");
 
@@ -380,41 +352,36 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Title", "Snippet", "URL", "Select All"
+                "No", "Date", "Title", "Snippet", "URL", "Select All"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
         jScrollPane2.setViewportView(table);
         table.getColumnModel().getColumn(0).setResizable(false);
         table.getColumnModel().getColumn(0).setPreferredWidth(5);
-        table.getColumnModel().getColumn(1).setCellRenderer(new PathCellRenderer());
         table.getColumnModel().getColumn(2).setCellRenderer(new PathCellRenderer());
         table.getColumnModel().getColumn(3).setCellRenderer(new PathCellRenderer());
-        table.getColumnModel().getColumn(4).setCellEditor(new DefaultCellEditor(new JCheckBox()));
+        table.getColumnModel().getColumn(4).setCellRenderer(new PathCellRenderer());
+        table.getColumnModel().getColumn(5).setCellEditor(new DefaultCellEditor(new JCheckBox()));
 
         saveButton.setText("Save");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformed(evt);
-            }
-        });
-
-        executionTimeLabel.setText(" ");
-
-        pagingInfoLabel.setText(" ");
-
-        prevButton.setText("<");
-        prevButton.setEnabled(false);
-        prevButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prevButtonActionPerformed(evt);
             }
         });
 
@@ -432,23 +399,17 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Date From:");
-
-        jLabel4.setText("Date To:");
-
-        jLabel5.setText("yyyymmdd");
-
-        jLabel6.setText("yyyymmdd");
+        jLabel8.setText("Sort By:");
 
         jMenu1.setText("File");
 
-        jMenuItem2.setText("About");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem1.setText("About");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
 
@@ -459,58 +420,49 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(countKeywordsCb)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(highlightKeywordsCb))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(prevButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nextButton)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(saveButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textOutputFile, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(browseButton)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(saveButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textOutputFile, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(browseButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(countKeywordsCb)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(highlightKeywordsCb)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pagingInfoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(1, 1, 1))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
-                            .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(searchButton)
+                                    .addComponent(jScrollPane1)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(dataProviderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(dateToText, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                                            .addComponent(dateFromText))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel6))))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addComponent(executionTimeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pagingInfoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
-                    .addComponent(progressBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(searchButton)
+                                            .addComponent(dataProviderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(sortByCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(nextButton)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -521,42 +473,33 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(dataProviderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(sortByCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dateFromText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dateToText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(searchButton)
-                .addGap(9, 9, 9)
+                .addGap(31, 31, 31)
+                .addComponent(pagingInfoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(executionTimeLabel)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pagingInfoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(prevButton)
-                    .addComponent(nextButton))
+                .addComponent(nextButton)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(countKeywordsCb)
                     .addComponent(highlightKeywordsCb))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(textOutputFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(browseButton)))
+                    .addComponent(browseButton))
+                .addContainerGap())
         );
 
         pack();
@@ -569,28 +512,20 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             return;
         }
         
-        if (dummyData) {
-        	loadedSearch = new LoadedSearch();
-        } else {
-            currentSearch = AbstractRestSearch.getSearchProvider(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
-            currentSearch.setQuery(queryText.getText());
-            currentSearch.setDateFrom(dateFromText.getText().trim().isEmpty() ? null : dateFromText.getText().trim());
-            currentSearch.setDateTo(dateToText.getText().trim().isEmpty() ? null : dateToText.getText().trim());
-            loadedSearch = new LoadedSearch(currentSearch);
-        }
-        loadedSearch.execute();
-        showResult(loadedSearch.getCurrentSearchResult());
+        currentSearch = AbstractSearch.getSearchProvider(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
+        // TBD
+        currentSearch.init(queryText.getText(), null, SortBy.getEnum(sortByCombo.getSelectedItem().toString()));
+        currentSearch.search();
+        showResult(currentSearch.getSearchResult());
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
     	log.info("saveButtonActionPerformed");
         updateSelected();
         selectedCount = 0;
-        for (SearchResult result : loadedSearch.getSearchCache().values()) {
-            for (SearchResultItem it : result.getItems()) {
-                if (it.isSelected()) {
-                    selectedCount++;
-                }
+        for (IResultEntry it : currentSearch.getSearchResult().getResultList()) {
+            if (it.isSelected()) {
+                selectedCount++;
             }
         }
         if (selectedCount != 0) {
@@ -629,13 +564,6 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 		}
 		pdfJoiner.joinPdf("temp", path);
 	}
-
-    private void prevButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prevButtonActionPerformed
-        if (loadedSearch.getResultStart() == 1) {
-            return;
-        }
-        navigatePrev();
-    }//GEN-LAST:event_prevButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         navigateNext();
@@ -694,13 +622,13 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 selectAllFrom = 0;
                 selectAllTo = 100;
             }
-            if(loadedSearch.getSearchCache().isEmpty()){
+            if(currentSearch.getSearchResult().getResultList().isEmpty()){
         		JOptionPane.showMessageDialog(this, "Empty Search Result", "Error", JOptionPane.ERROR_MESSAGE);
         		return;
         	}
             selectAllData(selectAllFrom, selectAllTo);
             selectAllDialog.setVisible(false);
-            showResult(loadedSearch.getCurrentSearchResult());
+            showResult(currentSearch.getSearchResult());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -718,19 +646,38 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         aboutDialog.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void dataProviderComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataProviderComboActionPerformed
+        // TODO add your handling code here:
+        String selectedProvider = dataProviderCombo.getSelectedItem().toString();
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        if(selectedProvider.equals(SearchProviderEnum.CNN.toString())){
+            model.addElement(SortBy.CNN_DATE);
+            model.addElement(SortBy.CNN_RELEVANCE);
+        }else if(selectedProvider.equals(SearchProviderEnum.CNA.toString())){
+            model.addElement(SortBy.CNA_LATEST);
+            model.addElement(SortBy.CNA_POPULARITY);
+        }else{
+            model.addElement(SortBy.ALJAZEERA_RELEVANCE);
+            model.addElement(SortBy.ALJAZEERA_DATE);
+        }
+        sortByCombo.setModel(model);
+    }//GEN-LAST:event_dataProviderComboActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        aboutDialog.pack();
+        aboutDialog.setLocationRelativeTo(null);
+        aboutDialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     
     private void selectAllData(int selectAllFrom, int selectAllTo){
-    	int count = 0;
-    	for(int i = 1; i <= (selectAllTo > loadedSearch.getLoadedResult() ? selectAllTo : loadedSearch.getLoadedResult()); i += Constant.RESULTS_PER_PAGE){
-    		SearchResult searchResult = loadedSearch.getNextSearchResult(i);
-	    	for(SearchResultItem item : searchResult.getItems()){
-	    		if(count >= selectAllFrom-1 && count < selectAllTo){
-	    			item.setSelected(true);
-	    		}else{
-	    			item.setSelected(false); 
-	    		}
-	    		count++;
-	    	}
+    	for(int i = 0; i <= (selectAllTo < currentSearch.getSearchResult().getResultList().size() ? selectAllTo : currentSearch.getSearchResult().getResultList().size() - 1); i++){
+            IResultEntry item = currentSearch.getSearchResult().getResultList().get(i);
+            if(i >= selectAllFrom-1 && i < selectAllTo){
+                    item.setSelected(true);
+            }else{
+                    item.setSelected(false); 
+            }
     	}
     }
     
@@ -740,31 +687,22 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private javax.swing.JButton browseButton;
     private javax.swing.JCheckBox countKeywordsCb;
     private javax.swing.JComboBox dataProviderCombo;
-    private javax.swing.JTextField dateFromText;
-    private javax.swing.JTextField dateToText;
-    private javax.swing.JLabel executionTimeLabel;
     private javax.swing.JCheckBox highlightKeywordsCb;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton nextButton;
     private javax.swing.JLabel pagingInfoLabel;
-    private javax.swing.JButton prevButton;
     private javax.swing.JProgressBar progressBar;
     private javax.swing.JTextArea queryText;
     private javax.swing.JButton saveButton;
@@ -772,6 +710,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private javax.swing.JButton selectAllAcceptButton;
     private javax.swing.JDialog selectAllDialog;
     private javax.swing.JTextField selectResultToText;
+    private javax.swing.JComboBox sortByCombo;
     private javax.swing.JTable table;
     private javax.swing.JTextField textOutputFile;
     // End of variables declaration//GEN-END:variables
@@ -787,21 +726,33 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             protected Object doInBackground() {
                 IParser parser = AbstractParser.getParser(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
                 INewsPdfWriter pdfWriter = new NewsPdfWriter();
-                int count = 0;
-                for (SearchResult result : loadedSearch.getSearchCache().values()) {
-                    for (SearchResultItem it : result.getItems()) {
-                        if (it.isSelected()) {
-                            count++;
-                            progressBar.setValue(100 * count / selectedCount);
-                            progressBar.setString("Downloading: " + it.getTitle());
-                            progressBar.setToolTipText("Downloading: " + it.getTitle());
-                            parser.init(it.getLink());
 
-                            String targetFileName = it.getTitle().replace(":", "") + ".pdf";
-                            log.info("Downloading " + targetFileName);
-                            PdfInputData data = new PdfInputData(queryText.getText(), it.getLink(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime());
-                        	pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected());
-                            pdfWriter.writePdf();
+                
+                String prefixCount = "00000";
+                
+                int count = 0;
+                for (IResultEntry it : currentSearch.getSearchResult().getResultList()) {
+                    if (it.isSelected()) {
+                        count++;
+                        progressBar.setValue(100 * count / selectedCount);
+                        progressBar.setString("Downloading: " + it.getTitle());
+                        progressBar.setToolTipText("Downloading: " + it.getTitle());
+                        parser.init(it.getUrl());
+                        
+                        
+                		String prefix = prefixCount;
+                        String countSt = count + "";
+                        prefix = prefixCount.substring(0, prefixCount.length() - countSt.length()) + count;
+                        
+                        String targetFileName = prefix + " - " + it.getTitle().replace(":", "") + ".pdf";
+                        log.info("Downloading " + targetFileName);
+                        PdfInputData data = null;
+                        try{
+                        	data = new PdfInputData(queryText.getText(), it.getUrl(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime(), count);
+                        	pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected(), currentSearch.getSearchResult().getResultList().size());
+                        	pdfWriter.writePdf();
+                        }catch(Exception e){
+                        	log.error("Warning: some error is happening: " + e.getMessage());
                         }
                     }
                 }
@@ -826,28 +777,32 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         }.execute();
     }
     
-    private void navigateTo(int resultStart){
-    	if(resultStart > loadedSearch.getResultStart()){
-    		while(resultStart != loadedSearch.getResultStart()){
-    			navigateNext();
-    		}
-    	}else{
-    		while(resultStart != loadedSearch.getResultStart()){
-    			navigatePrev();
-    		}
-    	}
-    }
+//    private void navigateTo(int resultStart){
+//    	if(resultStart > loadedSearch.getResultStart()){
+//    		while(resultStart != loadedSearch.getResultStart()){
+//    			navigateNext();
+//    		}
+//    	}else{
+//    		while(resultStart != loadedSearch.getResultStart()){
+//    			navigatePrev();
+//    		}
+//    	}
+//    }
     
-    private void navigateNext() {
+    private boolean navigateNext() {
         updateSelected();
-        loadedSearch.navigateNext();
-        showResult(loadedSearch.getCurrentSearchResult());
+        boolean available = currentSearch.next();
+        if(available){
+        	showResult(currentSearch.getSearchResult());
+        }else{
+        	JOptionPane.showMessageDialog(this, "No more search result");
+        }
+        return available;
     }
 
-    private void navigatePrev() {
-        updateSelected();
-        loadedSearch.navigatePrev();
-        showResult(loadedSearch.getCurrentSearchResult());
+    private boolean navigatePrev() {
+    	// NOT IMPLEMENTED
+    	return false;
     }
 }
 

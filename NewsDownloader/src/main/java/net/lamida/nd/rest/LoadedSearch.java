@@ -7,11 +7,11 @@ import java.util.Map;
 
 import net.lamida.nd.Constant;
 import net.lamida.nd.Utils;
-import net.lamida.nd.bean.SearchResult;
+import net.lamida.nd.bean.GoogleSearchResult;
 
 public class LoadedSearch {
 	private IRestSearch currentSearch;
-	private Map<Integer, SearchResult> searchCache;
+	private Map<Integer, GoogleSearchResult> searchCache;
 	private int resultStart = 1;
 	private int loadedResult;
 	private boolean dummyData;
@@ -19,23 +19,23 @@ public class LoadedSearch {
 	
 	public LoadedSearch(IRestSearch currentSearch){
 		this.currentSearch = currentSearch;
-		searchCache = new HashMap<Integer, SearchResult>();
+		searchCache = new HashMap<Integer, GoogleSearchResult>();
 	}
 
 	public LoadedSearch(){
-		this.dummyData = true;
-		searchCache = new HashMap<Integer, SearchResult>();
+		this.dummyData = false;
+		searchCache = new HashMap<Integer, GoogleSearchResult>();
 	}
 	
 	public void execute(){
 		searchCache.clear();
 		if (dummyData) {
-			SearchResult searchResult = getDummySearchResult();
+			GoogleSearchResult searchResult = getDummySearchResult();
 			searchCache.put(resultStart, searchResult);
 		} else {
 			System.out.println("Searching using provider: " + currentSearch.getClass().getSimpleName());
 			String json = currentSearch.execute();
-			SearchResult searchResult = resultBuilder.build(json);
+			GoogleSearchResult searchResult = resultBuilder.build(json);
 			searchCache.put(resultStart, searchResult);
 		}
 		loadedResult += Constant.RESULTS_PER_PAGE;
@@ -45,11 +45,11 @@ public class LoadedSearch {
 		resultStart += Constant.RESULTS_PER_PAGE;
       if (searchCache.get(resultStart) == null) {
           if (dummyData) {
-              SearchResult searchResult = getDummySearchResult();
+              GoogleSearchResult searchResult = getDummySearchResult();
               searchCache.put(resultStart, searchResult);
           } else {
               String json = currentSearch.next();
-              SearchResult searchResult = resultBuilder.build(json);
+              GoogleSearchResult searchResult = resultBuilder.build(json);
               searchCache.put(resultStart, searchResult);
           }
           loadedResult += Constant.RESULTS_PER_PAGE;
@@ -60,31 +60,31 @@ public class LoadedSearch {
 		resultStart -= Constant.RESULTS_PER_PAGE;
         if (searchCache.get(resultStart) == null) {
             if (dummyData) {
-                SearchResult searchResult = getDummySearchResult();
+                GoogleSearchResult searchResult = getDummySearchResult();
                 searchCache.put(resultStart, searchResult);
             } else {
                 String json = currentSearch.prev();
-                SearchResult searchResult = resultBuilder.build(json);
+                GoogleSearchResult searchResult = resultBuilder.build(json);
                 searchCache.put(resultStart, searchResult);
             }
             loadedResult += Constant.RESULTS_PER_PAGE;
         }
 	}
 	
-	public SearchResult getCurrentSearchResult(){
+	public GoogleSearchResult getCurrentSearchResult(){
 		return searchCache.get(resultStart);
 	}
 
-	public SearchResult getNextSearchResult(int resultStart){
+	public GoogleSearchResult getNextSearchResult(int resultStart){
 		if(searchCache.get(resultStart) == null){
 			navigateNext(); 
 		}
 		return searchCache.get(resultStart);
 	}
 	
-	private SearchResult getDummySearchResult() {
+	private GoogleSearchResult getDummySearchResult() {
         SearchResultBuilder builder = new SearchResultBuilder();
-        SearchResult result = null;
+        GoogleSearchResult result = null;
         try {
             result = builder.build(Utils.readFileToString(new File("resources/googleSearchCnn.txt")));
         } catch (IOException ex) {
@@ -94,7 +94,7 @@ public class LoadedSearch {
     }
 	
 
-	public Map<Integer, SearchResult> getSearchCache() {
+	public Map<Integer, GoogleSearchResult> getSearchCache() {
 		return searchCache;
 	}
 

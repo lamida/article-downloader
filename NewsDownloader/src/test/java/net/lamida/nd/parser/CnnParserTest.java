@@ -14,7 +14,7 @@ public class CnnParserTest {
 	}
 	
 	@Test
-	public void testParse(){
+	public void testParse() throws Exception{
 		CnnParser parser = new CnnParser();
 		parser.init(url);
 		String articleText = parser.getNewsContent();

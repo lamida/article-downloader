@@ -5,7 +5,7 @@ import java.util.Iterator;
 import javax.swing.JOptionPane;
 
 import net.lamida.nd.bean.SearchInformation;
-import net.lamida.nd.bean.SearchResult;
+import net.lamida.nd.bean.GoogleSearchResult;
 import net.lamida.nd.bean.SearchResultItem;
 
 import com.google.gson.JsonArray;
@@ -14,12 +14,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class SearchResultBuilder {
-	public SearchResult build(String json){
+	public GoogleSearchResult build(String json){
 		if(json == null){
 			throw new IllegalArgumentException("json string have to set first");
 		}
 		JsonParser parser = new JsonParser();
-		SearchResult result = new SearchResult();
+		GoogleSearchResult result = new GoogleSearchResult();
 		JsonObject root = parser.parse(json).getAsJsonObject();
 		result.setKind(root.get("kind").getAsString());
 		
