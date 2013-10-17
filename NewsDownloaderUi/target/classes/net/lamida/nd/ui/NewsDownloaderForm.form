@@ -227,7 +227,8 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="nextButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jButtonExportResult" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -261,7 +262,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane2" pref="234" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="nextButton" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="nextButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonExportResult" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="countKeywordsCb" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -351,7 +355,7 @@
                 <Column editable="false" title="Title" type="java.lang.Object"/>
                 <Column editable="false" title="Snippet" type="java.lang.Object"/>
                 <Column editable="false" title="URL" type="java.lang.Object"/>
-                <Column editable="false" title="Select All" type="java.lang.Boolean"/>
+                <Column editable="true" title="Select All" type="java.lang.Boolean"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -442,6 +446,14 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(SearchProviderEnum.values())"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonExportResult">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Export Result"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExportResultActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -1,28 +1,50 @@
 package net.lamida.nd.rest.neo;
+
+import net.lamida.nd.rest.SearchProviderEnum;
+
 public enum SortBy {
-	ALJAZEERA_RELEVANCE("relevance"), ALJAZEERA_DATE("date"),
-	CNN_RELEVANCE("relevance"), CNN_DATE("date"),
-	CNA_POPULARITY("popularity"), CNA_LATEST("latest");
+	ALJAZEERA_RELEVANCE(SearchProviderEnum.ALJAZEERA.getName(),"r", "relevance"), ALJAZEERA_DATE(SearchProviderEnum.ALJAZEERA.getName(),"d", "date"), 
+	CNN_RELEVANCE(SearchProviderEnum.CNN.getName(),"relevance", "relevance"), CNN_DATE(SearchProviderEnum.CNN.getName(),"date", "date"), 
+	CNA_POPULARITY(SearchProviderEnum.CNA.getName(),"popularity", "popularity"), CNA_LATEST(SearchProviderEnum.CNA.getName(),"latest", "latest");
+	
 	final static String enumLabel = "<<sortBy>>";
+	private String providerId;
 	private String value;
-	public String getValue(){
+	private String description;
+
+	public String getValue() {
 		return value;
 	}
-	SortBy(String label){
-		this.value =label;
-	}
-        
-        public String toString(){
-            return value;
-        }
-        
-        public static SortBy getEnum(String label){
-            for(SortBy sb:SortBy.values()){
-                if(sb.getValue().equals(label)){
-                    return sb;
-                }
-            }
-            return null;
-        } 
 	
+	public String getDescription() {
+		return description;
+	}
+
+	SortBy(String id, String value, String description) {
+		this.providerId = id;
+		this.value = value;
+		this.description = description;
+	}
+
+	public String toString() {
+		return description;
+	}
+
+	public static SortBy getEnumByValue(String provider, String value) {
+		for (SortBy sb : SortBy.values()) {
+			if (sb.providerId.startsWith(provider) && sb.getValue().equals(value)) {
+				return sb;
+			}
+		}
+		return null;
+	}
+
+	public static SortBy getEnumByDescription(String prefixId, String desc) {
+		for (SortBy sb : SortBy.values()) {
+			if (sb.providerId.startsWith(prefixId) && sb.getDescription().equals(desc)) {
+				return sb;
+			}
+		}
+		return null;
+	}
 };

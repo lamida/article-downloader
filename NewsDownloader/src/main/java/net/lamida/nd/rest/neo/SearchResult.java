@@ -7,6 +7,7 @@ public class SearchResult{
 	private int totalResult;
 	private String searchMetaInfo;
 	List<IResultEntry> resultList;
+	private int prevResult;
 
 	public SearchResult() {
 		resultList = new ArrayList<IResultEntry>();
@@ -30,5 +31,13 @@ public class SearchResult{
 
 	public List<IResultEntry> getResultList() {
 		return resultList;
+	}
+
+	public int getPrevResult() {
+		return prevResult;
+	}
+
+	public void setPrevResult(int prevResult) {
+		this.prevResult = prevResult;
 	}
 }

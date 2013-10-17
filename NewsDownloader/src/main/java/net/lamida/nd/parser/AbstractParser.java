@@ -32,9 +32,9 @@ public class AbstractParser implements IParser{
 		case CNA:
 			parser = new CnaParser();
 			break;
-//		case CNN:
-//			parser = new CnnParser();
-//			break;
+		case CNN:
+			parser = new CnnParser();
+			break;
 		default:
 			break;
 		}

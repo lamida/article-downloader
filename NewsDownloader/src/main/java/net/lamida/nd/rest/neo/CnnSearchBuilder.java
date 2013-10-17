@@ -27,7 +27,7 @@ public class CnnSearchBuilder implements ISearchBuilder{
 		searchResult.setSearchMetaInfo(meta + " Search Result");
 		searchResult.setTotalResult(Integer.parseInt(meta));
 		JsonArray array = el.getAsJsonObject().getAsJsonArray("results");
-		Iterator<JsonElement> it =  array.get(1).getAsJsonArray().iterator();
+		Iterator<JsonElement> it =  array.get(0).getAsJsonArray().iterator();
 		int i = 0;
 		while(it.hasNext()){
 			resultStillAvailable = true;
@@ -35,7 +35,9 @@ public class CnnSearchBuilder implements ISearchBuilder{
 			String link = row.getAsJsonObject().getAsJsonPrimitive("url").getAsString();
 			String title = row.getAsJsonObject().getAsJsonPrimitive("title").getAsString();
 			String snipet = row.getAsJsonObject().getAsJsonObject("metadata").getAsJsonObject("media").getAsJsonPrimitive("excerpt").getAsString();
-			String date = new Date().toString();
+			String date = row.getAsJsonObject().getAsJsonPrimitive("mediaDateUts").getAsString();
+			Date d = new Date(Long.parseLong(date) * 1000);
+			date = d.toString();
 			IResultEntry result = new GeneralSearchResult(link, title, snipet, date);
 			if(i == 0 && searchResult.getResultList().size() >= resultPerPage){
 				int size = searchResult.getResultList().size();

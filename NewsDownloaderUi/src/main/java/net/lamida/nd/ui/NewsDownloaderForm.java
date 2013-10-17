@@ -10,7 +10,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URI;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,6 +43,9 @@ import net.lamida.nd.rest.neo.ISearch;
 import net.lamida.nd.rest.neo.SearchResult;
 import net.lamida.nd.rest.neo.SortBy;
 
+import org.apache.commons.codec.binary.StringUtils;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -67,8 +73,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         model = (DefaultTableModel) table.getModel();
         textOutputFile.setText(new File("result/output.pdf").getAbsolutePath());
         DefaultComboBoxModel comboModel = new DefaultComboBoxModel();
-        comboModel.addElement(SortBy.ALJAZEERA_RELEVANCE.getValue());
-        comboModel.addElement(SortBy.ALJAZEERA_DATE.getValue());
+        comboModel.addElement(SortBy.ALJAZEERA_RELEVANCE.getDescription());
+        comboModel.addElement(SortBy.ALJAZEERA_DATE.getDescription());
         sortByCombo.setModel(comboModel);
     }
 
@@ -229,6 +235,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         progressBar = new javax.swing.JProgressBar();
         jLabel8 = new javax.swing.JLabel();
         sortByCombo = new javax.swing.JComboBox(SearchProviderEnum.values());
+        jButtonExportResult = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -359,7 +366,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, false, false, false, false
+                false, true, false, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -400,6 +407,13 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         });
 
         jLabel8.setText("Sort By:");
+
+        jButtonExportResult.setText("Export Result");
+        jButtonExportResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExportResultActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -462,7 +476,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(nextButton)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonExportResult)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -489,7 +504,9 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nextButton)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nextButton)
+                    .addComponent(jButtonExportResult))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(countKeywordsCb)
@@ -514,7 +531,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         
         currentSearch = AbstractSearch.getSearchProvider(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
         // TBD
-        currentSearch.init(queryText.getText(), null, SortBy.getEnum(sortByCombo.getSelectedItem().toString()));
+        currentSearch.init(queryText.getText(), null, SortBy.getEnumByDescription(dataProviderCombo.getSelectedItem().toString(), sortByCombo.getSelectedItem().toString()));
         currentSearch.search();
         showResult(currentSearch.getSearchResult());
     }//GEN-LAST:event_searchButtonActionPerformed
@@ -669,8 +686,49 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         aboutDialog.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jButtonExportResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExportResultActionPerformed
+        // TODO add your handling code here:
+    	exportResultToCsv();
+    }//GEN-LAST:event_jButtonExportResultActionPerformed
+
+    private void exportResultToCsv(){
+    	StringBuffer csv = new StringBuffer("No,Date,Title,Snipet,Url\n");
+    	int i = 1;
+    	for(IResultEntry entry : currentSearch.getSearchResult().getResultList()){
+    		csv
+    		.append(i++)
+    		.append(",")
+    		.append("\"").append(entry.getDate()).append("\"")
+    		.append(",")
+    		.append("\"").append(entry.getTitle()).append("\"")
+    		.append(",")
+    		.append("\"").append(entry.getSnipet()).append("\"")
+    		.append(",")
+    		.append(entry.getUrl())
+    		.append("\n");
+    	}
+    	String fileName = new Date().getTime() + "_" + queryText.getText().replace(" ", "_") + "_" + dataProviderCombo.getSelectedItem().toString() + ".csv";
+    	try {
+    		File out = new File("result",fileName);
+    		FileUtils.writeStringToFile(out, csv.toString());
+    		JOptionPane.showMessageDialog(this, "Result succesfully exported to " + out.getAbsolutePath());
+		} catch (IOException e) {
+			log.error(e.getMessage());
+			e.printStackTrace();
+		}
+    }
     
     private void selectAllData(int selectAllFrom, int selectAllTo){
+    	while(selectAllTo > currentSearch.getSearchResult().getResultList().size()){
+    		System.out.println(selectAllTo + ">>" + currentSearch.getSearchResult().getResultList().size());
+    		if(!navigateNext()){
+    			break;
+    		}
+    	}
+    	for(int i = 0; i <= currentSearch.getSearchResult().getResultList().size() - 1; i++){
+    		IResultEntry item = currentSearch.getSearchResult().getResultList().get(i);
+    		item.setSelected(false);
+    	}
     	for(int i = 0; i <= (selectAllTo < currentSearch.getSearchResult().getResultList().size() ? selectAllTo : currentSearch.getSearchResult().getResultList().size() - 1); i++){
             IResultEntry item = currentSearch.getSearchResult().getResultList().get(i);
             if(i >= selectAllFrom-1 && i < selectAllTo){
@@ -689,6 +747,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private javax.swing.JComboBox dataProviderCombo;
     private javax.swing.JCheckBox highlightKeywordsCb;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonExportResult;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

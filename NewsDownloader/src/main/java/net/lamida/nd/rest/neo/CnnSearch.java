@@ -10,20 +10,21 @@ import org.apache.commons.logging.LogFactory;
 public class CnnSearch extends AbstractSearch {
 	private Log log = LogFactory.getLog(this.getClass().toString());
 	public static void main(String[] args) throws Exception{
-		String keywords = "indonesia";
-		AbstractSearch search = new CnnSearch();
-		search.init(keywords,ResultPerPage.TEN, SortBy.CNN_DATE);
-		search.search();
-		for(IResultEntry entry:search.getSearchResult().getResultList()){
-			System.out.println(entry);
-		}
-		System.out.println(search.getSearchMetaInfo());
-		System.out.println();
-		System.out.println();
-		System.out.println(search.next());;
-		for(IResultEntry entry:search.getSearchResult().getResultList()){
-			System.out.println(entry);
-		}
+		System.out.println(SortBy.ALJAZEERA_DATE);
+//		String keywords = "indonesia";
+//		AbstractSearch search = new CnnSearch();
+//		search.init(keywords,ResultPerPage.TEN, SortBy.CNN_DATE);
+//		search.search();
+//		for(IResultEntry entry:search.getSearchResult().getResultList()){
+//			System.out.println(entry);
+//		}
+//		System.out.println(search.getSearchMetaInfo());
+//		System.out.println();
+//		System.out.println();
+//		System.out.println(search.next());;
+//		for(IResultEntry entry:search.getSearchResult().getResultList()){
+//			System.out.println(entry);
+//		}
 //		System.out.println(search.getSearchMetaInfo());
 	}
 	
@@ -78,7 +79,7 @@ public class CnnSearch extends AbstractSearch {
 			query = sb.substring(0, sb.toString().length() - 1);
 		}
 		return urlTemplate.replace("<<query>>", query)
-								.replace(SortBy.enumLabel, SortBy.CNN_RELEVANCE.getValue())
+								.replace(SortBy.enumLabel, sortBy.getValue())
 								.replace("<<start>>", start + "")
 								;
 	}

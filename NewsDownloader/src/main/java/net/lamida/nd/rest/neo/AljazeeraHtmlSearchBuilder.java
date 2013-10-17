@@ -2,12 +2,15 @@ package net.lamida.nd.rest.neo;
 
 import java.util.Iterator;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class AljazeeraHtmlSearchBuilder implements ISearchBuilder{
+	private Log log = LogFactory.getLog(this.getClass().toString());
 	public boolean buildResult(SearchResult searchResult, String html, int resultPerPage) {
 		boolean resultStillAvailable = false;
 		Document doc = Jsoup.parse(html); 
@@ -18,6 +21,7 @@ public class AljazeeraHtmlSearchBuilder implements ISearchBuilder{
 		searchResult.setTotalResult(Integer.parseInt(buildSearchCount(elCount.text())));
 		int i = 0;
 		while(it.hasNext()){
+			log.info("iterating result " + i);
 			resultStillAvailable = true;
 			Element rowEl = it.next();
 			Element linkEl = rowEl.select("a").get(0);
@@ -26,12 +30,12 @@ public class AljazeeraHtmlSearchBuilder implements ISearchBuilder{
 			Element dateEl = rowEl.select("div.indexSmallText").get(0);
 			String link = linkEl.attr("href");
 			String title = titleEl.text();
-			String date = dateEl.text();
+			String date = dateEl.text() != null ? dateEl.text().replace("Last Modified: ", "") : "";
 			String snipet = snipetEl.text();
 			IResultEntry result = new GeneralSearchResult(link, title, snipet, date);
 			if(i == 0 && searchResult.getResultList().size() >= resultPerPage){
 				int size = searchResult.getResultList().size();
-				if(result.equals(searchResult.getResultList().get(size - resultPerPage  + 1))){
+				if(result.equals(searchResult.getResultList().get(size - searchResult.getPrevResult()))){
 					resultStillAvailable = false;
 					break;
 				}
@@ -39,6 +43,7 @@ public class AljazeeraHtmlSearchBuilder implements ISearchBuilder{
 			searchResult.getResultList().add(result);
 			i++;
 		}
+		searchResult.setPrevResult(i);
 		return resultStillAvailable;
 	}
 	
