@@ -191,6 +191,8 @@
                               <Component id="countKeywordsCb" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="highlightKeywordsCb" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="downloadImagesCb" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="272" max="32767" attributes="0"/>
@@ -270,6 +272,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="countKeywordsCb" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="highlightKeywordsCb" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="downloadImagesCb" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="8" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -454,6 +457,13 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExportResultActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="downloadImagesCb">
+      <Properties>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="Download Images"/>
+        <Property name="toolTipText" type="java.lang.String" value="Highlight keyword in result document"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

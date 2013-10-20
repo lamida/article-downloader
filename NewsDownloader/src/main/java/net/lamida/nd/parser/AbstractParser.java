@@ -1,8 +1,10 @@
 package net.lamida.nd.parser;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
+import java.awt.Robot;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,9 +20,13 @@ import org.jsoup.select.Elements;
 public class AbstractParser implements IParser{
 	private Log log = LogFactory.getLog(this.getClass().toString());
 	protected String url;
+	protected String imageRootPath;
 	protected String newsContentSelector;
+	protected String newsImageSelector;
+	protected String newsImageCaptionSelector;
 	protected String newsTitleSelector;
 	protected String newsSectionSelector;
+	protected String newsDateFormat;
 	protected String newsPostTime;
 	
 	public static IParser getParser(SearchProviderEnum searchProviderEnum){
@@ -83,6 +89,31 @@ public class AbstractParser implements IParser{
 		return result;
 	}
 	
+	public String getNewsImage() {
+		log.info("getImageUrl");
+		String result = null;
+		try {
+			Document doc = getDocument(url);
+			Elements els = doc.select(newsImageSelector);
+			Element el = null;
+			if (els != null && !els.isEmpty()) {
+				el = els.get(0);
+				result = imageRootPath + el.attr("src");
+			}
+		} catch (Exception e) {
+			log.error("some error happen when parsing this news: " + e.getMessage());
+			result = "some error happen when parsing this news.";
+		}
+		return result;
+	}
+
+	public String getNewsImageCaption() {
+		log.info("getImageCaption");
+		return getSingleElementText(newsImageCaptionSelector);
+	}
+	
+
+	
 	public String getNewsTitle() {
 		log.info("getNewsTitle");
 		return getSingleElementText(newsTitleSelector);
@@ -96,6 +127,17 @@ public class AbstractParser implements IParser{
 	public String getNewsPostTime() {
 		log.info("getNewsPostTime");
 		return getSingleElementText(newsPostTime);
+	}
+	
+	public Date getNewsPostDateTime(){
+		Date date = null;
+		try {
+			date = new SimpleDateFormat(newsDateFormat).parse(getNewsPostTime());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return date;
 	}
 	
 	private String getSingleElementText(String selector) {
@@ -114,5 +156,4 @@ public class AbstractParser implements IParser{
 		}
 		return result;
 	}
-
 }

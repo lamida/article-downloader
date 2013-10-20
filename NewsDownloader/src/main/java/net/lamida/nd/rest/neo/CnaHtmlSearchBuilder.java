@@ -1,5 +1,8 @@
 package net.lamida.nd.rest.neo;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 
 import org.jsoup.Jsoup;
@@ -8,6 +11,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class CnaHtmlSearchBuilder implements ISearchBuilder{
+	final String dateFormat = "d MMM yyyy";
 	public boolean buildResult(SearchResult searchResult, String html, int resultPerPage) {
 		boolean resultStillAvailable = false;
 		Document doc = Jsoup.parse(html.toString());
@@ -25,9 +29,16 @@ public class CnaHtmlSearchBuilder implements ISearchBuilder{
 			Element dateEl = doc.select("div.date-box span.date").get(i);
 			String link = "http://www.channelnewsasia.com" + linkEl.attr("href");
 			String title = linkEl.text();
-			String date = dateEl.text();
+			String stringDate = dateEl.text();
+			Date date = null;
+			try {
+				date = new SimpleDateFormat(dateFormat).parse(stringDate);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			String snipet = snipetEl.text();
-			IResultEntry result = new GeneralSearchResult(link, title, snipet, date);
+			IResultEntry result = new GeneralSearchResult(link, title, snipet, stringDate, date);
 			if(i == 0 && searchResult.getResultList().size() >= resultPerPage){
 				int size = searchResult.getResultList().size();
 				if(result.equals(searchResult.getResultList().get(size - resultPerPage + 1))){

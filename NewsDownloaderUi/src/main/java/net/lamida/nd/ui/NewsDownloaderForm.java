@@ -10,9 +10,12 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Collections; 
+import java.util.Comparator;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,12 +43,11 @@ import net.lamida.nd.rest.SearchProviderEnum;
 import net.lamida.nd.rest.neo.AbstractSearch;
 import net.lamida.nd.rest.neo.IResultEntry;
 import net.lamida.nd.rest.neo.ISearch;
+import net.lamida.nd.rest.neo.NewsImage;
 import net.lamida.nd.rest.neo.SearchResult;
 import net.lamida.nd.rest.neo.SortBy;
 
-import org.apache.commons.codec.binary.StringUtils;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -60,6 +62,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private ISearch currentSearch;
     private int selectedCount;
     private File saveFile;
+    final DateFormat df = new SimpleDateFormat("dd MMM yyyy kk:mm:ss");
     
 
     /**
@@ -82,16 +85,49 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
 		table.getTableHeader().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
-                selectResultToText.setText("");
-                selectResultToText.requestFocusInWindow();
-                selectAllDialog.pack();
-                selectAllDialog.setModal(true);
-                selectAllDialog.setLocationRelativeTo(null);
-                selectAllDialog.setModal(true);
-                selectAllDialog.setVisible(true);
+            	int columnIndex = table.columnAtPoint(mouseEvent.getPoint());
+            	if(columnIndex == 5){
+            		selectResultToText.setText("");
+                    selectResultToText.requestFocusInWindow();
+                    selectAllDialog.pack();
+                    selectAllDialog.setModal(true);
+                    selectAllDialog.setLocationRelativeTo(null);
+                    selectAllDialog.setModal(true);
+                    selectAllDialog.setVisible(true);
+            	}else if(columnIndex == 1){
+            		sortDate("date");
+            	}
             }
         ;
         });
+	}
+	
+	enum SortDate {SORT_ASC, SORT_DESC, SORT_DEF};
+	SortDate sortDate = SortDate.SORT_DEF;
+	
+	private void sortDate(String column){
+		if(sortDate == SortDate.SORT_DEF){
+			sortDate = SortDate.SORT_ASC;
+			Collections.sort(currentSearch.getSearchResult().getResultList(), new Comparator<IResultEntry>() {
+				public int compare(IResultEntry arg0, IResultEntry arg1) {
+					return arg0.getDate().compareTo(arg1.getDate());
+				}
+			});
+			table.getTableHeader().getColumnModel().getColumn(1).setHeaderValue("Date ^");
+		}else if(sortDate == SortDate.SORT_ASC){
+			sortDate = SortDate.SORT_DESC;
+			Collections.sort(currentSearch.getSearchResult().getResultList(), new Comparator<IResultEntry>() {
+				public int compare(IResultEntry arg0, IResultEntry arg1) {
+					return arg1.getDate().compareTo(arg0.getDate());
+				}
+			});
+			table.getTableHeader().getColumnModel().getColumn(1).setHeaderValue("Date v");
+		}else{
+			sortDate = SortDate.SORT_DEF;
+			table.getTableHeader().getColumnModel().getColumn(1).setHeaderValue("Date");
+		}
+		table.getTableHeader().repaint();
+		showResult(currentSearch.getSearchResult());
 	}
 
 	private void addLinkListener() {
@@ -178,8 +214,9 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         Object[][] data = new Object[search.getResultList().size()][6];
         int row = 0;
         for (IResultEntry item : search.getResultList()) {
+        	
             data[row][0] = row + 1;
-            data[row][1] = item.getDate();
+            data[row][1] = df.format(item.getDate()); 
             data[row][2] = item.getTitle();
             data[row][3] = item.getSnipet();
             data[row][4] = item.getUrl();
@@ -236,6 +273,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         sortByCombo = new javax.swing.JComboBox(SearchProviderEnum.values());
         jButtonExportResult = new javax.swing.JButton();
+        downloadImagesCb = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -415,6 +453,10 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             }
         });
 
+        downloadImagesCb.setSelected(true);
+        downloadImagesCb.setText("Download Images");
+        downloadImagesCb.setToolTipText("Highlight keyword in result document");
+
         jMenu1.setText("File");
 
         jMenuItem1.setText("About");
@@ -450,7 +492,9 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(countKeywordsCb)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(highlightKeywordsCb)))
+                                .addComponent(highlightKeywordsCb)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(downloadImagesCb)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(11, 11, 11)
@@ -510,7 +554,8 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(countKeywordsCb)
-                    .addComponent(highlightKeywordsCb))
+                    .addComponent(highlightKeywordsCb)
+                    .addComponent(downloadImagesCb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
@@ -531,9 +576,12 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
         
         currentSearch = AbstractSearch.getSearchProvider(SearchProviderEnum.getSearchProviderEnumByName(dataProviderCombo.getSelectedItem().toString()));
         // TBD
-        currentSearch.init(queryText.getText(), null, SortBy.getEnumByDescription(dataProviderCombo.getSelectedItem().toString(), sortByCombo.getSelectedItem().toString()));
+        String searchId = new Date().getTime() + "";
+        currentSearch.init(searchId, queryText.getText(), null, SortBy.getEnumByDescription(dataProviderCombo.getSelectedItem().toString(), sortByCombo.getSelectedItem().toString()));
         currentSearch.search();
         showResult(currentSearch.getSearchResult());
+        
+        textOutputFile.setText(new File("result", searchId + "_output.pdf").getAbsolutePath());
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -634,11 +682,12 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
             	return;
             }
             
-            if (selectAllTo - selectAllFrom > 100) {
-                JOptionPane.showMessageDialog(this, "Maximum Article to Select is 100", "Error", JOptionPane.ERROR_MESSAGE);
-                selectAllFrom = 0;
-                selectAllTo = 100;
-            }
+//            if (selectAllTo - selectAllFrom > 100) {
+//                JOptionPane.showMessageDialog(this, "Maximum Article to Select is 100", "Error", JOptionPane.ERROR_MESSAGE);
+//                selectAllFrom = 0;
+//                selectAllTo = 100;
+//            }
+            
             if(currentSearch.getSearchResult().getResultList().isEmpty()){
         		JOptionPane.showMessageDialog(this, "Empty Search Result", "Error", JOptionPane.ERROR_MESSAGE);
         		return;
@@ -698,7 +747,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     		csv
     		.append(i++)
     		.append(",")
-    		.append("\"").append(entry.getDate()).append("\"")
+    		.append("\"").append(entry.getStringDate()).append("\"")
     		.append(",")
     		.append("\"").append(entry.getTitle()).append("\"")
     		.append(",")
@@ -707,7 +756,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     		.append(entry.getUrl())
     		.append("\n");
     	}
-    	String fileName = new Date().getTime() + "_" + queryText.getText().replace(" ", "_") + "_" + dataProviderCombo.getSelectedItem().toString() + ".csv";
+    	String fileName = currentSearch.getSearchId() + "_" + queryText.getText().replace(" ", "_") + "_" + dataProviderCombo.getSelectedItem().toString() + ".csv";
     	try {
     		File out = new File("result",fileName);
     		FileUtils.writeStringToFile(out, csv.toString());
@@ -745,6 +794,7 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
     private javax.swing.JButton browseButton;
     private javax.swing.JCheckBox countKeywordsCb;
     private javax.swing.JComboBox dataProviderCombo;
+    private javax.swing.JCheckBox downloadImagesCb;
     private javax.swing.JCheckBox highlightKeywordsCb;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonExportResult;
@@ -807,8 +857,12 @@ public class NewsDownloaderForm extends javax.swing.JFrame {
                         log.info("Downloading " + targetFileName);
                         PdfInputData data = null;
                         try{
-                        	data = new PdfInputData(queryText.getText(), it.getUrl(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime(), count);
-                        	pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected(), currentSearch.getSearchResult().getResultList().size());
+                        	NewsImage image = new NewsImage();
+                        	image.setUrl(parser.getNewsImage());
+                        	image.setCaption(parser.getNewsImageCaption());
+                        	data = new PdfInputData(queryText.getText(), it.getUrl(), parser.getNewsTitle(), parser.getNewsContent(), parser.getNewsPostTime(), image, count, selectedCount);
+                        	// TODO: image combo
+                        	pdfWriter.init(data, targetFileName, countKeywordsCb.isSelected(), highlightKeywordsCb.isSelected(), downloadImagesCb.isSelected(), currentSearch.getSearchResult().getResultList().size());
                         	pdfWriter.writePdf();
                         }catch(Exception e){
                         	log.error("Warning: some error is happening: " + e.getMessage());

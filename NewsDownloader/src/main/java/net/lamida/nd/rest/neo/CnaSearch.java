@@ -17,7 +17,7 @@ public class CnaSearch extends AbstractSearch {
 	public static void main(String[] args) throws Exception{
 		String keywords = "indonesia haze";
 		CnaSearch search = new CnaSearch();
-		search.init(keywords,ResultPerPage.TEN, SortBy.CNA_LATEST);
+		search.init("foo", keywords,ResultPerPage.TEN, SortBy.CNA_LATEST);
 		search.search();
 		for(IResultEntry entry:search.getSearchResult().getResultList()){
 			System.out.println(entry);
@@ -40,7 +40,8 @@ public class CnaSearch extends AbstractSearch {
 		this.searchBuilder = new CnaHtmlSearchBuilder();
 	}
 	
-	public void init(String keywords, ResultPerPage resultPerPage, SortBy sortBy){
+	public void init(String id, String keywords, ResultPerPage resultPerPage, SortBy sortBy){
+		this.searchId = id;
 		this.keywords = keywords;
 		this.resultPerPage = ResultPerPage.TEN;
 		this.sortBy = sortBy;

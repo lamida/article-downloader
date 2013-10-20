@@ -38,7 +38,7 @@ public class CnnSearchBuilder implements ISearchBuilder{
 			String date = row.getAsJsonObject().getAsJsonPrimitive("mediaDateUts").getAsString();
 			Date d = new Date(Long.parseLong(date) * 1000);
 			date = d.toString();
-			IResultEntry result = new GeneralSearchResult(link, title, snipet, date);
+			IResultEntry result = new GeneralSearchResult(link, title, snipet, date, d);
 			if(i == 0 && searchResult.getResultList().size() >= resultPerPage){
 				int size = searchResult.getResultList().size();
 				if(result.equals(searchResult.getResultList().get(size - resultPerPage + 1))){

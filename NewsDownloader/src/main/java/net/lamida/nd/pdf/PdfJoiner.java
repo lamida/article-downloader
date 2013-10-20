@@ -16,8 +16,11 @@ import org.apache.commons.logging.LogFactory;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfAction;
 import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfDestination;
 import com.itextpdf.text.pdf.PdfImportedPage;
+import com.itextpdf.text.pdf.PdfOutline;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfWriter;
 
@@ -41,6 +44,8 @@ public class PdfJoiner implements IPdfJoiner {
 			log.error(e.getMessage());
 		}
 	}
+	
+	private List<String> fileName;
 
 	public void joinPdf(String inputDir, String mergedPdfFileName) throws FileNotFoundException{
 		log.info("joinPdf");
@@ -48,10 +53,12 @@ public class PdfJoiner implements IPdfJoiner {
 		if(!dir.isDirectory()){
 			throw new IllegalArgumentException("inputDir must be directory");
 		}
-		List<InputStream> pdfs = new ArrayList<InputStream>();  
+		List<InputStream> pdfs = new ArrayList<InputStream>(); 
+		fileName = new ArrayList<String>();
 		for(File file : dir.listFiles()){
 			System.out.println(file.getName());
 			pdfs.add(new FileInputStream(file));
+			fileName.add(file.getName().substring(0, file.getName().indexOf(".pdf")));
 			file.delete(); 
 		}
 		OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
@@ -81,6 +88,9 @@ public class PdfJoiner implements IPdfJoiner {
 			PdfWriter writer = PdfWriter.getInstance(document, outputStream);
 
 			document.open();
+			PdfOutline root = writer.getRootOutline();
+			PdfOutline bookmark = null;
+			
 			BaseFont bf = BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
 			PdfContentByte cb = writer.getDirectContent(); // Holds the PDF data
 
@@ -90,9 +100,11 @@ public class PdfJoiner implements IPdfJoiner {
 			Iterator<PdfReader> iteratorPDFReader = readers.iterator();
 
 			// Loop through the PDF files and add to the output.
+			int loop = 0;
 			while (iteratorPDFReader.hasNext()) {
 				PdfReader pdfReader = iteratorPDFReader.next();
-
+				bookmark = new PdfOutline(root, new PdfDestination(PdfDestination.FITH, 0), fileName.get(loop++));
+				
 				// Create a new page in the target for each source page.
 				while (pageOfCurrentReaderPDF < pdfReader.getNumberOfPages()) {
 					document.newPage();

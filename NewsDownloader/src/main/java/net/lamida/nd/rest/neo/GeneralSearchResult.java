@@ -1,18 +1,23 @@
 package net.lamida.nd.rest.neo;
 
+import java.util.Date;
+
+
 public class GeneralSearchResult implements IResultEntry {
 	private String url;
 	private String title;
 	private String snipet;
-	private String date;
+	private String stringDate;
+	private Date dt;
 	private boolean selected;
 
-	public GeneralSearchResult(String url, String title, String snipet, String date) {
+	public GeneralSearchResult(String url, String title, String snipet, String date, Date dt) {
 		super();
 		this.url = url;
 		this.title = title;
 		this.snipet = snipet;
-		this.date = date;
+		this.stringDate = date;
+		this.dt = dt;
 	}
 
 	public String getUrl() {
@@ -23,8 +28,8 @@ public class GeneralSearchResult implements IResultEntry {
 		return snipet;
 	}
 
-	public String getDate() {
-		return date;
+	public String getStringDate() {
+		return stringDate;
 	}
 
 	public String getTitle() {
@@ -59,7 +64,7 @@ public class GeneralSearchResult implements IResultEntry {
 	@Override
 	public String toString() {
 		return "CnaResult [title=" + title + ", url=" + url + ", snipet="
-				+ snipet + ", date=" + date + "]";
+				+ snipet + ", date=" + stringDate + "]";
 	}
 
 	public boolean isSelected() {
@@ -69,4 +74,13 @@ public class GeneralSearchResult implements IResultEntry {
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}
+
+	public Date getDate() {
+		return dt;
+	}
+
+	public void setDt(Date dt) {
+		this.dt = dt;
+	}
+	
 }

@@ -34,7 +34,8 @@ public class CnnSearch extends AbstractSearch {
 		this.searchBuilder = new CnnSearchBuilder();
 	}
 	
-	public void init(String keywords, ResultPerPage resultPerPage, SortBy sortBy){
+	public void init(String id, String keywords, ResultPerPage resultPerPage, SortBy sortBy){
+		this.searchId = id;
 		this.keywords = keywords;
 		this.resultPerPage = ResultPerPage.TEN;
 		this.sortBy = sortBy;

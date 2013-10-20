@@ -7,6 +7,7 @@ import org.apache.commons.logging.LogFactory;
 
 public abstract class AbstractSearch implements ISearch{
 	private Log log = LogFactory.getLog(this.getClass().toString());
+	protected String searchId;
 	
 	public static ISearch getSearchProvider(SearchProviderEnum searchProviderEnum) {
 		ISearch search = null;
@@ -34,7 +35,7 @@ public abstract class AbstractSearch implements ISearch{
 	protected SearchResult searchResult = new SearchResult();
 	protected ISearchBuilder searchBuilder;
 	
-	public abstract void init(String keywords, ResultPerPage resultPerPage, SortBy sortBy);
+	public abstract void init(String id, String keywords, ResultPerPage resultPerPage, SortBy sortBy);
 
 	public abstract boolean search();
 
@@ -57,5 +58,8 @@ public abstract class AbstractSearch implements ISearch{
 	public SearchResult getSearchResult() {
 		return searchResult;
 	}
-	
+
+	public String getSearchId() {
+		return searchId;
+	}
 }

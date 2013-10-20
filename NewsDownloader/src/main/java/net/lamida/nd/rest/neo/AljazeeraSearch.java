@@ -13,14 +13,14 @@ public class AljazeeraSearch extends AbstractSearch{
 	public static void main(String[] args) throws Exception{
 		String keywords = "indonesia";
 		AbstractSearch search = new AljazeeraSearch();
-		search.init(keywords, ResultPerPage.FIFTEEN, SortBy.ALJAZEERA_RELEVANCE);
+		search.init("foo", keywords, ResultPerPage.FIFTEEN, SortBy.ALJAZEERA_RELEVANCE);
 		search.search();
 		for(IResultEntry entry:search.getSearchResult().getResultList()){
 			System.out.println(entry);
 		}
 		System.out.println(search.getSearchMetaInfo());
 		System.out.println();
-		search.init(keywords, ResultPerPage.FIFTEEN, SortBy.ALJAZEERA_DATE);
+		search.init("bar", keywords, ResultPerPage.FIFTEEN, SortBy.ALJAZEERA_DATE);
 		System.out.println(search.search());
 		for(IResultEntry entry:search.getSearchResult().getResultList()){
 			System.out.println(entry);
@@ -34,7 +34,8 @@ public class AljazeeraSearch extends AbstractSearch{
 		searchBuilder = new AljazeeraHtmlSearchBuilder();
 	}
 	
-	public void init(String keywords, ResultPerPage resultPerPage, SortBy sortBy){
+	public void init(String id, String keywords, ResultPerPage resultPerPage, SortBy sortBy){
+		this.searchId = id;
 		this.keywords = keywords;
 		this.resultPerPage = ResultPerPage.FIFTEEN;
 		this.sortBy = sortBy;

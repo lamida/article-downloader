@@ -3,6 +3,11 @@ package net.lamida.nd.pdf;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,13 +15,16 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfWriter;
 
@@ -27,6 +35,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	private String targetFileName;
 	private boolean countKeyWords;
 	private boolean highlightQuery;
+	private boolean downloadImage;
 	private int totalArticleCount;
 	
 	public NewsPdfWriter(){}
@@ -34,7 +43,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 	/* (non-Javadoc)
 	 * @see net.lamida.nd.pdf.INewsPdfWriter#init(net.lamida.nd.pdf.NewsPdfWriterData, boolean, boolean)
 	 */
-	public void init(PdfInputData data, String targetFileName, boolean countKeyWords, boolean highlightQuery, int totalArticleCount) {
+	public void init(PdfInputData data, String targetFileName, boolean countKeyWords, boolean highlightQuery, boolean downloadImage, int totalArticleCount) {
 		log.info("init");
 		if(targetFileName == null || data == null){
 			throw new IllegalArgumentException("OuputFileName or Data cannot be null");
@@ -44,8 +53,10 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		this.targetFileName = targetFileName;
 		this.countKeyWords = countKeyWords;
 		this.highlightQuery = highlightQuery;
+		this.downloadImage = downloadImage;
 		this.totalArticleCount = totalArticleCount;
 	}
+	
 	
 	/* (non-Javadoc)
 	 * @see net.lamida.nd.pdf.INewsPdfWriter#writePdf(java.lang.String)
@@ -86,6 +97,11 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		
 		StringBuffer sb = new StringBuffer();
 		//sb.append("Article: " + data.getCurrentCount() + " of " + totalArticleCount);
+		sb.append("Document : ");
+		sb.append(data.getCurrentCount());
+		sb.append(" of ");
+		sb.append(data.getSelectedCount());
+		sb.append("\n");
 		sb.append("Document URL: ");
 		sb.append(data.getUrl());
 		sb.append("\n");
@@ -130,12 +146,37 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		document.add(new Chunk(createHeader()));
 	}
 	
-	private void writeContent(Document document, String content, boolean highlightQuery) throws DocumentException{
+	private void writeContent(Document document, String content, boolean highlightQuery) throws Exception{
 		log.info("writeContent content: " + content);
+		if(downloadImage){
+			writeImage(document);
+		}
 		if(highlightQuery){
 			highlightText(document, content);
 		}else{
 			document.add(new Chunk(content));
+		}
+	}
+
+	/**
+	 * TODO: image scaling
+	 * @param document
+	 * @throws BadElementException
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 * @throws DocumentException
+	 */
+	private void writeImage(Document document) throws BadElementException,
+			MalformedURLException, IOException, DocumentException {
+		if(data.getNewsImage().getUrl() != null){
+			Image image = Image.getInstance(new URL(data.getNewsImage().getUrl()));
+			image.scaleToFit(document.getPageSize().getWidth() - 50, image.getHeight() * (image.getWidth() - 50)/document.getPageSize().getWidth());
+			document.add(image);
+			document.add(new Chunk(data.getNewsImage().getCaption()));
+			document.add(new Chunk("\n"));
+			document.add(new Chunk("\n"));
+		}else{
+			log.info("Document doesn't have any image");
 		}
 	}
 	
