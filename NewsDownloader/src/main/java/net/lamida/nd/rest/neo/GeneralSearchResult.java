@@ -2,6 +2,8 @@ package net.lamida.nd.rest.neo;
 
 import java.util.Date;
 
+import org.jsoup.Jsoup;
+
 
 public class GeneralSearchResult implements IResultEntry {
 	private String url;
@@ -14,7 +16,14 @@ public class GeneralSearchResult implements IResultEntry {
 	public GeneralSearchResult(String url, String title, String snipet, String date, Date dt) {
 		super();
 		this.url = url;
-		this.title = title;
+		String temp = title
+				.replace(":", "")
+				.replace("\"", "")
+				.replace("/'", "") 
+				.replace("?", "") 
+				.replace("\"", "") 
+				.replace("\'", ""); 
+		this.title = Jsoup.parse(temp).text();
 		this.snipet = snipet;
 		this.stringDate = date;
 		this.dt = dt;

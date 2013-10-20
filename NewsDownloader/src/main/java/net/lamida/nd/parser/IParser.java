@@ -1,5 +1,7 @@
 package net.lamida.nd.parser;
 
+import java.util.Date;
+
 public interface IParser {
 	void init(String url);
 	String getNewsContent();
@@ -8,4 +10,5 @@ public interface IParser {
 	String getNewsTitle();
 	String getNewsSection();
 	String getNewsPostTime();
+	Date getNewsPostDateTime();
 }

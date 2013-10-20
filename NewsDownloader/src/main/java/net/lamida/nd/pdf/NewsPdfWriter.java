@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -15,7 +13,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -69,7 +66,11 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		
 		try {
 			Document document = new Document();
-			File targetFile = new File("temp", targetFileName);
+			File tempFolder = new File("temp", data.getSearchId());
+			if(!tempFolder.mkdirs()){
+				log.error("cannot create temp directory");
+			}
+			File targetFile = new File("temp" + File.separator + data.getSearchId(), targetFileName);
 			PdfWriter.getInstance(document, new FileOutputStream(targetFile.getAbsolutePath())).setInitialLeading(16);
 			document.open();
 			writeHeader(document);
@@ -109,7 +110,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		sb.append(data.getNewsTitle());
 		sb.append("\n");
 		sb.append("Publication Date: ");
-		sb.append(data.getNewsPostTime());
+		sb.append(format.format(data.getNewsPostDateTime()));
 		sb.append("\n");
 		sb.append("Date of Retrieval: ");
 		sb.append(format.format(new Date()));
@@ -170,7 +171,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 			MalformedURLException, IOException, DocumentException {
 		if(data.getNewsImage().getUrl() != null){
 			Image image = Image.getInstance(new URL(data.getNewsImage().getUrl()));
-			image.scaleToFit(document.getPageSize().getWidth() - 50, image.getHeight() * (image.getWidth() - 50)/document.getPageSize().getWidth());
+			image.scaleToFit(document.getPageSize().getWidth() - 75, image.getHeight() * (image.getWidth() - 75)/document.getPageSize().getWidth());
 			document.add(image);
 			document.add(new Chunk(data.getNewsImage().getCaption()));
 			document.add(new Chunk("\n"));

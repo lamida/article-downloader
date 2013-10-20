@@ -16,7 +16,6 @@ import org.apache.commons.logging.LogFactory;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.BaseFont;
-import com.itextpdf.text.pdf.PdfAction;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfDestination;
 import com.itextpdf.text.pdf.PdfImportedPage;
@@ -30,20 +29,20 @@ public class PdfJoiner implements IPdfJoiner {
 	/* (non-Javadoc)
 	 * @see net.lamida.nd.pdf.IJoinPdf#joinPdf(java.util.List, java.lang.String)
 	 */
-	public void joinPdf(List<String> fileInput, String mergedPdfFileName){
-		log.info("joinPdf");
-		try {
-		    List<InputStream> pdfs = new ArrayList<InputStream>();  
-			for(String fileName : fileInput){
-				File file = new File(fileName);
-				pdfs.add(new FileInputStream(file));
-			}
-			OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
-			concatPDFs(pdfs, output, true);
-		} catch (FileNotFoundException e) {
-			log.error(e.getMessage());
-		}
-	}
+//	public void joinPdf(List<String> fileInput, String mergedPdfFileName){
+//		log.info("joinPdf");
+//		try {
+//		    List<InputStream> pdfs = new ArrayList<InputStream>();  
+//			for(String fileName : fileInput){
+//				File file = new File(fileName);
+//				pdfs.add(new FileInputStream(file));
+//			}
+//			OutputStream output = new FileOutputStream(new File(mergedPdfFileName));
+//			concatPDFs(pdfs, output, true);
+//		} catch (FileNotFoundException e) {
+//			log.error(e.getMessage());
+//		}
+//	}
 	
 	private List<String> fileName;
 
@@ -103,7 +102,7 @@ public class PdfJoiner implements IPdfJoiner {
 			int loop = 0;
 			while (iteratorPDFReader.hasNext()) {
 				PdfReader pdfReader = iteratorPDFReader.next();
-				bookmark = new PdfOutline(root, new PdfDestination(PdfDestination.FITH, 0), fileName.get(loop++));
+				bookmark = new PdfOutline(root, new PdfDestination(PdfDestination.FIT, 0), fileName.get(loop++));
 				
 				// Create a new page in the target for each source page.
 				while (pageOfCurrentReaderPDF < pdfReader.getNumberOfPages()) {

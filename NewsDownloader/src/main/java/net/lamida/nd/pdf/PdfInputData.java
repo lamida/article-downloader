@@ -1,27 +1,35 @@
 package net.lamida.nd.pdf;
 
+import java.util.Date;
+
+import net.lamida.nd.parser.IParser;
+import net.lamida.nd.rest.neo.IResultEntry;
 import net.lamida.nd.rest.neo.NewsImage;
 
 public class PdfInputData {
+	private String searchId;
 	private String searchQuery;
 	private String url;
 	private String newsTitle;
 	private String newsContent;
 	private NewsImage newsImage;
-	private String newsPostTime;
+	private Date newsPostDateTime;
 	private static final String ERROR_PARSING = "Error Parsing";
 	private int currentCount;
 	private int selectedCount;
 	
-	public PdfInputData(String searchQuery, String url, String newsTitle,
-			String newsContent, String newsPostTime, NewsImage newsImage, int currentCount, int selectedCount) {
+	public PdfInputData(String searchId, String searchQuery, IResultEntry entry, IParser parser, int currentCount, int selectedCount) {
 		super();
+		this.searchId = searchId;
 		this.searchQuery = searchQuery;
-		this.url = url;
-		this.newsTitle = newsTitle;
-		this.newsContent = newsContent;
-		this.newsImage = newsImage;
-		this.newsPostTime = newsPostTime;
+		this.url = entry.getUrl();
+		this.newsTitle = parser.getNewsTitle();
+		this.newsContent = parser.getNewsContent();
+		NewsImage image = new NewsImage();
+    	image.setUrl(parser.getNewsImage());
+    	image.setCaption(parser.getNewsImageCaption());
+		this.newsImage = image;
+		this.newsPostDateTime = entry.getDate();
 		this.currentCount = currentCount;
 		this.selectedCount = selectedCount;
 	}
@@ -48,13 +56,10 @@ public class PdfInputData {
 		return newsContent;
 	}
 	
-	public String getNewsPostTime() {
-		if(newsPostTime == null){
-			newsPostTime = ERROR_PARSING;
-		}
-		return newsPostTime;
+	public Date getNewsPostDateTime() {
+		return newsPostDateTime;
 	}
-	
+
 	public int getCurrentCount() {
 		return currentCount;
 	}
@@ -66,4 +71,9 @@ public class PdfInputData {
 	public NewsImage getNewsImage() {
 		return newsImage;
 	}
+
+	public String getSearchId() {
+		return searchId;
+	}
+	
 }

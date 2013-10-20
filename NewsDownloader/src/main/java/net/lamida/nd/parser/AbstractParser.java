@@ -1,6 +1,5 @@
 package net.lamida.nd.parser;
 
-import java.awt.Robot;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -49,7 +48,7 @@ public class AbstractParser implements IParser{
 	
 	private Map<String,Document> documentCache;
 	
-	private Document getDocument(String url) throws Exception{
+	protected Document getDocument(String url) throws Exception{
 		log.info("getDocument: " + url);
 		if(documentCache.get(url) != null){
 			return documentCache.get(url);
@@ -140,7 +139,7 @@ public class AbstractParser implements IParser{
 		return date;
 	}
 	
-	private String getSingleElementText(String selector) {
+	protected String getSingleElementText(String selector) {
 		String result = null;
 		try {
 			Document doc = getDocument(url);
