@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.StringTokenizer;
 
 import org.apache.commons.io.FileUtils;
 
@@ -53,26 +54,6 @@ public class Utils {
 	
 	public static int countWords(String s){
 
-	    int counter = 0;
-
-	    boolean word = false;
-	    int endOfLine = s.length() - 1;
-
-	    for (int i = 0; i < s.length(); i++) {
-	        // if the char is letter, word = true.
-	        if (Character.isLetter(s.charAt(i)) == true && i != endOfLine) {
-	            word = true;
-	            // if char isnt letter and there have been letters before (word
-	            // == true), counter goes up.
-	        } else if (Character.isLetter(s.charAt(i)) == false && word == true) {
-	            counter++;
-	            word = false;
-	            // last word of String, if it doesnt end with nonLetter it
-	            // wouldnt count without this.
-	        } else if (Character.isLetter(s.charAt(i)) && i == endOfLine) {
-	            counter++;
-	        }
-	    }
-	    return counter;
+	   return new StringTokenizer(s).countTokens();
 	}
 }

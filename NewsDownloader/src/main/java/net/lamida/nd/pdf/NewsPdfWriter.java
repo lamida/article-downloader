@@ -122,7 +122,7 @@ public class NewsPdfWriter implements INewsPdfWriter {
 		}
 		sb.append("Words Count: ");
 		sb.append(data.getWordsCount());
-		
+		sb.append("\n");
 		sb.append("==========================================================================");
 		sb.append("\n");
 		sb.append("\n");
