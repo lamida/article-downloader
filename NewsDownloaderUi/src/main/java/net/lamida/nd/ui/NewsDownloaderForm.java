@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Collections; 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.logging.Level;
@@ -43,14 +43,12 @@ import net.lamida.nd.rest.SearchProviderEnum;
 import net.lamida.nd.rest.neo.AbstractSearch;
 import net.lamida.nd.rest.neo.IResultEntry;
 import net.lamida.nd.rest.neo.ISearch;
-import net.lamida.nd.rest.neo.NewsImage;
 import net.lamida.nd.rest.neo.SearchResult;
 import net.lamida.nd.rest.neo.SortBy;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.jsoup.Jsoup;
 
 /**
  *

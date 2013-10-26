@@ -2,6 +2,7 @@ package net.lamida.nd.pdf;
 
 import java.util.Date;
 
+import net.lamida.nd.Utils;
 import net.lamida.nd.parser.IParser;
 import net.lamida.nd.rest.neo.IResultEntry;
 import net.lamida.nd.rest.neo.NewsImage;
@@ -17,6 +18,7 @@ public class PdfInputData {
 	private static final String ERROR_PARSING = "Error Parsing";
 	private int currentCount;
 	private int selectedCount;
+	private int wordsCount;
 	
 	public PdfInputData(String searchId, String searchQuery, IResultEntry entry, IParser parser, int currentCount, int selectedCount) {
 		super();
@@ -32,6 +34,7 @@ public class PdfInputData {
 		this.newsPostDateTime = entry.getDate();
 		this.currentCount = currentCount;
 		this.selectedCount = selectedCount;
+		this.wordsCount = Utils.countWords(this.newsContent);
 	}
 	
 	public String getSearchQuery() {
@@ -75,5 +78,8 @@ public class PdfInputData {
 	public String getSearchId() {
 		return searchId;
 	}
-	
+
+	public int getWordsCount() {
+		return wordsCount;
+	}
 }
